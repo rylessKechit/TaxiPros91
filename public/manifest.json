@@ -1,0 +1,16 @@
+{
+  "name": "Taxi Pros 91",
+  "short_name": "TaxiPros91",
+  "description": "Service de taxi professionnel en Essonne (91). Réservation 24h/24.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#facc15",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}
