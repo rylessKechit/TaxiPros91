@@ -8,17 +8,17 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="bg-white border-b-4 border-yellow-400 sticky top-0 z-50">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between py-4">
+    <header className="bg-white border-b-2 sm:border-b-4 border-yellow-400 sticky top-0 z-50">
+      <div className="container mx-auto px-3 sm:px-4">
+        <div className="flex items-center justify-between py-2 sm:py-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
-            <div className="w-14 h-14 bg-yellow-400 rounded-lg flex items-center justify-center">
-              <span className="text-black font-bold text-2xl">T</span>
+          <Link href="/" className="flex items-center gap-2 sm:gap-3">
+            <div className="w-9 h-9 sm:w-14 sm:h-14 bg-yellow-400 rounded-lg flex items-center justify-center">
+              <span className="text-black font-bold text-lg sm:text-2xl">T</span>
             </div>
             <div>
-              <div className="font-bold text-2xl text-gray-900">Taxi Pros 91</div>
-              <div className="text-gray-600 text-sm">Essonne - 24h/24</div>
+              <div className="font-bold text-base sm:text-2xl text-gray-900">Taxi Pros 91</div>
+              <div className="text-gray-600 text-xs sm:text-sm hidden sm:block">Essonne - 24h/24</div>
             </div>
           </Link>
 
@@ -71,28 +71,28 @@ export default function Header() {
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-2"
+            className="lg:hidden p-1"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Menu"
           >
-            {isMenuOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-gray-200">
-            <nav className="flex flex-col gap-2">
+          <div className="lg:hidden py-3 border-t border-gray-200">
+            <nav className="flex flex-col gap-1">
               <Link
                 href="/"
-                className="text-gray-700 font-medium text-lg py-3 px-2 hover:bg-gray-50 rounded"
+                className="text-gray-700 font-medium py-2 px-2 hover:bg-gray-50 rounded"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Accueil
               </Link>
               <Link
                 href="/#services"
-                className="text-gray-700 font-medium text-lg py-3 px-2 hover:bg-gray-50 rounded"
+                className="text-gray-700 font-medium py-2 px-2 hover:bg-gray-50 rounded"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Services
@@ -100,39 +100,39 @@ export default function Header() {
 
               {/* Zones submenu */}
               <div className="py-2 px-2">
-                <p className="text-gray-500 font-medium mb-2">Nos zones :</p>
+                <p className="text-gray-500 text-sm font-medium mb-2">Nos zones :</p>
                 <div className="grid grid-cols-2 gap-2">
                   <Link
                     href="/taxi-massy"
-                    className="text-gray-700 py-2 px-3 bg-gray-50 rounded hover:bg-yellow-50"
+                    className="text-gray-700 text-sm py-2 px-3 bg-gray-50 rounded hover:bg-yellow-50"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Massy
                   </Link>
                   <Link
                     href="/taxi-palaiseau"
-                    className="text-gray-700 py-2 px-3 bg-gray-50 rounded hover:bg-yellow-50"
+                    className="text-gray-700 text-sm py-2 px-3 bg-gray-50 rounded hover:bg-yellow-50"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Palaiseau
                   </Link>
                   <Link
                     href="/taxi-ballainvilliers"
-                    className="text-gray-700 py-2 px-3 bg-gray-50 rounded hover:bg-yellow-50"
+                    className="text-gray-700 text-sm py-2 px-3 bg-gray-50 rounded hover:bg-yellow-50"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Ballainvilliers
                   </Link>
                   <Link
                     href="/taxi-longjumeau"
-                    className="text-gray-700 py-2 px-3 bg-gray-50 rounded hover:bg-yellow-50"
+                    className="text-gray-700 text-sm py-2 px-3 bg-gray-50 rounded hover:bg-yellow-50"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Longjumeau
                   </Link>
                   <Link
                     href="/taxi-antony"
-                    className="text-gray-700 py-2 px-3 bg-gray-50 rounded hover:bg-yellow-50 col-span-2"
+                    className="text-gray-700 text-sm py-2 px-3 bg-gray-50 rounded hover:bg-yellow-50 col-span-2"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Antony
@@ -142,7 +142,7 @@ export default function Header() {
 
               <Link
                 href="/contact"
-                className="text-gray-700 font-medium text-lg py-3 px-2 hover:bg-gray-50 rounded"
+                className="text-gray-700 font-medium py-2 px-2 hover:bg-gray-50 rounded"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
@@ -150,9 +150,9 @@ export default function Header() {
 
               <a
                 href="tel:+33680036463"
-                className="flex items-center justify-center gap-3 bg-yellow-400 text-black font-bold text-xl px-6 py-4 rounded-lg mt-4"
+                className="flex items-center justify-center gap-2 bg-yellow-400 text-black font-bold px-4 py-3 rounded-lg mt-2"
               >
-                <Phone className="w-6 h-6" />
+                <Phone className="w-5 h-5" />
                 06 80 03 64 63
               </a>
             </nav>
