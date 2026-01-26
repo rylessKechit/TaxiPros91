@@ -71,95 +71,102 @@ export default function Header() {
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-1"
+            className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Menu"
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            <div className="relative w-6 h-6">
+              <Menu className={`w-6 h-6 absolute transition-all duration-300 ${isMenuOpen ? 'opacity-0 rotate-90' : 'opacity-100 rotate-0'}`} />
+              <X className={`w-6 h-6 absolute transition-all duration-300 ${isMenuOpen ? 'opacity-100 rotate-0' : 'opacity-0 -rotate-90'}`} />
+            </div>
           </button>
         </div>
 
       </div>
 
       {/* Mobile Navigation - Overlay */}
-      {isMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-[52px] bg-white z-40 overflow-y-auto">
-          <nav className="flex flex-col gap-1 p-4">
-            <Link
-              href="/"
-              className="text-gray-700 font-medium py-3 px-3 hover:bg-gray-50 rounded-lg"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Accueil
-            </Link>
-            <Link
-              href="/#services"
-              className="text-gray-700 font-medium py-3 px-3 hover:bg-gray-50 rounded-lg"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Services
-            </Link>
+      <div
+        className={`lg:hidden fixed inset-0 top-[52px] bg-white z-40 overflow-y-auto transition-all duration-300 ease-out ${
+          isMenuOpen
+            ? 'opacity-100 translate-y-0 pointer-events-auto'
+            : 'opacity-0 -translate-y-4 pointer-events-none'
+        }`}
+      >
+        <nav className="flex flex-col gap-1 p-4">
+          <Link
+            href="/"
+            className="text-gray-700 font-medium py-3 px-3 hover:bg-gray-50 rounded-lg transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Accueil
+          </Link>
+          <Link
+            href="/#services"
+            className="text-gray-700 font-medium py-3 px-3 hover:bg-gray-50 rounded-lg transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Services
+          </Link>
 
-            {/* Zones submenu */}
-            <div className="py-3 px-3">
-              <p className="text-gray-500 text-sm font-medium mb-3">Nos zones :</p>
-              <div className="grid grid-cols-2 gap-2">
-                <Link
-                  href="/taxi-massy"
-                  className="text-gray-700 text-sm py-2.5 px-3 bg-gray-50 rounded-lg hover:bg-yellow-50"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Massy
-                </Link>
-                <Link
-                  href="/taxi-palaiseau"
-                  className="text-gray-700 text-sm py-2.5 px-3 bg-gray-50 rounded-lg hover:bg-yellow-50"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Palaiseau
-                </Link>
-                <Link
-                  href="/taxi-ballainvilliers"
-                  className="text-gray-700 text-sm py-2.5 px-3 bg-gray-50 rounded-lg hover:bg-yellow-50"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Ballainvilliers
-                </Link>
-                <Link
-                  href="/taxi-longjumeau"
-                  className="text-gray-700 text-sm py-2.5 px-3 bg-gray-50 rounded-lg hover:bg-yellow-50"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Longjumeau
-                </Link>
-                <Link
-                  href="/taxi-antony"
-                  className="text-gray-700 text-sm py-2.5 px-3 bg-gray-50 rounded-lg hover:bg-yellow-50 col-span-2"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Antony
-                </Link>
-              </div>
+          {/* Zones submenu */}
+          <div className="py-3 px-3">
+            <p className="text-gray-500 text-sm font-medium mb-3">Nos zones :</p>
+            <div className="grid grid-cols-2 gap-2">
+              <Link
+                href="/taxi-massy"
+                className="text-gray-700 text-sm py-2.5 px-3 bg-gray-50 rounded-lg hover:bg-yellow-50 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Massy
+              </Link>
+              <Link
+                href="/taxi-palaiseau"
+                className="text-gray-700 text-sm py-2.5 px-3 bg-gray-50 rounded-lg hover:bg-yellow-50 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Palaiseau
+              </Link>
+              <Link
+                href="/taxi-ballainvilliers"
+                className="text-gray-700 text-sm py-2.5 px-3 bg-gray-50 rounded-lg hover:bg-yellow-50 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Ballainvilliers
+              </Link>
+              <Link
+                href="/taxi-longjumeau"
+                className="text-gray-700 text-sm py-2.5 px-3 bg-gray-50 rounded-lg hover:bg-yellow-50 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Longjumeau
+              </Link>
+              <Link
+                href="/taxi-antony"
+                className="text-gray-700 text-sm py-2.5 px-3 bg-gray-50 rounded-lg hover:bg-yellow-50 transition-colors col-span-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Antony
+              </Link>
             </div>
+          </div>
 
-            <Link
-              href="/contact"
-              className="text-gray-700 font-medium py-3 px-3 hover:bg-gray-50 rounded-lg"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Contact
-            </Link>
+          <Link
+            href="/contact"
+            className="text-gray-700 font-medium py-3 px-3 hover:bg-gray-50 rounded-lg transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Contact
+          </Link>
 
-            <a
-              href="tel:+33680036463"
-              className="flex items-center justify-center gap-2 bg-yellow-400 text-black font-bold px-4 py-4 rounded-lg mt-4"
-            >
-              <Phone className="w-5 h-5" />
-              06 80 03 64 63
-            </a>
-          </nav>
-        </div>
-      )}
+          <a
+            href="tel:+33680036463"
+            className="flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-4 py-4 rounded-lg mt-4 transition-colors"
+          >
+            <Phone className="w-5 h-5" />
+            06 80 03 64 63
+          </a>
+        </nav>
+      </div>
     </header>
   )
 }

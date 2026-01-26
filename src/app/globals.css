@@ -31,3 +31,17 @@ input:focus, select:focus, textarea:focus {
   outline: none;
   border-color: #facc15;
 }
+
+/* Transitions globales */
+a, button {
+  transition: all 0.2s ease;
+}
+
+/* Animation hover sur les cartes */
+.hover\:shadow-lg {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.hover\:shadow-lg:hover {
+  transform: translateY(-2px);
+}
