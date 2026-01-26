@@ -20,7 +20,7 @@ export default function Home() {
       {/* Bouton appel flottant sur mobile */}
       <div className="fixed bottom-4 left-4 right-4 md:hidden z-50">
         <a
-          href="tel:+33100000000"
+          href="tel:+33680036463"
           className="flex items-center justify-center gap-3 bg-yellow-400 text-black font-bold text-xl py-4 px-6 rounded-lg shadow-lg"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

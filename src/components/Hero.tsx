@@ -1,84 +1,96 @@
-import { Phone, CheckCircle } from 'lucide-react'
+import { Phone, Star, Clock, Shield } from 'lucide-react'
+import Image from 'next/image'
 import BookingForm from './BookingForm'
 
 export default function Hero() {
   return (
-    <section id="accueil" className="min-h-[calc(100vh-80px)] flex flex-col">
+    <section id="accueil">
       {/* Bandeau téléphone */}
       <div className="bg-yellow-400 py-2">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center gap-3 text-center">
             <Phone className="w-5 h-5 text-black" />
             <span className="text-black font-medium">Réservation immédiate :</span>
-            <a href="tel:+33100000000" className="text-black font-bold text-xl hover:underline">
-              01 XX XX XX XX
+            <a href="tel:+33680036463" className="text-black font-bold text-xl hover:underline">
+              06 80 03 64 63
             </a>
           </div>
         </div>
       </div>
 
-      {/* Hero principal */}
-      <div className="bg-gray-50 flex-1 flex items-center py-8 lg:py-6">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      {/* Hero avec image de fond */}
+      <div className="relative min-h-[calc(100vh-120px)] flex items-center">
+        {/* Image de fond */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero-bg.webp"
+            alt="Taxi Premium Essonne"
+            fill
+            className="object-cover"
+            priority
+          />
+          {/* Overlay sombre */}
+          <div className="absolute inset-0 bg-black/60" />
+        </div>
+
+        {/* Contenu */}
+        <div className="container mx-auto px-4 relative z-10 py-8 lg:py-12">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             {/* Colonne gauche - Texte */}
-            <div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
-                Votre Taxi en Essonne
+            <div className="text-white">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="flex">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+                  ))}
+                </div>
+                <span className="text-gray-300">4.9/5 sur Google</span>
+              </div>
+
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 lg:mb-6 leading-tight">
+                Taxi Premium
+                <span className="text-yellow-400"> Essonne</span>
               </h1>
 
-              <p className="text-lg md:text-xl text-gray-600 mb-6">
-                Service de taxi professionnel disponible <strong>24h/24</strong> à Massy, Palaiseau,
-                Ballainvilliers, Longjumeau et Antony.
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-6 lg:mb-8 max-w-lg">
+                Votre service de taxi haut de gamme disponible <strong className="text-white">24h/24</strong> dans tout le 91.
               </p>
 
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                  <span className="text-gray-700">Chauffeurs professionnels et ponctuels</span>
+              {/* Valeurs */}
+              <div className="space-y-3 lg:space-y-4 mb-6 lg:mb-8">
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 lg:w-12 lg:h-12 bg-yellow-400/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-5 h-5 lg:w-6 lg:h-6 text-yellow-400" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-base lg:text-lg">Disponible 24h/24, 7j/7</p>
+                    <p className="text-gray-400 text-sm">Réservation immédiate ou à l'avance</p>
+                  </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                  <span className="text-gray-700">Tarifs transparents, prix fixe à l'avance</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                  <span className="text-gray-700">Transferts aéroport Orly et gares</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                  <span className="text-gray-700">Transport médical conventionné CPAM</span>
+
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 lg:w-12 lg:h-12 bg-yellow-400/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Shield className="w-5 h-5 lg:w-6 lg:h-6 text-yellow-400" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-base lg:text-lg">Chauffeurs professionnels</p>
+                    <p className="text-gray-400 text-sm">Formés, expérimentés et ponctuels</p>
+                  </div>
                 </div>
               </div>
 
-              {/* Bouton appel mobile */}
-              <a
-                href="tel:+33100000000"
-                className="lg:hidden flex items-center justify-center gap-3 bg-gray-900 text-white font-bold text-lg py-4 px-6 rounded-lg w-full"
-              >
-                <Phone className="w-5 h-5" />
-                Appeler maintenant
-              </a>
-
-              {/* Stats desktop */}
-              <div className="hidden lg:flex items-center gap-8 mt-6 pt-6 border-t border-gray-200">
-                <div>
-                  <p className="text-2xl font-bold text-gray-900">500+</p>
-                  <p className="text-gray-500 text-sm">Clients satisfaits</p>
-                </div>
-                <div>
-                  <p className="text-2xl font-bold text-gray-900">24/7</p>
-                  <p className="text-gray-500 text-sm">Disponibilité</p>
-                </div>
-                <div>
-                  <p className="text-2xl font-bold text-gray-900">15 min</p>
-                  <p className="text-gray-500 text-sm">Délai moyen</p>
-                </div>
+              {/* Villes desservies */}
+              <div className="flex flex-wrap gap-2">
+                {['Massy', 'Palaiseau', 'Longjumeau', 'Antony', 'Ballainvilliers'].map((city) => (
+                  <span key={city} className="bg-white/10 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm border border-white/20">
+                    {city}
+                  </span>
+                ))}
               </div>
             </div>
 
             {/* Colonne droite - Formulaire */}
-            <div className="hidden lg:block">
+            <div>
               <BookingForm compact />
             </div>
           </div>

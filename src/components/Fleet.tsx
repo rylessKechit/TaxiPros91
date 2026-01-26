@@ -1,33 +1,52 @@
-import { Users, Briefcase, Snowflake, Wifi } from 'lucide-react'
+import { Users, Briefcase, Snowflake, Wifi, Zap } from 'lucide-react'
 import Image from 'next/image'
 
 const vehicles = [
   {
-    name: 'Berline Confort',
-    model: 'Mercedes Classe E / BMW Série 5',
-    image: '/images/fleet/berline.jpg',
+    name: 'Mercedes Classe S',
+    category: 'Berline de Luxe',
+    image: '/images/fleet/s-class.webp',
     passengers: '1-4 passagers',
     luggage: '3 bagages',
-    features: ['Climatisation', 'Prises USB', 'Sièges cuir'],
-    description: 'Idéale pour vos trajets quotidiens et transferts aéroport.',
+    features: ['Sièges massants', 'Wifi', 'Champagne'],
+    description: 'Le summum du luxe pour vos événements et clients VIP.',
   },
   {
-    name: 'Van 7 places',
-    model: 'Mercedes Classe V / Volkswagen Caravelle',
-    image: '/images/fleet/van.jpg',
+    name: 'BMW Série 7',
+    category: 'Berline de Luxe',
+    image: '/images/fleet/7-series.webp',
+    passengers: '1-4 passagers',
+    luggage: '3 bagages',
+    features: ['Sièges cuir', 'Wifi', 'Confort premium'],
+    description: 'Élégance et technologie pour vos déplacements d\'affaires.',
+  },
+  {
+    name: 'Mercedes Classe V',
+    category: 'Van VIP',
+    image: '/images/fleet/v-class.webp',
     passengers: '1-7 passagers',
-    luggage: '7 bagages',
-    features: ['Climatisation', 'Espace bagages', 'Confort groupe'],
-    description: 'Parfait pour les familles et groupes, transferts avec bagages.',
+    luggage: '8 bagages',
+    features: ['Configuration salon', 'Climatisation', 'Grand espace'],
+    description: 'Parfait pour les groupes, familles et transferts aéroport.',
   },
   {
-    name: 'Berline Standard',
-    model: 'Peugeot 508 / Renault Talisman',
-    image: '/images/fleet/standard.jpg',
+    name: 'Mercedes Classe E',
+    category: 'Berline Premium',
+    image: '/images/fleet/e-class.webp',
+    passengers: '1-4 passagers',
+    luggage: '3 bagages',
+    features: ['Sièges cuir', 'Climatisation', 'Wifi'],
+    description: 'Notre véhicule phare pour tous vos trajets professionnels.',
+  },
+  {
+    name: 'Tesla Model 3',
+    category: 'Électrique',
+    image: '/images/fleet/model-3.webp',
     passengers: '1-4 passagers',
     luggage: '2 bagages',
-    features: ['Climatisation', 'GPS intégré', 'Confort'],
-    description: 'Solution économique pour vos courses en ville.',
+    features: ['100% électrique', 'Silencieuse', 'Écologique'],
+    description: 'Voyagez vert sans compromis sur le confort.',
+    isElectric: true,
   },
 ]
 
@@ -41,44 +60,41 @@ export default function Fleet() {
             Notre flotte de véhicules
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Des véhicules récents, confortables et parfaitement entretenus
+            Des véhicules haut de gamme, récents et parfaitement entretenus
             pour tous vos déplacements en Essonne.
           </p>
         </div>
 
         {/* Vehicles grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {vehicles.map((vehicle) => (
             <div
               key={vehicle.name}
-              className="bg-gray-50 rounded-xl overflow-hidden border border-gray-200"
+              className="bg-gray-50 rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow"
             >
               {/* Image */}
               <div className="relative h-48 bg-gray-200">
-                {/* Placeholder - remplacer par de vraies images */}
-                <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-700 to-gray-900">
-                  <div className="text-center text-white">
-                    <svg className="w-16 h-16 mx-auto mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7h8m-8 4h8m-4 4v-4m-6 8h12a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    <p className="text-sm opacity-75">Image à ajouter</p>
-                    <p className="text-xs opacity-50">/images/fleet/...</p>
-                  </div>
-                </div>
-                {/* Uncomment when you have real images:
                 <Image
                   src={vehicle.image}
                   alt={vehicle.name}
                   fill
                   className="object-cover"
                 />
-                */}
+                {/* Badge catégorie */}
+                <div className="absolute top-3 left-3">
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                    vehicle.isElectric
+                      ? 'bg-green-500 text-white'
+                      : 'bg-yellow-400 text-black'
+                  }`}>
+                    {vehicle.category}
+                  </span>
+                </div>
               </div>
 
               {/* Content */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-1">{vehicle.name}</h3>
-                <p className="text-gray-500 text-sm mb-4">{vehicle.model}</p>
+              <div className="p-5">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{vehicle.name}</h3>
 
                 {/* Specs */}
                 <div className="flex items-center gap-4 mb-4">
@@ -97,7 +113,11 @@ export default function Fleet() {
                   {vehicle.features.map((feature) => (
                     <span
                       key={feature}
-                      className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded"
+                      className={`text-xs px-2 py-1 rounded ${
+                        vehicle.isElectric
+                          ? 'bg-green-100 text-green-800'
+                          : 'bg-yellow-100 text-yellow-800'
+                      }`}
                     >
                       {feature}
                     </span>
@@ -120,19 +140,17 @@ export default function Fleet() {
             </div>
             <div className="flex items-center gap-2">
               <Wifi className="w-5 h-5 text-yellow-400" />
-              <span>Prises USB</span>
+              <span>Wifi gratuit</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Zap className="w-5 h-5 text-yellow-400" />
+              <span>Chargeurs USB</span>
             </div>
             <div className="flex items-center gap-2">
               <svg className="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
               </svg>
               <span>Paiement CB</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <svg className="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <span>Contrôle technique OK</span>
             </div>
           </div>
         </div>

@@ -27,7 +27,7 @@ export default function Contact() {
           <div className="container mx-auto px-4 text-center">
             <p className="text-black font-medium">
               Besoin d'un taxi ? Appelez-nous :{' '}
-              <a href="tel:+33100000000" className="font-bold text-xl hover:underline">01 XX XX XX XX</a>
+              <a href="tel:+33680036463" className="font-bold text-xl hover:underline">06 80 03 64 63</a>
             </p>
           </div>
         </section>
@@ -60,8 +60,8 @@ export default function Contact() {
                       </div>
                       <div>
                         <h3 className="font-bold text-gray-900 text-lg mb-1">Téléphone</h3>
-                        <a href="tel:+33100000000" className="text-2xl font-bold text-yellow-600 hover:text-yellow-700">
-                          01 XX XX XX XX
+                        <a href="tel:+33680036463" className="text-2xl font-bold text-yellow-600 hover:text-yellow-700">
+                          06 80 03 64 63
                         </a>
                         <p className="text-gray-600 mt-1">Disponible 24h/24, 7j/7</p>
                       </div>
@@ -220,7 +220,7 @@ export default function Contact() {
               <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
                 <h3 className="font-bold text-gray-900 mb-2">Comment réserver un taxi ?</h3>
                 <p className="text-gray-600">
-                  Vous pouvez réserver par téléphone au 01 XX XX XX XX (disponible 24h/24) ou via notre formulaire en ligne.
+                  Vous pouvez réserver par téléphone au 06 80 03 64 63 (disponible 24h/24) ou via notre formulaire en ligne.
                   Pour une course immédiate, nous vous recommandons l'appel téléphonique.
                 </p>
               </div>

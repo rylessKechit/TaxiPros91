@@ -47,23 +47,23 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
   }
 
   const inputClass = compact
-    ? "w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-gray-900 placeholder-gray-400 focus:border-yellow-400 focus:outline-none"
+    ? "w-full border-2 border-gray-200 rounded-lg px-3 py-2.5 text-gray-900 placeholder-gray-400 focus:border-yellow-400 focus:outline-none text-sm"
     : "w-full border-2 border-gray-200 rounded-lg px-4 py-4 text-gray-900 placeholder-gray-400 focus:border-yellow-400 focus:outline-none"
 
   const labelClass = compact
-    ? "block text-gray-700 font-medium mb-1.5"
+    ? "block text-gray-700 font-medium mb-1 text-sm"
     : "block text-gray-700 font-medium mb-2"
 
   return (
-    <div className={`bg-white rounded-xl shadow-lg border-2 border-gray-100 ${compact ? 'p-5' : 'p-6 md:p-8'}`}>
-      <h2 className={`font-bold text-gray-900 ${compact ? 'text-xl mb-1' : 'text-2xl mb-2'}`}>
+    <div className={`bg-white rounded-xl shadow-lg border-2 border-gray-100 ${compact ? 'p-4 sm:p-5' : 'p-6 md:p-8'}`}>
+      <h2 className={`font-bold text-gray-900 ${compact ? 'text-lg sm:text-xl mb-1' : 'text-2xl mb-2'}`}>
         Réserver votre taxi
       </h2>
-      <p className={`text-gray-600 ${compact ? 'mb-4' : 'mb-6'}`}>
+      <p className={`text-gray-600 ${compact ? 'text-sm mb-3' : 'mb-6'}`}>
         Obtenez une estimation de prix
       </p>
 
-      <form onSubmit={handleCalculatePrice} className={compact ? 'space-y-4' : 'space-y-5'}>
+      <form onSubmit={handleCalculatePrice} className={compact ? 'space-y-3' : 'space-y-5'}>
         {/* Adresse de départ */}
         <div>
           <label htmlFor="pickup" className={labelClass}>
@@ -98,9 +98,9 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
           />
         </div>
 
-        {/* Date, Heure, Passagers - sur une ligne en mode compact */}
+        {/* Date, Heure, Passagers */}
         {compact ? (
-          <div className="grid grid-cols-3 gap-2">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
             <div>
               <label htmlFor="date" className={labelClass}>Date *</label>
               <input
@@ -125,7 +125,7 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
                 required
               />
             </div>
-            <div>
+            <div className="col-span-2 sm:col-span-1">
               <label htmlFor="passengers" className={labelClass}>Passagers</label>
               <select
                 id="passengers"
@@ -210,7 +210,7 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
         {estimatedPrice && (
           <div className={`bg-yellow-50 border-2 border-yellow-400 rounded-lg ${compact ? 'p-3' : 'p-4'}`}>
             <p className="text-gray-700 text-sm mb-1">Estimation :</p>
-            <p className={`font-bold text-gray-900 ${compact ? 'text-2xl' : 'text-3xl'}`}>
+            <p className={`font-bold text-gray-900 ${compact ? 'text-xl sm:text-2xl' : 'text-3xl'}`}>
               {estimatedPrice.min}€ - {estimatedPrice.max}€
             </p>
           </div>
@@ -221,7 +221,7 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
           type="submit"
           disabled={isCalculating}
           className={`w-full bg-yellow-400 hover:bg-yellow-500 disabled:bg-yellow-300 text-black font-bold rounded-lg transition-colors flex items-center justify-center gap-2 ${
-            compact ? 'text-lg py-4' : 'text-xl py-5'
+            compact ? 'text-base py-3 sm:py-4' : 'text-xl py-5'
           }`}
         >
           {isCalculating ? (
@@ -241,11 +241,11 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
           <div className="text-center">
             <p className="text-gray-500 mb-3">ou appelez-nous directement</p>
             <a
-              href="tel:+33100000000"
+              href="tel:+33680036463"
               className="inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-gray-800 text-white font-bold text-xl py-4 px-8 rounded-lg"
             >
               <Phone className="w-6 h-6" />
-              01 XX XX XX XX
+              06 80 03 64 63
             </a>
           </div>
         )}

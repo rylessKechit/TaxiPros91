@@ -62,11 +62,11 @@ export default function Header() {
 
           {/* Phone - Always visible on desktop */}
           <a
-            href="tel:+33100000000"
+            href="tel:+33680036463"
             className="hidden lg:flex items-center gap-3 bg-yellow-400 hover:bg-yellow-500 text-black font-bold text-lg px-5 py-3 rounded-lg"
           >
             <Phone className="w-5 h-5" />
-            01 XX XX XX XX
+            06 80 03 64 63
           </a>
 
           {/* Mobile menu button */}
@@ -149,11 +149,11 @@ export default function Header() {
               </Link>
 
               <a
-                href="tel:+33100000000"
+                href="tel:+33680036463"
                 className="flex items-center justify-center gap-3 bg-yellow-400 text-black font-bold text-xl px-6 py-4 rounded-lg mt-4"
               >
                 <Phone className="w-6 h-6" />
-                01 XX XX XX XX
+                06 80 03 64 63
               </a>
             </nav>
           </div>

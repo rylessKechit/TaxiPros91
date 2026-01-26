@@ -42,7 +42,7 @@ export default function TaxiBallainvilliers() {
           <div className="container mx-auto px-4 text-center">
             <p className="text-black font-medium">
               Taxi à Ballainvilliers :{' '}
-              <a href="tel:+33100000000" className="font-bold text-xl hover:underline">01 XX XX XX XX</a>
+              <a href="tel:+33680036463" className="font-bold text-xl hover:underline">06 80 03 64 63</a>
             </p>
           </div>
         </section>
@@ -86,11 +86,11 @@ export default function TaxiBallainvilliers() {
                 </div>
 
                 <a
-                  href="tel:+33100000000"
+                  href="tel:+33680036463"
                   className="inline-flex items-center gap-3 bg-gray-900 text-white font-bold text-xl py-4 px-8 rounded-lg hover:bg-gray-800"
                 >
                   <Phone className="w-6 h-6" />
-                  01 XX XX XX XX
+                  06 80 03 64 63
                 </a>
               </div>
 
@@ -179,11 +179,11 @@ export default function TaxiBallainvilliers() {
                   Réservez votre taxi à Ballainvilliers
                 </p>
                 <a
-                  href="tel:+33100000000"
+                  href="tel:+33680036463"
                   className="inline-flex items-center gap-3 bg-yellow-400 text-black font-bold text-lg py-3 px-6 rounded-lg hover:bg-yellow-500"
                 >
                   <Phone className="w-5 h-5" />
-                  01 XX XX XX XX
+                  06 80 03 64 63
                 </a>
               </div>
             </div>
