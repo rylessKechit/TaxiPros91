@@ -15,7 +15,7 @@ export default function Footer() {
                 <span className="text-black font-bold text-2xl">T</span>
               </div>
               <div>
-                <div className="font-bold text-xl">Taxi Pros 91</div>
+                <div className="font-bold text-xl">TAXI Pro 91</div>
                 <div className="text-gray-400 text-sm">Essonne</div>
               </div>
             </div>
@@ -81,7 +81,7 @@ export default function Footer() {
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6">
           <p className="text-gray-500 text-center">
-            © {currentYear} Taxi Pros 91. Tous droits réservés.
+            © {currentYear} TAXI Pro 91. Tous droits réservés.
           </p>
         </div>
       </div>
@@ -89,7 +89,7 @@ export default function Footer() {
       {/* SEO text */}
       <div className="sr-only">
         <p>
-          Taxi Pros 91 - Service de taxi professionnel en Essonne.
+          TAXI Pro 91 - Service de taxi professionnel en Essonne.
           Nous desservons Massy, Palaiseau, Ballainvilliers, Longjumeau, Antony.
           Transferts aéroport Orly et Roissy CDG, gares, transport médical.
           Disponible 24h/24, 7j/7.

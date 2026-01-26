@@ -153,7 +153,7 @@ export default function TaxiMassy() {
 
               <div className="prose prose-lg text-gray-600">
                 <p>
-                  <strong>Taxi Pros 91</strong> est votre partenaire de confiance pour tous vos déplacements à Massy et dans l'Essonne.
+                  <strong>TAXI Pro 91</strong> est votre partenaire de confiance pour tous vos déplacements à Massy et dans l'Essonne.
                   Située au carrefour de plusieurs axes de transport majeurs, Massy est une ville dynamique qui nécessite
                   un service de taxi fiable et disponible à toute heure.
                 </p>

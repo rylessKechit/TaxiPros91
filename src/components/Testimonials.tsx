@@ -12,7 +12,7 @@ const testimonials = [
     name: 'Thomas D.',
     location: 'Palaiseau',
     service: 'Déplacement professionnel',
-    text: 'J\'utilise Taxi Pros 91 chaque semaine pour mes déplacements vers le plateau de Saclay. Ponctualité irréprochable, chauffeurs discrets et professionnels. La facturation entreprise est un vrai plus.',
+    text: 'J\'utilise TAXI Pro 91 chaque semaine pour mes déplacements vers le plateau de Saclay. Ponctualité irréprochable, chauffeurs discrets et professionnels. La facturation entreprise est un vrai plus.',
     date: 'Décembre 2024',
   },
   {
@@ -33,7 +33,7 @@ const testimonials = [
     name: 'Catherine B.',
     location: 'Ballainvilliers',
     service: 'Événement',
-    text: 'Nous avons fait appel à Taxi Pros 91 pour le mariage de notre fille. Transport des invités depuis la gare impeccable, coordination parfaite. Merci pour votre professionnalisme !',
+    text: 'Nous avons fait appel à TAXI Pro 91 pour le mariage de notre fille. Transport des invités depuis la gare impeccable, coordination parfaite. Merci pour votre professionnalisme !',
     date: 'Octobre 2024',
   },
   {

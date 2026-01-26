@@ -47,8 +47,7 @@ export default function Hero() {
               </div>
 
               <h1 className="text-[2.5rem] sm:text-5xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 lg:mb-6 leading-tight">
-                TaxiPros
-                <span className="text-yellow-400">91</span>
+                <span className="text-yellow-400">TAXI</span> Pro 91
               </h1>
 
               <p className="text-sm sm:text-xl md:text-2xl text-gray-200 mb-4 sm:mb-6 lg:mb-8 max-w-lg">

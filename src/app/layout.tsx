@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://taxipros91.fr'),
   title: {
     default: 'Taxi Essonne 91 | Réservation Taxi Massy, Palaiseau, Longjumeau, Antony',
-    template: '%s | Taxi Pros 91 - Votre Taxi en Essonne'
+    template: '%s | TAXI Pro 91 - Votre Taxi en Essonne'
   },
   description: 'Service de taxi professionnel en Essonne (91). Réservation facile et rapide à Massy, Palaiseau, Ballainvilliers, Longjumeau et Antony. Tarifs transparents, chauffeurs expérimentés. Disponible 24h/24 et 7j/7 pour tous vos trajets : gares, aéroports, hôpitaux, sorties.',
   keywords: [
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
     'chauffeur taxi massy', 'compagnie taxi palaiseau', 'centrale taxi longjumeau',
     'taxi antony gare rer', 'taxi ballainvilliers 91160'
   ],
-  authors: [{ name: 'Taxi Pros 91' }],
-  creator: 'Taxi Pros 91',
-  publisher: 'Taxi Pros 91',
+  authors: [{ name: 'TAXI Pro 91' }],
+  creator: 'TAXI Pro 91',
+  publisher: 'TAXI Pro 91',
   formatDetection: {
     email: false,
     address: false,
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'fr_FR',
     url: 'https://taxipros91.fr',
-    siteName: 'Taxi Pros 91',
+    siteName: 'TAXI Pro 91',
     title: 'Taxi Essonne 91 | Réservation Rapide Massy, Palaiseau, Longjumeau',
     description: 'Votre service de taxi de confiance en Essonne. Réservez en ligne votre taxi à Massy, Palaiseau, Ballainvilliers, Longjumeau et Antony. Tarifs clairs, service 24h/24.',
     images: [
@@ -41,13 +41,13 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Taxi Pros 91 - Service de taxi en Essonne',
+        alt: 'TAXI Pro 91 - Service de taxi en Essonne',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Taxi Pros 91 | Réservation Taxi Essonne',
+    title: 'TAXI Pro 91 | Réservation Taxi Essonne',
     description: 'Réservez votre taxi en Essonne. Service professionnel à Massy, Palaiseau, Longjumeau, Antony. Disponible 24h/24.',
     images: ['/og-image.jpg'],
   },
@@ -72,10 +72,10 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'TaxiService',
-  name: 'Taxi Pros 91',
+  name: 'TAXI Pro 91',
   description: 'Service de taxi professionnel en Essonne (91). Réservation à Massy, Palaiseau, Ballainvilliers, Longjumeau et Antony.',
   url: 'https://taxipros91.fr',
-  telephone: '+33 1 XX XX XX XX',
+  telephone: '+33680036463',
   priceRange: '€€',
   areaServed: [
     {

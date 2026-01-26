@@ -17,7 +17,7 @@ export default function Header() {
               <span className="text-black font-bold text-lg sm:text-2xl">T</span>
             </div>
             <div>
-              <div className="font-bold text-base sm:text-2xl text-gray-900">Taxi Pros 91</div>
+              <div className="font-bold text-base sm:text-2xl text-gray-900">TAXI Pro 91</div>
               <div className="text-gray-600 text-xs sm:text-sm hidden sm:block">Essonne - 24h/24</div>
             </div>
           </Link>
