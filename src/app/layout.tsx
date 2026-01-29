@@ -8,7 +8,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://taxipros91.fr'),
+  metadataBase: new URL('https://taxipro91.com'),
   title: {
     default: 'Taxi Essonne 91 | Réservation Taxi Massy, Palaiseau, Les Ulis, Saclay, Longjumeau, Antony',
     template: '%s | TAXI Pro 91 - Votre Taxi en Essonne'
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
-    url: 'https://taxipros91.fr',
+    url: 'https://taxipro91.com',
     siteName: 'TAXI Pro 91',
     title: 'Taxi Essonne 91 | Réservation Rapide Massy, Palaiseau, Les Ulis, Saclay, Longjumeau, Antony',
     description: 'Votre service de taxi de confiance en Essonne. Réservez votre taxi à Massy, Palaiseau, Ballainvilliers, Verrières-le-Buisson, Les Ulis, Saclay, Longjumeau et Antony. Service 24h/24.',
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://taxipros91.fr',
+    canonical: 'https://taxipro91.com',
   },
   category: 'transportation',
 }
@@ -81,7 +81,7 @@ const jsonLd = {
   '@type': ['TaxiService', 'LocalBusiness'],
   name: 'TAXI Pro 91',
   description: 'Service de taxi professionnel en Essonne (91). Réservation à Massy, Palaiseau, Ballainvilliers, Longjumeau, Antony, Verrières-le-Buisson, Les Ulis et Saclay.',
-  url: 'https://taxipros91.fr',
+  url: 'https://taxipro91.com',
   telephone: '+33680036463',
   priceRange: '€€',
   areaServed: [
@@ -155,8 +155,8 @@ const jsonLd = {
     'https://www.facebook.com/taxipros91',
     'https://www.instagram.com/taxipros91'
   ],
-  image: 'https://taxipros91.fr/og-image.webp',
-  logo: 'https://taxipros91.fr/logo.webp',
+  image: 'https://taxipro91.com/og-image.webp',
+  logo: 'https://taxipro91.com/logo.webp',
   currenciesAccepted: 'EUR',
   paymentAccepted: 'Cash, Credit Card',
   hasOfferCatalog: {

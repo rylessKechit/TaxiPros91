@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://taxipros91.fr'
+  const baseUrl = 'https://taxipro91.com'
 
   const cities = [
     'taxi-massy',

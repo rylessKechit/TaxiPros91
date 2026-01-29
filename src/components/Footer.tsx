@@ -58,9 +58,9 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:contact@taxipros91.fr" className="flex items-center gap-3 text-gray-300 hover:text-yellow-400">
+                <a href="mailto:contact@taxipro91.com" className="flex items-center gap-3 text-gray-300 hover:text-yellow-400">
                   <Mail className="w-5 h-5 text-yellow-400" />
-                  contact@taxipros91.fr
+                  contact@taxipro91.com
                 </a>
               </li>
               <li className="flex items-center gap-3 text-gray-300">

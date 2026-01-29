@@ -13,10 +13,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Taxi Antony (92160) | Orlyval & RER B',
     description: 'Votre taxi à Antony : Orlyval, RER B, aéroport Orly. Disponible 24h/24.',
-    url: 'https://taxipros91.fr/taxi-antony',
+    url: 'https://taxipro91.com/taxi-antony',
   },
   alternates: {
-    canonical: 'https://taxipros91.fr/taxi-antony',
+    canonical: 'https://taxipro91.com/taxi-antony',
   },
 }
 

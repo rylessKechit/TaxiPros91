@@ -13,10 +13,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Taxi Palaiseau (91120) | Plateau de Saclay',
     description: 'Votre taxi à Palaiseau : Polytechnique, plateau de Saclay, gare RER. Disponible 24h/24.',
-    url: 'https://taxipros91.fr/taxi-palaiseau',
+    url: 'https://taxipro91.com/taxi-palaiseau',
   },
   alternates: {
-    canonical: 'https://taxipros91.fr/taxi-palaiseau',
+    canonical: 'https://taxipro91.com/taxi-palaiseau',
   },
 }
 

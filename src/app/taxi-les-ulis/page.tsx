@@ -14,10 +14,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Taxi Les Ulis (91940) | Zone de Courtabœuf - Service 24h/24',
     description: 'Votre taxi aux Ulis et zone de Courtabœuf : entreprises, aéroport, gare. Réservation rapide, tarifs transparents.',
-    url: 'https://taxipros91.fr/taxi-les-ulis',
+    url: 'https://taxipro91.com/taxi-les-ulis',
   },
   alternates: {
-    canonical: 'https://taxipros91.fr/taxi-les-ulis',
+    canonical: 'https://taxipro91.com/taxi-les-ulis',
   },
 }
 
