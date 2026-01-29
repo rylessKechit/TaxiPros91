@@ -5,11 +5,11 @@ const allCities = [
   { name: 'Massy', slug: 'taxi-massy' },
   { name: 'Palaiseau', slug: 'taxi-palaiseau' },
   { name: 'Ballainvilliers', slug: 'taxi-ballainvilliers' },
-  { name: 'Longjumeau', slug: 'taxi-longjumeau' },
-  { name: 'Antony', slug: 'taxi-antony' },
   { name: 'Verrières-le-Buisson', slug: 'taxi-verrieres-le-buisson' },
   { name: 'Les Ulis', slug: 'taxi-les-ulis' },
   { name: 'Saclay', slug: 'taxi-saclay' },
+  { name: 'Longjumeau', slug: 'taxi-longjumeau' },
+  { name: 'Antony', slug: 'taxi-antony' },
 ]
 
 export default function RelatedCities({ currentSlug }: { currentSlug: string }) {

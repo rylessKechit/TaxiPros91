@@ -42,12 +42,6 @@ export default function Header() {
                 <Link href="/taxi-ballainvilliers" className="block px-4 py-2 text-gray-700 hover:bg-yellow-50 hover:text-yellow-600">
                   Taxi Ballainvilliers
                 </Link>
-                <Link href="/taxi-longjumeau" className="block px-4 py-2 text-gray-700 hover:bg-yellow-50 hover:text-yellow-600">
-                  Taxi Longjumeau
-                </Link>
-                <Link href="/taxi-antony" className="block px-4 py-2 text-gray-700 hover:bg-yellow-50 hover:text-yellow-600">
-                  Taxi Antony
-                </Link>
                 <Link href="/taxi-verrieres-le-buisson" className="block px-4 py-2 text-gray-700 hover:bg-yellow-50 hover:text-yellow-600">
                   Taxi Verrières-le-Buisson
                 </Link>
@@ -56,6 +50,12 @@ export default function Header() {
                 </Link>
                 <Link href="/taxi-saclay" className="block px-4 py-2 text-gray-700 hover:bg-yellow-50 hover:text-yellow-600">
                   Taxi Saclay
+                </Link>
+                <Link href="/taxi-longjumeau" className="block px-4 py-2 text-gray-700 hover:bg-yellow-50 hover:text-yellow-600">
+                  Taxi Longjumeau
+                </Link>
+                <Link href="/taxi-antony" className="block px-4 py-2 text-gray-700 hover:bg-yellow-50 hover:text-yellow-600">
+                  Taxi Antony
                 </Link>
               </div>
             </div>
@@ -138,20 +138,6 @@ export default function Header() {
                 Ballainvilliers
               </Link>
               <Link
-                href="/taxi-longjumeau"
-                className="text-gray-700 text-sm py-2.5 px-3 bg-gray-50 rounded-lg hover:bg-yellow-50 transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Longjumeau
-              </Link>
-              <Link
-                href="/taxi-antony"
-                className="text-gray-700 text-sm py-2.5 px-3 bg-gray-50 rounded-lg hover:bg-yellow-50 transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Antony
-              </Link>
-              <Link
                 href="/taxi-verrieres-le-buisson"
                 className="text-gray-700 text-sm py-2.5 px-3 bg-gray-50 rounded-lg hover:bg-yellow-50 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
@@ -171,6 +157,20 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Saclay
+              </Link>
+              <Link
+                href="/taxi-longjumeau"
+                className="text-gray-700 text-sm py-2.5 px-3 bg-gray-50 rounded-lg hover:bg-yellow-50 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Longjumeau
+              </Link>
+              <Link
+                href="/taxi-antony"
+                className="text-gray-700 text-sm py-2.5 px-3 bg-gray-50 rounded-lg hover:bg-yellow-50 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Antony
               </Link>
             </div>
           </div>

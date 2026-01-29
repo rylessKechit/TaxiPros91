@@ -79,7 +79,7 @@ export default function Hero() {
 
               {/* Villes desservies */}
               <div className="flex flex-wrap gap-1.5 sm:gap-2">
-                {['Massy', 'Palaiseau', 'Longjumeau', 'Antony', 'Ballainvilliers', 'Les Ulis', 'Verrières-le-Buisson', 'Saclay'].map((city) => (
+                {['Massy', 'Palaiseau', 'Ballainvilliers', 'Verrières-le-Buisson', 'Les Ulis', 'Saclay', 'Longjumeau', 'Antony'].map((city) => (
                   <span key={city} className="bg-white/10 backdrop-blur-sm text-white px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-xs sm:text-sm border border-white/20">
                     {city}
                   </span>

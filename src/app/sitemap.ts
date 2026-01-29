@@ -7,11 +7,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'taxi-massy',
     'taxi-palaiseau',
     'taxi-ballainvilliers',
-    'taxi-longjumeau',
-    'taxi-antony',
     'taxi-verrieres-le-buisson',
     'taxi-les-ulis',
     'taxi-saclay',
+    'taxi-longjumeau',
+    'taxi-antony',
   ]
 
   const cityPages = cities.map((city) => ({

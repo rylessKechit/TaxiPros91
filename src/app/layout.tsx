@@ -10,10 +10,10 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://taxipros91.fr'),
   title: {
-    default: 'Taxi Essonne 91 | Réservation Taxi Massy, Palaiseau, Longjumeau, Antony',
+    default: 'Taxi Essonne 91 | Réservation Taxi Massy, Palaiseau, Les Ulis, Saclay, Longjumeau, Antony',
     template: '%s | TAXI Pro 91 - Votre Taxi en Essonne'
   },
-  description: 'Service de taxi professionnel en Essonne (91). Réservation facile et rapide à Massy, Palaiseau, Ballainvilliers, Longjumeau et Antony. Tarifs transparents, chauffeurs expérimentés. Disponible 24h/24 et 7j/7 pour tous vos trajets : gares, aéroports, hôpitaux, sorties.',
+  description: 'Service de taxi professionnel en Essonne (91). Réservation rapide à Massy, Palaiseau, Ballainvilliers, Verrières-le-Buisson, Les Ulis, Saclay, Longjumeau et Antony. Tarifs transparents, chauffeurs expérimentés. Disponible 24h/24 et 7j/7.',
   keywords: [
     // Mots-clés principaux
     'taxi essonne', 'taxi 91', 'taxi massy', 'taxi palaiseau', 'taxi longjumeau',
@@ -41,8 +41,8 @@ export const metadata: Metadata = {
     locale: 'fr_FR',
     url: 'https://taxipros91.fr',
     siteName: 'TAXI Pro 91',
-    title: 'Taxi Essonne 91 | Réservation Rapide Massy, Palaiseau, Longjumeau',
-    description: 'Votre service de taxi de confiance en Essonne. Réservez en ligne votre taxi à Massy, Palaiseau, Ballainvilliers, Longjumeau et Antony. Tarifs clairs, service 24h/24.',
+    title: 'Taxi Essonne 91 | Réservation Rapide Massy, Palaiseau, Les Ulis, Saclay, Longjumeau, Antony',
+    description: 'Votre service de taxi de confiance en Essonne. Réservez votre taxi à Massy, Palaiseau, Ballainvilliers, Verrières-le-Buisson, Les Ulis, Saclay, Longjumeau et Antony. Service 24h/24.',
     images: [
       {
         url: '/og-image.webp',
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'TAXI Pro 91 | Réservation Taxi Essonne',
-    description: 'Réservez votre taxi en Essonne. Service professionnel à Massy, Palaiseau, Longjumeau, Antony. Disponible 24h/24.',
+    description: 'Réservez votre taxi en Essonne. Service professionnel à Massy, Palaiseau, Verrières-le-Buisson, Les Ulis, Saclay, Longjumeau et Antony. 24h/24.',
     images: ['/og-image.webp'],
   },
   robots: {
@@ -102,16 +102,6 @@ const jsonLd = {
     },
     {
       '@type': 'City',
-      name: 'Longjumeau',
-      containedInPlace: { '@type': 'AdministrativeArea', name: 'Essonne' }
-    },
-    {
-      '@type': 'City',
-      name: 'Antony',
-      containedInPlace: { '@type': 'AdministrativeArea', name: 'Hauts-de-Seine' }
-    },
-    {
-      '@type': 'City',
       name: 'Verrières-le-Buisson',
       containedInPlace: { '@type': 'AdministrativeArea', name: 'Essonne' }
     },
@@ -124,6 +114,16 @@ const jsonLd = {
       '@type': 'City',
       name: 'Saclay',
       containedInPlace: { '@type': 'AdministrativeArea', name: 'Essonne' }
+    },
+    {
+      '@type': 'City',
+      name: 'Longjumeau',
+      containedInPlace: { '@type': 'AdministrativeArea', name: 'Essonne' }
+    },
+    {
+      '@type': 'City',
+      name: 'Antony',
+      containedInPlace: { '@type': 'AdministrativeArea', name: 'Hauts-de-Seine' }
     }
   ],
   address: {

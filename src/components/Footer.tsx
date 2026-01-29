@@ -39,11 +39,11 @@ export default function Footer() {
               <li><Link href="/taxi-massy" className="text-gray-300 hover:text-yellow-400">Taxi Massy</Link></li>
               <li><Link href="/taxi-palaiseau" className="text-gray-300 hover:text-yellow-400">Taxi Palaiseau</Link></li>
               <li><Link href="/taxi-ballainvilliers" className="text-gray-300 hover:text-yellow-400">Taxi Ballainvilliers</Link></li>
-              <li><Link href="/taxi-longjumeau" className="text-gray-300 hover:text-yellow-400">Taxi Longjumeau</Link></li>
-              <li><Link href="/taxi-antony" className="text-gray-300 hover:text-yellow-400">Taxi Antony</Link></li>
               <li><Link href="/taxi-verrieres-le-buisson" className="text-gray-300 hover:text-yellow-400">Taxi Verrières-le-Buisson</Link></li>
               <li><Link href="/taxi-les-ulis" className="text-gray-300 hover:text-yellow-400">Taxi Les Ulis</Link></li>
               <li><Link href="/taxi-saclay" className="text-gray-300 hover:text-yellow-400">Taxi Saclay</Link></li>
+              <li><Link href="/taxi-longjumeau" className="text-gray-300 hover:text-yellow-400">Taxi Longjumeau</Link></li>
+              <li><Link href="/taxi-antony" className="text-gray-300 hover:text-yellow-400">Taxi Antony</Link></li>
             </ul>
           </div>
 
@@ -89,7 +89,7 @@ export default function Footer() {
       <div className="sr-only">
         <p>
           TAXI Pro 91 - Service de taxi professionnel en Essonne.
-          Nous desservons Massy, Palaiseau, Ballainvilliers, Longjumeau, Antony, Verrières-le-Buisson, Les Ulis et Saclay.
+          Nous desservons Massy, Palaiseau, Ballainvilliers, Verrières-le-Buisson, Les Ulis, Saclay, Longjumeau et Antony.
           Transferts aéroport Orly et Roissy CDG, gares, transport médical.
           Disponible 24h/24, 7j/7.
         </p>

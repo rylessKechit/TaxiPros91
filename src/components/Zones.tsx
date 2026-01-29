@@ -27,22 +27,6 @@ const zones = [
     population: '4 500 habitants',
   },
   {
-    city: 'Longjumeau',
-    postalCode: '91160',
-    slug: 'taxi-longjumeau',
-    description: 'Taxi disponible à Longjumeau pour la gare, le centre hospitalier, les zones commerciales et l\'accès à l\'autoroute A6.',
-    highlights: ['Gare de Longjumeau', 'Centre hospitalier', 'Zone commerciale', 'Accès A6'],
-    population: '22 000 habitants',
-  },
-  {
-    city: 'Antony',
-    postalCode: '92160',
-    slug: 'taxi-antony',
-    description: 'Service de taxi à Antony avec connexion directe vers Orly via Orlyval. Desserte du RER B, du Parc de Sceaux et de tous les quartiers.',
-    highlights: ['RER B Antony', 'Orlyval', 'Parc de Sceaux', 'Centre-ville'],
-    population: '62 000 habitants',
-  },
-  {
     city: 'Verrières-le-Buisson',
     postalCode: '91370',
     slug: 'taxi-verrieres-le-buisson',
@@ -66,6 +50,22 @@ const zones = [
     highlights: ['Plateau de Saclay', 'CEA', 'Université Paris-Saclay', 'Grandes écoles'],
     population: '4 000 habitants',
   },
+  {
+    city: 'Longjumeau',
+    postalCode: '91160',
+    slug: 'taxi-longjumeau',
+    description: 'Taxi disponible à Longjumeau pour la gare, le centre hospitalier, les zones commerciales et l\'accès à l\'autoroute A6.',
+    highlights: ['Gare de Longjumeau', 'Centre hospitalier', 'Zone commerciale', 'Accès A6'],
+    population: '22 000 habitants',
+  },
+  {
+    city: 'Antony',
+    postalCode: '92160',
+    slug: 'taxi-antony',
+    description: 'Service de taxi à Antony avec connexion directe vers Orly via Orlyval. Desserte du RER B, du Parc de Sceaux et de tous les quartiers.',
+    highlights: ['RER B Antony', 'Orlyval', 'Parc de Sceaux', 'Centre-ville'],
+    population: '62 000 habitants',
+  },
 ]
 
 const otherCities = [
@@ -84,7 +84,7 @@ export default function Zones() {
             Zones desservies par nos taxis
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Nous intervenons principalement à Massy, Palaiseau, Ballainvilliers, Longjumeau, Antony, Verrières-le-Buisson, Les Ulis et Saclay,
+            Nous intervenons principalement à Massy, Palaiseau, Ballainvilliers, Verrières-le-Buisson, Les Ulis, Saclay, Longjumeau et Antony,
             mais également dans toutes les communes de l'Essonne (91) et des Hauts-de-Seine (92).
           </p>
         </div>
