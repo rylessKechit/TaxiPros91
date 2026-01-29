@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import RelatedCities from '@/components/RelatedCities'
 import BookingForm from '@/components/BookingForm'
 import { Phone, MapPin, CheckCircle } from 'lucide-react'
 
@@ -189,6 +190,7 @@ export default function TaxiLongjumeau() {
             </div>
           </div>
         </section>
+      <RelatedCities currentSlug="taxi-longjumeau" />
       </main>
       <Footer />
     </>

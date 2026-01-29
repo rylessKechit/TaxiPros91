@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Clock } from 'lucide-react'
+import Link from 'next/link'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -40,11 +41,14 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-4">Zones desservies</h3>
             <ul className="space-y-2">
-              <li><span className="text-gray-400">Taxi Massy</span></li>
-              <li><span className="text-gray-400">Taxi Palaiseau</span></li>
-              <li><span className="text-gray-400">Taxi Ballainvilliers</span></li>
-              <li><span className="text-gray-400">Taxi Longjumeau</span></li>
-              <li><span className="text-gray-400">Taxi Antony</span></li>
+              <li><Link href="/taxi-massy" className="text-gray-400 hover:text-yellow-400">Taxi Massy</Link></li>
+              <li><Link href="/taxi-palaiseau" className="text-gray-400 hover:text-yellow-400">Taxi Palaiseau</Link></li>
+              <li><Link href="/taxi-ballainvilliers" className="text-gray-400 hover:text-yellow-400">Taxi Ballainvilliers</Link></li>
+              <li><Link href="/taxi-longjumeau" className="text-gray-400 hover:text-yellow-400">Taxi Longjumeau</Link></li>
+              <li><Link href="/taxi-antony" className="text-gray-400 hover:text-yellow-400">Taxi Antony</Link></li>
+              <li><Link href="/taxi-verrieres-le-buisson" className="text-gray-400 hover:text-yellow-400">Taxi Verrières-le-Buisson</Link></li>
+              <li><Link href="/taxi-les-ulis" className="text-gray-400 hover:text-yellow-400">Taxi Les Ulis</Link></li>
+              <li><Link href="/taxi-saclay" className="text-gray-400 hover:text-yellow-400">Taxi Saclay</Link></li>
             </ul>
           </div>
 
@@ -90,7 +94,7 @@ export default function Footer() {
       <div className="sr-only">
         <p>
           TAXI Pro 91 - Service de taxi professionnel en Essonne.
-          Nous desservons Massy, Palaiseau, Ballainvilliers, Longjumeau, Antony.
+          Nous desservons Massy, Palaiseau, Ballainvilliers, Longjumeau, Antony, Verrières-le-Buisson, Les Ulis et Saclay.
           Transferts aéroport Orly et Roissy CDG, gares, transport médical.
           Disponible 24h/24, 7j/7.
         </p>

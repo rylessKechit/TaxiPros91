@@ -1,5 +1,11 @@
 import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
 import './globals.css'
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://taxipros91.fr'),
@@ -11,7 +17,8 @@ export const metadata: Metadata = {
   keywords: [
     // Mots-clés principaux
     'taxi essonne', 'taxi 91', 'taxi massy', 'taxi palaiseau', 'taxi longjumeau',
-    'taxi antony', 'taxi ballainvilliers', 'réservation taxi 91',
+    'taxi antony', 'taxi ballainvilliers', 'taxi verrières-le-buisson', 'taxi les ulis',
+    'taxi saclay', 'taxi courtaboeuf', 'réservation taxi 91',
     // Mots-clés longue traîne
     'taxi pas cher essonne', 'taxi aéroport orly massy', 'taxi gare massy palaiseau',
     'taxi conventionné essonne', 'taxi médical 91', 'taxi aéroport cdg essonne',
@@ -73,7 +80,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'TaxiService',
   name: 'TAXI Pro 91',
-  description: 'Service de taxi professionnel en Essonne (91). Réservation à Massy, Palaiseau, Ballainvilliers, Longjumeau et Antony.',
+  description: 'Service de taxi professionnel en Essonne (91). Réservation à Massy, Palaiseau, Ballainvilliers, Longjumeau, Antony, Verrières-le-Buisson, Les Ulis et Saclay.',
   url: 'https://taxipros91.fr',
   telephone: '+33680036463',
   priceRange: '€€',
@@ -102,6 +109,21 @@ const jsonLd = {
       '@type': 'City',
       name: 'Antony',
       containedInPlace: { '@type': 'AdministrativeArea', name: 'Hauts-de-Seine' }
+    },
+    {
+      '@type': 'City',
+      name: 'Verrières-le-Buisson',
+      containedInPlace: { '@type': 'AdministrativeArea', name: 'Essonne' }
+    },
+    {
+      '@type': 'City',
+      name: 'Les Ulis',
+      containedInPlace: { '@type': 'AdministrativeArea', name: 'Essonne' }
+    },
+    {
+      '@type': 'City',
+      name: 'Saclay',
+      containedInPlace: { '@type': 'AdministrativeArea', name: 'Essonne' }
     }
   ],
   address: {
@@ -121,6 +143,13 @@ const jsonLd = {
     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
     opens: '00:00',
     closes: '23:59'
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '500',
+    bestRating: '5',
+    worstRating: '1'
   },
   sameAs: [
     'https://www.facebook.com/taxipros91',
@@ -149,7 +178,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="antialiased">
+      <body className={`${inter.className} antialiased`}>
         {children}
       </body>
     </html>

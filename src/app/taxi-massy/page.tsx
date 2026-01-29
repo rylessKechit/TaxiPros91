@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import RelatedCities from '@/components/RelatedCities'
 import BookingForm from '@/components/BookingForm'
 import { Phone, MapPin, Train, Plane, Clock, CheckCircle } from 'lucide-react'
 
@@ -193,6 +194,7 @@ export default function TaxiMassy() {
             </div>
           </div>
         </section>
+      <RelatedCities currentSlug="taxi-massy" />
       </main>
       <Footer />
     </>

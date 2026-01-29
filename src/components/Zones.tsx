@@ -42,12 +42,36 @@ const zones = [
     highlights: ['RER B Antony', 'Orlyval', 'Parc de Sceaux', 'Centre-ville'],
     population: '62 000 habitants',
   },
+  {
+    city: 'Verrières-le-Buisson',
+    postalCode: '91370',
+    slug: 'taxi-verrieres-le-buisson',
+    description: 'Taxi à Verrières-le-Buisson pour tous vos déplacements. Accès rapide vers Antony, Massy et les axes A86/N118.',
+    highlights: ['Centre-ville', 'Forêt de Verrières', 'Accès A86', 'Proximité Antony'],
+    population: '16 000 habitants',
+  },
+  {
+    city: 'Les Ulis',
+    postalCode: '91940',
+    slug: 'taxi-les-ulis',
+    description: 'Votre taxi aux Ulis et à la zone industrielle de Courtabœuf. Desserte des entreprises, du centre commercial Ulis 2 et de toute la zone d\'activités.',
+    highlights: ['Zone de Courtabœuf', 'Centre commercial Ulis 2', 'Entreprises', 'Accès N118'],
+    population: '25 000 habitants',
+  },
+  {
+    city: 'Saclay',
+    postalCode: '91400',
+    slug: 'taxi-saclay',
+    description: 'Taxi à Saclay pour le plateau de Saclay, le CEA, les grandes écoles et universités. Desserte du campus Paris-Saclay.',
+    highlights: ['Plateau de Saclay', 'CEA', 'Université Paris-Saclay', 'Grandes écoles'],
+    population: '4 000 habitants',
+  },
 ]
 
 const otherCities = [
   'Savigny-sur-Orge', 'Chilly-Mazarin', 'Morangis', 'Wissous', 'Champlan',
-  'Villebon-sur-Yvette', 'Les Ulis', 'Orsay', 'Bures-sur-Yvette', 'Gif-sur-Yvette',
-  'Verrières-le-Buisson', 'Igny', 'Bièvres', 'Saclay', 'Vauhallan'
+  'Villebon-sur-Yvette', 'Orsay', 'Bures-sur-Yvette', 'Gif-sur-Yvette',
+  'Igny', 'Bièvres', 'Vauhallan'
 ]
 
 export default function Zones() {
@@ -60,7 +84,7 @@ export default function Zones() {
             Zones desservies par nos taxis
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Nous intervenons principalement à Massy, Palaiseau, Ballainvilliers, Longjumeau et Antony,
+            Nous intervenons principalement à Massy, Palaiseau, Ballainvilliers, Longjumeau, Antony, Verrières-le-Buisson, Les Ulis et Saclay,
             mais également dans toutes les communes de l'Essonne (91) et des Hauts-de-Seine (92).
           </p>
         </div>

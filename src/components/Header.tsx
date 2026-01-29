@@ -53,6 +53,15 @@ export default function Header() {
                 <Link href="/taxi-antony" className="block px-4 py-2 text-gray-700 hover:bg-yellow-50 hover:text-yellow-600">
                   Taxi Antony
                 </Link>
+                <Link href="/taxi-verrieres-le-buisson" className="block px-4 py-2 text-gray-700 hover:bg-yellow-50 hover:text-yellow-600">
+                  Taxi Verrières-le-Buisson
+                </Link>
+                <Link href="/taxi-les-ulis" className="block px-4 py-2 text-gray-700 hover:bg-yellow-50 hover:text-yellow-600">
+                  Taxi Les Ulis
+                </Link>
+                <Link href="/taxi-saclay" className="block px-4 py-2 text-gray-700 hover:bg-yellow-50 hover:text-yellow-600">
+                  Taxi Saclay
+                </Link>
               </div>
             </div>
             <Link href="/contact" className="text-gray-700 hover:text-yellow-600 font-medium">
@@ -142,10 +151,31 @@ export default function Header() {
               </Link>
               <Link
                 href="/taxi-antony"
-                className="text-gray-700 text-sm py-2.5 px-3 bg-gray-50 rounded-lg hover:bg-yellow-50 transition-colors col-span-2"
+                className="text-gray-700 text-sm py-2.5 px-3 bg-gray-50 rounded-lg hover:bg-yellow-50 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Antony
+              </Link>
+              <Link
+                href="/taxi-verrieres-le-buisson"
+                className="text-gray-700 text-sm py-2.5 px-3 bg-gray-50 rounded-lg hover:bg-yellow-50 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Verrières-le-Buisson
+              </Link>
+              <Link
+                href="/taxi-les-ulis"
+                className="text-gray-700 text-sm py-2.5 px-3 bg-gray-50 rounded-lg hover:bg-yellow-50 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Les Ulis
+              </Link>
+              <Link
+                href="/taxi-saclay"
+                className="text-gray-700 text-sm py-2.5 px-3 bg-gray-50 rounded-lg hover:bg-yellow-50 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Saclay
               </Link>
             </div>
           </div>

@@ -3,22 +3,15 @@ import Image from 'next/image'
 
 const vehicles = [
   {
-    name: 'Mercedes Classe S',
-    category: 'Berline de Luxe',
-    image: '/images/fleet/s-class.webp',
+    name: 'Tesla Model Y',
+    category: 'SUV Électrique',
+    image: '/images/fleet/model-y.webp',
     passengers: '1-4 passagers',
-    luggage: '3 bagages',
-    features: ['Sièges massants', 'Wifi', 'Champagne'],
-    description: 'Le summum du luxe pour vos événements et clients VIP.',
-  },
-  {
-    name: 'BMW Série 7',
-    category: 'Berline de Luxe',
-    image: '/images/fleet/7-series.webp',
-    passengers: '1-4 passagers',
-    luggage: '3 bagages',
-    features: ['Sièges cuir', 'Wifi', 'Confort premium'],
-    description: 'Élégance et technologie pour vos déplacements d\'affaires.',
+    luggage: '4 bagages',
+    features: ['100% électrique', 'Grand coffre', 'Écran tactile'],
+    description: 'SUV spacieux et écologique pour tous vos trajets en confort.',
+    isElectric: true,
+    objectFit: 'contain' as const,
   },
   {
     name: 'Mercedes Classe V',
@@ -37,16 +30,6 @@ const vehicles = [
     luggage: '3 bagages',
     features: ['Sièges cuir', 'Climatisation', 'Wifi'],
     description: 'Notre véhicule phare pour tous vos trajets professionnels.',
-  },
-  {
-    name: 'Tesla Model 3',
-    category: 'Électrique',
-    image: '/images/fleet/model-3.webp',
-    passengers: '1-4 passagers',
-    luggage: '2 bagages',
-    features: ['100% électrique', 'Silencieuse', 'Écologique'],
-    description: 'Voyagez vert sans compromis sur le confort.',
-    isElectric: true,
   },
 ]
 
@@ -73,12 +56,12 @@ export default function Fleet() {
               className="bg-gray-50 rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow"
             >
               {/* Image */}
-              <div className="relative h-48 bg-gray-200">
+              <div className="relative h-64 bg-gray-200">
                 <Image
                   src={vehicle.image}
                   alt={vehicle.name}
                   fill
-                  className="object-cover"
+                  className={vehicle.objectFit === 'contain' ? 'object-contain p-4' : 'object-cover'}
                 />
                 {/* Badge catégorie */}
                 <div className="absolute top-3 left-3">

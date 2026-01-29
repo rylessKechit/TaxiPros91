@@ -1,39 +1,40 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import RelatedCities from '@/components/RelatedCities'
 import BookingForm from '@/components/BookingForm'
-import { Phone, MapPin, CheckCircle } from 'lucide-react'
+import { Phone, MapPin, Train, Plane, Clock, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Taxi Palaiseau (91120) | Plateau de Saclay & Polytechnique - 24h/24',
-  description: 'Taxi à Palaiseau 91120. Desserte du plateau de Saclay, École Polytechnique, HEC, campus universitaire. Service 24h/24, chauffeurs professionnels. Réservez maintenant !',
-  keywords: ['taxi palaiseau', 'taxi palaiseau 91120', 'taxi plateau saclay', 'taxi polytechnique', 'taxi palaiseau gare', 'réservation taxi palaiseau'],
+  title: 'Taxi Verrières-le-Buisson (91370) | Réservation 24h/24',
+  description: 'Réservez votre taxi à Verrières-le-Buisson 91370. Service disponible 24h/24 pour vos trajets gare, aéroport Orly, Paris. Chauffeurs professionnels, tarifs transparents. Appelez maintenant !',
+  keywords: ['taxi verrières-le-buisson', 'taxi verrières-le-buisson 91370', 'taxi verrières buisson', 'réservation taxi verrières', 'taxi verrières orly'],
   openGraph: {
-    title: 'Taxi Palaiseau (91120) | Plateau de Saclay',
-    description: 'Votre taxi à Palaiseau : Polytechnique, plateau de Saclay, gare RER. Disponible 24h/24.',
-    url: 'https://taxipros91.fr/taxi-palaiseau',
+    title: 'Taxi Verrières-le-Buisson (91370) | Service 24h/24',
+    description: 'Votre taxi à Verrières-le-Buisson : gare, aéroport Orly, Paris. Réservation rapide, tarifs transparents.',
+    url: 'https://taxipros91.fr/taxi-verrieres-le-buisson',
   },
   alternates: {
-    canonical: 'https://taxipros91.fr/taxi-palaiseau',
+    canonical: 'https://taxipros91.fr/taxi-verrieres-le-buisson',
   },
 }
 
 const destinations = [
-  { name: 'École Polytechnique', distance: '10 min', description: 'Accès direct au campus de l\'X sur le plateau de Saclay' },
-  { name: 'Plateau de Saclay', distance: '10-15 min', description: 'Desserte de toutes les écoles et entreprises du plateau' },
-  { name: 'Gare RER Palaiseau', distance: '5 min', description: 'Connexion RER B vers Paris et Massy' },
-  { name: 'HEC Paris', distance: '15 min', description: 'Transport vers le campus de Jouy-en-Josas' },
-  { name: 'Aéroport d\'Orly', distance: '20 min', description: 'Transfert rapide vers tous les terminaux' },
-  { name: 'Paris Centre', distance: '35 min', description: 'Liaison directe vers la capitale' },
+  { name: 'Gare RER B Antony', distance: '8 min', description: 'Connexion RER B vers Paris et Orlyval vers l\'aéroport' },
+  { name: 'Gare Massy TGV', distance: '10 min', description: 'Accès rapide à la gare TGV pour vos voyages en province' },
+  { name: 'Aéroport d\'Orly', distance: '15 min', description: 'Transfert direct vers tous les terminaux d\'Orly' },
+  { name: 'Paris Centre', distance: '30 min', description: 'Liaison directe vers tous les arrondissements parisiens' },
+  { name: 'Antony', distance: '5 min', description: 'Accès rapide au centre-ville et au Parc de Sceaux' },
+  { name: 'Massy', distance: '10 min', description: 'Centre commercial, gare TGV et RER' },
 ]
 
 const quartiers = [
-  'Centre-ville', 'Lozère', 'Pileu', 'Villebon', 'Camille Claudel',
-  'Les Mathieux', 'Le Tronchet', 'Polytechnique'
+  'Centre-ville', 'La Gâtine', 'Les Antes', 'Le Petit Verrières',
+  'La Nouzotte', 'Les Gâtines', 'Forêt de Verrières', 'Amblainvilliers'
 ]
 
-export default function TaxiPalaiseau() {
+export default function TaxiVerrieres() {
   return (
     <>
       <Header />
@@ -42,7 +43,7 @@ export default function TaxiPalaiseau() {
         <section className="bg-yellow-400 py-4">
           <div className="container mx-auto px-4 text-center">
             <p className="text-black font-medium">
-              Taxi à Palaiseau disponible maintenant :{' '}
+              Besoin d'un taxi à Verrières-le-Buisson ? Appelez le{' '}
               <a href="tel:+33680036463" className="font-bold text-xl hover:underline">06 80 03 64 63</a>
             </p>
           </div>
@@ -54,35 +55,35 @@ export default function TaxiPalaiseau() {
               <div>
                 <div className="flex items-center gap-2 text-yellow-600 mb-4">
                   <MapPin className="w-5 h-5" />
-                  <span className="font-medium">Palaiseau (91120) - Essonne</span>
+                  <span className="font-medium">Verrières-le-Buisson (91370) - Essonne</span>
                 </div>
 
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                  Taxi à Palaiseau
+                  Taxi à Verrières-le-Buisson
                 </h1>
 
                 <p className="text-xl text-gray-600 mb-6 leading-relaxed">
-                  Service de <strong>taxi à Palaiseau</strong> pour le <strong>plateau de Saclay</strong>,
-                  l'<strong>École Polytechnique</strong>, les grandes écoles et le centre-ville.
-                  Disponible 24h/24 pour étudiants, professeurs et professionnels.
+                  Votre service de <strong>taxi à Verrières-le-Buisson</strong> disponible 24h/24 et 7j/7.
+                  Nous assurons tous vos trajets depuis et vers <strong>Antony</strong>,
+                  <strong> Massy</strong>, l'<strong>aéroport d'Orly</strong> et Paris.
                 </p>
 
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   <div className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span className="text-gray-700">Plateau de Saclay</span>
+                    <span className="text-gray-700">Disponible 24h/24</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span className="text-gray-700">Polytechnique</span>
+                    <span className="text-gray-700">Réservation rapide</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span className="text-gray-700">24h/24 - 7j/7</span>
+                    <span className="text-gray-700">Tarifs transparents</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span className="text-gray-700">Tarifs fixes</span>
+                    <span className="text-gray-700">Chauffeurs pro</span>
                   </div>
                 </div>
 
@@ -106,7 +107,7 @@ export default function TaxiPalaiseau() {
         <section className="py-12 md:py-16 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
-              Destinations depuis Palaiseau
+              Principales destinations depuis Verrières-le-Buisson
             </h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
@@ -127,8 +128,11 @@ export default function TaxiPalaiseau() {
         <section className="py-12 md:py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
-              Tous les quartiers de Palaiseau desservis
+              Taxi dans tous les quartiers de Verrières-le-Buisson
             </h2>
+            <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
+              Nous intervenons dans tous les quartiers de Verrières-le-Buisson pour vous prendre en charge ou vous déposer à l'adresse de votre choix.
+            </p>
 
             <div className="flex flex-wrap justify-center gap-3 mb-10">
               {quartiers.map((quartier) => (
@@ -145,38 +149,38 @@ export default function TaxiPalaiseau() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-                Taxi Palaiseau : spécialiste du plateau de Saclay
+                Votre taxi de confiance à Verrières-le-Buisson
               </h2>
 
               <div className="prose prose-lg text-gray-600">
                 <p>
-                  Palaiseau est au cœur du plus grand pôle scientifique et technologique d'Europe : le <strong>plateau de Saclay</strong>.
-                  Notre service de taxi à Palaiseau est spécialisé dans les transferts vers les écoles, universités et entreprises du plateau.
+                  <strong>TAXI Pro 91</strong> est votre partenaire de confiance pour tous vos déplacements à Verrières-le-Buisson et dans l'Essonne.
+                  Commune résidentielle prisée entre Antony et Massy, Verrières-le-Buisson bénéficie d'un cadre de vie agréable
+                  avec sa célèbre forêt et sa proximité avec les grands axes de transport.
                 </p>
 
-                <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">Transport vers les grandes écoles</h3>
+                <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">Connexions transport</h3>
                 <p>
-                  L'<strong>École Polytechnique</strong>, CentraleSupélec, ENS Paris-Saclay, AgroParisTech...
-                  Nous connaissons parfaitement l'accès à chaque établissement du plateau de Saclay.
-                  Idéal pour les étudiants, professeurs et visiteurs.
+                  Verrières-le-Buisson est idéalement située à proximité du RER B (gare d'Antony) et de la gare Massy TGV.
+                  Nos chauffeurs vous conduisent rapidement vers ces pôles de transport pour rejoindre Paris ou prendre votre TGV.
                 </p>
 
-                <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">Transferts professionnels</h3>
+                <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">Navettes aéroport Orly</h3>
                 <p>
-                  De nombreuses entreprises sont implantées sur le plateau de Saclay. Nous assurons le transport
-                  de vos collaborateurs et visiteurs avec professionnalisme. Facturation entreprise disponible.
+                  L'aéroport d'Orly est accessible en 15 minutes depuis Verrières-le-Buisson. Nous proposons un service de navette
+                  aéroport fiable avec suivi de vol pour adapter l'heure de prise en charge.
                 </p>
 
-                <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">Connexion gare et aéroport</h3>
+                <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">Transport médical conventionné</h3>
                 <p>
-                  Depuis Palaiseau, nous vous conduisons rapidement à la gare Massy TGV, aux gares RER,
-                  ou à l'aéroport d'Orly. Service disponible 24h/24, même pour les vols tôt le matin.
+                  Nous sommes agréés par la CPAM pour le transport médical. Pour vos rendez-vous médicaux depuis
+                  Verrières-le-Buisson, nous vous accompagnons avec professionnalisme et bienveillance.
                 </p>
               </div>
 
               <div className="mt-8 p-6 bg-yellow-50 rounded-xl border border-yellow-200">
                 <p className="text-gray-900 font-medium mb-4">
-                  Réservez votre taxi à Palaiseau
+                  Réservez votre taxi à Verrières-le-Buisson dès maintenant
                 </p>
                 <a
                   href="tel:+33680036463"
@@ -189,7 +193,7 @@ export default function TaxiPalaiseau() {
             </div>
           </div>
         </section>
-      <RelatedCities currentSlug="taxi-palaiseau" />
+      <RelatedCities currentSlug="taxi-verrieres-le-buisson" />
       </main>
       <Footer />
     </>

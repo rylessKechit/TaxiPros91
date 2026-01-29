@@ -17,10 +17,53 @@ export const metadata: Metadata = {
   },
 }
 
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Comment réserver un taxi ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Vous pouvez réserver par téléphone au 06 80 03 64 63 (disponible 24h/24) ou via notre formulaire en ligne. Pour une course immédiate, nous vous recommandons l\'appel téléphonique.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Quels sont vos modes de paiement ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Nous acceptons les paiements en espèces, par carte bancaire et par virement pour les entreprises. Le paiement s\'effectue à bord du véhicule.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Proposez-vous le transport médical ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Oui, nous sommes agréés par la CPAM pour le transport médical conventionné. Contactez-nous pour plus d\'informations sur la prise en charge.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Quelle est votre zone d\'intervention ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Nous intervenons dans toute l\'Essonne (91) et les communes limitrophes des Hauts-de-Seine (92). Nos zones principales sont Massy, Palaiseau, Ballainvilliers, Longjumeau, Antony, Verrières-le-Buisson, Les Ulis et Saclay.'
+      }
+    }
+  ]
+}
+
 export default function Contact() {
   return (
     <>
       <Header />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <main>
         {/* Hero */}
         <section className="bg-yellow-400 py-4">
@@ -93,7 +136,7 @@ export default function Contact() {
                       <div>
                         <h3 className="font-bold text-gray-900 text-lg mb-1">Zone d'intervention</h3>
                         <p className="text-gray-700">Essonne (91) et Hauts-de-Seine (92)</p>
-                        <p className="text-gray-600 mt-1">Massy, Palaiseau, Longjumeau, Antony...</p>
+                        <p className="text-gray-600 mt-1">Massy, Palaiseau, Longjumeau, Antony, Les Ulis, Verrières-le-Buisson, Saclay...</p>
                       </div>
                     </div>
                   </div>
@@ -245,7 +288,7 @@ export default function Contact() {
                 <h3 className="font-bold text-gray-900 mb-2">Quelle est votre zone d'intervention ?</h3>
                 <p className="text-gray-600">
                   Nous intervenons dans toute l'Essonne (91) et les communes limitrophes des Hauts-de-Seine (92).
-                  Nos zones principales sont Massy, Palaiseau, Ballainvilliers, Longjumeau et Antony.
+                  Nos zones principales sont Massy, Palaiseau, Ballainvilliers, Longjumeau, Antony, Verrières-le-Buisson, Les Ulis et Saclay.
                 </p>
               </div>
             </div>
