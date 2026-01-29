@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Header from '@/components/Header'
+import Breadcrumb from '@/components/Breadcrumb'
 import Footer from '@/components/Footer'
 import RelatedCities from '@/components/RelatedCities'
 import BookingForm from '@/components/BookingForm'
@@ -37,6 +38,7 @@ export default function TaxiAntony() {
   return (
     <>
       <Header />
+      <Breadcrumb items={[{ name: 'Taxi Antony' }]} />
       <main>
         {/* Hero */}
         <section className="bg-yellow-400 py-4">

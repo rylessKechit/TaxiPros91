@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     description: 'Votre service de taxi de confiance en Essonne. Réservez en ligne votre taxi à Massy, Palaiseau, Ballainvilliers, Longjumeau et Antony. Tarifs clairs, service 24h/24.',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/og-image.webp',
         width: 1200,
         height: 630,
         alt: 'TAXI Pro 91 - Service de taxi en Essonne',
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'TAXI Pro 91 | Réservation Taxi Essonne',
     description: 'Réservez votre taxi en Essonne. Service professionnel à Massy, Palaiseau, Longjumeau, Antony. Disponible 24h/24.',
-    images: ['/og-image.jpg'],
+    images: ['/og-image.webp'],
   },
   robots: {
     index: true,
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
 // Schema.org JSON-LD pour le SEO local
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'TaxiService',
+  '@type': ['TaxiService', 'LocalBusiness'],
   name: 'TAXI Pro 91',
   description: 'Service de taxi professionnel en Essonne (91). Réservation à Massy, Palaiseau, Ballainvilliers, Longjumeau, Antony, Verrières-le-Buisson, Les Ulis et Saclay.',
   url: 'https://taxipros91.fr',
@@ -154,7 +154,20 @@ const jsonLd = {
   sameAs: [
     'https://www.facebook.com/taxipros91',
     'https://www.instagram.com/taxipros91'
-  ]
+  ],
+  image: 'https://taxipros91.fr/og-image.webp',
+  logo: 'https://taxipros91.fr/logo.webp',
+  currenciesAccepted: 'EUR',
+  paymentAccepted: 'Cash, Credit Card',
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Services de taxi',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Transfert Aéroport', description: 'Navettes vers Orly et Roissy CDG' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Transport Médical', description: 'Transport conventionné CPAM' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Transport Professionnel', description: 'Déplacements d\'affaires et facturation entreprise' } },
+    ]
+  }
 }
 
 export default function RootLayout({
@@ -166,7 +179,7 @@ export default function RootLayout({
     <html lang="fr">
       <head>
         <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.webp" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#facc15" />
         <meta name="geo.region" content="FR-91" />

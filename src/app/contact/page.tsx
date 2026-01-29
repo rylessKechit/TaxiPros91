@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Header from '@/components/Header'
+import Breadcrumb from '@/components/Breadcrumb'
 import Footer from '@/components/Footer'
 import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react'
 
@@ -60,6 +61,7 @@ export default function Contact() {
   return (
     <>
       <Header />
+      <Breadcrumb items={[{ name: 'Contact' }]} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}

@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -11,14 +12,8 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company info */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center">
-                <span className="text-black font-bold text-2xl">T</span>
-              </div>
-              <div>
-                <div className="font-bold text-xl">TAXI Pro 91</div>
-                <div className="text-gray-400 text-sm">Essonne</div>
-              </div>
+            <div className="mb-4">
+              <Image src="/logo.webp" alt="TAXI Pro 91" width={356} height={124} className="h-14 w-auto" />
             </div>
             <p className="text-gray-400">
               Votre service de taxi de confiance en Essonne.

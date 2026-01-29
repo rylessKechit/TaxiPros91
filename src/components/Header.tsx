@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Phone, Menu, X } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -13,13 +14,7 @@ export default function Header() {
         <div className="flex items-center justify-between py-2 sm:py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 sm:gap-3">
-            <div className="w-9 h-9 sm:w-14 sm:h-14 bg-yellow-400 rounded-lg flex items-center justify-center">
-              <span className="text-black font-bold text-lg sm:text-2xl">T</span>
-            </div>
-            <div>
-              <div className="font-bold text-base sm:text-2xl text-gray-900">TAXI Pro 91</div>
-              <div className="text-gray-600 text-xs sm:text-sm hidden sm:block">Essonne - 24h/24</div>
-            </div>
+            <Image src="/logo.webp" alt="TAXI Pro 91" width={356} height={124} className="h-10 sm:h-14 w-auto" priority />
           </Link>
 
           {/* Desktop Navigation */}
