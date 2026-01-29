@@ -182,6 +182,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.webp" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#facc15" />
+        <meta name="google-site-verification" content="ByaFEimKJQnVVkNTUb36uq6ROgEPc7tBSgzTE-J9RqU" />
         <meta name="geo.region" content="FR-91" />
         <meta name="geo.placename" content="Essonne" />
         <meta name="geo.position" content="48.7253;2.2714" />
