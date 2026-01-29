@@ -100,7 +100,7 @@ export default function Testimonials() {
                   <p className="text-gray-900 font-semibold">{testimonial.name}</p>
                   <p className="text-gray-500 text-sm">{testimonial.location}</p>
                 </div>
-                <span className="text-gray-400 text-sm">{testimonial.date}</span>
+                <span className="text-gray-500 text-sm">{testimonial.date}</span>
               </div>
             </div>
           ))}

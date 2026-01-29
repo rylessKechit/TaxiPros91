@@ -124,7 +124,7 @@ export default function Zones() {
 
               <Link
                 href={`/${zone.slug}`}
-                className="inline-flex items-center gap-2 text-yellow-600 font-semibold hover:text-yellow-700"
+                className="inline-flex items-center gap-2 text-yellow-700 font-semibold hover:text-yellow-700"
               >
                 En savoir plus
                 <ArrowRight className="w-4 h-4" />

@@ -67,7 +67,7 @@ export default function Fleet() {
                 <div className="absolute top-3 left-3">
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${
                     vehicle.isElectric
-                      ? 'bg-green-500 text-white'
+                      ? 'bg-green-700 text-white'
                       : 'bg-yellow-400 text-black'
                   }`}>
                     {vehicle.category}
