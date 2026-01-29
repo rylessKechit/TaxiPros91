@@ -187,7 +187,6 @@ export default function RootLayout({
         <meta name="geo.placename" content="Essonne" />
         <meta name="geo.position" content="48.7253;2.2714" />
         <meta name="ICBM" content="48.7253, 2.2714" />
-        <link rel="preload" as="image" href="/images/hero-bg.webp" type="image/webp" fetchPriority="high" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
