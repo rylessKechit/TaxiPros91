@@ -398,8 +398,8 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
             </label>
           )}
 
-          <div className="grid grid-cols-2 gap-2">
-            <div className="min-w-0">
+          <div className="grid grid-cols-2 gap-3">
+            <div>
               <label htmlFor="booking-date" className="block text-gray-700 text-sm font-medium mb-1">Date *</label>
               <input
                 id="booking-date"
@@ -408,11 +408,11 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
                 value={formData.date}
                 onChange={handleInputChange}
                 min={minDate}
-                className={`${inputClass} min-w-0`}
+                className={inputClass}
                 required
               />
             </div>
-            <div className="min-w-0">
+            <div>
               <label htmlFor="booking-time" className="block text-gray-700 text-sm font-medium mb-1">Heure *</label>
               <input
                 id="booking-time"
@@ -420,7 +420,7 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
                 name="time"
                 value={formData.time}
                 onChange={handleInputChange}
-                className={`${inputClass} min-w-0`}
+                className={inputClass}
                 required
               />
             </div>
@@ -451,8 +451,8 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
                   label="Adresse d'arrivée retour"
                 />
               </div>
-              <div className="grid grid-cols-2 gap-2">
-                <div className="min-w-0">
+              <div className="grid grid-cols-2 gap-3">
+                <div>
                   <label htmlFor="booking-return-date" className="block text-gray-700 text-sm font-medium mb-1">Date retour *</label>
                   <input
                     id="booking-return-date"
@@ -461,11 +461,11 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
                     value={formData.returnDate}
                     onChange={handleInputChange}
                     min={formData.date || minDate}
-                    className={`${inputClass} min-w-0`}
+                    className={inputClass}
                     required
                   />
                 </div>
-                <div className="min-w-0">
+                <div>
                   <label htmlFor="booking-return-time" className="block text-gray-700 text-sm font-medium mb-1">Heure retour *</label>
                   <input
                     id="booking-return-time"
@@ -473,7 +473,7 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
                     name="returnTime"
                     value={formData.returnTime}
                     onChange={handleInputChange}
-                    className={`${inputClass} min-w-0`}
+                    className={inputClass}
                     required
                   />
                 </div>
@@ -573,8 +573,8 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
 
           <div ref={mapRef} role="img" aria-label="Carte du trajet" className="w-full h-40 sm:h-56 rounded-lg overflow-hidden border border-gray-200" />
 
-          <div className="grid grid-cols-2 gap-2">
-            <div className="min-w-0">
+          <div className="grid grid-cols-2 gap-3">
+            <div>
               <label htmlFor="booking-lastname" className="block text-gray-700 text-sm font-medium mb-1">Nom *</label>
               <input
                 id="booking-lastname"
@@ -587,7 +587,7 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
                 required
               />
             </div>
-            <div className="min-w-0">
+            <div>
               <label htmlFor="booking-firstname" className="block text-gray-700 text-sm font-medium mb-1">Prénom *</label>
               <input
                 id="booking-firstname"
