@@ -288,7 +288,7 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
   ]
 
   const StepIndicator = () => (
-    <div className="flex items-center justify-between mb-4 sm:mb-6">
+    <nav aria-label="Étapes de réservation" className="flex items-center justify-between mb-4 sm:mb-6">
       {STEPS.map((s, i) => {
         const Icon = s.icon
         const stepNum = i + 1
@@ -312,7 +312,7 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
           </div>
         )
       })}
-    </div>
+    </nav>
   )
 
   if (bookingDone) {
@@ -370,6 +370,7 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
               placeholder="Ex: 15 rue de la Gare, Massy"
               className={inputClass}
               defaultValue={formData.pickup}
+              label="Adresse de départ"
             />
           </div>
 
@@ -380,6 +381,7 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
               placeholder="Ex: Aéroport d'Orly"
               className={inputClass}
               defaultValue={formData.destination}
+              label="Adresse d'arrivée"
             />
           </div>
 
@@ -434,6 +436,7 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
                   placeholder="Départ retour"
                   className={inputClass}
                   defaultValue={formData.returnPickup}
+                  label="Adresse de départ retour"
                 />
               </div>
               <div>
@@ -443,6 +446,7 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
                   placeholder="Arrivée retour"
                   className={inputClass}
                   defaultValue={formData.returnDestination}
+                  label="Adresse d'arrivée retour"
                 />
               </div>
               <div className="grid grid-cols-2 gap-3">
@@ -525,7 +529,7 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
                       value={v.id}
                       checked={formData.vehicle === v.id}
                       onChange={handleInputChange}
-                      className="hidden"
+                      className="sr-only"
                     />
                     <div className={`w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 ${
                       formData.vehicle === v.id ? 'bg-yellow-400 text-black' : 'bg-gray-100 text-gray-500'
@@ -562,7 +566,7 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
             Vos coordonnées
           </h2>
 
-          <div ref={mapRef} className="w-full h-40 sm:h-56 rounded-lg overflow-hidden border border-gray-200" />
+          <div ref={mapRef} role="img" aria-label="Carte du trajet" className="w-full h-40 sm:h-56 rounded-lg overflow-hidden border border-gray-200" />
 
           <div className="grid grid-cols-2 gap-3">
             <div>

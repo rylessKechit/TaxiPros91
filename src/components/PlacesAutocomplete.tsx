@@ -4,11 +4,44 @@ import { useState, useRef, useEffect, useCallback } from 'react'
 
 const GOOGLE_MAPS_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ''
 
+let scriptLoadPromise: Promise<void> | null = null
+
+function loadGoogleMapsScript(): Promise<void> {
+  if (window.google?.maps?.importLibrary != null) return Promise.resolve()
+  if (scriptLoadPromise) return scriptLoadPromise
+
+  scriptLoadPromise = new Promise((resolve) => {
+    if (document.querySelector('script[src*="maps.googleapis.com"]')) {
+      const interval = setInterval(() => {
+        if (window.google?.maps?.importLibrary != null) {
+          clearInterval(interval)
+          resolve()
+        }
+      }, 200)
+      return
+    }
+    const script = document.createElement('script')
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAPS_KEY}&libraries=places&loading=async`
+    script.async = true
+    script.onload = () => {
+      const interval = setInterval(() => {
+        if (window.google?.maps?.importLibrary != null) {
+          clearInterval(interval)
+          resolve()
+        }
+      }, 100)
+    }
+    document.head.appendChild(script)
+  })
+  return scriptLoadPromise
+}
+
 interface PlacesAutocompleteProps {
   placeholder: string
   className: string
   defaultValue?: string
   onPlaceSelected: (address: string) => void
+  label?: string
 }
 
 interface Suggestion {
@@ -23,6 +56,7 @@ export default function PlacesAutocomplete({
   className,
   defaultValue = '',
   onPlaceSelected,
+  label,
 }: PlacesAutocompleteProps) {
   const [inputValue, setInputValue] = useState(defaultValue)
   const [suggestions, setSuggestions] = useState<Suggestion[]>([])
@@ -33,31 +67,7 @@ export default function PlacesAutocomplete({
   const wrapperRef = useRef<HTMLDivElement>(null)
   const tokenRef = useRef<google.maps.places.AutocompleteSessionToken | null>(null)
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null)
-
-  // Load Google Maps script on demand, only once
-  useEffect(() => {
-    const check = () => {
-      if (window.google?.maps?.importLibrary != null) {
-        setIsReady(true)
-        return true
-      }
-      return false
-    }
-    if (check()) return
-
-    // Inject script if not already present
-    if (!document.querySelector('script[src*="maps.googleapis.com"]')) {
-      const script = document.createElement('script')
-      script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAPS_KEY}&libraries=places&loading=async`
-      script.async = true
-      document.head.appendChild(script)
-    }
-
-    const interval = setInterval(() => {
-      if (check()) clearInterval(interval)
-    }, 300)
-    return () => clearInterval(interval)
-  }, [])
+  const listboxId = useRef(`places-listbox-${Math.random().toString(36).slice(2, 8)}`).current
 
   // Close dropdown on outside click
   useEffect(() => {
@@ -70,13 +80,21 @@ export default function PlacesAutocomplete({
     return () => document.removeEventListener('mousedown', handleClick)
   }, [])
 
+  const ensureReady = useCallback(async () => {
+    if (isReady) return true
+    await loadGoogleMapsScript()
+    setIsReady(true)
+    return true
+  }, [isReady])
+
   const fetchSuggestions = useCallback(async (input: string) => {
-    if (!isReady || input.length < 3) {
+    if (input.length < 3) {
       setSuggestions([])
       return
     }
 
     try {
+      await ensureReady()
       const { AutocompleteSuggestion, AutocompleteSessionToken } =
         (await google.maps.importLibrary('places')) as google.maps.PlacesLibrary
 
@@ -106,7 +124,7 @@ export default function PlacesAutocomplete({
       console.error('Autocomplete error:', err)
       setSuggestions([])
     }
-  }, [isReady])
+  }, [ensureReady])
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const val = e.target.value
@@ -130,7 +148,7 @@ export default function PlacesAutocomplete({
 
     setSuggestions([])
     setShowDropdown(false)
-    tokenRef.current = null // Reset token after selection
+    tokenRef.current = null
   }
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -161,12 +179,26 @@ export default function PlacesAutocomplete({
         placeholder={placeholder}
         className={className}
         autoComplete="off"
+        role="combobox"
+        aria-expanded={showDropdown}
+        aria-controls={listboxId}
+        aria-activedescendant={activeIndex >= 0 ? `${listboxId}-${activeIndex}` : undefined}
+        aria-autocomplete="list"
+        aria-label={label || placeholder}
       />
       {showDropdown && suggestions.length > 0 && (
-        <ul className="absolute z-50 left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg max-h-60 overflow-y-auto">
+        <ul
+          id={listboxId}
+          role="listbox"
+          aria-label="Suggestions d'adresses"
+          className="absolute z-50 left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg max-h-60 overflow-y-auto"
+        >
           {suggestions.map((s, i) => (
             <li
               key={s.placeId}
+              id={`${listboxId}-${i}`}
+              role="option"
+              aria-selected={i === activeIndex}
               onClick={() => handleSelect(s)}
               className={`px-3 py-2.5 text-sm text-gray-900 cursor-pointer transition-colors ${
                 i === activeIndex ? 'bg-yellow-50' : 'hover:bg-gray-50'
