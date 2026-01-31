@@ -61,6 +61,7 @@ export default function Fleet() {
                   src={vehicle.image}
                   alt={vehicle.name}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className={vehicle.objectFit === 'contain' ? 'object-contain p-4' : 'object-cover'}
                 />
                 {/* Badge catégorie */}
