@@ -26,6 +26,7 @@ export default function Hero() {
             sizes="100vw"
             className="object-cover object-center"
             priority
+            fetchPriority="high"
             quality={85}
           />
           {/* Overlay sombre */}

@@ -302,7 +302,7 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
               }`}>
                 {isDone && !isActive ? <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4" /> : <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />}
               </div>
-              <span className={`text-[10px] sm:text-xs mt-1 ${isActive || isDone ? 'text-gray-900' : 'text-gray-400'}`}>
+              <span className={`text-[10px] sm:text-xs mt-1 ${isActive || isDone ? 'text-gray-900' : 'text-gray-500'}`}>
                 {s.label}
               </span>
             </div>
@@ -400,8 +400,9 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
 
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <label className="block text-gray-700 text-sm font-medium mb-1">Date *</label>
+              <label htmlFor="booking-date" className="block text-gray-700 text-sm font-medium mb-1">Date *</label>
               <input
+                id="booking-date"
                 type="date"
                 name="date"
                 value={formData.date}
@@ -412,8 +413,9 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
               />
             </div>
             <div>
-              <label className="block text-gray-700 text-sm font-medium mb-1">Heure *</label>
+              <label htmlFor="booking-time" className="block text-gray-700 text-sm font-medium mb-1">Heure *</label>
               <input
+                id="booking-time"
                 type="time"
                 name="time"
                 value={formData.time}
@@ -451,8 +453,9 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
               </div>
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-gray-700 text-sm font-medium mb-1">Date retour *</label>
+                  <label htmlFor="booking-return-date" className="block text-gray-700 text-sm font-medium mb-1">Date retour *</label>
                   <input
+                    id="booking-return-date"
                     type="date"
                     name="returnDate"
                     value={formData.returnDate}
@@ -463,8 +466,9 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
                   />
                 </div>
                 <div>
-                  <label className="block text-gray-700 text-sm font-medium mb-1">Heure retour *</label>
+                  <label htmlFor="booking-return-time" className="block text-gray-700 text-sm font-medium mb-1">Heure retour *</label>
                   <input
+                    id="booking-return-time"
                     type="time"
                     name="returnTime"
                     value={formData.returnTime}
@@ -478,8 +482,9 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
           )}
 
           <div>
-            <label className="block text-gray-700 text-sm font-medium mb-1">Passagers</label>
+            <label htmlFor="booking-passengers" className="block text-gray-700 text-sm font-medium mb-1">Passagers</label>
             <select
+              id="booking-passengers"
               name="passengers"
               value={formData.passengers}
               onChange={handleInputChange}
@@ -570,8 +575,9 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
 
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <label className="block text-gray-700 text-sm font-medium mb-1">Nom *</label>
+              <label htmlFor="booking-lastname" className="block text-gray-700 text-sm font-medium mb-1">Nom *</label>
               <input
+                id="booking-lastname"
                 type="text"
                 name="lastName"
                 value={formData.lastName}
@@ -582,8 +588,9 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
               />
             </div>
             <div>
-              <label className="block text-gray-700 text-sm font-medium mb-1">Prénom *</label>
+              <label htmlFor="booking-firstname" className="block text-gray-700 text-sm font-medium mb-1">Prénom *</label>
               <input
+                id="booking-firstname"
                 type="text"
                 name="firstName"
                 value={formData.firstName}
@@ -596,8 +603,9 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
           </div>
 
           <div>
-            <label className="block text-gray-700 text-sm font-medium mb-1">Email *</label>
+            <label htmlFor="booking-email" className="block text-gray-700 text-sm font-medium mb-1">Email *</label>
             <input
+              id="booking-email"
               type="email"
               name="email"
               value={formData.email}
@@ -609,8 +617,9 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
           </div>
 
           <div>
-            <label className="block text-gray-700 text-sm font-medium mb-1">Téléphone *</label>
+            <label htmlFor="booking-phone" className="block text-gray-700 text-sm font-medium mb-1">Téléphone *</label>
             <input
+              id="booking-phone"
               type="tel"
               name="phone"
               value={formData.phone}
