@@ -14,10 +14,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Taxi Saclay (91400) | Plateau de Saclay - Service 24h/24',
     description: 'Votre taxi à Saclay et sur le plateau : CEA, universités, grandes écoles. Réservation rapide, tarifs transparents.',
-    url: 'https://taxipro91.com/taxi-saclay',
+    url: 'https://www.taxipro91.com/taxi-saclay',
   },
   alternates: {
-    canonical: 'https://taxipro91.com/taxi-saclay',
+    canonical: 'https://www.taxipro91.com/taxi-saclay',
   },
 }
 

@@ -14,10 +14,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Taxi Verrières-le-Buisson (91370) | Service 24h/24',
     description: 'Votre taxi à Verrières-le-Buisson : gare, aéroport Orly, Paris. Réservation rapide, tarifs transparents.',
-    url: 'https://taxipro91.com/taxi-verrieres-le-buisson',
+    url: 'https://www.taxipro91.com/taxi-verrieres-le-buisson',
   },
   alternates: {
-    canonical: 'https://taxipro91.com/taxi-verrieres-le-buisson',
+    canonical: 'https://www.taxipro91.com/taxi-verrieres-le-buisson',
   },
 }
 

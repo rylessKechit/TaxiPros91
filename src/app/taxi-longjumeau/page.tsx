@@ -13,10 +13,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Taxi Longjumeau (91160) | Service 24h/24',
     description: 'Votre taxi à Longjumeau : gare, hôpital, aéroport. Disponible 24h/24.',
-    url: 'https://taxipro91.com/taxi-longjumeau',
+    url: 'https://www.taxipro91.com/taxi-longjumeau',
   },
   alternates: {
-    canonical: 'https://taxipro91.com/taxi-longjumeau',
+    canonical: 'https://www.taxipro91.com/taxi-longjumeau',
   },
 }
 

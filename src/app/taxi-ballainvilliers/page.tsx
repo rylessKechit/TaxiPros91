@@ -13,10 +13,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Taxi Ballainvilliers (91160) | Service 24h/24',
     description: 'Votre taxi à Ballainvilliers. Disponible 24h/24 pour tous vos trajets.',
-    url: 'https://taxipro91.com/taxi-ballainvilliers',
+    url: 'https://www.taxipro91.com/taxi-ballainvilliers',
   },
   alternates: {
-    canonical: 'https://taxipro91.com/taxi-ballainvilliers',
+    canonical: 'https://www.taxipro91.com/taxi-ballainvilliers',
   },
 }
 

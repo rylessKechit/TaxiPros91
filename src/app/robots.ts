@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://taxipro91.com/sitemap.xml',
+    sitemap: 'https://www.taxipro91.com/sitemap.xml',
   }
 }

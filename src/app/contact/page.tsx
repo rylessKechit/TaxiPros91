@@ -11,10 +11,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Contact TAXI Pro 91',
     description: 'Réservez votre taxi en Essonne. Disponible 24h/24.',
-    url: 'https://taxipro91.com/contact',
+    url: 'https://www.taxipro91.com/contact',
   },
   alternates: {
-    canonical: 'https://taxipro91.com/contact',
+    canonical: 'https://www.taxipro91.com/contact',
   },
 }
 

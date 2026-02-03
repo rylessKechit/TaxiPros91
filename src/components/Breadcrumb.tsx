@@ -10,12 +10,12 @@ export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://taxipro91.com' },
+      { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.taxipro91.com' },
       ...items.map((item, i) => ({
         '@type': 'ListItem',
         position: i + 2,
         name: item.name,
-        ...(item.href ? { item: `https://taxipro91.com${item.href}` } : {}),
+        ...(item.href ? { item: `https://www.taxipro91.com${item.href}` } : {}),
       })),
     ],
   }

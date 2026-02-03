@@ -14,10 +14,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Taxi Massy (91300) | Service 24h/24',
     description: 'Votre taxi à Massy : gare TGV, RER B, aéroport Orly. Réservation rapide, tarifs transparents.',
-    url: 'https://taxipro91.com/taxi-massy',
+    url: 'https://www.taxipro91.com/taxi-massy',
   },
   alternates: {
-    canonical: 'https://taxipro91.com/taxi-massy',
+    canonical: 'https://www.taxipro91.com/taxi-massy',
   },
 }
 
