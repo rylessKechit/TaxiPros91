@@ -24,12 +24,14 @@ export const metadata: Metadata = {
 // Schema.org enrichi pour LocalBusiness + FAQ
 const localBusinessSchema = {
   '@context': 'https://schema.org',
-  '@type': 'TaxiService',
+  '@type': 'LocalBusiness',
+  '@id': 'https://www.taxipro91.com/taxi-ballainvilliers',
+  additionalType: 'https://schema.org/TaxiService',
   name: 'TAXI Pro 91 - Taxi Ballainvilliers',
   description: 'Service de taxi professionnel a Ballainvilliers (91160). Transferts aeroport Orly, gare Massy TGV, Paris. Disponible 24h/24 dans ce village residentiel proche A10.',
   url: 'https://www.taxipro91.com/taxi-ballainvilliers',
   telephone: '+33680036463',
-  priceRange: '$$',
+  priceRange: '€€',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Ballainvilliers',
@@ -51,7 +53,8 @@ const localBusinessSchema = {
     '@type': 'AggregateRating',
     ratingValue: '4.9',
     reviewCount: '89',
-    bestRating: '5'
+    bestRating: '5',
+    worstRating: '1'
   },
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',

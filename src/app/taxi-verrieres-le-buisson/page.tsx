@@ -24,7 +24,9 @@ export const metadata: Metadata = {
 // Schema.org enrichi pour LocalBusiness + FAQ
 const localBusinessSchema = {
   '@context': 'https://schema.org',
-  '@type': 'TaxiService',
+  '@type': 'LocalBusiness',
+  '@id': 'https://www.taxipro91.com/taxi-verrieres-le-buisson',
+  additionalType: 'https://schema.org/TaxiService',
   name: 'TAXI Pro 91 - Taxi Verrières-le-Buisson',
   description: 'Service de taxi professionnel à Verrières-le-Buisson (91370). Transferts Antony RER B, Massy TGV, aéroport Orly. Disponible 24h/24.',
   url: 'https://www.taxipro91.com/taxi-verrieres-le-buisson',
@@ -51,7 +53,8 @@ const localBusinessSchema = {
     '@type': 'AggregateRating',
     ratingValue: '4.9',
     reviewCount: '89',
-    bestRating: '5'
+    bestRating: '5',
+    worstRating: '1'
   },
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',

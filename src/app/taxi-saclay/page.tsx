@@ -24,7 +24,9 @@ export const metadata: Metadata = {
 // Schema.org enrichi pour LocalBusiness + FAQ
 const localBusinessSchema = {
   '@context': 'https://schema.org',
-  '@type': 'TaxiService',
+  '@type': 'LocalBusiness',
+  '@id': 'https://www.taxipro91.com/taxi-saclay',
+  additionalType: 'https://schema.org/TaxiService',
   name: 'TAXI Pro 91 - Taxi Saclay',
   description: 'Service de taxi professionnel à Saclay (91400). Transferts plateau de Saclay, CEA, universités, aéroports. Disponible 24h/24.',
   url: 'https://www.taxipro91.com/taxi-saclay',
@@ -51,7 +53,8 @@ const localBusinessSchema = {
     '@type': 'AggregateRating',
     ratingValue: '4.9',
     reviewCount: '98',
-    bestRating: '5'
+    bestRating: '5',
+    worstRating: '1'
   },
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',

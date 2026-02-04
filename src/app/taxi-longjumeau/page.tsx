@@ -24,12 +24,14 @@ export const metadata: Metadata = {
 // Schema.org enrichi pour LocalBusiness + FAQ
 const localBusinessSchema = {
   '@context': 'https://schema.org',
-  '@type': 'TaxiService',
+  '@type': 'LocalBusiness',
+  '@id': 'https://www.taxipro91.com/taxi-longjumeau',
+  additionalType: 'https://schema.org/TaxiService',
   name: 'TAXI Pro 91 - Taxi Longjumeau',
   description: 'Service de taxi professionnel a Longjumeau (91160). Transferts hopital, gare RER C, aeroport Orly. Transport medical conventionne CPAM. Disponible 24h/24.',
   url: 'https://www.taxipro91.com/taxi-longjumeau',
   telephone: '+33680036463',
-  priceRange: '$$',
+  priceRange: '€€',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Longjumeau',
@@ -51,7 +53,8 @@ const localBusinessSchema = {
     '@type': 'AggregateRating',
     ratingValue: '4.9',
     reviewCount: '89',
-    bestRating: '5'
+    bestRating: '5',
+    worstRating: '1'
   },
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',

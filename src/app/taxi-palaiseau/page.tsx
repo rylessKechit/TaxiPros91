@@ -24,7 +24,9 @@ export const metadata: Metadata = {
 // Schema.org enrichi pour LocalBusiness + FAQ
 const localBusinessSchema = {
   '@context': 'https://schema.org',
-  '@type': 'TaxiService',
+  '@type': 'LocalBusiness',
+  '@id': 'https://www.taxipro91.com/taxi-palaiseau',
+  additionalType: 'https://schema.org/TaxiService',
   name: 'TAXI Pro 91 - Taxi Palaiseau',
   description: 'Service de taxi professionnel à Palaiseau (91120). Transferts plateau de Saclay, Polytechnique, grandes écoles, gare RER B. Disponible 24h/24.',
   url: 'https://www.taxipro91.com/taxi-palaiseau',
@@ -51,7 +53,8 @@ const localBusinessSchema = {
     '@type': 'AggregateRating',
     ratingValue: '4.9',
     reviewCount: '98',
-    bestRating: '5'
+    bestRating: '5',
+    worstRating: '1'
   },
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
