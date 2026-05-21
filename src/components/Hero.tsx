@@ -8,9 +8,9 @@ export default function Hero() {
       {/* Bandeau téléphone - masqué sur mobile */}
       <div className="hidden sm:block bg-yellow-400 py-2">
         <div className="container mx-auto px-4">
-          <a href="tel:+33680036463" className="flex items-center justify-center gap-2 text-center">
+          <a href="tel:+33180859191" className="flex items-center justify-center gap-2 text-center">
             <Phone className="w-5 h-5 text-black" />
-            <span className="text-black font-bold text-xl">06 80 03 64 63</span>
+            <span className="text-black font-bold text-xl">01 80 85 91 91</span>
           </a>
         </div>
       </div>
@@ -47,12 +47,12 @@ export default function Hero() {
                 <span className="text-gray-300 text-xs sm:text-base">4.9/5 Google</span>
               </div>
 
-              <h1 className="text-[2.5rem] sm:text-5xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 lg:mb-6 leading-tight">
-                <span className="text-yellow-400">TAXI</span> Pro 91
+              <h1 className="text-[1.875rem] sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold mb-3 sm:mb-4 lg:mb-6 leading-tight">
+                Taxi <span className="text-yellow-400">Essonne (91)</span> — votre taxi 24h/24 à Massy &amp; Palaiseau
               </h1>
 
               <p className="text-sm sm:text-xl md:text-2xl text-gray-200 mb-4 sm:mb-6 lg:mb-8 max-w-lg">
-                Service de taxi haut de gamme <strong className="text-white">24h/24</strong> dans le 91.
+                Réservation rapide • Transferts Orly &amp; CDG • Conventionné CPAM • Note <strong className="text-white">4.9/5</strong> sur 500+ avis.
               </p>
 
               {/* Valeurs */}

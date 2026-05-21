@@ -5,12 +5,12 @@ import Breadcrumb from '@/components/Breadcrumb'
 import Footer from '@/components/Footer'
 import RelatedCities from '@/components/RelatedCities'
 import BookingForm from '@/components/BookingForm'
+import { ServiceSchema, FAQSchema } from '@/components/seo/Schemas'
 import { Phone, MapPin, Train, Plane, Clock, CheckCircle, Star, CreditCard, Shield, Users, Car, HelpCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Taxi Saclay (91400) | Plateau de Saclay, CEA, Universités - Réservation 24h/24',
-  description: 'Réservez votre taxi à Saclay 91400. Service disponible 24h/24 pour le plateau de Saclay, CEA, Université Paris-Saclay, Polytechnique. Chauffeurs professionnels, tarifs transparents. Appelez maintenant le 06 80 03 64 63 !',
-  keywords: ['taxi saclay', 'taxi saclay 91400', 'taxi plateau de saclay', 'taxi université paris-saclay', 'taxi cea saclay', 'taxi polytechnique saclay', 'réservation taxi saclay', 'taxi saclay orly', 'prix taxi saclay paris'],
+  description: 'Réservez votre taxi à Saclay 91400. Service disponible 24h/24 pour le plateau de Saclay, CEA, Université Paris-Saclay, Polytechnique. Chauffeurs professionnels, tarifs transparents. Appelez maintenant le 01 80 85 91 91 !',
   openGraph: {
     title: 'Taxi Saclay (91400) | Service 24h/24 - Plateau de Saclay & CEA',
     description: 'Votre taxi à Saclay : CEA, universités, Polytechnique, entreprises tech. Réservation rapide, tarifs transparents. Note 4.9/5.',
@@ -21,119 +21,16 @@ export const metadata: Metadata = {
   },
 }
 
-// Schema.org enrichi pour LocalBusiness + FAQ
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  '@id': 'https://www.taxipro91.com/taxi-saclay',
-  additionalType: 'https://schema.org/TaxiService',
-  name: 'TAXI Pro 91 - Taxi Saclay',
-  description: 'Service de taxi professionnel à Saclay (91400). Transferts plateau de Saclay, CEA, universités, aéroports. Disponible 24h/24.',
-  url: 'https://www.taxipro91.com/taxi-saclay',
-  telephone: '+33680036463',
-  priceRange: '€€',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Saclay',
-    postalCode: '91400',
-    addressRegion: 'Essonne',
-    addressCountry: 'FR'
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 48.7316,
-    longitude: 2.1686
-  },
-  areaServed: {
-    '@type': 'City',
-    name: 'Saclay',
-    containedInPlace: { '@type': 'AdministrativeArea', name: 'Essonne' }
-  },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '98',
-    bestRating: '5',
-    worstRating: '1'
-  },
-  openingHoursSpecification: {
-    '@type': 'OpeningHoursSpecification',
-    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-    opens: '00:00',
-    closes: '23:59'
-  }
-}
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Quel est le prix d\'un taxi Saclay → Orly ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Le prix d\'un taxi de Saclay vers l\'aéroport d\'Orly est d\'environ 35€ à 45€ selon l\'heure et le trafic. Ce tarif est fixe et comprend la prise en charge. Comptez environ 25 minutes de trajet.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Comment se rendre au CEA Saclay sans voiture ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Le CEA Saclay n\'est pas directement desservi par le métro ou le RER. Les navettes sont limitées et peu fréquentes. Le taxi reste la solution la plus pratique et rapide pour accéder au CEA depuis les gares ou aéroports.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Proposez-vous des transferts pour l\'Université Paris-Saclay ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Oui, nous assurons tous les transferts vers l\'Université Paris-Saclay, ses différents campus (Orsay, Gif-sur-Yvette, plateau), les résidences étudiantes et les laboratoires de recherche. Service disponible 24h/24.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Y a-t-il des transports en commun sur le plateau de Saclay ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Les transports en commun sur le plateau de Saclay sont limités à quelques lignes de bus. En attendant l\'arrivée de la ligne 18 du métro, le taxi reste le moyen le plus efficace pour se déplacer, surtout le soir et le week-end.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Pouvez-vous récupérer des chercheurs ou visiteurs à l\'aéroport pour le CEA ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Absolument ! Nous assurons régulièrement les transferts aéroport (Orly et CDG) pour les chercheurs, visiteurs et professionnels se rendant au CEA, à l\'Université Paris-Saclay ou dans les entreprises du plateau.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Quel délai pour avoir un taxi à Saclay ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'En moyenne, un taxi peut être disponible à Saclay en 15 à 20 minutes. Le plateau étant moins desservi que les villes voisines, nous recommandons de réserver à l\'avance pour garantir votre prise en charge.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Acceptez-vous les paiements par carte bancaire ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Oui, tous nos taxis acceptent le paiement par carte bancaire (Visa, Mastercard), en espèces, et les bons de transport CPAM. Facturation entreprise disponible pour les sociétés du plateau.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Proposez-vous des forfaits pour les entreprises tech de Saclay ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Oui, nous proposons des comptes entreprise avec facturation mensuelle et tarifs négociés pour les sociétés du plateau de Saclay. Idéal pour les déplacements réguliers de vos collaborateurs et visiteurs.'
-      }
-    }
-  ]
-}
+const faqs = [
+  { q: 'Quel est le prix d\'un taxi Saclay → Orly ?', a: 'Le prix d\'un taxi de Saclay vers l\'aéroport d\'Orly est d\'environ 35€ à 45€ selon l\'heure et le trafic. Ce tarif est fixe et comprend la prise en charge. Comptez environ 25 minutes de trajet.' },
+  { q: 'Comment se rendre au CEA Saclay sans voiture ?', a: 'Le CEA Saclay n\'est pas directement desservi par le métro ou le RER. Les navettes sont limitées et peu fréquentes. Le taxi reste la solution la plus pratique et rapide pour accéder au CEA depuis les gares ou aéroports.' },
+  { q: 'Proposez-vous des transferts pour l\'Université Paris-Saclay ?', a: 'Oui, nous assurons tous les transferts vers l\'Université Paris-Saclay, ses différents campus (Orsay, Gif-sur-Yvette, plateau), les résidences étudiantes et les laboratoires de recherche. Service disponible 24h/24.' },
+  { q: 'Y a-t-il des transports en commun sur le plateau de Saclay ?', a: 'Les transports en commun sur le plateau de Saclay sont limités à quelques lignes de bus. En attendant l\'arrivée de la ligne 18 du métro, le taxi reste le moyen le plus efficace pour se déplacer, surtout le soir et le week-end.' },
+  { q: 'Pouvez-vous récupérer des chercheurs ou visiteurs à l\'aéroport pour le CEA ?', a: 'Absolument ! Nous assurons régulièrement les transferts aéroport (Orly et CDG) pour les chercheurs, visiteurs et professionnels se rendant au CEA, à l\'Université Paris-Saclay ou dans les entreprises du plateau.' },
+  { q: 'Quel délai pour avoir un taxi à Saclay ?', a: 'En moyenne, un taxi peut être disponible à Saclay en 15 à 20 minutes. Le plateau étant moins desservi que les villes voisines, nous recommandons de réserver à l\'avance pour garantir votre prise en charge.' },
+  { q: 'Acceptez-vous les paiements par carte bancaire ?', a: 'Oui, tous nos taxis acceptent le paiement par carte bancaire (Visa, Mastercard), en espèces, et les bons de transport CPAM. Facturation entreprise disponible pour les sociétés du plateau.' },
+  { q: 'Proposez-vous des forfaits pour les entreprises tech de Saclay ?', a: 'Oui, nous proposons des comptes entreprise avec facturation mensuelle et tarifs négociés pour les sociétés du plateau de Saclay. Idéal pour les déplacements réguliers de vos collaborateurs et visiteurs.' },
+]
 
 const destinations = [
   { name: 'Aéroport d\'Orly', distance: '25 min', price: '35-45€', description: 'Transfert rapide vers les terminaux Orly 1, 2, 3 et 4. Suivi de vol inclus.' },
@@ -204,14 +101,13 @@ export default function TaxiSaclay() {
       <Breadcrumb items={[{ name: 'Taxi Saclay' }]} />
 
       {/* Schema.org JSON-LD */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      <ServiceSchema
+        name="Taxi à Saclay"
+        description="Service de taxi professionnel à Saclay (91400). Réservation 24h/24, transferts aéroport, gare, transport médical CPAM."
+        url="https://www.taxipro91.com/taxi-saclay"
+        areaServed={['Saclay']}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <FAQSchema faqs={faqs} />
 
       <main>
         {/* Hero Banner */}
@@ -219,7 +115,7 @@ export default function TaxiSaclay() {
           <div className="container mx-auto px-4 text-center">
             <p className="text-black font-medium">
               Besoin d'un taxi à Saclay ? Appelez le{' '}
-              <a href="tel:+33680036463" className="font-bold text-xl hover:underline">06 80 03 64 63</a>
+              <a href="tel:+33180859191" className="font-bold text-xl hover:underline">01 80 85 91 91</a>
             </p>
           </div>
         </section>
@@ -273,11 +169,11 @@ export default function TaxiSaclay() {
                 </div>
 
                 <a
-                  href="tel:+33680036463"
+                  href="tel:+33180859191"
                   className="inline-flex items-center gap-3 bg-gray-900 text-white font-bold text-xl py-4 px-8 rounded-lg hover:bg-gray-800 transition-colors"
                 >
                   <Phone className="w-6 h-6" />
-                  06 80 03 64 63
+                  01 80 85 91 91
                 </a>
               </div>
 
@@ -488,8 +384,8 @@ export default function TaxiSaclay() {
                 </div>
                 <h3 className="font-bold text-gray-900 text-lg mb-2">Par téléphone</h3>
                 <p className="text-gray-600 mb-4">Appelez-nous directement au</p>
-                <a href="tel:+33680036463" className="text-xl font-bold text-yellow-600 hover:text-yellow-700">
-                  06 80 03 64 63
+                <a href="tel:+33180859191" className="text-xl font-bold text-yellow-600 hover:text-yellow-700">
+                  01 80 85 91 91
                 </a>
               </div>
 
@@ -630,11 +526,11 @@ export default function TaxiSaclay() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <a
-                    href="tel:+33680036463"
+                    href="tel:+33180859191"
                     className="inline-flex items-center gap-3 bg-yellow-400 text-black font-bold text-lg py-3 px-6 rounded-lg hover:bg-yellow-500 transition-colors"
                   >
                     <Phone className="w-5 h-5" />
-                    06 80 03 64 63
+                    01 80 85 91 91
                   </a>
                   <Link
                     href="/#reservation"

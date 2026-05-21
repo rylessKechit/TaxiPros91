@@ -1,0 +1,543 @@
+import { Metadata } from 'next'
+import Link from 'next/link'
+import Header from '@/components/Header'
+import Breadcrumb from '@/components/Breadcrumb'
+import Footer from '@/components/Footer'
+import BookingForm from '@/components/BookingForm'
+import { FAQSchema, ServiceSchema } from '@/components/seo/Schemas'
+import { SITE } from '@/lib/site'
+import { popularRoutes } from '@/lib/routes'
+import { Phone, Clock, CheckCircle, Star, CreditCard, Shield, Plane, HelpCircle, MapPin, Car, Briefcase, Route as RouteIcon } from 'lucide-react'
+
+const ROUTE = popularRoutes.find(r => r.slug === 'taxi-longjumeau-orly')!
+const FROM = ROUTE.from
+const TO = ROUTE.to
+const PRICE_MIN = ROUTE.priceMin
+const PRICE_MAX = ROUTE.priceMax
+const DURATION = ROUTE.durationMin
+const URL = `${SITE.url}/taxi-longjumeau-orly`
+
+export const metadata: Metadata = {
+  title: `Taxi ${FROM} → Aéroport Orly — Tarif dès ${PRICE_MIN}€ & Réservation 24h/24`,
+  description: `Taxi ${FROM} vers Aéroport Orly : tarif fixe dès ${PRICE_MIN}€, trajet en ${DURATION} min via RD117 et A6, suivi de vol inclus. Réservation 24h/24 au ${SITE.phone.display}. Hôpital, gare RER C, tous quartiers desservis.`,
+  openGraph: {
+    title: `Taxi ${FROM} → Orly — Dès ${PRICE_MIN}€ • ${DURATION} min`,
+    description: `Transfert taxi ${FROM} Aéroport d'Orly. Tarif fixe, suivi de vol, prise en charge 24h/24 dans tout Longjumeau (centre, hôpital, gare RER C).`,
+    url: URL,
+  },
+  alternates: { canonical: URL },
+}
+
+const faqs = [
+  {
+    q: `Quel est le prix d'un taxi ${FROM} → Aéroport Orly ?`,
+    a: `Le prix d'un taxi de ${FROM} vers l'aéroport d'Orly est compris entre ${PRICE_MIN}€ et ${PRICE_MAX}€ selon l'heure (tarif jour ou tarif nuit/dimanche/jours fériés) et les conditions de circulation. Ce tarif est fixe, communiqué à la réservation et inclut la prise en charge à votre adresse (centre-ville, quartier de la gare RER C, hôpital), l'attente au terminal et l'aide aux bagages.`,
+  },
+  {
+    q: `Combien de temps dure le trajet ${FROM} Orly en taxi ?`,
+    a: `Le trajet ${FROM} → Aéroport d'Orly dure en moyenne ${DURATION} minutes en taxi via la RD117 puis l'A6 et l'A106. Aux heures de pointe (7h-9h et 17h-20h), comptez 22 à 28 minutes en raison du trafic sur l'A6. En heures creuses ou la nuit, le trajet se fait en 12 à 15 minutes seulement.`,
+  },
+  {
+    q: `Comment réserver un taxi de ${FROM} vers Orly ?`,
+    a: `Trois options : appelez le ${SITE.phone.display} disponible 24h/24, utilisez le formulaire de réservation en ligne (confirmation immédiate par email et SMS), ou réservez à l'avance pour un trajet matinal. Pour un vol tôt le matin depuis Longjumeau, nous recommandons de réserver au moins la veille (J-1).`,
+  },
+  {
+    q: `Desservez-vous l'hôpital de ${FROM} et la gare RER C ?`,
+    a: `Oui, nous prenons en charge à toutes les adresses de Longjumeau : centre-ville, gare RER C Longjumeau, hôpital de Longjumeau (Groupe Hospitalier Nord-Essonne), quartier Saint-Martin, Balizy, et ZAE de Longjumeau. Nous proposons également le transport conventionné CPAM pour les sorties d'hôpital vers Orly ou Paris.`,
+  },
+  {
+    q: 'Quels moyens de paiement acceptez-vous ?',
+    a: `Tous nos taxis acceptent la carte bancaire (Visa, Mastercard, American Express), les espèces et les bons de transport CPAM. La facturation entreprise est disponible sur demande pour vos déplacements professionnels depuis Longjumeau vers Orly.`,
+  },
+  {
+    q: `Proposez-vous l'aller-retour ${FROM} ↔ Orly ?`,
+    a: `Oui, nous proposons un forfait aller-retour ${FROM} ↔ Orly à tarif préférentiel, idéal pour un voyage court. Indiquez les horaires aller et retour à la réservation ; le chauffeur vous attend à votre vol retour avec suivi en temps réel.`,
+  },
+  {
+    q: 'Que se passe-t-il si mon vol est retardé ?',
+    a: `Aucun stress : nous suivons votre vol en temps réel grâce au numéro de vol communiqué à la réservation. Si votre avion a du retard, nous adaptons automatiquement l'heure de prise en charge à Orly, sans supplément d'attente. Si votre vol est annulé, prévenez-nous au ${SITE.phone.display} pour annuler ou reporter sans frais.`,
+  },
+  {
+    q: 'Tous les terminaux d\'Orly sont-ils desservis ?',
+    a: `Oui, nous desservons l'ensemble des terminaux d'Orly : Orly 1, Orly 2, Orly 3 et Orly 4. Précisez votre terminal à la réservation pour une dépose au plus près de votre porte d'embarquement.`,
+  },
+  {
+    q: 'Le taxi est-il plus pratique que le RER C + Orlyval ?',
+    a: `Pour la plupart des voyageurs avec bagages, oui. Le trajet RER C depuis Longjumeau implique une correspondance à Pont-de-Rungis et l'Orlyval (45-55 minutes au total). Notre taxi vous dépose directement devant votre terminal en ${DURATION} minutes, sans correspondance ni manipulation de bagages.`,
+  },
+]
+
+const terminaux = [
+  { code: 'Orly 1', desc: 'Vols low-cost et certaines compagnies européennes' },
+  { code: 'Orly 2', desc: 'Vols domestiques et internationaux Air France principalement' },
+  { code: 'Orly 3', desc: 'Vols court et moyen-courrier, compagnies européennes' },
+  { code: 'Orly 4', desc: 'Vols internationaux long-courrier et destinations Outre-mer' },
+]
+
+const usp = [
+  { icon: Clock, title: 'Disponible 24h/24', desc: `Vols tôt le matin, vols de nuit, week-ends : nous sommes là à toute heure pour votre trajet ${FROM} Orly.` },
+  { icon: Plane, title: 'Suivi de vol inclus', desc: 'Votre numéro de vol est tracké en temps réel : aucune attente facturée en cas de retard.' },
+  { icon: CreditCard, title: 'Tarif fixe sans surprise', desc: `Prix communiqué à la réservation, entre ${PRICE_MIN}€ et ${PRICE_MAX}€. Pas de compteur qui tourne dans les bouchons.` },
+  { icon: Shield, title: 'Transport conventionné CPAM', desc: 'Spécialistes des transferts depuis l\'hôpital de Longjumeau, prise en charge médicale et bons CPAM acceptés.' },
+]
+
+const avis = [
+  { nom: 'Nadia K. (Longjumeau centre)', note: 5, texte: `Réservé pour un vol à 7h depuis Orly 2. Chauffeur ponctuel à 5h15, trajet rapide par l'A6, prix annoncé respecté. Bien plus simple que le RER C avec mes deux valises.`, date: 'Mars 2025' },
+  { nom: 'Marc V. (quartier Balizy)', note: 5, texte: `Je prends TAXI Pro 91 chaque mois pour mes déplacements pros vers Orly. Toujours ponctuel, voiture propre, et la facturation entreprise simplifie ma comptabilité.`, date: 'Février 2025' },
+  { nom: 'Sylvie P. (sortie hôpital)', note: 5, texte: `Sortie de l'hôpital de Longjumeau avec un bon CPAM, transfert vers Orly pour rejoindre ma famille. Chauffeur très attentionné, voiture confortable, pas un euro à avancer.`, date: 'Janvier 2025' },
+  { nom: 'Karim H. (gare Longjumeau)', note: 5, texte: `Aller-retour Longjumeau-Orly pour un week-end à Marrakech. Tarif imbattable comparé aux applications VTC, chauffeur sympa, recommandé sans hésiter.`, date: 'Avril 2025' },
+]
+
+const autresTrajets = popularRoutes.filter(r => r.fromSlug === 'longjumeau' && r.slug !== 'taxi-longjumeau-orly')
+
+export default function TaxiLongjumeauOrly() {
+  return (
+    <>
+      <Header />
+      <Breadcrumb items={[{ name: `Taxi ${FROM} → ${TO}` }]} />
+
+      <ServiceSchema
+        name={`Taxi ${FROM} ${TO}`}
+        description={`Service de taxi entre ${FROM} (91160) et l'aéroport d'Orly. Tarif fixe dès ${PRICE_MIN}€, trajet en ${DURATION} minutes via RD117 et A6, disponible 24h/24 avec suivi de vol inclus.`}
+        url={URL}
+        areaServed={[FROM, 'Orly']}
+      />
+      <FAQSchema faqs={faqs} />
+
+      <main>
+        {/* Hero */}
+        <section className="bg-gray-50 py-10 md:py-14">
+          <div className="container mx-auto px-4">
+            <div className="grid lg:grid-cols-2 gap-10 items-start">
+              <div>
+                <div className="flex items-center gap-2 text-yellow-600 mb-3">
+                  <RouteIcon className="w-5 h-5" />
+                  <span className="font-medium">{FROM} (91160) → Aéroport Orly</span>
+                </div>
+
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
+                  Taxi {FROM} → {TO} — Tarif &amp; Réservation 24h/24
+                </h1>
+
+                <div className="flex flex-wrap gap-3 mb-6">
+                  <span className="bg-yellow-400 text-black font-bold px-4 py-2 rounded-lg text-sm">
+                    Dès {PRICE_MIN}€
+                  </span>
+                  <span className="bg-gray-900 text-white font-bold px-4 py-2 rounded-lg text-sm flex items-center gap-2">
+                    <Clock className="w-4 h-4" /> {DURATION} min
+                  </span>
+                  <span className="bg-white border border-gray-200 text-gray-900 font-medium px-4 py-2 rounded-lg text-sm flex items-center gap-2">
+                    <Plane className="w-4 h-4 text-yellow-500" /> Suivi de vol
+                  </span>
+                </div>
+
+                <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                  Votre <strong>taxi {FROM} Orly</strong> au tarif fixe, sans surprise.
+                  Trajet rapide en <strong>{DURATION} minutes</strong> via la RD117 puis l'A6 et l'A106, prise en charge à votre adresse
+                  à {FROM} (centre, hôpital, gare RER C, Balizy) et dépose directe à votre terminal (Orly 1, 2, 3 ou 4). Service 24h/24.
+                </p>
+
+                <div className="grid grid-cols-2 gap-3 mb-6">
+                  <div className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" /><span className="text-gray-700 text-sm">Tarif fixe garanti</span></div>
+                  <div className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" /><span className="text-gray-700 text-sm">Suivi de vol inclus</span></div>
+                  <div className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" /><span className="text-gray-700 text-sm">Tous terminaux Orly</span></div>
+                  <div className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" /><span className="text-gray-700 text-sm">Conventionné CPAM</span></div>
+                </div>
+
+                <div className="flex flex-wrap gap-3">
+                  <a href={SITE.phone.tel} className="inline-flex items-center gap-3 bg-gray-900 text-white font-bold text-lg py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors">
+                    <Phone className="w-5 h-5" />
+                    {SITE.phone.display}
+                  </a>
+                  <a href="#reservation" className="inline-flex items-center gap-3 bg-yellow-400 text-black font-bold text-lg py-3 px-6 rounded-lg hover:bg-yellow-500 transition-colors">
+                    Réserver en ligne
+                  </a>
+                </div>
+              </div>
+
+              <div id="reservation">
+                <BookingForm compact />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Prix */}
+        <section className="py-12 md:py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                Prix du taxi {FROM} → Aéroport Orly
+              </h2>
+              <p className="text-gray-600 mb-8">
+                Tarification claire et fixe, communiquée lors de la réservation. Aucun supplément caché.
+                Voici notre grille indicative pour le trajet {FROM} Orly, applicable depuis tous les quartiers
+                (centre-ville, gare RER C, hôpital de Longjumeau, Balizy, Saint-Martin).
+              </p>
+
+              <div className="overflow-x-auto rounded-xl border border-gray-200">
+                <table className="w-full text-left">
+                  <thead className="bg-gray-900 text-white">
+                    <tr>
+                      <th className="py-4 px-4 font-bold">Type de trajet</th>
+                      <th className="py-4 px-4 font-bold text-center">Jour (7h-19h)</th>
+                      <th className="py-4 px-4 font-bold text-center">Nuit / Dimanche / Fériés</th>
+                    </tr>
+                  </thead>
+                  <tbody className="bg-white">
+                    <tr className="border-t border-gray-200">
+                      <td className="py-4 px-4 font-medium text-gray-900">Aller simple {FROM} → Orly</td>
+                      <td className="py-4 px-4 text-center"><span className="bg-yellow-400 text-black font-bold px-3 py-1 rounded">{PRICE_MIN}€</span></td>
+                      <td className="py-4 px-4 text-center"><span className="bg-yellow-400 text-black font-bold px-3 py-1 rounded">{PRICE_MAX}€</span></td>
+                    </tr>
+                    <tr className="border-t border-gray-200 bg-gray-50">
+                      <td className="py-4 px-4 font-medium text-gray-900">Aller-retour (forfait)</td>
+                      <td className="py-4 px-4 text-center"><span className="bg-yellow-400 text-black font-bold px-3 py-1 rounded">{PRICE_MIN * 2 - 5}€</span></td>
+                      <td className="py-4 px-4 text-center"><span className="bg-yellow-400 text-black font-bold px-3 py-1 rounded">{PRICE_MAX * 2 - 5}€</span></td>
+                    </tr>
+                    <tr className="border-t border-gray-200">
+                      <td className="py-4 px-4 font-medium text-gray-900">Supplément Van (5-7 pax / gros bagages)</td>
+                      <td className="py-4 px-4 text-center text-gray-700">+10€</td>
+                      <td className="py-4 px-4 text-center text-gray-700">+15€</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p className="text-gray-500 text-sm mt-4">
+                * Tarif communiqué et confirmé à la réservation, sans surprise. Le prix dépend du tarif applicable
+                (jour ou nuit/dimanche selon la réglementation préfectorale) et du véhicule choisi.
+              </p>
+
+              <div className="mt-8 p-5 bg-yellow-50 border border-yellow-200 rounded-xl">
+                <p className="text-gray-900 text-sm leading-relaxed">
+                  <strong>À noter :</strong> les forfaits officiels Paris-Orly à 36€ (rive gauche) et 45€ (rive droite)
+                  sont réservés aux <strong>taxis parisiens</strong> titulaires de la carte professionnelle Préfecture de Police.
+                  TAXI Pro 91 est une compagnie de taxis basée en <strong>Essonne (91)</strong> avec ses propres tarifs fixes
+                  négociés pour vos trajets Longjumeau-Orly — souvent plus avantageux pour les habitants de l'Essonne.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Durée & itinéraire */}
+        <section className="py-12 md:py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                Durée du trajet et itinéraire {FROM} Orly
+              </h2>
+              <p className="text-gray-600 mb-6">
+                Le trajet entre {FROM} et l'aéroport d'Orly couvre environ <strong>14 kilomètres</strong> et
+                se parcourt en moyenne en <strong>{DURATION} minutes</strong>. Longjumeau est l'une des villes
+                de l'Essonne les mieux situées pour rejoindre Orly grâce à la proximité directe de la <strong>RD117</strong>
+                et de l'autoroute <strong>A6</strong>. Un atout majeur pour les voyageurs pressés ou les vols matinaux.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="bg-white rounded-xl p-6 border border-gray-200">
+                  <h3 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
+                    <RouteIcon className="w-5 h-5 text-yellow-500" /> Itinéraire principal
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    L'itinéraire le plus direct emprunte la <strong>RD117</strong> au départ de {FROM},
+                    rejoint l'<strong>autoroute A6</strong> à l'échangeur de Wissous, puis bifurque sur
+                    l'<strong>A106</strong> qui dessert directement les terminaux d'Orly. Aucun péage sur ce parcours.
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-xl p-6 border border-gray-200">
+                  <h3 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
+                    <Clock className="w-5 h-5 text-yellow-500" /> Temps selon l'heure
+                  </h3>
+                  <ul className="text-gray-600 text-sm space-y-2">
+                    <li><strong>Heures creuses :</strong> 12-15 minutes</li>
+                    <li><strong>Heures de pointe (7h-9h / 17h-20h) :</strong> 22-28 minutes</li>
+                    <li><strong>Nuit (après 22h) :</strong> 12 minutes</li>
+                    <li><strong>Week-end :</strong> 15-18 minutes</li>
+                  </ul>
+                </div>
+              </div>
+
+              <p className="text-gray-600 mb-6">
+                <strong>Conseil de pro :</strong> pour un vol au départ d'Orly, partez de {FROM} <strong>2 heures avant</strong> votre
+                vol en semaine aux heures de pointe, <strong>1h15 avant</strong> en heures creuses. Nos chauffeurs
+                connaissent les itinéraires alternatifs (par la N20 ou la D118 via Massy) en cas d'incident sur l'A6.
+              </p>
+
+              <p className="text-gray-600">
+                Pour les patients sortant de l'<strong>hôpital de Longjumeau</strong> (Groupe Hospitalier Nord-Essonne), nous avons un accès
+                privilégié au parking de l'hôpital. Pour les voyageurs venant de la <strong>gare RER C de Longjumeau</strong>,
+                notre standard peut suivre votre arrivée et synchroniser la prise en charge.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Terminaux */}
+        <section className="py-12 md:py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
+                Tous les terminaux d'Orly desservis
+              </h2>
+              <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
+                Précisez votre terminal à la réservation : votre chauffeur vous dépose au plus près
+                des dépose-minute, juste devant les portes d'entrée.
+              </p>
+
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                {terminaux.map(t => (
+                  <div key={t.code} className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-yellow-400 transition-colors">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Plane className="w-5 h-5 text-yellow-500" />
+                      <h3 className="font-bold text-gray-900 text-lg">{t.code}</h3>
+                    </div>
+                    <p className="text-gray-600 text-sm">{t.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Suivi de vol */}
+        <section className="py-12 md:py-16 bg-gray-900 text-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                Suivi de vol inclus : aucun stress à l'arrivée
+              </h2>
+              <p className="text-gray-300 mb-6">
+                Pour vos retours à Orly, nous vous demandons votre <strong>numéro de vol</strong> à la réservation.
+                Notre système connecté aux données de l'aéroport suit en temps réel votre vol :
+              </p>
+              <ul className="space-y-3 text-gray-300 mb-6">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5" />
+                  <span><strong className="text-white">Vol à l'heure :</strong> votre chauffeur est positionné au dépose-minute du terminal avant votre atterrissage.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5" />
+                  <span><strong className="text-white">Vol en retard :</strong> l'heure de prise en charge est automatiquement ajustée. Aucun supplément d'attente facturé.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5" />
+                  <span><strong className="text-white">Vol en avance :</strong> notre standard vous prévient et accélère la prise en charge.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5" />
+                  <span><strong className="text-white">Vol annulé :</strong> contactez-nous au {SITE.phone.display} pour reporter ou annuler sans frais (jusqu'à 2h avant).</span>
+                </li>
+              </ul>
+              <p className="text-gray-400 text-sm">
+                Le numéro de vol est demandé uniquement pour les trajets retour Orly → {FROM}. Pour un départ depuis {FROM}, indiquez simplement l'heure souhaitée de prise en charge.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* 3 façons de réserver */}
+        <section className="py-12 md:py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
+              3 façons de réserver votre taxi {FROM} → Orly
+            </h2>
+            <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
+              Choisissez le canal qui vous convient. Pour un vol matinal, la réservation à l'avance (J-1) est fortement recommandée.
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 text-center">
+                <div className="w-14 h-14 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Phone className="w-7 h-7 text-black" />
+                </div>
+                <h3 className="font-bold text-gray-900 text-lg mb-2">Par téléphone</h3>
+                <p className="text-gray-600 text-sm mb-4">Standard humain 24h/24, réservation immédiate ou à l'avance.</p>
+                <a href={SITE.phone.tel} className="text-lg font-bold text-yellow-600 hover:text-yellow-700">
+                  {SITE.phone.display}
+                </a>
+              </div>
+
+              <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 text-center">
+                <div className="w-14 h-14 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Car className="w-7 h-7 text-black" />
+                </div>
+                <h3 className="font-bold text-gray-900 text-lg mb-2">Formulaire en ligne</h3>
+                <p className="text-gray-600 text-sm mb-4">Réservation 24h/24 avec prix annoncé en temps réel.</p>
+                <a href="#reservation" className="text-yellow-600 font-medium hover:text-yellow-700">Réserver en ligne</a>
+              </div>
+
+              <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 text-center">
+                <div className="w-14 h-14 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Clock className="w-7 h-7 text-black" />
+                </div>
+                <h3 className="font-bold text-gray-900 text-lg mb-2">À l'avance (J-1 recommandé)</h3>
+                <p className="text-gray-600 text-sm mb-4">Pour les vols tôt le matin, réservez la veille pour garantir votre chauffeur.</p>
+                <span className="text-yellow-600 font-medium">SMS de rappel inclus</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* USP */}
+        <section className="py-12 md:py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
+              Pourquoi choisir TAXI Pro 91 pour votre trajet {FROM} → Orly
+            </h2>
+            <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
+              Plus de 10 ans d'expérience sur l'axe Longjumeau-Orly, partenaire de l'hôpital de Longjumeau pour les transports médicaux.
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+              {usp.map(u => {
+                const Icon = u.icon
+                return (
+                  <div key={u.title} className="bg-white rounded-xl p-6 border border-gray-200 text-center">
+                    <div className="w-14 h-14 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Icon className="w-7 h-7 text-black" />
+                    </div>
+                    <h3 className="font-bold text-gray-900 mb-2">{u.title}</h3>
+                    <p className="text-gray-600 text-sm">{u.desc}</p>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Avis */}
+        <section className="py-12 md:py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
+              Avis clients sur le trajet {FROM} → Orly
+            </h2>
+            <div className="flex items-center justify-center gap-2 mb-10">
+              <div className="flex">{[1,2,3,4,5].map(i => <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />)}</div>
+              <span className="font-bold text-gray-900">4.9/5</span>
+              <span className="text-gray-500">basé sur les retours clients</span>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+              {avis.map((a, i) => (
+                <div key={i} className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+                  <div className="flex items-center gap-1 mb-3">
+                    {[...Array(a.note)].map((_, j) => <Star key={j} className="w-4 h-4 text-yellow-400 fill-yellow-400" />)}
+                  </div>
+                  <p className="text-gray-700 mb-4 italic text-sm">&quot;{a.texte}&quot;</p>
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="font-medium text-gray-900">{a.nom}</span>
+                    <span className="text-gray-500">{a.date}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="py-12 md:py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
+              Questions fréquentes — Taxi {FROM} Orly
+            </h2>
+            <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
+              Toutes les réponses aux questions des voyageurs qui réservent ce trajet.
+            </p>
+
+            <div className="max-w-3xl mx-auto space-y-4">
+              {faqs.map((item, i) => (
+                <details key={i} className="bg-white rounded-xl border border-gray-200 overflow-hidden group">
+                  <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50">
+                    <div className="flex items-center gap-3">
+                      <HelpCircle className="w-5 h-5 text-yellow-500 flex-shrink-0" />
+                      <span className="font-medium text-gray-900">{item.q}</span>
+                    </div>
+                    <span className="text-yellow-500 group-open:rotate-180 transition-transform">
+                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </span>
+                  </summary>
+                  <div className="px-6 pb-6 pt-0">
+                    <p className="text-gray-600 leading-relaxed">{item.a}</p>
+                  </div>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Autres trajets */}
+        <section className="py-12 md:py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
+              Autres trajets populaires depuis {FROM}
+            </h2>
+            <p className="text-gray-600 text-center mb-10">Découvrez nos autres liaisons au départ de {FROM} et de l'Essonne.</p>
+            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {autresTrajets.map(r => (
+                <Link key={r.slug} href={`/${r.slug}`} className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-yellow-400 transition-colors block">
+                  <div className="flex items-center gap-2 mb-2 text-yellow-600">
+                    <RouteIcon className="w-5 h-5" />
+                    <span className="text-sm font-medium">Trajet</span>
+                  </div>
+                  <h3 className="font-bold text-gray-900 text-lg mb-2">{r.from} → {r.to}</h3>
+                  <p className="text-gray-600 text-sm mb-3">{r.description}</p>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="bg-yellow-400 text-black font-bold px-2 py-1 rounded">{r.priceMin}-{r.priceMax}€</span>
+                    <span className="text-gray-500">{r.durationMin} min</span>
+                  </div>
+                </Link>
+              ))}
+              <Link href="/taxi-essonne-disneyland" className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-yellow-400 transition-colors block">
+                <div className="flex items-center gap-2 mb-2 text-yellow-600">
+                  <RouteIcon className="w-5 h-5" />
+                  <span className="text-sm font-medium">Trajet</span>
+                </div>
+                <h3 className="font-bold text-gray-900 text-lg mb-2">Longjumeau → Disneyland Paris</h3>
+                <p className="text-gray-600 text-sm mb-3">Transfert direct depuis Longjumeau vers Marne-la-Vallée.</p>
+                <div className="flex items-center justify-between text-sm">
+                  <span className="bg-yellow-400 text-black font-bold px-2 py-1 rounded">90-130€</span>
+                  <span className="text-gray-500">60 min</span>
+                </div>
+              </Link>
+              <Link href="/taxi-longjumeau" className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-yellow-400 transition-colors block">
+                <div className="flex items-center gap-2 mb-2 text-yellow-600">
+                  <MapPin className="w-5 h-5" />
+                  <span className="text-sm font-medium">Ville</span>
+                </div>
+                <h3 className="font-bold text-gray-900 text-lg mb-2">Taxi {FROM}</h3>
+                <p className="text-gray-600 text-sm mb-3">Toutes nos prestations à {FROM} : gares, aéroports, hôpital, transport conventionné CPAM.</p>
+                <span className="text-yellow-600 font-medium text-sm">Voir la page ville</span>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA final */}
+        <section className="py-12 bg-yellow-400">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-black mb-3">
+              Réservez votre taxi {FROM} → Orly maintenant
+            </h2>
+            <p className="text-gray-900 mb-6 max-w-2xl mx-auto">
+              Tarif fixe dès {PRICE_MIN}€, suivi de vol inclus, prise en charge 24h/24. Une seule promesse : la ponctualité.
+            </p>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <a href={SITE.phone.tel} className="inline-flex items-center gap-3 bg-gray-900 text-white font-bold text-lg py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors">
+                <Phone className="w-5 h-5" />
+                {SITE.phone.display}
+              </a>
+              <Link href="#reservation" className="inline-flex items-center gap-3 bg-white text-gray-900 font-bold text-lg py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
+                <Briefcase className="w-5 h-5" />
+                Réserver en ligne
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  )
+}

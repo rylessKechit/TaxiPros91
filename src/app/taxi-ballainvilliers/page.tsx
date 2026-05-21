@@ -5,12 +5,12 @@ import Breadcrumb from '@/components/Breadcrumb'
 import Footer from '@/components/Footer'
 import RelatedCities from '@/components/RelatedCities'
 import BookingForm from '@/components/BookingForm'
+import { ServiceSchema, FAQSchema } from '@/components/seo/Schemas'
 import { Phone, MapPin, Train, Plane, Clock, CheckCircle, Star, CreditCard, Shield, Users, Car, HelpCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Taxi Ballainvilliers (91160) | Reservation 24h/24 - Aeroport Orly & Gares',
-  description: 'Reservez votre taxi a Ballainvilliers 91160. Service disponible 24h/24 pour vos trajets aeroport Orly, gare Massy TGV, Paris. Village residentiel proche A10. Chauffeurs professionnels, tarifs transparents. Appelez maintenant le 06 80 03 64 63 !',
-  keywords: ['taxi ballainvilliers', 'taxi ballainvilliers 91160', 'taxi ballainvilliers orly', 'taxi ballainvilliers massy', 'reservation taxi ballainvilliers', 'taxi ballainvilliers aeroport', 'prix taxi ballainvilliers orly', 'taxi ballainvilliers paris', 'vtc ballainvilliers'],
+  description: 'Reservez votre taxi a Ballainvilliers 91160. Service disponible 24h/24 pour vos trajets aeroport Orly, gare Massy TGV, Paris. Village residentiel proche A10. Chauffeurs professionnels, tarifs transparents. Appelez maintenant le 01 80 85 91 91 !',
   openGraph: {
     title: 'Taxi Ballainvilliers (91160) | Service 24h/24 - Orly & Massy TGV',
     description: 'Votre taxi a Ballainvilliers : aeroport Orly, gare Massy TGV, Paris. Reservation rapide, tarifs transparents. Note 4.9/5.',
@@ -21,119 +21,16 @@ export const metadata: Metadata = {
   },
 }
 
-// Schema.org enrichi pour LocalBusiness + FAQ
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  '@id': 'https://www.taxipro91.com/taxi-ballainvilliers',
-  additionalType: 'https://schema.org/TaxiService',
-  name: 'TAXI Pro 91 - Taxi Ballainvilliers',
-  description: 'Service de taxi professionnel a Ballainvilliers (91160). Transferts aeroport Orly, gare Massy TGV, Paris. Disponible 24h/24 dans ce village residentiel proche A10.',
-  url: 'https://www.taxipro91.com/taxi-ballainvilliers',
-  telephone: '+33680036463',
-  priceRange: '€€',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Ballainvilliers',
-    postalCode: '91160',
-    addressRegion: 'Essonne',
-    addressCountry: 'FR'
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 48.6758,
-    longitude: 2.2919
-  },
-  areaServed: {
-    '@type': 'City',
-    name: 'Ballainvilliers',
-    containedInPlace: { '@type': 'AdministrativeArea', name: 'Essonne' }
-  },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '89',
-    bestRating: '5',
-    worstRating: '1'
-  },
-  openingHoursSpecification: {
-    '@type': 'OpeningHoursSpecification',
-    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-    opens: '00:00',
-    closes: '23:59'
-  }
-}
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Quel est le prix d\'un taxi Ballainvilliers vers Orly ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Le prix d\'un taxi de Ballainvilliers vers l\'aeroport d\'Orly est d\'environ 25EUR a 35EUR selon l\'heure et le trafic. Ce tarif est fixe et comprend la prise en charge. Reservez a l\'avance pour beneficier du meilleur tarif.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Y a-t-il une gare a Ballainvilliers ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Non, Ballainvilliers ne dispose pas de gare. La gare la plus proche est Longjumeau (RER C) a 5 minutes en taxi. Nous assurons les navettes vers cette gare ainsi que vers Massy TGV (10 min) pour vos correspondances.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Comment reserver un taxi a Ballainvilliers ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Pour reserver un taxi a Ballainvilliers, vous pouvez appeler le 06 80 03 64 63 disponible 24h/24, ou utiliser notre formulaire de reservation en ligne. La confirmation est immediate et vous recevez un SMS de rappel.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Quel delai pour avoir un taxi a Ballainvilliers ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'En moyenne, un taxi peut etre disponible a Ballainvilliers en 10 a 15 minutes. Etant un village residentiel calme, nous recommandons de reserver a l\'avance pour garantir votre prise en charge, surtout pour les trajets aeroport.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Desservez-vous les zones pavillonnaires de Ballainvilliers ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Oui, nous desservons tous les quartiers de Ballainvilliers : le Centre-bourg, la zone pavillonnaire, et les secteurs proches des Music\'Halles. Nos chauffeurs connaissent parfaitement les rues du village.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'L\'acces a l\'A10 est-il rapide depuis Ballainvilliers ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Oui, Ballainvilliers beneficie d\'un acces direct a l\'autoroute A10 en quelques minutes, ce qui permet des trajets rapides vers Paris, Orly et les autres destinations. Nos chauffeurs optimisent les itineraires selon le trafic.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Proposez-vous le transport medical a Ballainvilliers ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Oui, nous sommes conventionnes CPAM pour le transport medical a Ballainvilliers. Nous assurons vos trajets vers les hopitaux, cliniques et centres medicaux de la region avec prise en charge de votre bon de transport.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Peut-on reserver un taxi pour un aller-retour depuis Ballainvilliers ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Absolument ! Nous proposons des forfaits aller-retour avantageux, notamment pour les trajets gare et aeroport. Ideal pour les habitants de ce village residentiel sans transports en commun directs.'
-      }
-    }
-  ]
-}
+const faqs = [
+  { q: 'Quel est le prix d\'un taxi Ballainvilliers vers Orly ?', a: 'Le prix d\'un taxi de Ballainvilliers vers l\'aeroport d\'Orly est d\'environ 25EUR a 35EUR selon l\'heure et le trafic. Ce tarif est fixe et comprend la prise en charge. Reservez a l\'avance pour beneficier du meilleur tarif.' },
+  { q: 'Y a-t-il une gare a Ballainvilliers ?', a: 'Non, Ballainvilliers ne dispose pas de gare. La gare la plus proche est Longjumeau (RER C) a 5 minutes en taxi. Nous assurons les navettes vers cette gare ainsi que vers Massy TGV (10 min) pour vos correspondances.' },
+  { q: 'Comment reserver un taxi a Ballainvilliers ?', a: 'Pour reserver un taxi a Ballainvilliers, vous pouvez appeler le 01 80 85 91 91 disponible 24h/24, ou utiliser notre formulaire de reservation en ligne. La confirmation est immediate et vous recevez un SMS de rappel.' },
+  { q: 'Quel delai pour avoir un taxi a Ballainvilliers ?', a: 'En moyenne, un taxi peut etre disponible a Ballainvilliers en 10 a 15 minutes. Etant un village residentiel calme, nous recommandons de reserver a l\'avance pour garantir votre prise en charge, surtout pour les trajets aeroport.' },
+  { q: 'Desservez-vous les zones pavillonnaires de Ballainvilliers ?', a: 'Oui, nous desservons tous les quartiers de Ballainvilliers : le Centre-bourg, la zone pavillonnaire, et les secteurs proches des Music\'Halles. Nos chauffeurs connaissent parfaitement les rues du village.' },
+  { q: 'L\'acces a l\'A10 est-il rapide depuis Ballainvilliers ?', a: 'Oui, Ballainvilliers beneficie d\'un acces direct a l\'autoroute A10 en quelques minutes, ce qui permet des trajets rapides vers Paris, Orly et les autres destinations. Nos chauffeurs optimisent les itineraires selon le trafic.' },
+  { q: 'Proposez-vous le transport medical a Ballainvilliers ?', a: 'Oui, nous sommes conventionnes CPAM pour le transport medical a Ballainvilliers. Nous assurons vos trajets vers les hopitaux, cliniques et centres medicaux de la region avec prise en charge de votre bon de transport.' },
+  { q: 'Peut-on reserver un taxi pour un aller-retour depuis Ballainvilliers ?', a: 'Absolument ! Nous proposons des forfaits aller-retour avantageux, notamment pour les trajets gare et aeroport. Ideal pour les habitants de ce village residentiel sans transports en commun directs.' },
+]
 
 const destinations = [
   { name: 'Gare de Longjumeau (RER C)', distance: '5 min', price: '10-15EUR', description: 'Gare RER C la plus proche de Ballainvilliers. Connexion vers Paris Austerlitz et Versailles.' },
@@ -173,7 +70,7 @@ const faqItems = [
   },
   {
     question: 'Comment reserver un taxi a Ballainvilliers ?',
-    answer: 'Pour reserver un taxi a Ballainvilliers, trois options s\'offrent a vous : appelez le 06 80 03 64 63 (disponible 24h/24), utilisez notre formulaire de reservation en ligne, ou envoyez un SMS. La confirmation est immediate et vous recevez un rappel avant votre course. Nous recommandons la reservation a l\'avance pour ce village residentiel.'
+    answer: 'Pour reserver un taxi a Ballainvilliers, trois options s\'offrent a vous : appelez le 01 80 85 91 91 (disponible 24h/24), utilisez notre formulaire de reservation en ligne, ou envoyez un SMS. La confirmation est immediate et vous recevez un rappel avant votre course. Nous recommandons la reservation a l\'avance pour ce village residentiel.'
   },
   {
     question: 'Quel delai pour avoir un taxi a Ballainvilliers ?',
@@ -204,14 +101,13 @@ export default function TaxiBallainvilliers() {
       <Breadcrumb items={[{ name: 'Taxi Ballainvilliers' }]} />
 
       {/* Schema.org JSON-LD */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      <ServiceSchema
+        name="Taxi à Ballainvilliers"
+        description="Service de taxi professionnel à Ballainvilliers (91160). Réservation 24h/24, transferts aéroport, gare, transport médical CPAM."
+        url="https://www.taxipro91.com/taxi-ballainvilliers"
+        areaServed={['Ballainvilliers']}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <FAQSchema faqs={faqs} />
 
       <main>
         {/* Hero Banner */}
@@ -219,7 +115,7 @@ export default function TaxiBallainvilliers() {
           <div className="container mx-auto px-4 text-center">
             <p className="text-black font-medium">
               Besoin d'un taxi a Ballainvilliers ? Appelez le{' '}
-              <a href="tel:+33680036463" className="font-bold text-xl hover:underline">06 80 03 64 63</a>
+              <a href="tel:+33180859191" className="font-bold text-xl hover:underline">01 80 85 91 91</a>
             </p>
           </div>
         </section>
@@ -273,11 +169,11 @@ export default function TaxiBallainvilliers() {
                 </div>
 
                 <a
-                  href="tel:+33680036463"
+                  href="tel:+33180859191"
                   className="inline-flex items-center gap-3 bg-gray-900 text-white font-bold text-xl py-4 px-8 rounded-lg hover:bg-gray-800 transition-colors"
                 >
                   <Phone className="w-6 h-6" />
-                  06 80 03 64 63
+                  01 80 85 91 91
                 </a>
               </div>
 
@@ -485,8 +381,8 @@ export default function TaxiBallainvilliers() {
                 </div>
                 <h3 className="font-bold text-gray-900 text-lg mb-2">Par telephone</h3>
                 <p className="text-gray-600 mb-4">Appelez-nous directement au</p>
-                <a href="tel:+33680036463" className="text-xl font-bold text-yellow-600 hover:text-yellow-700">
-                  06 80 03 64 63
+                <a href="tel:+33180859191" className="text-xl font-bold text-yellow-600 hover:text-yellow-700">
+                  01 80 85 91 91
                 </a>
               </div>
 
@@ -630,11 +526,11 @@ export default function TaxiBallainvilliers() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <a
-                    href="tel:+33680036463"
+                    href="tel:+33180859191"
                     className="inline-flex items-center gap-3 bg-yellow-400 text-black font-bold text-lg py-3 px-6 rounded-lg hover:bg-yellow-500 transition-colors"
                   >
                     <Phone className="w-5 h-5" />
-                    06 80 03 64 63
+                    01 80 85 91 91
                   </a>
                   <Link
                     href="/#reservation"

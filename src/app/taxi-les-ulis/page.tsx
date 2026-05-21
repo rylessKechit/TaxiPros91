@@ -5,12 +5,12 @@ import Breadcrumb from '@/components/Breadcrumb'
 import Footer from '@/components/Footer'
 import RelatedCities from '@/components/RelatedCities'
 import BookingForm from '@/components/BookingForm'
+import { ServiceSchema, FAQSchema } from '@/components/seo/Schemas'
 import { Phone, MapPin, Train, Plane, Clock, CheckCircle, Star, CreditCard, Shield, Users, Car, HelpCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Taxi Les Ulis (91940) | Zone Courtaboeuf - Réservation 24h/24',
-  description: 'Réservez votre taxi aux Ulis 91940. Service disponible 24h/24 pour la zone d\'activités Courtaboeuf, centres commerciaux, aéroport Orly. Chauffeurs professionnels, tarifs transparents. Appelez maintenant le 06 80 03 64 63 !',
-  keywords: ['taxi les ulis', 'taxi les ulis 91940', 'taxi courtaboeuf', 'taxi zone activités courtaboeuf', 'taxi les ulis orly', 'réservation taxi les ulis', 'taxi les ulis aéroport', 'prix taxi les ulis orly', 'taxi les ulis paris'],
+  description: 'Réservez votre taxi aux Ulis 91940. Service disponible 24h/24 pour la zone d\'activités Courtaboeuf, centres commerciaux, aéroport Orly. Chauffeurs professionnels, tarifs transparents. Appelez maintenant le 01 80 85 91 91 !',
   openGraph: {
     title: 'Taxi Les Ulis (91940) | Service 24h/24 - Courtaboeuf & Orly',
     description: 'Votre taxi aux Ulis : zone Courtaboeuf, centres commerciaux, aéroport Orly. Réservation rapide, tarifs transparents. Note 4.9/5.',
@@ -21,119 +21,16 @@ export const metadata: Metadata = {
   },
 }
 
-// Schema.org enrichi pour LocalBusiness + FAQ
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  '@id': 'https://www.taxipro91.com/taxi-les-ulis',
-  additionalType: 'https://schema.org/TaxiService',
-  name: 'TAXI Pro 91 - Taxi Les Ulis',
-  description: 'Service de taxi professionnel aux Ulis (91940). Transferts zone Courtaboeuf, centres commerciaux, aéroport Orly. Disponible 24h/24.',
-  url: 'https://www.taxipro91.com/taxi-les-ulis',
-  telephone: '+33680036463',
-  priceRange: '€€',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Les Ulis',
-    postalCode: '91940',
-    addressRegion: 'Essonne',
-    addressCountry: 'FR'
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 48.6819,
-    longitude: 2.1686
-  },
-  areaServed: {
-    '@type': 'City',
-    name: 'Les Ulis',
-    containedInPlace: { '@type': 'AdministrativeArea', name: 'Essonne' }
-  },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '98',
-    bestRating: '5',
-    worstRating: '1'
-  },
-  openingHoursSpecification: {
-    '@type': 'OpeningHoursSpecification',
-    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-    opens: '00:00',
-    closes: '23:59'
-  }
-}
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Quel est le prix d\'un taxi Les Ulis → Orly ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Le prix d\'un taxi des Ulis vers l\'aéroport d\'Orly est d\'environ 30€ à 40€ selon l\'heure et le trafic. Ce tarif est fixe et comprend la prise en charge. Réservez à l\'avance pour bénéficier du meilleur tarif.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Y a-t-il une gare aux Ulis ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Non, Les Ulis ne dispose pas de gare ferroviaire directe. La ville est desservie par un réseau de bus. Pour prendre le train, la gare Massy TGV est accessible en 15 minutes en taxi, offrant des connexions TGV et RER.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Proposez-vous des transferts pour les entreprises de Courtaboeuf ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Oui, nous sommes spécialisés dans le transport professionnel vers la zone d\'activités de Courtaboeuf. Nous proposons la facturation entreprise, des comptes professionnels et des tarifs négociés pour les trajets réguliers.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Comment réserver un taxi aux Ulis ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Pour réserver un taxi aux Ulis, vous pouvez appeler le 06 80 03 64 63 disponible 24h/24, ou utiliser notre formulaire de réservation en ligne. La confirmation est immédiate et vous recevez un SMS de rappel.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Desservez-vous le centre commercial Ulis 2 ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Oui, nous assurons les transferts vers et depuis le centre commercial Ulis 2 et tous les commerces des Ulis. Idéal pour vos courses volumineuses ou si vous préférez éviter les transports en commun.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Quel délai pour avoir un taxi aux Ulis ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'En moyenne, un taxi peut être disponible aux Ulis en 10 à 15 minutes. Pour les trajets vers les aéroports ou la gare Massy TGV, nous recommandons de réserver à l\'avance pour garantir votre prise en charge.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Acceptez-vous les paiements par carte bancaire ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Oui, tous nos taxis acceptent le paiement par carte bancaire (Visa, Mastercard), en espèces, et les bons de transport CPAM. Le paiement s\'effectue à la fin de la course.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Proposez-vous le transport médical aux Ulis ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Oui, nous sommes conventionnés CPAM pour le transport médical aux Ulis. Nous assurons vos trajets vers les hôpitaux, cliniques et centres médicaux avec prise en charge de votre bon de transport.'
-      }
-    }
-  ]
-}
+const faqs = [
+  { q: 'Quel est le prix d\'un taxi Les Ulis → Orly ?', a: 'Le prix d\'un taxi des Ulis vers l\'aéroport d\'Orly est d\'environ 30€ à 40€ selon l\'heure et le trafic. Ce tarif est fixe et comprend la prise en charge. Réservez à l\'avance pour bénéficier du meilleur tarif.' },
+  { q: 'Y a-t-il une gare aux Ulis ?', a: 'Non, Les Ulis ne dispose pas de gare ferroviaire directe. La ville est desservie par un réseau de bus. Pour prendre le train, la gare Massy TGV est accessible en 15 minutes en taxi, offrant des connexions TGV et RER.' },
+  { q: 'Proposez-vous des transferts pour les entreprises de Courtaboeuf ?', a: 'Oui, nous sommes spécialisés dans le transport professionnel vers la zone d\'activités de Courtaboeuf. Nous proposons la facturation entreprise, des comptes professionnels et des tarifs négociés pour les trajets réguliers.' },
+  { q: 'Comment réserver un taxi aux Ulis ?', a: 'Pour réserver un taxi aux Ulis, vous pouvez appeler le 01 80 85 91 91 disponible 24h/24, ou utiliser notre formulaire de réservation en ligne. La confirmation est immédiate et vous recevez un SMS de rappel.' },
+  { q: 'Desservez-vous le centre commercial Ulis 2 ?', a: 'Oui, nous assurons les transferts vers et depuis le centre commercial Ulis 2 et tous les commerces des Ulis. Idéal pour vos courses volumineuses ou si vous préférez éviter les transports en commun.' },
+  { q: 'Quel délai pour avoir un taxi aux Ulis ?', a: 'En moyenne, un taxi peut être disponible aux Ulis en 10 à 15 minutes. Pour les trajets vers les aéroports ou la gare Massy TGV, nous recommandons de réserver à l\'avance pour garantir votre prise en charge.' },
+  { q: 'Acceptez-vous les paiements par carte bancaire ?', a: 'Oui, tous nos taxis acceptent le paiement par carte bancaire (Visa, Mastercard), en espèces, et les bons de transport CPAM. Le paiement s\'effectue à la fin de la course.' },
+  { q: 'Proposez-vous le transport médical aux Ulis ?', a: 'Oui, nous sommes conventionnés CPAM pour le transport médical aux Ulis. Nous assurons vos trajets vers les hôpitaux, cliniques et centres médicaux avec prise en charge de votre bon de transport.' },
+]
 
 const destinations = [
   { name: 'Zone Courtaboeuf', distance: '5 min', price: '10-15€', description: 'Desserte directe du plus grand parc d\'activités d\'Île-de-France. Accès à toutes les entreprises.' },
@@ -177,7 +74,7 @@ const faqItems = [
   },
   {
     question: 'Comment réserver un taxi aux Ulis ?',
-    answer: 'Pour réserver un taxi aux Ulis, trois options s\'offrent à vous : appelez le 06 80 03 64 63 (disponible 24h/24), utilisez notre formulaire de réservation en ligne, ou envoyez un SMS. La confirmation est immédiate et vous recevez un rappel avant votre course.'
+    answer: 'Pour réserver un taxi aux Ulis, trois options s\'offrent à vous : appelez le 01 80 85 91 91 (disponible 24h/24), utilisez notre formulaire de réservation en ligne, ou envoyez un SMS. La confirmation est immédiate et vous recevez un rappel avant votre course.'
   },
   {
     question: 'Desservez-vous le centre commercial Ulis 2 ?',
@@ -204,14 +101,13 @@ export default function TaxiLesUlis() {
       <Breadcrumb items={[{ name: 'Taxi Les Ulis' }]} />
 
       {/* Schema.org JSON-LD */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      <ServiceSchema
+        name="Taxi à Les Ulis"
+        description="Service de taxi professionnel à Les Ulis (91940). Réservation 24h/24, transferts aéroport, gare, transport médical CPAM."
+        url="https://www.taxipro91.com/taxi-les-ulis"
+        areaServed={['Les Ulis']}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <FAQSchema faqs={faqs} />
 
       <main>
         {/* Hero Banner */}
@@ -219,7 +115,7 @@ export default function TaxiLesUlis() {
           <div className="container mx-auto px-4 text-center">
             <p className="text-black font-medium">
               Besoin d'un taxi aux Ulis ? Appelez le{' '}
-              <a href="tel:+33680036463" className="font-bold text-xl hover:underline">06 80 03 64 63</a>
+              <a href="tel:+33180859191" className="font-bold text-xl hover:underline">01 80 85 91 91</a>
             </p>
           </div>
         </section>
@@ -273,11 +169,11 @@ export default function TaxiLesUlis() {
                 </div>
 
                 <a
-                  href="tel:+33680036463"
+                  href="tel:+33180859191"
                   className="inline-flex items-center gap-3 bg-gray-900 text-white font-bold text-xl py-4 px-8 rounded-lg hover:bg-gray-800 transition-colors"
                 >
                   <Phone className="w-6 h-6" />
-                  06 80 03 64 63
+                  01 80 85 91 91
                 </a>
               </div>
 
@@ -486,8 +382,8 @@ export default function TaxiLesUlis() {
                 </div>
                 <h3 className="font-bold text-gray-900 text-lg mb-2">Par téléphone</h3>
                 <p className="text-gray-600 mb-4">Appelez-nous directement au</p>
-                <a href="tel:+33680036463" className="text-xl font-bold text-yellow-600 hover:text-yellow-700">
-                  06 80 03 64 63
+                <a href="tel:+33180859191" className="text-xl font-bold text-yellow-600 hover:text-yellow-700">
+                  01 80 85 91 91
                 </a>
               </div>
 
@@ -617,11 +513,11 @@ export default function TaxiLesUlis() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <a
-                    href="tel:+33680036463"
+                    href="tel:+33180859191"
                     className="inline-flex items-center gap-3 bg-yellow-400 text-black font-bold text-lg py-3 px-6 rounded-lg hover:bg-yellow-500 transition-colors"
                   >
                     <Phone className="w-5 h-5" />
-                    06 80 03 64 63
+                    01 80 85 91 91
                   </a>
                   <Link
                     href="/#reservation"

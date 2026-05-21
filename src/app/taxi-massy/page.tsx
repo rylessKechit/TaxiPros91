@@ -5,12 +5,12 @@ import Breadcrumb from '@/components/Breadcrumb'
 import Footer from '@/components/Footer'
 import RelatedCities from '@/components/RelatedCities'
 import BookingForm from '@/components/BookingForm'
+import { ServiceSchema, FAQSchema } from '@/components/seo/Schemas'
 import { Phone, MapPin, Train, Plane, Clock, CheckCircle, Star, CreditCard, Shield, Users, Car, HelpCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Taxi Massy (91300) | Réservation 24h/24 - Gare TGV & Aéroport Orly',
-  description: 'Réservez votre taxi à Massy 91300. Service disponible 24h/24 pour vos trajets gare Massy TGV, RER B, aéroport Orly. Chauffeurs professionnels, tarifs transparents. Appelez maintenant le 06 80 03 64 63 !',
-  keywords: ['taxi massy', 'taxi massy 91300', 'taxi gare massy tgv', 'taxi massy palaiseau', 'taxi massy orly', 'réservation taxi massy', 'taxi massy aéroport', 'prix taxi massy orly', 'taxi massy paris'],
+  description: 'Réservez votre taxi à Massy 91300. Service disponible 24h/24 pour vos trajets gare Massy TGV, RER B, aéroport Orly. Chauffeurs professionnels, tarifs transparents. Appelez maintenant le 01 80 85 91 91 !',
   openGraph: {
     title: 'Taxi Massy (91300) | Service 24h/24 - Gare TGV & Orly',
     description: 'Votre taxi à Massy : gare TGV, RER B, aéroport Orly. Réservation rapide, tarifs transparents. Note 4.9/5.',
@@ -21,119 +21,16 @@ export const metadata: Metadata = {
   },
 }
 
-// Schema.org enrichi pour LocalBusiness + FAQ
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  '@id': 'https://www.taxipro91.com/taxi-massy',
-  additionalType: 'https://schema.org/TaxiService',
-  name: 'TAXI Pro 91 - Taxi Massy',
-  description: 'Service de taxi professionnel à Massy (91300). Transferts gare TGV, RER, aéroport Orly. Disponible 24h/24.',
-  url: 'https://www.taxipro91.com/taxi-massy',
-  telephone: '+33680036463',
-  priceRange: '€€',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Massy',
-    postalCode: '91300',
-    addressRegion: 'Essonne',
-    addressCountry: 'FR'
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 48.7253,
-    longitude: 2.2714
-  },
-  areaServed: {
-    '@type': 'City',
-    name: 'Massy',
-    containedInPlace: { '@type': 'AdministrativeArea', name: 'Essonne' }
-  },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '127',
-    bestRating: '5',
-    worstRating: '1'
-  },
-  openingHoursSpecification: {
-    '@type': 'OpeningHoursSpecification',
-    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-    opens: '00:00',
-    closes: '23:59'
-  }
-}
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Quel est le prix d\'un taxi Massy → Orly ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Le prix d\'un taxi de Massy vers l\'aéroport d\'Orly est d\'environ 25€ à 35€ selon l\'heure et le trafic. Ce tarif est fixe et comprend la prise en charge. Réservez à l\'avance pour bénéficier du meilleur tarif.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Comment réserver un taxi à Massy ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Pour réserver un taxi à Massy, vous pouvez appeler le 06 80 03 64 63 disponible 24h/24, ou utiliser notre formulaire de réservation en ligne. La confirmation est immédiate et vous recevez un SMS de rappel.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Proposez-vous le transport médical à Massy ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Oui, nous sommes conventionnés CPAM pour le transport médical à Massy. Nous assurons vos trajets vers les hôpitaux, cliniques et centres médicaux avec prise en charge de votre bon de transport.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Quel délai pour avoir un taxi à Massy ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'En moyenne, un taxi peut être disponible à Massy en 10 à 15 minutes. Pour les trajets vers les gares ou aéroports, nous recommandons de réserver à l\'avance pour garantir votre prise en charge.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Acceptez-vous les paiements par carte bancaire ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Oui, tous nos taxis acceptent le paiement par carte bancaire (Visa, Mastercard), en espèces, et les bons de transport CPAM. Le paiement s\'effectue à la fin de la course.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Peut-on réserver un taxi pour un aller-retour Massy ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Absolument ! Nous proposons des forfaits aller-retour avantageux, notamment pour les trajets gare et aéroport. Précisez votre besoin lors de la réservation pour obtenir le meilleur tarif.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Vos taxis sont-ils équipés pour les personnes à mobilité réduite ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Nous disposons de véhicules adaptés aux personnes à mobilité réduite (PMR). Merci de le préciser lors de votre réservation afin que nous puissions vous envoyer le véhicule approprié.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Y a-t-il un supplément pour les bagages ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Non, les bagages standards sont inclus dans le tarif. Pour les bagages volumineux ou nombreux, nous vous recommandons notre service Van qui offre plus d\'espace sans supplément.'
-      }
-    }
-  ]
-}
+const faqs = [
+  { q: 'Quel est le prix d\'un taxi Massy → Orly ?', a: 'Le prix d\'un taxi de Massy vers l\'aéroport d\'Orly est d\'environ 25€ à 35€ selon l\'heure et le trafic. Ce tarif est fixe et comprend la prise en charge. Réservez à l\'avance pour bénéficier du meilleur tarif.' },
+  { q: 'Comment réserver un taxi à Massy ?', a: 'Pour réserver un taxi à Massy, vous pouvez appeler le 01 80 85 91 91 disponible 24h/24, ou utiliser notre formulaire de réservation en ligne. La confirmation est immédiate et vous recevez un SMS de rappel.' },
+  { q: 'Proposez-vous le transport médical à Massy ?', a: 'Oui, nous sommes conventionnés CPAM pour le transport médical à Massy. Nous assurons vos trajets vers les hôpitaux, cliniques et centres médicaux avec prise en charge de votre bon de transport.' },
+  { q: 'Quel délai pour avoir un taxi à Massy ?', a: 'En moyenne, un taxi peut être disponible à Massy en 10 à 15 minutes. Pour les trajets vers les gares ou aéroports, nous recommandons de réserver à l\'avance pour garantir votre prise en charge.' },
+  { q: 'Acceptez-vous les paiements par carte bancaire ?', a: 'Oui, tous nos taxis acceptent le paiement par carte bancaire (Visa, Mastercard), en espèces, et les bons de transport CPAM. Le paiement s\'effectue à la fin de la course.' },
+  { q: 'Peut-on réserver un taxi pour un aller-retour Massy ?', a: 'Absolument ! Nous proposons des forfaits aller-retour avantageux, notamment pour les trajets gare et aéroport. Précisez votre besoin lors de la réservation pour obtenir le meilleur tarif.' },
+  { q: 'Vos taxis sont-ils équipés pour les personnes à mobilité réduite ?', a: 'Nous disposons de véhicules adaptés aux personnes à mobilité réduite (PMR). Merci de le préciser lors de votre réservation afin que nous puissions vous envoyer le véhicule approprié.' },
+  { q: 'Y a-t-il un supplément pour les bagages ?', a: 'Non, les bagages standards sont inclus dans le tarif. Pour les bagages volumineux ou nombreux, nous vous recommandons notre service Van qui offre plus d\'espace sans supplément.' },
+]
 
 const destinations = [
   { name: 'Gare Massy TGV', distance: '5 min', price: '10-15€', description: 'Desserte directe de la gare TGV pour vos voyages en province. Accès rapide aux quais.' },
@@ -169,7 +66,7 @@ const faqItems = [
   },
   {
     question: 'Comment réserver un taxi à Massy ?',
-    answer: 'Pour réserver un taxi à Massy, trois options s\'offrent à vous : appelez le 06 80 03 64 63 (disponible 24h/24), utilisez notre formulaire de réservation en ligne, ou envoyez un SMS. La confirmation est immédiate et vous recevez un rappel avant votre course.'
+    answer: 'Pour réserver un taxi à Massy, trois options s\'offrent à vous : appelez le 01 80 85 91 91 (disponible 24h/24), utilisez notre formulaire de réservation en ligne, ou envoyez un SMS. La confirmation est immédiate et vous recevez un rappel avant votre course.'
   },
   {
     question: 'Proposez-vous le transport médical à Massy ?',
@@ -204,14 +101,13 @@ export default function TaxiMassy() {
       <Breadcrumb items={[{ name: 'Taxi Massy' }]} />
 
       {/* Schema.org JSON-LD */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      <ServiceSchema
+        name="Taxi à Massy"
+        description="Service de taxi professionnel à Massy (91300). Réservation 24h/24, transferts aéroport, gare, transport médical CPAM."
+        url="https://www.taxipro91.com/taxi-massy"
+        areaServed={['Massy']}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <FAQSchema faqs={faqs} />
 
       <main>
         {/* Hero Banner */}
@@ -219,7 +115,7 @@ export default function TaxiMassy() {
           <div className="container mx-auto px-4 text-center">
             <p className="text-black font-medium">
               Besoin d'un taxi à Massy ? Appelez le{' '}
-              <a href="tel:+33680036463" className="font-bold text-xl hover:underline">06 80 03 64 63</a>
+              <a href="tel:+33180859191" className="font-bold text-xl hover:underline">01 80 85 91 91</a>
             </p>
           </div>
         </section>
@@ -273,11 +169,11 @@ export default function TaxiMassy() {
                 </div>
 
                 <a
-                  href="tel:+33680036463"
+                  href="tel:+33180859191"
                   className="inline-flex items-center gap-3 bg-gray-900 text-white font-bold text-xl py-4 px-8 rounded-lg hover:bg-gray-800 transition-colors"
                 >
                   <Phone className="w-6 h-6" />
-                  06 80 03 64 63
+                  01 80 85 91 91
                 </a>
               </div>
 
@@ -487,8 +383,8 @@ export default function TaxiMassy() {
                 </div>
                 <h3 className="font-bold text-gray-900 text-lg mb-2">Par téléphone</h3>
                 <p className="text-gray-600 mb-4">Appelez-nous directement au</p>
-                <a href="tel:+33680036463" className="text-xl font-bold text-yellow-600 hover:text-yellow-700">
-                  06 80 03 64 63
+                <a href="tel:+33180859191" className="text-xl font-bold text-yellow-600 hover:text-yellow-700">
+                  01 80 85 91 91
                 </a>
               </div>
 
@@ -614,11 +510,11 @@ export default function TaxiMassy() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <a
-                    href="tel:+33680036463"
+                    href="tel:+33180859191"
                     className="inline-flex items-center gap-3 bg-yellow-400 text-black font-bold text-lg py-3 px-6 rounded-lg hover:bg-yellow-500 transition-colors"
                   >
                     <Phone className="w-5 h-5" />
-                    06 80 03 64 63
+                    01 80 85 91 91
                   </a>
                   <Link
                     href="/#reservation"

@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { LocalBusinessSchema } from '@/components/seo/Schemas'
+import { SITE } from '@/lib/site'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -8,41 +10,23 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.taxipro91.com'),
+  metadataBase: new URL(SITE.url),
   title: {
-    default: 'Taxi Essonne 91 | Réservation Taxi Massy, Palaiseau, Les Ulis, Saclay, Longjumeau, Antony',
-    template: '%s | TAXI Pro 91 - Votre Taxi en Essonne'
+    default: 'Taxi Essonne 91 — Réservation 24h/24 Massy, Orly, Saclay | TAXI Pro 91',
+    template: '%s | TAXI Pro 91',
   },
-  description: 'Service de taxi professionnel en Essonne (91). Réservation rapide à Massy, Palaiseau, Ballainvilliers, Verrières-le-Buisson, Les Ulis, Saclay, Longjumeau et Antony. Tarifs transparents, chauffeurs expérimentés. Disponible 24h/24 et 7j/7.',
-  keywords: [
-    // Mots-clés principaux
-    'taxi essonne', 'taxi 91', 'taxi massy', 'taxi palaiseau', 'taxi longjumeau',
-    'taxi antony', 'taxi ballainvilliers', 'taxi verrières-le-buisson', 'taxi les ulis',
-    'taxi saclay', 'taxi courtaboeuf', 'réservation taxi 91',
-    // Mots-clés longue traîne
-    'taxi pas cher essonne', 'taxi aéroport orly massy', 'taxi gare massy palaiseau',
-    'taxi conventionné essonne', 'taxi médical 91', 'taxi aéroport cdg essonne',
-    'réserver taxi massy', 'taxi longjumeau gare', 'vtc essonne',
-    'taxi palaiseau polytechnique', 'taxi saclay', 'taxi orsay',
-    // Mots-clés géolocalisés
-    'chauffeur taxi massy', 'compagnie taxi palaiseau', 'centrale taxi longjumeau',
-    'taxi antony gare rer', 'taxi ballainvilliers 91160'
-  ],
-  authors: [{ name: 'TAXI Pro 91' }],
-  creator: 'TAXI Pro 91',
-  publisher: 'TAXI Pro 91',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
+  description: 'Taxi en Essonne (91) disponible 24h/24. Massy, Palaiseau, Antony, Saclay, Les Ulis. Transferts Orly & CDG, gare Massy TGV, transport médical CPAM. ☎ 01 80 85 91 91 — Note 4.9/5 ★',
+  authors: [{ name: SITE.name }],
+  creator: SITE.name,
+  publisher: SITE.name,
+  formatDetection: { email: false, address: false, telephone: false },
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
-    url: 'https://www.taxipro91.com',
-    siteName: 'TAXI Pro 91',
-    title: 'Taxi Essonne 91 | Réservation Rapide Massy, Palaiseau, Les Ulis, Saclay, Longjumeau, Antony',
-    description: 'Votre service de taxi de confiance en Essonne. Réservez votre taxi à Massy, Palaiseau, Ballainvilliers, Verrières-le-Buisson, Les Ulis, Saclay, Longjumeau et Antony. Service 24h/24.',
+    url: SITE.url,
+    siteName: SITE.name,
+    title: 'Taxi Essonne 91 — Réservation 24h/24 Massy, Orly, Saclay',
+    description: 'Votre taxi en Essonne disponible 24h/24. Transferts Orly & CDG, gare Massy TGV, conventionné CPAM. Note 4.9/5.',
     images: [
       {
         url: '/og-image.webp',
@@ -54,8 +38,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'TAXI Pro 91 | Réservation Taxi Essonne',
-    description: 'Réservez votre taxi en Essonne. Service professionnel à Massy, Palaiseau, Verrières-le-Buisson, Les Ulis, Saclay, Longjumeau et Antony. 24h/24.',
+    title: 'TAXI Pro 91 | Taxi Essonne 24h/24',
+    description: 'Réservez votre taxi en Essonne. Massy, Palaiseau, Saclay, Orly & CDG. 24h/24.',
     images: ['/og-image.webp'],
   },
   robots: {
@@ -69,105 +53,8 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  alternates: {
-    canonical: 'https://www.taxipro91.com',
-  },
+  alternates: { canonical: SITE.url },
   category: 'transportation',
-}
-
-// Schema.org JSON-LD pour le SEO local
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': ['TaxiService', 'LocalBusiness'],
-  name: 'TAXI Pro 91',
-  description: 'Service de taxi professionnel en Essonne (91). Réservation à Massy, Palaiseau, Ballainvilliers, Longjumeau, Antony, Verrières-le-Buisson, Les Ulis et Saclay.',
-  url: 'https://www.taxipro91.com',
-  telephone: '+33680036463',
-  priceRange: '€€',
-  areaServed: [
-    {
-      '@type': 'City',
-      name: 'Massy',
-      containedInPlace: { '@type': 'AdministrativeArea', name: 'Essonne' }
-    },
-    {
-      '@type': 'City',
-      name: 'Palaiseau',
-      containedInPlace: { '@type': 'AdministrativeArea', name: 'Essonne' }
-    },
-    {
-      '@type': 'City',
-      name: 'Ballainvilliers',
-      containedInPlace: { '@type': 'AdministrativeArea', name: 'Essonne' }
-    },
-    {
-      '@type': 'City',
-      name: 'Verrières-le-Buisson',
-      containedInPlace: { '@type': 'AdministrativeArea', name: 'Essonne' }
-    },
-    {
-      '@type': 'City',
-      name: 'Les Ulis',
-      containedInPlace: { '@type': 'AdministrativeArea', name: 'Essonne' }
-    },
-    {
-      '@type': 'City',
-      name: 'Saclay',
-      containedInPlace: { '@type': 'AdministrativeArea', name: 'Essonne' }
-    },
-    {
-      '@type': 'City',
-      name: 'Longjumeau',
-      containedInPlace: { '@type': 'AdministrativeArea', name: 'Essonne' }
-    },
-    {
-      '@type': 'City',
-      name: 'Antony',
-      containedInPlace: { '@type': 'AdministrativeArea', name: 'Hauts-de-Seine' }
-    }
-  ],
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Massy',
-    postalCode: '91300',
-    addressRegion: 'Essonne',
-    addressCountry: 'FR'
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 48.7253,
-    longitude: 2.2714
-  },
-  openingHoursSpecification: {
-    '@type': 'OpeningHoursSpecification',
-    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-    opens: '00:00',
-    closes: '23:59'
-  },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '500',
-    bestRating: '5',
-    worstRating: '1'
-  },
-  sameAs: [
-    'https://www.facebook.com/taxipros91',
-    'https://www.instagram.com/taxipros91'
-  ],
-  image: 'https://www.taxipro91.com/og-image.webp',
-  logo: 'https://www.taxipro91.com/logo.webp',
-  currenciesAccepted: 'EUR',
-  paymentAccepted: 'Cash, Credit Card',
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Services de taxi',
-    itemListElement: [
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Transfert Aéroport', description: 'Navettes vers Orly et Roissy CDG' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Transport Médical', description: 'Transport conventionné CPAM' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Transport Professionnel', description: 'Déplacements d\'affaires et facturation entreprise' } },
-    ]
-  }
 }
 
 export default function RootLayout({
@@ -184,13 +71,10 @@ export default function RootLayout({
         <meta name="theme-color" content="#facc15" />
         <meta name="google-site-verification" content="ByaFEimKJQnVVkNTUb36uq6ROgEPc7tBSgzTE-J9RqU" />
         <meta name="geo.region" content="FR-91" />
-        <meta name="geo.placename" content="Essonne" />
-        <meta name="geo.position" content="48.7253;2.2714" />
-        <meta name="ICBM" content="48.7253, 2.2714" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <meta name="geo.placename" content="Palaiseau" />
+        <meta name="geo.position" content="48.7146;2.2454" />
+        <meta name="ICBM" content="48.7146, 2.2454" />
+        <LocalBusinessSchema />
       </head>
       <body className={`${inter.className} antialiased`}>
         {children}

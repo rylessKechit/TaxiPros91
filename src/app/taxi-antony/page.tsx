@@ -5,12 +5,12 @@ import Breadcrumb from '@/components/Breadcrumb'
 import Footer from '@/components/Footer'
 import RelatedCities from '@/components/RelatedCities'
 import BookingForm from '@/components/BookingForm'
+import { ServiceSchema, FAQSchema } from '@/components/seo/Schemas'
 import { Phone, MapPin, Train, Plane, Clock, CheckCircle, Star, CreditCard, Shield, Users, Car, HelpCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Taxi Antony (92160) | Réservation 24h/24 - Orlyval, RER B & Aéroport Orly',
-  description: 'Réservez votre taxi à Antony 92160. Service disponible 24h/24 pour vos trajets Orlyval, RER B Antony, aéroport Orly, Parc de Sceaux. Chauffeurs professionnels, tarifs transparents. Appelez maintenant le 06 80 03 64 63 !',
-  keywords: ['taxi antony', 'taxi antony 92160', 'taxi antony orly', 'taxi antony orlyval', 'taxi antony rer b', 'taxi parc de sceaux', 'réservation taxi antony', 'taxi antony aéroport', 'prix taxi antony orly', 'taxi antony paris'],
+  description: 'Réservez votre taxi à Antony 92160. Service disponible 24h/24 pour vos trajets Orlyval, RER B Antony, aéroport Orly, Parc de Sceaux. Chauffeurs professionnels, tarifs transparents. Appelez maintenant le 01 80 85 91 91 !',
   openGraph: {
     title: 'Taxi Antony (92160) | Service 24h/24 - Orlyval & Orly',
     description: 'Votre taxi à Antony : Orlyval, RER B, aéroport Orly, Parc de Sceaux. Réservation rapide, tarifs transparents. Note 4.9/5.',
@@ -21,119 +21,16 @@ export const metadata: Metadata = {
   },
 }
 
-// Schema.org enrichi pour LocalBusiness + FAQ
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  '@id': 'https://www.taxipro91.com/taxi-antony',
-  additionalType: 'https://schema.org/TaxiService',
-  name: 'TAXI Pro 91 - Taxi Antony',
-  description: 'Service de taxi professionnel à Antony (92160). Transferts Orlyval, RER B, aéroport Orly, Parc de Sceaux. Disponible 24h/24.',
-  url: 'https://www.taxipro91.com/taxi-antony',
-  telephone: '+33680036463',
-  priceRange: '€€',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Antony',
-    postalCode: '92160',
-    addressRegion: 'Hauts-de-Seine',
-    addressCountry: 'FR'
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 48.7539,
-    longitude: 2.2975
-  },
-  areaServed: {
-    '@type': 'City',
-    name: 'Antony',
-    containedInPlace: { '@type': 'AdministrativeArea', name: 'Hauts-de-Seine' }
-  },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '143',
-    bestRating: '5',
-    worstRating: '1'
-  },
-  openingHoursSpecification: {
-    '@type': 'OpeningHoursSpecification',
-    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-    opens: '00:00',
-    closes: '23:59'
-  }
-}
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Quel est le prix d\'un taxi Antony → Orly ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Le prix d\'un taxi de Antony vers l\'aéroport d\'Orly est d\'environ 20€ à 30€ selon l\'heure et le trafic. Trajet direct en 10 minutes, plus rapide et confortable que l\'Orlyval avec vos bagages.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Le taxi est-il plus pratique que l\'Orlyval depuis Antony ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Oui, le taxi offre plusieurs avantages par rapport à l\'Orlyval : prise en charge à domicile, pas de correspondance, confort avec les bagages, disponible 24h/24 (contrairement à l\'Orlyval qui ferme la nuit), et tarif compétitif pour 2 personnes ou plus.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Quelles gares RER B desservez-vous à Antony ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Nous desservons les trois gares RER B d\'Antony : Antony (avec correspondance Orlyval), La Croix de Berny et Les Baconnets. Prise en charge et dépose au plus près des accès.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Proposez-vous des transferts vers le Parc de Sceaux ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Oui, nous assurons les transferts vers le Domaine de Sceaux pour vos promenades, événements, mariages ou séances photos. Dépose à l\'entrée de votre choix (grilles d\'honneur, Petit Château, etc.).'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Quel délai pour avoir un taxi à Antony ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'En moyenne, un taxi peut être disponible à Antony en 10 à 15 minutes. Pour les trajets vers Orly, nous recommandons de réserver à l\'avance pour garantir votre prise en charge.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Acceptez-vous les paiements par carte bancaire ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Oui, tous nos taxis acceptent le paiement par carte bancaire (Visa, Mastercard), en espèces, et les bons de transport CPAM. Le paiement s\'effectue à la fin de la course.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Proposez-vous le transport médical à Antony ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Oui, nous sommes conventionnés CPAM pour le transport médical à Antony. Nous assurons vos trajets vers les hôpitaux, cliniques et centres médicaux, notamment l\'hôpital privé d\'Antony.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Y a-t-il un supplément pour les trajets de nuit vers Orly ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Les tarifs de nuit (19h-7h) incluent un supplément d\'environ 15-20%. C\'est particulièrement avantageux car l\'Orlyval ne fonctionne pas la nuit, le taxi devient alors la seule solution directe.'
-      }
-    }
-  ]
-}
+const faqs = [
+  { q: 'Quel est le prix d\'un taxi Antony → Orly ?', a: 'Le prix d\'un taxi de Antony vers l\'aéroport d\'Orly est d\'environ 20€ à 30€ selon l\'heure et le trafic. Trajet direct en 10 minutes, plus rapide et confortable que l\'Orlyval avec vos bagages.' },
+  { q: 'Le taxi est-il plus pratique que l\'Orlyval depuis Antony ?', a: 'Oui, le taxi offre plusieurs avantages par rapport à l\'Orlyval : prise en charge à domicile, pas de correspondance, confort avec les bagages, disponible 24h/24 (contrairement à l\'Orlyval qui ferme la nuit), et tarif compétitif pour 2 personnes ou plus.' },
+  { q: 'Quelles gares RER B desservez-vous à Antony ?', a: 'Nous desservons les trois gares RER B d\'Antony : Antony (avec correspondance Orlyval), La Croix de Berny et Les Baconnets. Prise en charge et dépose au plus près des accès.' },
+  { q: 'Proposez-vous des transferts vers le Parc de Sceaux ?', a: 'Oui, nous assurons les transferts vers le Domaine de Sceaux pour vos promenades, événements, mariages ou séances photos. Dépose à l\'entrée de votre choix (grilles d\'honneur, Petit Château, etc.).' },
+  { q: 'Quel délai pour avoir un taxi à Antony ?', a: 'En moyenne, un taxi peut être disponible à Antony en 10 à 15 minutes. Pour les trajets vers Orly, nous recommandons de réserver à l\'avance pour garantir votre prise en charge.' },
+  { q: 'Acceptez-vous les paiements par carte bancaire ?', a: 'Oui, tous nos taxis acceptent le paiement par carte bancaire (Visa, Mastercard), en espèces, et les bons de transport CPAM. Le paiement s\'effectue à la fin de la course.' },
+  { q: 'Proposez-vous le transport médical à Antony ?', a: 'Oui, nous sommes conventionnés CPAM pour le transport médical à Antony. Nous assurons vos trajets vers les hôpitaux, cliniques et centres médicaux, notamment l\'hôpital privé d\'Antony.' },
+  { q: 'Y a-t-il un supplément pour les trajets de nuit vers Orly ?', a: 'Les tarifs de nuit (19h-7h) incluent un supplément d\'environ 15-20%. C\'est particulièrement avantageux car l\'Orlyval ne fonctionne pas la nuit, le taxi devient alors la seule solution directe.' },
+]
 
 const destinations = [
   { name: 'Aéroport d\'Orly', distance: '10 min', price: '20-30€', description: 'Transfert rapide vers tous les terminaux Orly 1, 2, 3 et 4. Plus pratique que l\'Orlyval.' },
@@ -204,14 +101,13 @@ export default function TaxiAntony() {
       <Breadcrumb items={[{ name: 'Taxi Antony' }]} />
 
       {/* Schema.org JSON-LD */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      <ServiceSchema
+        name="Taxi à Antony"
+        description="Service de taxi professionnel à Antony (92160). Réservation 24h/24, transferts aéroport, gare, transport médical CPAM."
+        url="https://www.taxipro91.com/taxi-antony"
+        areaServed={['Antony']}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <FAQSchema faqs={faqs} />
 
       <main>
         {/* Hero Banner */}
@@ -219,7 +115,7 @@ export default function TaxiAntony() {
           <div className="container mx-auto px-4 text-center">
             <p className="text-black font-medium">
               Besoin d'un taxi à Antony ? Appelez le{' '}
-              <a href="tel:+33680036463" className="font-bold text-xl hover:underline">06 80 03 64 63</a>
+              <a href="tel:+33180859191" className="font-bold text-xl hover:underline">01 80 85 91 91</a>
             </p>
           </div>
         </section>
@@ -274,11 +170,11 @@ export default function TaxiAntony() {
                 </div>
 
                 <a
-                  href="tel:+33680036463"
+                  href="tel:+33180859191"
                   className="inline-flex items-center gap-3 bg-gray-900 text-white font-bold text-xl py-4 px-8 rounded-lg hover:bg-gray-800 transition-colors"
                 >
                   <Phone className="w-6 h-6" />
-                  06 80 03 64 63
+                  01 80 85 91 91
                 </a>
               </div>
 
@@ -487,8 +383,8 @@ export default function TaxiAntony() {
                 </div>
                 <h3 className="font-bold text-gray-900 text-lg mb-2">Par téléphone</h3>
                 <p className="text-gray-600 mb-4">Appelez-nous directement au</p>
-                <a href="tel:+33680036463" className="text-xl font-bold text-yellow-600 hover:text-yellow-700">
-                  06 80 03 64 63
+                <a href="tel:+33180859191" className="text-xl font-bold text-yellow-600 hover:text-yellow-700">
+                  01 80 85 91 91
                 </a>
               </div>
 
@@ -623,11 +519,11 @@ export default function TaxiAntony() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <a
-                    href="tel:+33680036463"
+                    href="tel:+33180859191"
                     className="inline-flex items-center gap-3 bg-yellow-400 text-black font-bold text-lg py-3 px-6 rounded-lg hover:bg-yellow-500 transition-colors"
                   >
                     <Phone className="w-5 h-5" />
-                    06 80 03 64 63
+                    01 80 85 91 91
                   </a>
                   <Link
                     href="/#reservation"

@@ -79,7 +79,7 @@ function buildEmailHtml(data: BookingData, isAdmin: boolean): string {
         ${!isAdmin ? `
         <div style="margin-top:24px;padding:16px;background:#171717;border-radius:8px;text-align:center;">
           <p style="color:#ccc;margin:0 0 8px;">Besoin de modifier votre réservation ?</p>
-          <a href="tel:+33680036463" style="color:#facc15;text-decoration:none;font-weight:bold;">📞 06 80 03 64 63</a>
+          <a href="tel:+33180859191" style="color:#facc15;text-decoration:none;font-weight:bold;">📞 01 80 85 91 91</a>
         </div>
         ` : ''}
       </div>

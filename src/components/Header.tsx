@@ -66,11 +66,11 @@ export default function Header() {
 
           {/* Phone - Always visible on desktop */}
           <a
-            href="tel:+33680036463"
+            href="tel:+33180859191"
             className="hidden lg:flex items-center gap-3 bg-yellow-400 hover:bg-yellow-500 text-black font-bold text-lg px-5 py-3 rounded-lg"
           >
             <Phone className="w-5 h-5" />
-            06 80 03 64 63
+            01 80 85 91 91
           </a>
 
           {/* Mobile menu button */}
@@ -184,11 +184,11 @@ export default function Header() {
           </Link>
 
           <a
-            href="tel:+33680036463"
+            href="tel:+33180859191"
             className="flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-4 py-4 rounded-lg mt-4 transition-colors"
           >
             <Phone className="w-5 h-5" />
-            06 80 03 64 63
+            01 80 85 91 91
           </a>
         </nav>
       </div>

@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import Services from '@/components/Services'
+import PopularRoutes from '@/components/PopularRoutes'
 import Fleet from '@/components/Fleet'
 import Zones from '@/components/Zones'
 import Testimonials from '@/components/Testimonials'
@@ -12,6 +13,7 @@ export default function Home() {
       <Header />
       <Hero />
       <Services />
+      <PopularRoutes />
       <Fleet />
       <Zones />
       <Testimonials />
@@ -19,7 +21,7 @@ export default function Home() {
 
       {/* Bouton appel flottant sur mobile - petit rond */}
       <a
-        href="tel:+33680036463"
+        href="tel:+33180859191"
         className="fixed bottom-4 right-4 sm:hidden z-50 w-14 h-14 bg-yellow-400 hover:bg-yellow-500 rounded-full flex items-center justify-center shadow-lg"
         aria-label="Appeler"
       >

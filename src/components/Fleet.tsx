@@ -11,7 +11,6 @@ const vehicles = [
     features: ['100% électrique', 'Grand coffre', 'Écran tactile'],
     description: 'SUV spacieux et écologique pour tous vos trajets en confort.',
     isElectric: true,
-    objectFit: 'contain' as const,
   },
   {
     name: 'Mercedes Classe V',
@@ -62,7 +61,7 @@ export default function Fleet() {
                   alt={vehicle.name}
                   fill
                   sizes="(max-width: 768px) 90vw, (max-width: 1024px) 45vw, 30vw"
-                  className={vehicle.objectFit === 'contain' ? 'object-contain p-4' : 'object-cover'}
+                  className="object-cover"
                 />
                 {/* Badge catégorie */}
                 <div className="absolute top-3 left-3">

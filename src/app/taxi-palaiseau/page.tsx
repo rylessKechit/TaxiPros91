@@ -5,12 +5,12 @@ import Breadcrumb from '@/components/Breadcrumb'
 import Footer from '@/components/Footer'
 import RelatedCities from '@/components/RelatedCities'
 import BookingForm from '@/components/BookingForm'
+import { ServiceSchema, FAQSchema } from '@/components/seo/Schemas'
 import { Phone, MapPin, Train, Plane, Clock, CheckCircle, Star, CreditCard, Shield, Users, Car, HelpCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Taxi Palaiseau (91120) | Plateau de Saclay & Polytechnique - 24h/24',
-  description: 'Taxi Palaiseau 91120 : plateau de Saclay, Polytechnique, CentraleSupelec, ENS, HEC. Service 24h/24, gare RER B Palaiseau. Tarifs transparents. Appelez le 06 80 03 64 63 !',
-  keywords: ['taxi palaiseau', 'taxi palaiseau 91120', 'taxi plateau saclay', 'taxi polytechnique', 'taxi centralesupelec', 'taxi ens saclay', 'taxi palaiseau gare', 'taxi hec', 'taxi agroparistech', 'réservation taxi palaiseau'],
+  description: 'Taxi Palaiseau 91120 : plateau de Saclay, Polytechnique, CentraleSupelec, ENS, HEC. Service 24h/24, gare RER B Palaiseau. Tarifs transparents. Appelez le 01 80 85 91 91 !',
   openGraph: {
     title: 'Taxi Palaiseau (91120) | Plateau de Saclay & Grandes Ecoles',
     description: 'Votre taxi à Palaiseau : Polytechnique, plateau de Saclay, grandes écoles, gare RER B. Disponible 24h/24. Note 4.9/5.',
@@ -21,119 +21,16 @@ export const metadata: Metadata = {
   },
 }
 
-// Schema.org enrichi pour LocalBusiness + FAQ
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  '@id': 'https://www.taxipro91.com/taxi-palaiseau',
-  additionalType: 'https://schema.org/TaxiService',
-  name: 'TAXI Pro 91 - Taxi Palaiseau',
-  description: 'Service de taxi professionnel à Palaiseau (91120). Transferts plateau de Saclay, Polytechnique, grandes écoles, gare RER B. Disponible 24h/24.',
-  url: 'https://www.taxipro91.com/taxi-palaiseau',
-  telephone: '+33680036463',
-  priceRange: '€€',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Palaiseau',
-    postalCode: '91120',
-    addressRegion: 'Essonne',
-    addressCountry: 'FR'
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 48.7147,
-    longitude: 2.2464
-  },
-  areaServed: {
-    '@type': 'City',
-    name: 'Palaiseau',
-    containedInPlace: { '@type': 'AdministrativeArea', name: 'Essonne' }
-  },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '98',
-    bestRating: '5',
-    worstRating: '1'
-  },
-  openingHoursSpecification: {
-    '@type': 'OpeningHoursSpecification',
-    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-    opens: '00:00',
-    closes: '23:59'
-  }
-}
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Quel est le prix d\'un taxi Palaiseau → Polytechnique ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Le prix d\'un taxi de Palaiseau centre vers l\'École Polytechnique est d\'environ 15€ à 25€ selon le point de départ exact. Le trajet dure environ 10 minutes. Tarif fixe communiqué à la réservation.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Comment réserver un taxi pour le plateau de Saclay ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Pour réserver un taxi vers le plateau de Saclay, appelez le 06 80 03 64 63 (24h/24) ou utilisez notre formulaire en ligne. Nous connaissons parfaitement tous les accès aux écoles et entreprises du plateau.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Proposez-vous des tarifs étudiants pour le plateau de Saclay ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Oui, nous proposons des tarifs préférentiels pour les étudiants du plateau de Saclay (Polytechnique, CentraleSupélec, ENS, HEC, AgroParisTech). Mentionnez votre statut étudiant lors de la réservation.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Desservez-vous toutes les écoles du plateau de Saclay ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Oui, nous desservons toutes les écoles et universités du plateau : Polytechnique, CentraleSupélec, ENS Paris-Saclay, AgroParisTech, Institut d\'Optique, ENSAE, Télécom Paris, et l\'Université Paris-Saclay.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Quel est le prix d\'un taxi Palaiseau → Orly ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Le prix d\'un taxi de Palaiseau vers l\'aéroport d\'Orly est d\'environ 30€ à 40€. Le trajet dure environ 20 minutes selon le trafic. Suivi de vol inclus pour les retards éventuels.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Y a-t-il un service de taxi la nuit à Palaiseau ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Oui, notre service est disponible 24h/24, 7j/7, y compris la nuit. Idéal pour les vols tôt le matin ou les retours tardifs de soirées étudiantes. Supplément nuit applicable de 19h à 7h.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Comment rejoindre la gare RER de Palaiseau en taxi ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Nous desservons les gares RER B Palaiseau et Lozère. Un taxi peut vous y conduire en 5-10 minutes depuis n\'importe quel quartier de Palaiseau. Tarif : 10-15€.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Proposez-vous le transport depuis/vers les entreprises tech du plateau ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Oui, nous assurons le transport professionnel vers toutes les entreprises du plateau de Saclay : Danone, Thalès, EDF Lab, Safran, startups... Facturation entreprise disponible.'
-      }
-    }
-  ]
-}
+const faqs = [
+  { q: 'Quel est le prix d\'un taxi Palaiseau → Polytechnique ?', a: 'Le prix d\'un taxi de Palaiseau centre vers l\'École Polytechnique est d\'environ 15€ à 25€ selon le point de départ exact. Le trajet dure environ 10 minutes. Tarif fixe communiqué à la réservation.' },
+  { q: 'Comment réserver un taxi pour le plateau de Saclay ?', a: 'Pour réserver un taxi vers le plateau de Saclay, appelez le 01 80 85 91 91 (24h/24) ou utilisez notre formulaire en ligne. Nous connaissons parfaitement tous les accès aux écoles et entreprises du plateau.' },
+  { q: 'Proposez-vous des tarifs étudiants pour le plateau de Saclay ?', a: 'Oui, nous proposons des tarifs préférentiels pour les étudiants du plateau de Saclay (Polytechnique, CentraleSupélec, ENS, HEC, AgroParisTech). Mentionnez votre statut étudiant lors de la réservation.' },
+  { q: 'Desservez-vous toutes les écoles du plateau de Saclay ?', a: 'Oui, nous desservons toutes les écoles et universités du plateau : Polytechnique, CentraleSupélec, ENS Paris-Saclay, AgroParisTech, Institut d\'Optique, ENSAE, Télécom Paris, et l\'Université Paris-Saclay.' },
+  { q: 'Quel est le prix d\'un taxi Palaiseau → Orly ?', a: 'Le prix d\'un taxi de Palaiseau vers l\'aéroport d\'Orly est d\'environ 30€ à 40€. Le trajet dure environ 20 minutes selon le trafic. Suivi de vol inclus pour les retards éventuels.' },
+  { q: 'Y a-t-il un service de taxi la nuit à Palaiseau ?', a: 'Oui, notre service est disponible 24h/24, 7j/7, y compris la nuit. Idéal pour les vols tôt le matin ou les retours tardifs de soirées étudiantes. Supplément nuit applicable de 19h à 7h.' },
+  { q: 'Comment rejoindre la gare RER de Palaiseau en taxi ?', a: 'Nous desservons les gares RER B Palaiseau et Lozère. Un taxi peut vous y conduire en 5-10 minutes depuis n\'importe quel quartier de Palaiseau. Tarif : 10-15€.' },
+  { q: 'Proposez-vous le transport depuis/vers les entreprises tech du plateau ?', a: 'Oui, nous assurons le transport professionnel vers toutes les entreprises du plateau de Saclay : Danone, Thalès, EDF Lab, Safran, startups... Facturation entreprise disponible.' },
+]
 
 const destinations = [
   { name: 'École Polytechnique', distance: '10 min', price: '15-25€', description: 'Accès direct au campus de l\'X sur le plateau de Saclay. Connaissance parfaite des entrées.' },
@@ -169,7 +66,7 @@ const faqItems = [
   },
   {
     question: 'Comment réserver un taxi pour le plateau de Saclay ?',
-    answer: 'Pour réserver un taxi vers le plateau de Saclay, vous avez trois options : appelez le 06 80 03 64 63 (disponible 24h/24), utilisez notre formulaire de réservation en ligne, ou envoyez un SMS. Précisez l\'école ou l\'entreprise de destination car nous connaissons tous les accès du plateau.'
+    answer: 'Pour réserver un taxi vers le plateau de Saclay, vous avez trois options : appelez le 01 80 85 91 91 (disponible 24h/24), utilisez notre formulaire de réservation en ligne, ou envoyez un SMS. Précisez l\'école ou l\'entreprise de destination car nous connaissons tous les accès du plateau.'
   },
   {
     question: 'Proposez-vous des tarifs étudiants pour le plateau de Saclay ?',
@@ -204,14 +101,13 @@ export default function TaxiPalaiseau() {
       <Breadcrumb items={[{ name: 'Taxi Palaiseau' }]} />
 
       {/* Schema.org JSON-LD */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      <ServiceSchema
+        name="Taxi à Palaiseau"
+        description="Service de taxi professionnel à Palaiseau (91120). Réservation 24h/24, transferts aéroport, gare, transport médical CPAM."
+        url="https://www.taxipro91.com/taxi-palaiseau"
+        areaServed={['Palaiseau']}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <FAQSchema faqs={faqs} />
 
       <main>
         {/* Hero Banner */}
@@ -219,7 +115,7 @@ export default function TaxiPalaiseau() {
           <div className="container mx-auto px-4 text-center">
             <p className="text-black font-medium">
               Besoin d'un taxi à Palaiseau ? Appelez le{' '}
-              <a href="tel:+33680036463" className="font-bold text-xl hover:underline">06 80 03 64 63</a>
+              <a href="tel:+33180859191" className="font-bold text-xl hover:underline">01 80 85 91 91</a>
             </p>
           </div>
         </section>
@@ -273,11 +169,11 @@ export default function TaxiPalaiseau() {
                 </div>
 
                 <a
-                  href="tel:+33680036463"
+                  href="tel:+33180859191"
                   className="inline-flex items-center gap-3 bg-gray-900 text-white font-bold text-xl py-4 px-8 rounded-lg hover:bg-gray-800 transition-colors"
                 >
                   <Phone className="w-6 h-6" />
-                  06 80 03 64 63
+                  01 80 85 91 91
                 </a>
               </div>
 
@@ -487,8 +383,8 @@ export default function TaxiPalaiseau() {
                 </div>
                 <h3 className="font-bold text-gray-900 text-lg mb-2">Par téléphone</h3>
                 <p className="text-gray-600 mb-4">Appelez-nous directement au</p>
-                <a href="tel:+33680036463" className="text-xl font-bold text-yellow-600 hover:text-yellow-700">
-                  06 80 03 64 63
+                <a href="tel:+33180859191" className="text-xl font-bold text-yellow-600 hover:text-yellow-700">
+                  01 80 85 91 91
                 </a>
               </div>
 
@@ -626,11 +522,11 @@ export default function TaxiPalaiseau() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <a
-                    href="tel:+33680036463"
+                    href="tel:+33180859191"
                     className="inline-flex items-center gap-3 bg-yellow-400 text-black font-bold text-lg py-3 px-6 rounded-lg hover:bg-yellow-500 transition-colors"
                   >
                     <Phone className="w-5 h-5" />
-                    06 80 03 64 63
+                    01 80 85 91 91
                   </a>
                   <Link
                     href="/#reservation"

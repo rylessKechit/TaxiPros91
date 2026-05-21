@@ -5,12 +5,12 @@ import Breadcrumb from '@/components/Breadcrumb'
 import Footer from '@/components/Footer'
 import RelatedCities from '@/components/RelatedCities'
 import BookingForm from '@/components/BookingForm'
+import { ServiceSchema, FAQSchema } from '@/components/seo/Schemas'
 import { Phone, MapPin, Train, Plane, Clock, CheckCircle, Star, CreditCard, Shield, Users, Car, HelpCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Taxi Longjumeau (91160) | Reservation 24h/24 - Hopital & Gare RER C',
-  description: 'Reservez votre taxi a Longjumeau 91160. Service disponible 24h/24 pour vos trajets hopital, gare RER C, aeroport Orly. Transport medical conventionne CPAM. Appelez maintenant le 06 80 03 64 63 !',
-  keywords: ['taxi longjumeau', 'taxi longjumeau 91160', 'taxi hopital longjumeau', 'taxi gare longjumeau', 'taxi longjumeau orly', 'reservation taxi longjumeau', 'taxi longjumeau aeroport', 'transport medical longjumeau', 'taxi longjumeau paris'],
+  description: 'Reservez votre taxi a Longjumeau 91160. Service disponible 24h/24 pour vos trajets hopital, gare RER C, aeroport Orly. Transport medical conventionne CPAM. Appelez maintenant le 01 80 85 91 91 !',
   openGraph: {
     title: 'Taxi Longjumeau (91160) | Service 24h/24 - Hopital & Orly',
     description: 'Votre taxi a Longjumeau : hopital, gare RER C, aeroport Orly. Reservation rapide, tarifs transparents. Note 4.9/5.',
@@ -21,119 +21,16 @@ export const metadata: Metadata = {
   },
 }
 
-// Schema.org enrichi pour LocalBusiness + FAQ
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  '@id': 'https://www.taxipro91.com/taxi-longjumeau',
-  additionalType: 'https://schema.org/TaxiService',
-  name: 'TAXI Pro 91 - Taxi Longjumeau',
-  description: 'Service de taxi professionnel a Longjumeau (91160). Transferts hopital, gare RER C, aeroport Orly. Transport medical conventionne CPAM. Disponible 24h/24.',
-  url: 'https://www.taxipro91.com/taxi-longjumeau',
-  telephone: '+33680036463',
-  priceRange: '€€',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Longjumeau',
-    postalCode: '91160',
-    addressRegion: 'Essonne',
-    addressCountry: 'FR'
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 48.6944,
-    longitude: 2.2956
-  },
-  areaServed: {
-    '@type': 'City',
-    name: 'Longjumeau',
-    containedInPlace: { '@type': 'AdministrativeArea', name: 'Essonne' }
-  },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '89',
-    bestRating: '5',
-    worstRating: '1'
-  },
-  openingHoursSpecification: {
-    '@type': 'OpeningHoursSpecification',
-    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-    opens: '00:00',
-    closes: '23:59'
-  }
-}
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Quel est le prix d\'un taxi Longjumeau vers Orly ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Le prix d\'un taxi de Longjumeau vers l\'aeroport d\'Orly est d\'environ 20 a 30 euros selon l\'heure et le trafic. Le trajet dure environ 12 minutes via l\'A6. Ce tarif est fixe et comprend la prise en charge.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Proposez-vous le transport medical a Longjumeau ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Oui, nous sommes conventionnes CPAM pour le transport medical a Longjumeau. Nous assurons vos trajets vers le centre hospitalier de Longjumeau, les cliniques et centres medicaux avec prise en charge de votre bon de transport.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Comment rejoindre la gare RER C de Longjumeau en taxi ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Nous assurons les transferts vers la gare RER C de Longjumeau en 3 a 5 minutes selon votre point de depart. Service disponible 24h/24 pour vos correspondances vers Paris ou la banlieue sud.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Quel est le tarif taxi Longjumeau vers l\'hopital ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Le tarif pour un taxi de Longjumeau vers le centre hospitalier est de 10 a 15 euros environ, soit 5 minutes de trajet. Pour les transports medicaux avec prescription, nous acceptons les bons CPAM.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Peut-on reserver un taxi a Longjumeau pour un rendez-vous medical tot le matin ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Absolument ! Notre service est disponible 24h/24, y compris tot le matin pour vos rendez-vous medicaux. Reservez la veille pour garantir votre prise en charge a l\'heure souhaitee.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Combien de temps pour rejoindre Paris depuis Longjumeau ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Le trajet Longjumeau-Paris centre dure environ 30 minutes via l\'autoroute A6, selon les conditions de circulation. Le tarif est de 45 a 60 euros selon la destination exacte dans Paris.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Acceptez-vous les bons de transport CPAM a Longjumeau ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Oui, nous sommes taxi conventionne CPAM. Nous acceptons les bons de transport pour vos trajets medicaux. Presentez simplement votre prescription et nous nous occupons des formalites administratives.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Comment rejoindre la gare Massy TGV depuis Longjumeau ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Le trajet Longjumeau vers la gare Massy TGV dure environ 10 minutes pour un tarif de 15 a 20 euros. Ideal pour vos correspondances TGV vers Lyon, Marseille, Bordeaux ou Nantes.'
-      }
-    }
-  ]
-}
+const faqs = [
+  { q: 'Quel est le prix d\'un taxi Longjumeau vers Orly ?', a: 'Le prix d\'un taxi de Longjumeau vers l\'aeroport d\'Orly est d\'environ 20 a 30 euros selon l\'heure et le trafic. Le trajet dure environ 12 minutes via l\'A6. Ce tarif est fixe et comprend la prise en charge.' },
+  { q: 'Proposez-vous le transport medical a Longjumeau ?', a: 'Oui, nous sommes conventionnes CPAM pour le transport medical a Longjumeau. Nous assurons vos trajets vers le centre hospitalier de Longjumeau, les cliniques et centres medicaux avec prise en charge de votre bon de transport.' },
+  { q: 'Comment rejoindre la gare RER C de Longjumeau en taxi ?', a: 'Nous assurons les transferts vers la gare RER C de Longjumeau en 3 a 5 minutes selon votre point de depart. Service disponible 24h/24 pour vos correspondances vers Paris ou la banlieue sud.' },
+  { q: 'Quel est le tarif taxi Longjumeau vers l\'hopital ?', a: 'Le tarif pour un taxi de Longjumeau vers le centre hospitalier est de 10 a 15 euros environ, soit 5 minutes de trajet. Pour les transports medicaux avec prescription, nous acceptons les bons CPAM.' },
+  { q: 'Peut-on reserver un taxi a Longjumeau pour un rendez-vous medical tot le matin ?', a: 'Absolument ! Notre service est disponible 24h/24, y compris tot le matin pour vos rendez-vous medicaux. Reservez la veille pour garantir votre prise en charge a l\'heure souhaitee.' },
+  { q: 'Combien de temps pour rejoindre Paris depuis Longjumeau ?', a: 'Le trajet Longjumeau-Paris centre dure environ 30 minutes via l\'autoroute A6, selon les conditions de circulation. Le tarif est de 45 a 60 euros selon la destination exacte dans Paris.' },
+  { q: 'Acceptez-vous les bons de transport CPAM a Longjumeau ?', a: 'Oui, nous sommes taxi conventionne CPAM. Nous acceptons les bons de transport pour vos trajets medicaux. Presentez simplement votre prescription et nous nous occupons des formalites administratives.' },
+  { q: 'Comment rejoindre la gare Massy TGV depuis Longjumeau ?', a: 'Le trajet Longjumeau vers la gare Massy TGV dure environ 10 minutes pour un tarif de 15 a 20 euros. Ideal pour vos correspondances TGV vers Lyon, Marseille, Bordeaux ou Nantes.' },
+]
 
 const destinations = [
   { name: 'Aeroport d\'Orly', distance: '12 min', price: '20-30\u20AC', description: 'Transfert rapide vers les terminaux Orly 1, 2, 3 et 4 via l\'A6. Suivi de vol inclus.' },
@@ -204,14 +101,13 @@ export default function TaxiLongjumeau() {
       <Breadcrumb items={[{ name: 'Taxi Longjumeau' }]} />
 
       {/* Schema.org JSON-LD */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      <ServiceSchema
+        name="Taxi à Longjumeau"
+        description="Service de taxi professionnel à Longjumeau (91160). Réservation 24h/24, transferts aéroport, gare, transport médical CPAM."
+        url="https://www.taxipro91.com/taxi-longjumeau"
+        areaServed={['Longjumeau']}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <FAQSchema faqs={faqs} />
 
       <main>
         {/* Hero Banner */}
@@ -219,7 +115,7 @@ export default function TaxiLongjumeau() {
           <div className="container mx-auto px-4 text-center">
             <p className="text-black font-medium">
               Besoin d'un taxi a Longjumeau ? Appelez le{' '}
-              <a href="tel:+33680036463" className="font-bold text-xl hover:underline">06 80 03 64 63</a>
+              <a href="tel:+33180859191" className="font-bold text-xl hover:underline">01 80 85 91 91</a>
             </p>
           </div>
         </section>
@@ -274,11 +170,11 @@ export default function TaxiLongjumeau() {
                 </div>
 
                 <a
-                  href="tel:+33680036463"
+                  href="tel:+33180859191"
                   className="inline-flex items-center gap-3 bg-gray-900 text-white font-bold text-xl py-4 px-8 rounded-lg hover:bg-gray-800 transition-colors"
                 >
                   <Phone className="w-6 h-6" />
-                  06 80 03 64 63
+                  01 80 85 91 91
                 </a>
               </div>
 
@@ -487,8 +383,8 @@ export default function TaxiLongjumeau() {
                 </div>
                 <h3 className="font-bold text-gray-900 text-lg mb-2">Par telephone</h3>
                 <p className="text-gray-600 mb-4">Appelez-nous directement au</p>
-                <a href="tel:+33680036463" className="text-xl font-bold text-yellow-600 hover:text-yellow-700">
-                  06 80 03 64 63
+                <a href="tel:+33180859191" className="text-xl font-bold text-yellow-600 hover:text-yellow-700">
+                  01 80 85 91 91
                 </a>
               </div>
 
@@ -634,11 +530,11 @@ export default function TaxiLongjumeau() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <a
-                    href="tel:+33680036463"
+                    href="tel:+33180859191"
                     className="inline-flex items-center gap-3 bg-yellow-400 text-black font-bold text-lg py-3 px-6 rounded-lg hover:bg-yellow-500 transition-colors"
                   >
                     <Phone className="w-5 h-5" />
-                    06 80 03 64 63
+                    01 80 85 91 91
                   </a>
                   <Link
                     href="/#reservation"

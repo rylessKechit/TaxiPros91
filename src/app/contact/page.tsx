@@ -7,7 +7,6 @@ import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'Contact TAXI Pro 91 | Réservation Taxi Essonne - 24h/24',
   description: 'Contactez TAXI Pro 91 pour réserver votre taxi en Essonne. Disponible 24h/24, 7j/7. Téléphone, email, formulaire. Massy, Palaiseau, Longjumeau, Antony.',
-  keywords: ['contact taxi essonne', 'réservation taxi 91', 'téléphone taxi massy', 'taxi pro 91 contact'],
   openGraph: {
     title: 'Contact TAXI Pro 91',
     description: 'Réservez votre taxi en Essonne. Disponible 24h/24.',
@@ -27,7 +26,7 @@ const faqJsonLd = {
       name: 'Comment réserver un taxi ?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Vous pouvez réserver par téléphone au 06 80 03 64 63 (disponible 24h/24) ou via notre formulaire en ligne. Pour une course immédiate, nous vous recommandons l\'appel téléphonique.'
+        text: 'Vous pouvez réserver par téléphone au 01 80 85 91 91 (disponible 24h/24) ou via notre formulaire en ligne. Pour une course immédiate, nous vous recommandons l\'appel téléphonique.'
       }
     },
     {
@@ -72,7 +71,7 @@ export default function Contact() {
           <div className="container mx-auto px-4 text-center">
             <p className="text-black font-medium">
               Besoin d'un taxi ? Appelez-nous :{' '}
-              <a href="tel:+33680036463" className="font-bold text-xl hover:underline">06 80 03 64 63</a>
+              <a href="tel:+33180859191" className="font-bold text-xl hover:underline">01 80 85 91 91</a>
             </p>
           </div>
         </section>
@@ -105,8 +104,8 @@ export default function Contact() {
                       </div>
                       <div>
                         <h3 className="font-bold text-gray-900 text-lg mb-1">Téléphone</h3>
-                        <a href="tel:+33680036463" className="text-2xl font-bold text-yellow-600 hover:text-yellow-700">
-                          06 80 03 64 63
+                        <a href="tel:+33180859191" className="text-2xl font-bold text-yellow-600 hover:text-yellow-700">
+                          01 80 85 91 91
                         </a>
                         <p className="text-gray-600 mt-1">Disponible 24h/24, 7j/7</p>
                       </div>
@@ -265,7 +264,7 @@ export default function Contact() {
               <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
                 <h3 className="font-bold text-gray-900 mb-2">Comment réserver un taxi ?</h3>
                 <p className="text-gray-600">
-                  Vous pouvez réserver par téléphone au 06 80 03 64 63 (disponible 24h/24) ou via notre formulaire en ligne.
+                  Vous pouvez réserver par téléphone au 01 80 85 91 91 (disponible 24h/24) ou via notre formulaire en ligne.
                   Pour une course immédiate, nous vous recommandons l'appel téléphonique.
                 </p>
               </div>
