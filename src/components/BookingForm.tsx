@@ -398,7 +398,7 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
             </label>
           )}
 
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
               <label htmlFor="booking-date" className="block text-gray-700 text-sm font-medium mb-1">Date *</label>
               <input
@@ -451,7 +451,7 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
                   label="Adresse d'arrivée retour"
                 />
               </div>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
                   <label htmlFor="booking-return-date" className="block text-gray-700 text-sm font-medium mb-1">Date retour *</label>
                   <input
@@ -573,7 +573,7 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
 
           <div ref={mapRef} role="img" aria-label="Carte du trajet" className="w-full h-40 sm:h-56 rounded-lg overflow-hidden border border-gray-200" />
 
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
               <label htmlFor="booking-lastname" className="block text-gray-700 text-sm font-medium mb-1">Nom *</label>
               <input
