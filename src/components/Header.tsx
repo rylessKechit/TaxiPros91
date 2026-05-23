@@ -64,18 +64,19 @@ export default function Header() {
             </Link>
           </nav>
 
-          {/* Phone - Always visible on desktop */}
+          {/* Phone CTA - visible partout */}
           <a
             href="tel:+33180859191"
-            className="hidden lg:flex items-center gap-3 bg-yellow-400 hover:bg-yellow-500 text-black font-bold text-lg px-5 py-3 rounded-lg"
+            className="flex items-center gap-1.5 sm:gap-2 lg:gap-3 bg-yellow-400 hover:bg-yellow-500 text-black font-bold text-sm sm:text-base lg:text-lg px-2.5 sm:px-4 lg:px-5 py-2 sm:py-2.5 lg:py-3 rounded-lg whitespace-nowrap ml-auto lg:ml-0"
+            aria-label="Appeler 01 80 85 91 91"
           >
-            <Phone className="w-5 h-5" />
-            01 80 85 91 91
+            <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
+            <span>01 80 85 91 91</span>
           </a>
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            className="lg:hidden p-2 ml-1 rounded-lg hover:bg-gray-100 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Menu"
           >
