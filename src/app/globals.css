@@ -55,7 +55,6 @@ input[type="time"]::-webkit-date-and-time-value {
   justify-content: center;
   text-align: center;
   width: 100%;
-  min-height: inherit;
 }
 
 /* Transitions globales */
