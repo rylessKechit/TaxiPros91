@@ -47,11 +47,15 @@ input[type="time"] {
   font-family: inherit;
 }
 
-/* iOS centers the date/time value by default; left-align it */
+/* Center the displayed value both vertically and horizontally inside the input */
 input[type="date"]::-webkit-date-and-time-value,
 input[type="time"]::-webkit-date-and-time-value {
-  text-align: left;
-  min-height: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  min-height: inherit;
 }
 
 /* Transitions globales */
