@@ -31,6 +31,23 @@ input:focus, select:focus, textarea:focus {
   border-color: #facc15;
 }
 
+/* Fix iOS Safari: date/time inputs ignore width:100% and overflow */
+input[type="date"],
+input[type="time"] {
+  -webkit-appearance: none;
+  appearance: none;
+  min-width: 0;
+  max-width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+
+/* iOS centers the date/time value by default; left-align it */
+input[type="date"]::-webkit-date-and-time-value,
+input[type="time"]::-webkit-date-and-time-value {
+  text-align: left;
+}
+
 /* Transitions globales */
 a, button {
   transition: all 0.2s ease;
