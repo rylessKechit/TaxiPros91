@@ -1,22 +1,12 @@
-import { Phone, Star, Clock, Shield } from 'lucide-react'
+import { Star, Clock, Shield } from 'lucide-react'
 import Image from 'next/image'
 import BookingForm from './BookingForm'
 
 export default function Hero() {
   return (
     <section id="accueil">
-      {/* Bandeau téléphone - masqué sur mobile */}
-      <div className="hidden sm:block bg-yellow-400 py-2">
-        <div className="container mx-auto px-4">
-          <a href="tel:+33180859191" className="flex items-center justify-center gap-2 text-center">
-            <Phone className="w-5 h-5 text-black" />
-            <span className="text-black font-bold text-xl">01 80 85 91 91</span>
-          </a>
-        </div>
-      </div>
-
       {/* Hero avec image de fond */}
-      <div className="relative min-h-[calc(100vh-60px)] sm:min-h-[calc(100vh-120px)] flex items-center">
+      <div className="relative min-h-[calc(100vh-60px)] sm:min-h-[calc(100vh-80px)] flex items-center">
         {/* Image de fond */}
         <div className="absolute inset-0 w-full h-full">
           <Image
