@@ -280,6 +280,14 @@ export default function TaxiPalaiseau() {
                     <span>{dest.distance}</span>
                   </div>
                   <p className="text-gray-600 text-sm">{dest.description}</p>
+                  {dest.name === 'École Polytechnique' && (
+                    <Link
+                      href="/taxi-ecole-polytechnique"
+                      className="inline-flex items-center gap-1 text-yellow-600 text-xs font-medium hover:text-yellow-700 mt-2"
+                    >
+                      Service dédié à l&apos;X →
+                    </Link>
+                  )}
                 </div>
               ))}
             </div>
