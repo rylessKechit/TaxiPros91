@@ -477,7 +477,10 @@ export default function TaxiMassy() {
                 </p>
                 <p>
                   Notre service couvre tous les terminaux : Orly 1, Orly 2, Orly 3 et Orly 4.
-                  Le tarif est fixe et connu à l'avance, sans mauvaise surprise à l'arrivée.
+                  Le tarif est fixe et connu à l'avance, sans mauvaise surprise à l'arrivée.{' '}
+                  <Link href="/taxi-orly" className="text-yellow-600 font-medium hover:underline">
+                    Voir tous les détails sur notre service taxi aéroport Orly.
+                  </Link>
                 </p>
 
                 <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Transport médical conventionné CPAM</h3>
