@@ -1,5 +1,5 @@
 // Intégration AppSolu (groupement Taxi Pro 91)
-// API publique non documentée endpoints reverse-engineerés depuis le widget officiel.
+// API publique non documentée : endpoints reverse-engineerés depuis le widget officiel.
 // base: https://prod.taxi.appsolu.net
 
 const APPSOLU_BASE = 'https://prod.taxi.appsolu.net'

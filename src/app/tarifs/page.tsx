@@ -23,11 +23,11 @@ import {
 const PAGE_URL = `${SITE.url}/tarifs`
 
 export const metadata: Metadata = {
-  title: 'Tarifs taxi Essonne Grille de prix transparente 2026',
+  title: 'Tarifs taxi Essonne : grille de prix transparente 2026',
   description: `Tarifs taxi Essonne 2026 : tarifs réglementés A/B/C/D, forfaits Orly, CDG, Paris, Disneyland. Prix annoncé avant la course. ${SITE.phone.display}.`,
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Tarifs taxi Essonne Grille de prix transparente',
+    title: 'Tarifs taxi Essonne : grille de prix transparente',
     description:
       'Grille tarifaire complète : tarifs réglementés A/B/C/D, forfaits aéroports, suppléments. Tarif annoncé avant la course, sans surprise.',
     url: PAGE_URL,
@@ -39,39 +39,39 @@ const tarifsReglementes = [
     code: 'A',
     rate: '1,00 €/km',
     label: 'Jour + Aller-Retour',
-    desc: 'Trajet de jour (8h 19h), du lundi au samedi, avec retour à vide du chauffeur au point de départ.',
+    desc: 'Trajet de jour (8h à 19h), du lundi au samedi, avec retour à vide du chauffeur au point de départ.',
   },
   {
     code: 'B',
     rate: '1,50 €/km',
     label: 'Nuit / Dimanche + Aller-Retour',
-    desc: 'Trajet de nuit (19h 8h), dimanche ou jour férié, avec retour à vide au point de départ.',
+    desc: 'Trajet de nuit (19h à 8h), dimanche ou jour férié, avec retour à vide au point de départ.',
   },
   {
     code: 'C',
     rate: '2,00 €/km',
     label: 'Jour + Aller simple',
-    desc: 'Trajet de jour (8h 19h), du lundi au samedi, sans retour à vide.',
+    desc: 'Trajet de jour (8h à 19h), du lundi au samedi, sans retour à vide.',
   },
   {
     code: 'D',
     rate: '3,00 €/km',
     label: 'Nuit / Dimanche + Aller simple',
-    desc: 'Trajet de nuit (19h 8h), dimanche ou jour férié, sans retour à vide.',
+    desc: 'Trajet de nuit (19h à 8h), dimanche ou jour férié, sans retour à vide.',
   },
 ]
 
 const forfaits = [
-  { dest: 'Aéroport d\'Orly', duree: '15 min', prix: '25 35 €' },
-  { dest: 'Aéroport Roissy CDG', duree: '50 min', prix: '70 90 €' },
-  { dest: 'Paris Centre', duree: '30 min', prix: '45 60 €' },
-  { dest: 'La Défense', duree: '35 min', prix: '50 65 €' },
-  { dest: 'Disneyland Paris', duree: '50 min', prix: '85 105 €' },
-  { dest: 'Château de Versailles', duree: '25 min', prix: '35 50 €' },
-  { dest: 'Aéroport du Bourget', duree: '45 min', prix: '70 85 €' },
-  { dest: 'Stade de France', duree: '40 min', prix: '60 80 €' },
-  { dest: 'Gare de Lyon', duree: '35 min', prix: '50 65 €' },
-  { dest: 'Gare Montparnasse', duree: '30 min', prix: '45 60 €' },
+  { dest: 'Aéroport d\'Orly', duree: '15 min', prix: '25 à 35 €' },
+  { dest: 'Aéroport Roissy CDG', duree: '50 min', prix: '70 à 90 €' },
+  { dest: 'Paris Centre', duree: '30 min', prix: '45 à 60 €' },
+  { dest: 'La Défense', duree: '35 min', prix: '50 à 65 €' },
+  { dest: 'Disneyland Paris', duree: '50 min', prix: '85 à 105 €' },
+  { dest: 'Château de Versailles', duree: '25 min', prix: '35 à 50 €' },
+  { dest: 'Aéroport du Bourget', duree: '45 min', prix: '70 à 85 €' },
+  { dest: 'Stade de France', duree: '40 min', prix: '60 à 80 €' },
+  { dest: 'Gare de Lyon', duree: '35 min', prix: '50 à 65 €' },
+  { dest: 'Gare Montparnasse', duree: '30 min', prix: '45 à 60 €' },
 ]
 
 const usp = [
@@ -100,11 +100,11 @@ const usp = [
 const faqs = [
   {
     q: 'Quelle est la différence entre un forfait et un trajet au compteur ?',
-    a: 'Un forfait est un prix fixe convenu avant la course, calculé selon la distance, la durée et l\'horaire. Il est conseillé pour les longues distances (aéroports, gares, Paris) car il garantit une sécurité tarifaire totale, même en cas d\'embouteillages. Le trajet au compteur applique en temps réel les tarifs réglementés A, B, C ou D pertinent pour les courtes courses en ville.',
+    a: 'Un forfait est un prix fixe convenu avant la course, calculé selon la distance, la durée et l\'horaire. Il est conseillé pour les longues distances (aéroports, gares, Paris) car il garantit une sécurité tarifaire totale, même en cas d\'embouteillages. Le trajet au compteur applique en temps réel les tarifs réglementés A, B, C ou D, pertinent pour les courtes courses en ville.',
   },
   {
     q: 'Y a-t-il un supplément de nuit ou le dimanche ?',
-    a: 'Oui, conformément aux tarifs réglementés. La nuit (19h 8h), le dimanche et les jours fériés, le tarif kilométrique passe à 1,50 €/km en aller-retour (tarif B) ou 3,00 €/km en aller simple (tarif D). La prise en charge de nuit est réduite à 5 € (contre 10 € en journée).',
+    a: 'Oui, conformément aux tarifs réglementés. La nuit (19h à 8h), le dimanche et les jours fériés, le tarif kilométrique passe à 1,50 €/km en aller-retour (tarif B) ou 3,00 €/km en aller simple (tarif D). La prise en charge de nuit est réduite à 5 € (contre 10 € en journée).',
   },
   {
     q: 'Le prix annoncé sera-t-il bien respecté ?',
@@ -148,7 +148,7 @@ export default function Tarifs() {
               </div>
 
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                Tarifs taxi Essonne Grille de prix transparente
+                Tarifs taxi Essonne : grille de prix transparente
               </h1>
 
               <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -322,7 +322,7 @@ export default function Tarifs() {
                   <h3 className="font-bold text-gray-900 text-lg mb-2">Véhicule Van (groupes / bagages)</h3>
                   <p className="text-2xl font-bold text-yellow-600 mb-2">+ 10 €</p>
                   <p className="text-sm text-gray-600">
-                    Mercedes Classe V jusqu&apos;à 7 passagers avec bagages. Idéal pour les voyages en groupe,
+                    Mercedes Classe V : jusqu&apos;à 7 passagers avec bagages. Idéal pour les voyages en groupe,
                     en famille ou avec bagages volumineux (skis, vélos, instruments de musique).
                   </p>
                 </div>
@@ -335,7 +335,7 @@ export default function Tarifs() {
                   </p>
                 </div>
                 <div className="bg-white border border-gray-200 rounded-xl p-6">
-                  <h3 className="font-bold text-gray-900 text-lg mb-2">Nuit (19h 8h)</h3>
+                  <h3 className="font-bold text-gray-900 text-lg mb-2">Nuit (19h à 8h)</h3>
                   <p className="text-2xl font-bold text-yellow-600 mb-2">Tarif B ou D</p>
                   <p className="text-sm text-gray-600">
                     Tarification spécifique nuit (tarif B en aller-retour, D en aller simple). Prise en charge
@@ -374,7 +374,7 @@ export default function Tarifs() {
               <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 text-center">
                 <CreditCard className="w-10 h-10 text-yellow-500 mx-auto mb-3" />
                 <h3 className="font-bold text-gray-900 mb-1">Carte bancaire</h3>
-                <p className="text-sm text-gray-600">Visa, Mastercard sans frais</p>
+                <p className="text-sm text-gray-600">Visa, Mastercard : sans frais</p>
               </div>
               <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 text-center">
                 <HeartPulse className="w-10 h-10 text-yellow-500 mx-auto mb-3" />

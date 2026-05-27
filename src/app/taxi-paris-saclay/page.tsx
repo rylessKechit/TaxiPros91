@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   title: 'Taxi Paris-Saclay | Grandes écoles, CEA, R&D Plateau 24h/24',
   description: `Taxi Paris-Saclay 24h/24 : Polytechnique, CentraleSupélec, HEC, CEA, Synchrotron SOLEIL, EDF Lab, Thales R&T. Tarifs fixes, comptes entreprise. ${SITE.phone.display}.`,
   openGraph: {
-    title: 'Taxi Paris-Saclay Grandes écoles & R&D du Plateau',
+    title: 'Taxi Paris-Saclay : Grandes écoles & R&D du Plateau',
     description: 'Service de taxi dédié au cluster Paris-Saclay : grandes écoles, CEA, Synchrotron SOLEIL, EDF Lab, Thales, Servier, Danone Nutricia.',
     url: `${SITE.url}/taxi-paris-saclay`,
   },
@@ -142,7 +142,7 @@ const tarifsDestinations = [
 const faqItems = [
   {
     q: 'Quels sont les principaux lieux desservis par TAXI Pro 91 sur le plateau de Saclay ?',
-    a: 'Nous desservons l\'ensemble du cluster Paris-Saclay : École Polytechnique, CentraleSupélec, ENS Paris-Saclay, AgroParisTech, Telecom Paris, ENSAE, ENSTA, Université Paris-Saclay, HEC Jouy-en-Josas, ainsi que les centres de R&D CEA Saclay, Synchrotron SOLEIL, EDF Lab, Thales R&T, Servier, Danone Nutricia, Air Liquide, Naval Group. Nos chauffeurs connaissent les codes d\'accès et parkings visiteurs de chaque site.',
+    a: 'Nous desservons l\'ensemble du cluster Paris-Saclay : École Polytechnique, CentraleSupélec, ENS Paris-Saclay, AgroParisTech, Telecom Paris, ENSAE, ENSTA, Université Paris-Saclay, HEC Jouy-en-Josas, ainsi que les centres de R&D : CEA Saclay, Synchrotron SOLEIL, EDF Lab, Thales R&T, Servier, Danone Nutricia, Air Liquide, Naval Group. Nos chauffeurs connaissent les codes d\'accès et parkings visiteurs de chaque site.',
   },
   {
     q: 'Combien coûte un taxi entre le plateau de Saclay et l\'aéroport d\'Orly ?',
@@ -204,11 +204,11 @@ export default function TaxiParisSaclay() {
               <div>
                 <div className="flex items-center gap-2 text-yellow-600 mb-4">
                   <FlaskConical className="w-5 h-5" />
-                  <span className="font-medium">Cluster Paris-Saclay Essonne</span>
+                  <span className="font-medium">Cluster Paris-Saclay : Essonne</span>
                 </div>
 
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                  Taxi Paris-Saclay Toutes les grandes écoles &amp; entreprises du Plateau
+                  Taxi Paris-Saclay : Toutes les grandes écoles &amp; entreprises du Plateau
                 </h1>
 
                 <p className="text-xl text-gray-600 mb-6 leading-relaxed">
@@ -522,7 +522,7 @@ export default function TaxiParisSaclay() {
         <section className="py-12 md:py-16 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
-              Questions fréquentes Taxi Paris-Saclay
+              Questions fréquentes : Taxi Paris-Saclay
             </h2>
             <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
               Les réponses aux questions des étudiants, chercheurs, salariés et visiteurs du

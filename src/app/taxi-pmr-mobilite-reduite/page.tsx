@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   title: 'Taxi PMR Essonne | Fauteuil roulant & mobilité réduite 24h/24',
   description: `Taxi PMR Essonne 24h/24 : véhicule adapté, rampe, chauffeurs formés, accompagnement porte-à-porte. Conventionné CPAM. Même tarif qu'un taxi classique. ${SITE.phone.display}.`,
   openGraph: {
-    title: 'Taxi PMR Essonne Personne à Mobilité Réduite & Fauteuil Roulant',
+    title: 'Taxi PMR Essonne : Personne à Mobilité Réduite & Fauteuil Roulant',
     description: 'Service de taxi adapté aux personnes à mobilité réduite en Essonne. Véhicule équipé, chauffeurs formés, conventionné CPAM, porte-à-porte.',
     url: `${SITE.url}/taxi-pmr-mobilite-reduite`,
   },
@@ -170,7 +170,7 @@ export default function TaxiPMR() {
       <Breadcrumb items={[{ name: 'Taxi PMR' }]} />
 
       <ServiceSchema
-        name="Taxi PMR Essonne Personne à Mobilité Réduite"
+        name="Taxi PMR Essonne : Personne à Mobilité Réduite"
         description="Service de taxi PMR adapté aux personnes à mobilité réduite en Essonne : véhicule équipé d'une rampe et de sangles, chauffeurs formés à l'accompagnement, transport de fauteuils roulants manuels et électriques. Conventionné CPAM."
         url={`${SITE.url}/taxi-pmr-mobilite-reduite`}
         areaServed={['Massy', 'Palaiseau', 'Antony', 'Longjumeau', 'Les Ulis', 'Saclay', 'Évry-Courcouronnes', 'Orsay']}
@@ -197,11 +197,11 @@ export default function TaxiPMR() {
               <div>
                 <div className="flex items-center gap-2 text-yellow-600 mb-4">
                   <Accessibility className="w-5 h-5" />
-                  <span className="font-medium">Service PMR Essonne et Île-de-France</span>
+                  <span className="font-medium">Service PMR : Essonne et Île-de-France</span>
                 </div>
 
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                  Taxi PMR Essonne Personne à Mobilité Réduite &amp; Fauteuil Roulant
+                  Taxi PMR Essonne : Personne à Mobilité Réduite &amp; Fauteuil Roulant
                 </h1>
 
                 <p className="text-xl text-gray-600 mb-6 leading-relaxed">
@@ -621,7 +621,7 @@ export default function TaxiPMR() {
         <section className="py-12 md:py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
-              Questions fréquentes Taxi PMR
+              Questions fréquentes : Taxi PMR
             </h2>
             <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
               Tout ce que vous devez savoir avant de réserver votre taxi adapté en Essonne.

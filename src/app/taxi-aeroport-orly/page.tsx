@@ -22,10 +22,10 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Taxi aéroport Orly | TAXI Pro 91 Réservation 24h/24',
+  title: 'Taxi aéroport Orly | TAXI Pro 91 : réservation 24h/24',
   description: `Réservez votre taxi aéroport Orly en 1 appel : ${SITE.phone.display}. Tarifs fixes dès 25€, suivi de vol inclus, tous terminaux (Orly 1, 2, 3, 4), 24h/24.`,
   openGraph: {
-    title: 'Taxi aéroport Orly | TAXI Pro 91 Tarifs fixes 24h/24',
+    title: 'Taxi aéroport Orly | TAXI Pro 91 : tarifs fixes 24h/24',
     description:
       "Taxi pour l'aéroport d'Orly depuis l'Essonne. Tarifs fixes annoncés à la réservation, suivi de vol en temps réel, 4 terminaux desservis.",
     url: `${SITE.url}/taxi-aeroport-orly`,
@@ -78,7 +78,7 @@ const avantages = [
     icon: Shield,
     title: 'Tarif fixe garanti',
     description:
-      'Le montant est annoncé et confirmé avant le départ. Pas de compteur, pas de variable selon le trafic vous savez ce que vous payez.',
+      'Le montant est annoncé et confirmé avant le départ. Pas de compteur, pas de variable selon le trafic, vous savez ce que vous payez.',
   },
   {
     icon: Plane,
@@ -106,19 +106,19 @@ const faqItems = [
   },
   {
     q: "Où mon chauffeur m'attend-il quand j'arrive à Orly ?",
-    a: "Le chauffeur se positionne à la sortie de la zone Arrivées du terminal indiqué à la réservation, juste après la récupération des bagages. Il tient une pancarte à votre nom sur demande. Grâce au suivi de vol en temps réel, il adapte son heure de présence à l'heure réelle d'atterrissage sans frais supplémentaires en cas de retard compagnie. Vous disposez de 15 minutes offertes après l'heure réelle d'arrivée.",
+    a: "Le chauffeur se positionne à la sortie de la zone Arrivées du terminal indiqué à la réservation, juste après la récupération des bagages. Il tient une pancarte à votre nom sur demande. Grâce au suivi de vol en temps réel, il adapte son heure de présence à l'heure réelle d'atterrissage, sans frais supplémentaires en cas de retard compagnie. Vous disposez de 15 minutes offertes après l'heure réelle d'arrivée.",
   },
   {
     q: "Quelles sont les zones de dépose-minute à l'aéroport d'Orly ?",
-    a: "Chaque terminal d'Orly dispose d'une zone de dépose officielle au niveau Départs. Pour Orly 1 et 2, la dépose s'effectue côté voie montante niveau 0. Pour Orly 3, l'accès se fait directement depuis la bretelle A106 c'est la dépose la plus rapide. Pour Orly 4 (ex-Orly Ouest), la zone se trouve côté voie montante, niveau Départs haut. Nos chauffeurs connaissent la configuration post-rénovation et vous déposent au plus près de votre comptoir d'enregistrement.",
+    a: "Chaque terminal d'Orly dispose d'une zone de dépose officielle au niveau Départs. Pour Orly 1 et 2, la dépose s'effectue côté voie montante niveau 0. Pour Orly 3, l'accès se fait directement depuis la bretelle A106, c'est la dépose la plus rapide. Pour Orly 4 (ex-Orly Ouest), la zone se trouve côté voie montante, niveau Départs haut. Nos chauffeurs connaissent la configuration post-rénovation et vous déposent au plus près de votre comptoir d'enregistrement.",
   },
   {
     q: "Vaut-il mieux prendre un taxi ou l'Orlyval depuis Orly ?",
-    a: "L'Orlyval relie Orly à la station Antony (RER B) en 8 minutes pour environ 13€. C'est pertinent si vous partez avec un seul bagage cabine vers Paris ou une ville desservie par le RER B. Le taxi TAXI Pro 91 est plus adapté si vous avez plusieurs valises, si votre destination finale est en Essonne (Massy, Palaiseau, Les Ulis, Saclay), si vous arrivez entre 23h30 et 6h (Orlyval ne fonctionne pas sur cette plage), ou si vous voyagez à 2 ou 3 le coût se répartit alors avantageusement.",
+    a: "L'Orlyval relie Orly à la station Antony (RER B) en 8 minutes pour environ 13€. C'est pertinent si vous partez avec un seul bagage cabine vers Paris ou une ville desservie par le RER B. Le taxi TAXI Pro 91 est plus adapté si vous avez plusieurs valises, si votre destination finale est en Essonne (Massy, Palaiseau, Les Ulis, Saclay), si vous arrivez entre 23h30 et 6h (Orlyval ne fonctionne pas sur cette plage), ou si vous voyagez à 2 ou 3, le coût se répartit alors avantageusement.",
   },
   {
     q: "Les tarifs changent-ils pour un taxi vers Orly la nuit ou le week-end ?",
-    a: "Oui, une majoration s'applique pour les courses de nuit (19h–7h) et les dimanches et jours fériés, conformément à la réglementation tarifaire des taxis. Cette majoration est intégrée dans le tarif fixe communiqué à la réservation vous connaissez le montant exact avant le départ, sans découvrir de supplément à la fin de la course. Exemple : un trajet Massy → Orly de nuit est facturé environ 35–45€ tout compris.",
+    a: "Oui, une majoration s'applique pour les courses de nuit (19h–7h) et les dimanches et jours fériés, conformément à la réglementation tarifaire des taxis. Cette majoration est intégrée dans le tarif fixe communiqué à la réservation : vous connaissez le montant exact avant le départ, sans découvrir de supplément à la fin de la course. Exemple : un trajet Massy → Orly de nuit est facturé environ 35–45€ tout compris.",
   },
 ]
 
@@ -145,7 +145,7 @@ export default function TaxiAeroportOrly() {
       />
 
       <ServiceSchema
-        name="Taxi aéroport Orly depuis l'Essonne Tous terminaux"
+        name="Taxi aéroport Orly depuis l'Essonne : tous terminaux"
         description="Service de taxi 24h/24 vers les 4 terminaux de l'aéroport Paris-Orly (Orly 1, 2, 3, 4) depuis toutes les communes de l'Essonne. Tarifs fixes annoncés à la réservation, suivi de vol en temps réel, prise en charge en zone Arrivées."
         url={`${SITE.url}/taxi-aeroport-orly`}
         areaServed={['Massy', 'Palaiseau', 'Antony', 'Longjumeau', 'Les Ulis', 'Saclay', 'Ballainvilliers', 'Verrières-le-Buisson']}
@@ -172,11 +172,11 @@ export default function TaxiAeroportOrly() {
               <div>
                 <div className="flex items-center gap-2 text-yellow-600 mb-4">
                   <Plane className="w-5 h-5" />
-                  <span className="font-medium">Aéroport Paris-Orly Orly 1, 2, 3, 4</span>
+                  <span className="font-medium">Aéroport Paris-Orly : Orly 1, 2, 3, 4</span>
                 </div>
 
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                  Votre taxi pour l&apos;aéroport d&apos;Orly TAXI Pro 91
+                  Votre taxi pour l&apos;aéroport d&apos;Orly : TAXI Pro 91
                 </h1>
 
                 <p className="text-xl text-gray-600 mb-6 leading-relaxed">
@@ -286,7 +286,7 @@ export default function TaxiAeroportOrly() {
               </h2>
 
               <p className="text-gray-600 mb-6">
-                La distance domicile aéroport n&apos;est qu&apos;une partie du calcul. Il faut aussi
+                La distance domicile-aéroport n&apos;est qu&apos;une partie du calcul. Il faut aussi
                 intégrer les formalités d&apos;enregistrement et de contrôle, qui varient selon le
                 type de vol.
               </p>
@@ -318,7 +318,7 @@ export default function TaxiAeroportOrly() {
                   </div>
                   <h3 className="font-bold text-gray-900 mb-2">Vols internationaux</h3>
                   <p className="text-gray-600 text-sm">
-                    Prévoyez <strong>3h avant</strong> (Orly 4 Air France, Corsair, Air
+                    Prévoyez <strong>3h avant</strong> (Orly 4 : Air France, Corsair, Air
                     Caraïbes). L&apos;enregistrement ferme 50 min avant le décollage.
                   </p>
                 </div>
@@ -408,7 +408,7 @@ export default function TaxiAeroportOrly() {
 
             <p className="text-gray-500 text-sm text-center mt-6">
               * Tarifs indicatifs en berline. Van Mercedes Classe V (7 passagers) disponible avec
-              léger supplément. Tarifs nuit (19h–7h) et dimanche/férié majorés inclus dans le
+              léger supplément. Tarifs nuit (19h–7h) et dimanche/férié majorés, inclus dans le
               tarif fixe annoncé à la réservation.
             </p>
           </div>
@@ -421,7 +421,7 @@ export default function TaxiAeroportOrly() {
               Les 4 terminaux de l&apos;aéroport d&apos;Orly
             </h2>
             <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
-              Précisez votre terminal à la réservation ou indiquez simplement votre numéro de vol
+              Précisez votre terminal à la réservation ou indiquez simplement votre numéro de vol,
               nous identifions automatiquement le terminal correspondant.
             </p>
 
@@ -451,7 +451,7 @@ export default function TaxiAeroportOrly() {
                 <Info className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" />
                 <p className="text-gray-700 text-sm">
                   <strong>Retour depuis Orly :</strong> pour les arrivées, votre chauffeur attend en
-                  sortie de la zone Arrivées du terminal indiqué tapis bagages passés. 15 minutes
+                  sortie de la zone Arrivées du terminal indiqué, tapis bagages passés. 15 minutes
                   d&apos;attente offertes après l&apos;heure réelle d&apos;atterrissage. Pancarte à
                   votre nom sur demande.
                 </p>
@@ -522,10 +522,10 @@ export default function TaxiAeroportOrly() {
         <section className="py-12 md:py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
-              Questions fréquentes Taxi aéroport Orly
+              Questions fréquentes : Taxi aéroport Orly
             </h2>
             <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
-              Réservation, zones de dépose, tarifs nuit, suivi de vol les réponses aux questions
+              Réservation, zones de dépose, tarifs nuit, suivi de vol : les réponses aux questions
               les plus posées.
             </p>
 

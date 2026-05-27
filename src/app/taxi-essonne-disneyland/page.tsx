@@ -18,10 +18,10 @@ const DURATION = ROUTE.durationMin
 const URL = `${SITE.url}/taxi-essonne-disneyland`
 
 export const metadata: Metadata = {
-  title: `Taxi ${FROM} → ${TO} Tarif dès ${PRICE_MIN}€ & Réservation 24h/24`,
+  title: `Taxi ${FROM} → ${TO} : Tarif dès ${PRICE_MIN}€ & Réservation 24h/24`,
   description: `Taxi depuis l'${FROM} vers Disneyland Paris : tarif fixe dès ${PRICE_MIN}€, trajet en ${DURATION} min via A6, A86 et A4. Dépose Parcs, hôtels Disney ou gare TGV Chessy. Réservation 24h/24 au ${SITE.phone.display}.`,
   openGraph: {
-    title: `Taxi ${FROM} → Disneyland Dès ${PRICE_MIN}€ • ${DURATION} min`,
+    title: `Taxi ${FROM} → Disneyland : Dès ${PRICE_MIN}€ • ${DURATION} min`,
     description: `Transfert direct depuis l'Essonne vers Disneyland Paris (Marne-la-Vallée). Tarif fixe, dépose aux Parcs et hôtels Disney, service 24h/24.`,
     url: URL,
   },
@@ -116,7 +116,7 @@ export default function TaxiEssonneDisneyland() {
                 </div>
 
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
-                  Taxi {FROM} → {TO} Tarif &amp; Réservation 24h/24
+                  Taxi {FROM} → {TO} : Tarif &amp; Réservation 24h/24
                 </h1>
 
                 <div className="flex flex-wrap gap-3 mb-6">
@@ -405,7 +405,7 @@ export default function TaxiEssonneDisneyland() {
         <section className="py-12 md:py-16 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
-              Questions fréquentes Taxi {FROM} Disneyland
+              Questions fréquentes : Taxi {FROM} Disneyland
             </h2>
             <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
               Toutes les réponses aux questions des familles et voyageurs qui réservent ce trajet.

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 const articles = [
   {
-    title: 'Article 1 Objet',
+    title: 'Article 1 : Objet',
     body: (
       <p>
         Les présentes Conditions Générales de Vente (CGV) ont pour objet de définir les modalités de prestation de
@@ -25,7 +25,7 @@ const articles = [
     ),
   },
   {
-    title: 'Article 2 Réservation',
+    title: 'Article 2 : Réservation',
     body: (
       <>
         <p>
@@ -46,7 +46,7 @@ const articles = [
     ),
   },
   {
-    title: 'Article 3 Tarifs',
+    title: 'Article 3 : Tarifs',
     body: (
       <>
         <p>
@@ -68,7 +68,7 @@ const articles = [
     ),
   },
   {
-    title: 'Article 4 Annulation',
+    title: 'Article 4 : Annulation',
     body: (
       <>
         <p>
@@ -88,7 +88,7 @@ const articles = [
     ),
   },
   {
-    title: 'Article 5 Paiement',
+    title: 'Article 5 : Paiement',
     body: (
       <>
         <p>
@@ -108,7 +108,7 @@ const articles = [
     ),
   },
   {
-    title: 'Article 6 Bagages',
+    title: 'Article 6 : Bagages',
     body: (
       <p>
         Le transport des bagages standards (valise cabine, valise soute, sac à dos) est inclus dans le tarif, dans la
@@ -120,7 +120,7 @@ const articles = [
     ),
   },
   {
-    title: 'Article 7 Animaux',
+    title: 'Article 7 : Animaux',
     body: (
       <p>
         Les animaux de compagnie sont acceptés à bord, à condition d&apos;être signalés lors de la réservation et
@@ -131,7 +131,7 @@ const articles = [
     ),
   },
   {
-    title: 'Article 8 Transport de mineurs',
+    title: 'Article 8 : Transport de mineurs',
     body: (
       <p>
         Les enfants de moins de 10 ans doivent être installés dans un dispositif de retenue homologué adapté à leur
@@ -142,7 +142,7 @@ const articles = [
     ),
   },
   {
-    title: 'Article 9 Retards et tolérance',
+    title: 'Article 9 : Retards et tolérance',
     body: (
       <p>
         En cas de retard du Client, une <strong>tolérance de 15 minutes</strong> est accordée après l&apos;heure de
@@ -153,7 +153,7 @@ const articles = [
     ),
   },
   {
-    title: 'Article 10 Force majeure',
+    title: 'Article 10 : Force majeure',
     body: (
       <p>
         Le Prestataire ne saurait être tenu pour responsable en cas de non-exécution ou de retard d&apos;exécution
@@ -165,7 +165,7 @@ const articles = [
     ),
   },
   {
-    title: 'Article 11 Responsabilité et assurance',
+    title: 'Article 11 : Responsabilité et assurance',
     body: (
       <p>
         Le Prestataire est couvert par une <strong>assurance professionnelle taxi</strong> (responsabilité civile
@@ -177,7 +177,7 @@ const articles = [
     ),
   },
   {
-    title: 'Article 12 Données personnelles',
+    title: 'Article 12 : Données personnelles',
     body: (
       <p>
         Les données personnelles communiquées par le Client lors de la réservation (nom, téléphone, email, adresses)
@@ -190,7 +190,7 @@ const articles = [
     ),
   },
   {
-    title: 'Article 13 Réclamations',
+    title: 'Article 13 : Réclamations',
     body: (
       <p>
         Toute réclamation doit être adressée par email à <a href={`mailto:${SITE.email}`} className="text-yellow-600 hover:underline">{SITE.email}</a>
@@ -201,7 +201,7 @@ const articles = [
     ),
   },
   {
-    title: 'Article 14 Médiation de la consommation',
+    title: 'Article 14 : Médiation de la consommation',
     body: (
       <p>
         Conformément aux dispositions de l&apos;article L. 612-1 du Code de la consommation, le Client consommateur
@@ -214,7 +214,7 @@ const articles = [
     ),
   },
   {
-    title: 'Article 15 Droit applicable',
+    title: 'Article 15 : Droit applicable',
     body: (
       <p>
         Les présentes CGV sont soumises au <strong>droit français</strong>. En cas de litige et à défaut d&apos;accord

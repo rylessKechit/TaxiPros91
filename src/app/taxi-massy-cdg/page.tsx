@@ -18,10 +18,10 @@ const DURATION = ROUTE.durationMin
 const URL = `${SITE.url}/taxi-massy-cdg`
 
 export const metadata: Metadata = {
-  title: `Taxi ${FROM} → Aéroport CDG (Roissy) Tarif dès ${PRICE_MIN}€ & Réservation 24h/24`,
+  title: `Taxi ${FROM} → Aéroport CDG (Roissy) : Tarif dès ${PRICE_MIN}€ & Réservation 24h/24`,
   description: `Taxi ${FROM} vers Roissy Charles de Gaulle : tarif fixe dès ${PRICE_MIN}€, trajet ${DURATION} min, suivi de vol inclus. Tous terminaux T1, T2A-G, T3 desservis. Appelez le ${SITE.phone.display}.`,
   openGraph: {
-    title: `Taxi ${FROM} → CDG Dès ${PRICE_MIN}€ • ${DURATION} min`,
+    title: `Taxi ${FROM} → CDG : Dès ${PRICE_MIN}€ • ${DURATION} min`,
     description: `Transfert taxi ${FROM} Roissy CDG : tarif fixe, suivi de vol, prise en charge 24h/24, tous terminaux.`,
     url: URL,
   },
@@ -47,11 +47,11 @@ const faqs = [
   },
   {
     q: 'Proposez-vous l\'aller-retour Massy ↔ CDG ?',
-    a: `Oui, un forfait aller-retour ${FROM} ↔ Roissy CDG est disponible à tarif préférentiel (économie de 5 à 10€ par rapport à deux trajets simples). Le chauffeur vous récupère au terminal à votre vol retour avec suivi en temps réel idéal pour un voyage de quelques jours.`,
+    a: `Oui, un forfait aller-retour ${FROM} ↔ Roissy CDG est disponible à tarif préférentiel (économie de 5 à 10€ par rapport à deux trajets simples). Le chauffeur vous récupère au terminal à votre vol retour avec suivi en temps réel, idéal pour un voyage de quelques jours.`,
   },
   {
     q: 'Que se passe-t-il si mon vol CDG est retardé ?',
-    a: `Nous suivons votre vol en temps réel via le numéro de vol communiqué à la réservation. En cas de retard à l'arrivée à Roissy, l'heure de prise en charge est automatiquement ajustée aucun supplément d'attente n'est facturé. En cas d'annulation, prévenez-nous au ${SITE.phone.display} pour reporter sans frais.`,
+    a: `Nous suivons votre vol en temps réel via le numéro de vol communiqué à la réservation. En cas de retard à l'arrivée à Roissy, l'heure de prise en charge est automatiquement ajustée, aucun supplément d'attente n'est facturé. En cas d'annulation, prévenez-nous au ${SITE.phone.display} pour reporter sans frais.`,
   },
   {
     q: 'Tous les terminaux de Roissy CDG sont-ils desservis ?',
@@ -115,7 +115,7 @@ export default function TaxiMassyCDG() {
                 </div>
 
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
-                  Taxi {FROM} → {TO} Tarif fixe & Réservation 24h/24
+                  Taxi {FROM} → {TO} : Tarif fixe & Réservation 24h/24
                 </h1>
 
                 <div className="flex flex-wrap gap-3 mb-6">
@@ -212,7 +212,7 @@ export default function TaxiMassyCDG() {
                   <strong>À noter :</strong> les forfaits officiels Paris-CDG à 56€ (rive gauche) et 65€ (rive droite)
                   sont réservés aux <strong>taxis parisiens</strong> détenant la carte professionnelle Préfecture de Police.
                   TAXI Pro 91 est une compagnie de taxis basée en <strong>Essonne (91)</strong> avec ses propres tarifs fixes
-                  négociés pour vos trajets vers Roissy depuis le sud francilien sans surprise et souvent plus
+                  négociés pour vos trajets vers Roissy depuis le sud francilien, sans surprise et souvent plus
                   intéressants que les VTC en heures de pointe ou pendant les surge.
                 </p>
               </div>
@@ -230,7 +230,7 @@ export default function TaxiMassyCDG() {
               <p className="text-gray-600 mb-6">
                 Le trajet entre {FROM} et l'aéroport Roissy Charles de Gaulle couvre environ <strong>50 kilomètres</strong> et
                 se parcourt en moyenne en <strong>{DURATION} minutes</strong> hors trafic. C'est l'un des trajets aéroport
-                les plus exigeants depuis le sud francilien il nécessite de traverser ou contourner Paris.
+                les plus exigeants depuis le sud francilien : il nécessite de traverser ou contourner Paris.
               </p>
 
               <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -267,7 +267,7 @@ export default function TaxiMassyCDG() {
               </p>
               <p className="text-gray-600">
                 <strong>Conseil de pro :</strong> pour un vol au départ de CDG, prévoyez <strong>3 heures avant</strong> votre
-                vol en heures de pointe et <strong>2h30 avant</strong> en heures creuses il faut intégrer la marge
+                vol en heures de pointe et <strong>2h30 avant</strong> en heures creuses : il faut intégrer la marge
                 pour le check-in, les contrôles de sécurité et les déplacements internes au terminal (notamment T2E).
               </p>
             </div>
@@ -441,7 +441,7 @@ export default function TaxiMassyCDG() {
         <section className="py-12 md:py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
-              Questions fréquentes Taxi {FROM} CDG
+              Questions fréquentes : Taxi {FROM} CDG
             </h2>
             <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
               Toutes les réponses aux questions des voyageurs qui partent à Roissy CDG.

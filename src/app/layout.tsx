@@ -12,10 +12,10 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: 'Taxi Essonne 91 Massy, Orly, Saclay | TAXI Pro 91',
+    default: 'Taxi Essonne 91 : Massy, Orly, Saclay | TAXI Pro 91',
     template: '%s | TAXI Pro 91',
   },
-  description: 'Taxi en Essonne (91) 24h/24. Massy, Palaiseau, Antony, Saclay. Transferts Orly & CDG, gare Massy TGV, CPAM. ☎ 01 80 85 91 91 Note 4.9/5 ★',
+  description: 'Taxi en Essonne (91) 24h/24. Massy, Palaiseau, Antony, Saclay. Transferts Orly & CDG, gare Massy TGV, CPAM. ☎ 01 80 85 91 91. Note 4.9/5 ★',
   authors: [{ name: SITE.name }],
   creator: SITE.name,
   publisher: SITE.name,
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     locale: 'fr_FR',
     url: SITE.url,
     siteName: SITE.name,
-    title: 'Taxi Essonne 91 Réservation 24h/24 Massy, Orly, Saclay',
+    title: 'Taxi Essonne 91 : Réservation 24h/24 Massy, Orly, Saclay',
     description: 'Votre taxi en Essonne disponible 24h/24. Transferts Orly & CDG, gare Massy TGV, conventionné CPAM. Note 4.9/5.',
     images: [
       {

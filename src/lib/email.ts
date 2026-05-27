@@ -2,7 +2,7 @@ import { Resend } from 'resend'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
-// Expéditeur doit appartenir à un domaine vérifié sur Resend (ex: reservation@taxipro91.com)
+// Expéditeur : doit appartenir à un domaine vérifié sur Resend (ex: reservation@taxipro91.com)
 const FROM = process.env.RESEND_FROM || 'TAXI Pro 91 <onboarding@resend.dev>'
 const REPLY_TO = process.env.CONTACT_EMAIL || 'contact@taxipro91.com'
 
@@ -73,7 +73,7 @@ function buildEmailHtml(data: BookingData, isAdmin: boolean): string {
           <tr><td colspan="2" style="padding:16px 0 8px;font-weight:bold;font-size:16px;color:#facc15;border-top:1px solid #333;">🚗 Véhicule</td></tr>
           <tr><td style="padding:6px 0;color:#999;">Catégorie</td><td style="padding:6px 0;color:#fff;">${VEHICLE_LABELS[data.vehicle]}</td></tr>
           <tr><td style="padding:6px 0;color:#999;">Distance</td><td style="padding:6px 0;color:#fff;">${data.distanceKm} km</td></tr>
-          <tr><td style="padding:6px 0;color:#999;">Prix estimé</td><td style="padding:6px 0;color:#facc15;font-weight:bold;font-size:18px;">${data.priceMin}€ ${data.priceMax}€</td></tr>
+          <tr><td style="padding:6px 0;color:#999;">Prix estimé</td><td style="padding:6px 0;color:#facc15;font-weight:bold;font-size:18px;">${data.priceMin}€ à ${data.priceMax}€</td></tr>
           <tr><td colspan="2" style="padding:16px 0 8px;font-weight:bold;font-size:16px;color:#facc15;border-top:1px solid #333;">👤 Client</td></tr>
           <tr><td style="padding:6px 0;color:#999;">Nom</td><td style="padding:6px 0;color:#fff;">${data.lastName} ${data.firstName}</td></tr>
           <tr><td style="padding:6px 0;color:#999;">Email</td><td style="padding:6px 0;color:#fff;">${data.email}</td></tr>
@@ -88,7 +88,7 @@ function buildEmailHtml(data: BookingData, isAdmin: boolean): string {
         ` : ''}
       </div>
       <div style="background:#171717;padding:16px;text-align:center;color:#666;font-size:12px;">
-        TAXI Pro 91 taxipro91.com
+        TAXI Pro 91, taxipro91.com
       </div>
     </div>
   `
@@ -103,7 +103,7 @@ export async function sendBookingEmails(data: BookingData): Promise<void> {
       from: FROM,
       to: data.email,
       replyTo: REPLY_TO,
-      subject: `Confirmation de réservation TAXI Pro 91`,
+      subject: `Confirmation de réservation : TAXI Pro 91`,
       html: buildEmailHtml(data, false),
     }),
     // 2. Notification aux adresses admin (1 envoi, plusieurs destinataires)
@@ -111,7 +111,7 @@ export async function sendBookingEmails(data: BookingData): Promise<void> {
       from: FROM,
       to: adminEmails,
       replyTo: data.email,
-      subject: `Nouvelle réservation ${data.lastName} ${data.firstName} ${formatDate(data.date)} ${data.time}`,
+      subject: `Nouvelle réservation : ${data.lastName} ${data.firstName}, ${formatDate(data.date)} ${data.time}`,
       html: buildEmailHtml(data, true),
     }),
   ])

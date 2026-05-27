@@ -48,7 +48,7 @@ export default function MentionsLegalesPage() {
                   {/* TODO: remplacer par les vraies valeurs client */}
                   <p>
                     Carte professionnelle de taxi n° <em className="text-gray-500">[À compléter par le client]</em>
-                    {' '}— délivrée par la Préfecture de l&apos;Essonne.
+                    , délivrée par la Préfecture de l&apos;Essonne.
                   </p>
                 </div>
               </section>

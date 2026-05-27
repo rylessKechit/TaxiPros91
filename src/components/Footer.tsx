@@ -112,7 +112,7 @@ export default function Footer() {
       {/* SEO sr-only */}
       <div className="sr-only">
         <p>
-          TAXI Pro 91 service de taxi professionnel en Essonne basé à Palaiseau (1A avenue du 1er Mai, 91120).
+          TAXI Pro 91, service de taxi professionnel en Essonne basé à Palaiseau (1A avenue du 1er Mai, 91120).
           Nous intervenons en priorité à Massy (91300) et desservons Palaiseau, Antony, Longjumeau, Les Ulis, Saclay,
           Ballainvilliers, Verrières-le-Buisson, Évry-Courcouronnes, Corbeil-Essonnes et toute l&apos;Essonne.
           Transferts aéroport Orly et Roissy CDG, gare Massy TGV, transport médical conventionné CPAM. Disponible 24h/24, 7j/7.

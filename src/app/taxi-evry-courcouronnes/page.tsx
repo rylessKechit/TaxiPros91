@@ -27,10 +27,10 @@ const CP = '91000'
 const URL = `${SITE.url}/taxi-evry-courcouronnes`
 
 export const metadata: Metadata = {
-  title: `Taxi Évry-Courcouronnes (${CP}) Réservation 24h/24`,
+  title: `Taxi Évry-Courcouronnes (${CP}) : Réservation 24h/24`,
   description: `Taxi à Évry-Courcouronnes 24h/24. Transferts Orly, CDG, gare RER D, Génopole, hôpital. Réservation au ${SITE.phone.display}. Tarifs fixes, paiement CB et CPAM.`,
   openGraph: {
-    title: `Taxi Évry-Courcouronnes (${CP}) Service 24h/24`,
+    title: `Taxi Évry-Courcouronnes (${CP}) : Service 24h/24`,
     description: `Votre taxi à Évry-Courcouronnes : aéroports Orly et CDG, gare RER D, Génopole, hôpital Sud Francilien. Note 4.9/5.`,
     url: URL,
   },
@@ -73,7 +73,7 @@ const avantages = [
 const avisClients = [
   { nom: 'Karim B.', note: 5, texte: 'Pris en charge à Évry tôt le matin pour aller à Orly, chauffeur ponctuel et très courtois. Tarif respecté. Je recommande !', date: 'Février 2025' },
   { nom: 'Isabelle T.', note: 5, texte: 'Transport médical depuis Courcouronnes vers l\'hôpital Sud Francilien, prise en charge CPAM nickel. Chauffeur très patient.', date: 'Janvier 2025' },
-  { nom: 'Mehdi A.', note: 5, texte: 'Aller-retour Évry gare Massy TGV pour un déplacement pro. Véhicule premium, conduite calme. Parfait.', date: 'Décembre 2024' },
+  { nom: 'Mehdi A.', note: 5, texte: 'Aller-retour Évry, gare Massy TGV pour un déplacement pro. Véhicule premium, conduite calme. Parfait.', date: 'Décembre 2024' },
   { nom: 'Sandrine R.', note: 5, texte: 'Réservation la veille pour un vol tôt à CDG, le chauffeur était devant chez moi 10 min avant. Service top.', date: 'Mars 2025' },
 ]
 
@@ -142,11 +142,11 @@ export default function TaxiEvryCourcouronnes() {
               <div>
                 <div className="flex items-center gap-2 text-yellow-600 mb-4">
                   <MapPin className="w-5 h-5" />
-                  <span className="font-medium">{CITY} ({CP}) Essonne</span>
+                  <span className="font-medium">{CITY} ({CP}), Essonne</span>
                 </div>
 
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                  Taxi à {CITY} ({CP}) Réservation 24h/24
+                  Taxi à {CITY} ({CP}) : Réservation 24h/24
                 </h1>
 
                 <p className="text-xl text-gray-600 mb-6 leading-relaxed">
@@ -162,7 +162,7 @@ export default function TaxiEvryCourcouronnes() {
                     ))}
                   </div>
                   <span className="font-bold text-gray-900">4.9/5</span>
-                  <span className="text-gray-500">— plus de 500 avis</span>
+                  <span className="text-gray-500">, plus de 500 avis</span>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4 mb-8">
@@ -303,7 +303,7 @@ export default function TaxiEvryCourcouronnes() {
                 ))}
               </div>
               <span className="font-bold text-xl text-gray-900">4.9/5</span>
-              <span className="text-gray-500">— plus de 500 avis clients</span>
+              <span className="text-gray-500">, plus de 500 avis clients</span>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -392,7 +392,7 @@ export default function TaxiEvryCourcouronnes() {
         <section className="py-12 md:py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
-              Questions fréquentes Taxi {CITY}
+              Questions fréquentes : Taxi {CITY}
             </h2>
             <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
               Retrouvez les réponses aux questions les plus posées par nos clients à {CITY}.

@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   title: 'Taxi École Polytechnique (X) Palaiseau | 24h/24 Plateau de Saclay',
   description: `Taxi École Polytechnique 24h/24 à Palaiseau (91128). Élèves, enseignants, doctorants, événements (Bal de l'X, JX). Orly, CDG, gare Massy TGV. Tarifs fixes au ${SITE.phone.display}.`,
   openGraph: {
-    title: 'Taxi École Polytechnique (X) Plateau de Saclay 24h/24',
+    title: 'Taxi École Polytechnique (X) : Plateau de Saclay 24h/24',
     description: 'Service de taxi dédié à l\'École Polytechnique et au campus du Plateau de Saclay. Tarifs fixes, suivi de vol, événements et soutenances.',
     url: `${SITE.url}/taxi-ecole-polytechnique`,
   },
@@ -149,7 +149,7 @@ export default function TaxiPolytechnique() {
       <Breadcrumb items={[{ name: 'Taxi École Polytechnique' }]} />
 
       <ServiceSchema
-        name="Taxi École Polytechnique (X) Palaiseau"
+        name="Taxi École Polytechnique (X) : Palaiseau"
         description="Service de taxi 24h/24 dédié à l'École Polytechnique et au campus du Plateau de Saclay. Transferts aéroport Orly, CDG, gare Massy TGV, Paris. Tarifs fixes, événements, soutenances."
         url={`${SITE.url}/taxi-ecole-polytechnique`}
         areaServed={['Palaiseau', 'Saclay', 'Orsay', 'Gif-sur-Yvette', 'Massy', 'Les Ulis']}
@@ -176,11 +176,11 @@ export default function TaxiPolytechnique() {
               <div>
                 <div className="flex items-center gap-2 text-yellow-600 mb-4">
                   <GraduationCap className="w-5 h-5" />
-                  <span className="font-medium">École Polytechnique Palaiseau 91128</span>
+                  <span className="font-medium">École Polytechnique : Palaiseau 91128</span>
                 </div>
 
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                  Taxi École Polytechnique (X) Palaiseau, Plateau de Saclay 24h/24
+                  Taxi École Polytechnique (X) : Palaiseau, Plateau de Saclay 24h/24
                 </h1>
 
                 <p className="text-xl text-gray-600 mb-6 leading-relaxed">
@@ -271,8 +271,8 @@ export default function TaxiPolytechnique() {
                   Le campus de 160 hectares accueille plus de <strong>3 500 étudiants</strong>
                   (élèves polytechniciens, masters, doctorants), <strong>500 enseignants-chercheurs</strong>
                   et de nombreux personnels administratifs. La proximité d&apos;institutions
-                  prestigieuses CentraleSupélec, ENS Paris-Saclay, AgroParisTech, Telecom Paris,
-                  ENSAE fait du plateau un écosystème unique.
+                  prestigieuses : CentraleSupélec, ENS Paris-Saclay, AgroParisTech, Telecom Paris,
+                  ENSAE, fait du plateau un écosystème unique.
                 </p>
                 <p>
                   L&apos;accès au campus se fait par la <strong>RN118</strong> (sortie 9 « Polytechnique
@@ -550,7 +550,7 @@ export default function TaxiPolytechnique() {
         <section className="py-12 md:py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
-              Questions fréquentes Taxi École Polytechnique
+              Questions fréquentes : Taxi École Polytechnique
             </h2>
             <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
               Les réponses aux questions des élèves, enseignants, chercheurs et visiteurs de l&apos;X.

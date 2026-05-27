@@ -38,7 +38,7 @@ export default function Hero() {
               </div>
 
               <h1 className="text-[1.875rem] sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold mb-3 sm:mb-4 lg:mb-6 leading-tight">
-                Taxi <span className="text-yellow-400">Essonne (91)</span> votre taxi 24h/24 à Massy &amp; Palaiseau
+                Taxi <span className="text-yellow-400">Essonne (91)</span> : votre taxi 24h/24 à Massy &amp; Palaiseau
               </h1>
 
               <p className="text-sm sm:text-xl md:text-2xl text-gray-200 mb-4 sm:mb-6 lg:mb-8 max-w-lg">

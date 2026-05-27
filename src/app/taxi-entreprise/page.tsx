@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   title: 'Taxi entreprise Essonne | Compte pro & facturation mensuelle B2B',
   description: `Taxi entreprise B2B en Essonne : compte dédié, facturation mensuelle, paiement 30 jours, justificatifs détaillés. Saclay, Massy, Évry, Orly, CDG. Devis au ${SITE.phone.display}.`,
   openGraph: {
-    title: 'Taxi entreprise Essonne | TAXI Pro 91 Solutions B2B',
+    title: 'Taxi entreprise Essonne | TAXI Pro 91 : Solutions B2B',
     description: `Compte entreprise, facturation mensuelle, transferts collaborateurs et VIP. Mercedes Classe E, Tesla, Van 7 places. Devis personnalisé au ${SITE.phone.display}.`,
     url: `${SITE.url}/taxi-entreprise`,
   },
@@ -179,7 +179,7 @@ const zonesPrioritaires = [
   { name: 'Évry-Courcouronnes', desc: 'Génopole, Université Paris-Saclay Évry, sièges régionaux' },
   { name: 'La Défense', desc: 'Tours du quartier d\'affaires, trajets quotidiens collaborateurs' },
   { name: 'Roissy CDG', desc: 'Tous terminaux, lounges business, parkings VIP' },
-  { name: 'Orly', desc: 'Orly 1, 2, 3, 4 terminaux affaires et vols domestiques' },
+  { name: 'Orly', desc: 'Orly 1, 2, 3, 4 : terminaux affaires et vols domestiques' },
 ]
 
 const etapesOuverture = [
@@ -269,11 +269,11 @@ export default function TaxiEntreprise() {
               <div>
                 <div className="flex items-center gap-2 text-yellow-600 mb-4">
                   <Briefcase className="w-5 h-5" />
-                  <span className="font-medium">Solutions B2B Essonne et Île-de-France</span>
+                  <span className="font-medium">Solutions B2B : Essonne et Île-de-France</span>
                 </div>
 
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                  Taxi entreprise Essonne Facturation, comptes pro &amp; déplacements professionnels
+                  Taxi entreprise Essonne : Facturation, comptes pro &amp; déplacements professionnels
                 </h1>
 
                 <p className="text-xl text-gray-600 mb-6 leading-relaxed">
@@ -640,7 +640,7 @@ export default function TaxiEntreprise() {
                 className="inline-flex items-center gap-3 bg-gray-900 text-white font-bold text-lg py-3 px-8 rounded-lg hover:bg-gray-800 transition-colors"
               >
                 <Phone className="w-5 h-5" />
-                Démarrer maintenant {SITE.phone.display}
+                Démarrer maintenant : {SITE.phone.display}
               </a>
             </div>
           </div>
@@ -705,7 +705,7 @@ export default function TaxiEntreprise() {
         <section className="py-12 md:py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
-              Questions fréquentes Taxi entreprise
+              Questions fréquentes : Taxi entreprise
             </h2>
             <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
               Tout ce que vous devez savoir avant d&apos;ouvrir un compte entreprise chez TAXI Pro 91.

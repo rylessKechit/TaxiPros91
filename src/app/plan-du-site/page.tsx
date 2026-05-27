@@ -73,7 +73,7 @@ export default function PlanDuSitePage() {
 
               <Section title="Accueil & contact">
                 <LinkList items={[
-                  { href: '/', label: 'Accueil Taxi Essonne 24h/24' },
+                  { href: '/', label: 'Accueil : Taxi Essonne 24h/24' },
                   { href: '/contact', label: 'Contact' },
                   { href: '/tarifs', label: 'Tarifs' },
                 ]} />
@@ -107,7 +107,7 @@ export default function PlanDuSitePage() {
 
               <Section title="Blog">
                 <LinkList items={[
-                  { href: '/blog', label: 'Blog Conseils & guides taxi en Essonne' },
+                  { href: '/blog', label: 'Blog : Conseils & guides taxi en Essonne' },
                 ]} />
               </Section>
 

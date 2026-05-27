@@ -357,7 +357,7 @@ export default function TaxiOrly() {
                 <Info className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" />
                 <p className="text-gray-700 text-sm">
                   <strong>Bon à savoir :</strong> précisez le terminal de votre vol à la réservation
-                  ou indiquez simplement votre numéro de vol nous identifions automatiquement le
+                  ou indiquez simplement votre numéro de vol, nous identifions automatiquement le
                   terminal correspondant grâce aux données de la compagnie.
                 </p>
               </div>
@@ -440,7 +440,7 @@ export default function TaxiOrly() {
                   dans l&apos;incertitude du compteur, nous proposons nos propres{' '}
                   <strong>tarifs fixes négociés</strong> annoncés et confirmés au moment de la
                   réservation. Vous connaissez le prix exact avant le départ, péages éventuels
-                  inclus, sans variation à l&apos;arrivée sauf modification du trajet en cours de
+                  inclus, sans variation à l&apos;arrivée, sauf modification du trajet en cours de
                   route demandée par le client.
                 </p>
               </div>
@@ -566,7 +566,7 @@ export default function TaxiOrly() {
         <section className="py-12 md:py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
-              Questions fréquentes Taxi Orly depuis l&apos;Essonne
+              Questions fréquentes : Taxi Orly depuis l&apos;Essonne
             </h2>
             <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
               Les réponses aux questions les plus posées par nos clients pour leurs transferts vers
