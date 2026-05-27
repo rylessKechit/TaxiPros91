@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Plane, Train, Stethoscope, Briefcase, GraduationCap, PartyPopper, Phone } from 'lucide-react'
 
 const services = [
@@ -97,6 +98,12 @@ export default function Services() {
             <Phone className="w-6 h-6" />
             01 80 85 91 91
           </a>
+          <p className="mt-4 text-sm text-black/70">
+            Conseils, guides tarifaires et infos pratiques sur notre{' '}
+            <Link href="/blog" className="font-semibold underline hover:text-black">
+              blog taxi en Essonne
+            </Link>
+          </p>
         </div>
       </div>
     </section>

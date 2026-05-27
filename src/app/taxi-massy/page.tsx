@@ -502,6 +502,12 @@ export default function TaxiMassy() {
                   Zone d'activité de Massy, pôle technologique Paris-Saclay, centres d'affaires...
                   Nous assurons tous vos déplacements professionnels avec ponctualité et discrétion.
                 </p>
+                <p>
+                  Préparez votre prochain trajet depuis Massy grâce à nos{' '}
+                  <Link href="/blog" className="text-yellow-700 hover:text-yellow-800 font-medium underline">
+                    guides pratiques et conseils taxi sur le blog
+                  </Link>.
+                </p>
               </div>
 
               <div className="mt-10 p-6 bg-yellow-50 rounded-xl border border-yellow-200">
