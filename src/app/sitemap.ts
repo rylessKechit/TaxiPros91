@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: SITE.url, lastModified: now, changeFrequency: 'weekly', priority: 1 },
     { url: `${SITE.url}/tarifs`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE.url}/taxi-orly`, lastModified: now, changeFrequency: 'monthly', priority: 1.0 },
+    { url: `${SITE.url}/taxi-aeroport-orly`, lastModified: now, changeFrequency: 'monthly', priority: 1.0 },
     { url: `${SITE.url}/taxi-cdg`, lastModified: now, changeFrequency: 'monthly', priority: 1.0 },
     { url: `${SITE.url}/taxi-aeroport`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE.url}/taxi-gare-massy-tgv`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },

@@ -5,6 +5,7 @@ const PRICE_DISCLAIMER =
   "Tarifs indicatifs susceptibles de varier selon le trafic, les bagages, le nombre de passagers et l'horaire."
 
 const routes = [
+  { slug: 'taxi-aeroport-orly', from: 'Taxi aéroport Orly', to: 'Essonne 91', price: '25-50€', duration: '15-27 min', icon: Plane },
   { slug: 'taxi-massy-orly', from: 'Massy', to: 'Aéroport Orly', price: '40-50€', duration: '15 min', icon: Plane },
   { slug: 'taxi-massy-cdg', from: 'Massy', to: 'Aéroport CDG', price: '90-120€', duration: '50 min', icon: Plane },
   { slug: 'taxi-massy-paris', from: 'Massy', to: 'Paris Centre', price: '55-80€', duration: '30 min', icon: Building2 },
