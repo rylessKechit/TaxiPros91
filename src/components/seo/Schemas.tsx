@@ -6,7 +6,7 @@ const ORG_ID = `${SITE.url}/#business`
 export function LocalBusinessSchema() {
   const data = {
     '@context': 'https://schema.org',
-    '@type': 'TaxiService',
+    '@type': ['LocalBusiness', 'TaxiService'],
     '@id': ORG_ID,
     name: SITE.name,
     description: 'Service de taxi professionnel en Essonne (91), 24h/24 et 7j/7. Transferts aéroport Orly et Roissy CDG, gare Massy TGV, transport médical conventionné CPAM.',
