@@ -18,10 +18,10 @@ const DURATION = ROUTE.durationMin
 const URL = `${SITE.url}/taxi-essonne-versailles`
 
 export const metadata: Metadata = {
-  title: `Taxi ${FROM} → ${TO} — Tarif dès ${PRICE_MIN}€ & Réservation 24h/24`,
+  title: `Taxi ${FROM} → ${TO} Tarif dès ${PRICE_MIN}€ & Réservation 24h/24`,
   description: `Taxi depuis l'${FROM} vers le Château de ${TO} : tarif fixe dès ${PRICE_MIN}€, trajet en ${DURATION} min via RN118 et A86. Dépose Château, Trianon, Grandes Eaux. Réservation 24h/24 au ${SITE.phone.display}.`,
   openGraph: {
-    title: `Taxi ${FROM} → Versailles — Dès ${PRICE_MIN}€ • ${DURATION} min`,
+    title: `Taxi ${FROM} → Versailles Dès ${PRICE_MIN}€ • ${DURATION} min`,
     description: `Transfert direct depuis l'Essonne vers Versailles. Tarif fixe, dépose au Château, au Trianon ou au hameau de la Reine. Service 24h/24.`,
     url: URL,
   },
@@ -116,7 +116,7 @@ export default function TaxiEssonneVersailles() {
                 </div>
 
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
-                  Taxi {FROM} → {TO} — Tarif &amp; Réservation 24h/24
+                  Taxi {FROM} → {TO} Tarif &amp; Réservation 24h/24
                 </h1>
 
                 <div className="flex flex-wrap gap-3 mb-6">
@@ -406,7 +406,7 @@ export default function TaxiEssonneVersailles() {
         <section className="py-12 md:py-16 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
-              Questions fréquentes — Taxi {FROM} Versailles
+              Questions fréquentes Taxi {FROM} Versailles
             </h2>
             <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
               Toutes les réponses aux questions des visiteurs et amateurs de patrimoine qui réservent ce trajet.

@@ -18,10 +18,10 @@ const DURATION = ROUTE.durationMin
 const URL = `${SITE.url}/taxi-massy-orly`
 
 export const metadata: Metadata = {
-  title: `Taxi ${FROM} → Aéroport Orly — Tarif fixe dès ${PRICE_MIN}€ & Réservation 24h/24`,
+  title: `Taxi ${FROM} → Aéroport Orly Tarif fixe dès ${PRICE_MIN}€ & Réservation 24h/24`,
   description: `Taxi ${FROM} vers Aéroport Orly : tarif fixe dès ${PRICE_MIN}€, trajet en ${DURATION} min, suivi de vol inclus. Réservation 24h/24 au ${SITE.phone.display}. Tous terminaux Orly 1, 2, 3, 4 desservis.`,
   openGraph: {
-    title: `Taxi ${FROM} → Orly — Dès ${PRICE_MIN}€ • ${DURATION} min`,
+    title: `Taxi ${FROM} → Orly Dès ${PRICE_MIN}€ • ${DURATION} min`,
     description: `Transfert taxi ${FROM} Aéroport d'Orly. Tarif fixe sans surprise, suivi de vol, prise en charge 24h/24.`,
     url: URL,
   },
@@ -112,7 +112,7 @@ export default function TaxiMassyOrly() {
                 </div>
 
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
-                  Taxi {FROM} → {TO} — Tarif fixe & Réservation 24h/24
+                  Taxi {FROM} → {TO} Tarif fixe & Réservation 24h/24
                 </h1>
 
                 <div className="flex flex-wrap gap-3 mb-6">
@@ -209,7 +209,7 @@ export default function TaxiMassyOrly() {
                   <strong>À noter :</strong> les forfaits officiels Paris-Orly à 36€ (rive gauche) et 45€ (rive droite)
                   sont réservés aux <strong>taxis parisiens</strong> titulaires de la carte professionnelle Préfecture de Police.
                   TAXI Pro 91 est une compagnie de taxis basée en <strong>Essonne (91)</strong> avec ses propres tarifs fixes
-                  négociés pour vos trajets vers Orly — souvent plus avantageux pour les habitants du sud francilien.
+                  négociés pour vos trajets vers Orly souvent plus avantageux pour les habitants du sud francilien.
                 </p>
               </div>
             </div>
@@ -226,7 +226,7 @@ export default function TaxiMassyOrly() {
               <p className="text-gray-600 mb-6">
                 Le trajet entre {FROM} et l'aéroport d'Orly couvre environ <strong>12 kilomètres</strong> et
                 se parcourt en moyenne en <strong>{DURATION} minutes</strong>. C'est l'un des trajets les plus
-                courts pour rejoindre un aéroport parisien depuis l'Essonne — un atout majeur pour les voyageurs
+                courts pour rejoindre un aéroport parisien depuis l'Essonne un atout majeur pour les voyageurs
                 qui veulent éviter le stress de la route.
               </p>
 
@@ -428,7 +428,7 @@ export default function TaxiMassyOrly() {
         <section className="py-12 md:py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
-              Questions fréquentes — Taxi {FROM} Orly
+              Questions fréquentes Taxi {FROM} Orly
             </h2>
             <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
               Toutes les réponses aux questions des voyageurs qui réservent ce trajet.

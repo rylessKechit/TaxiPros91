@@ -251,7 +251,7 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
     if (formData.isRoundTrip) {
       commentParts.push(`Aller-retour (retour : ${formData.returnDate ? formatDate(formData.returnDate) : '-'} ${formData.returnTime || ''})`)
     }
-    const comment = commentParts.join(' — ')
+    const comment = commentParts.join(' ')
 
     try {
       const res = await fetch('/api/appsolu/booking', {
@@ -333,7 +333,7 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
   const VEHICLES = [
     { id: 'electrique' as const, name: 'Électrique', desc: 'Tesla Model 3 ou équivalent', icon: Zap },
     { id: 'premium' as const, name: 'Premium', desc: 'Mercedes Classe E ou équivalent', icon: Crown },
-    { id: 'van' as const, name: 'Van', desc: 'Mercedes Classe V — jusqu\'à 7 passagers', icon: Bus },
+    { id: 'van' as const, name: 'Van', desc: 'Mercedes Classe V jusqu\'à 7 passagers', icon: Bus },
   ]
 
   const StepIndicator = () => (
@@ -387,7 +387,7 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
             </div>
             <div className="flex justify-between">
               <span className="text-gray-500">Prix estimé</span>
-              <span className="text-gray-900 font-bold">{priceEstimate?.min}€ — {priceEstimate?.max}€</span>
+              <span className="text-gray-900 font-bold">{priceEstimate?.min}€ {priceEstimate?.max}€</span>
             </div>
           </div>
         </div>
@@ -615,7 +615,7 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
                     </div>
                     {vPrice && (
                       <span className="text-sm font-bold text-gray-900 whitespace-nowrap">
-                        {vPrice.min}€ — {vPrice.max}€
+                        {vPrice.min}€ {vPrice.max}€
                       </span>
                     )}
                   </label>

@@ -18,10 +18,10 @@ const DURATION = ROUTE.durationMin
 const URL = `${SITE.url}/taxi-antony-orly`
 
 export const metadata: Metadata = {
-  title: `Taxi ${FROM} → Aéroport Orly — Tarif dès ${PRICE_MIN}€ & Réservation 24h/24`,
+  title: `Taxi ${FROM} → Aéroport Orly Tarif dès ${PRICE_MIN}€ & Réservation 24h/24`,
   description: `Taxi ${FROM} (92160) vers Aéroport Orly : tarif fixe dès ${PRICE_MIN}€, trajet ${DURATION} min, suivi de vol inclus. Tous terminaux Orly 1, 2, 3, 4. Réservez au ${SITE.phone.display}.`,
   openGraph: {
-    title: `Taxi ${FROM} → Orly — Dès ${PRICE_MIN}€ • ${DURATION} min`,
+    title: `Taxi ${FROM} → Orly Dès ${PRICE_MIN}€ • ${DURATION} min`,
     description: `Transfert taxi ${FROM} (92) Aéroport Orly : tarif fixe, suivi de vol, prise en charge 24h/24.`,
     url: URL,
   },
@@ -47,11 +47,11 @@ const faqs = [
   },
   {
     q: 'Proposez-vous l\'aller-retour Antony ↔ Orly ?',
-    a: `Oui, nous proposons un forfait aller-retour Antony ↔ Orly à tarif préférentiel. Le chauffeur vous attend à votre vol retour avec suivi en temps réel — idéal pour un voyage court (city break, déplacement pro de quelques jours).`,
+    a: `Oui, nous proposons un forfait aller-retour Antony ↔ Orly à tarif préférentiel. Le chauffeur vous attend à votre vol retour avec suivi en temps réel idéal pour un voyage court (city break, déplacement pro de quelques jours).`,
   },
   {
     q: 'Que se passe-t-il si mon vol est retardé ?',
-    a: `Aucun stress : nous suivons votre vol en temps réel grâce au numéro de vol communiqué à la réservation. En cas de retard, l'heure de prise en charge est automatiquement ajustée — aucun supplément d'attente facturé. En cas d'annulation, prévenez-nous au ${SITE.phone.display} pour reporter sans frais.`,
+    a: `Aucun stress : nous suivons votre vol en temps réel grâce au numéro de vol communiqué à la réservation. En cas de retard, l'heure de prise en charge est automatiquement ajustée aucun supplément d'attente facturé. En cas d'annulation, prévenez-nous au ${SITE.phone.display} pour reporter sans frais.`,
   },
   {
     q: 'Tous les terminaux d\'Orly sont-ils desservis ?',
@@ -115,7 +115,7 @@ export default function TaxiAntonyOrly() {
                 </div>
 
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
-                  Taxi {FROM} → {TO} — Tarif fixe & Réservation 24h/24
+                  Taxi {FROM} → {TO} Tarif fixe & Réservation 24h/24
                 </h1>
 
                 <div className="flex flex-wrap gap-3 mb-6">
@@ -230,7 +230,7 @@ export default function TaxiAntonyOrly() {
               <p className="text-gray-600 mb-6">
                 Le trajet entre {FROM} et l'aéroport d'Orly couvre environ <strong>8 kilomètres</strong> et
                 se parcourt en moyenne en <strong>{DURATION} minutes</strong>. C'est <strong>le trajet aéroport
-                le plus court</strong> de notre catalogue — un atout majeur pour les voyageurs qui veulent
+                le plus court</strong> de notre catalogue un atout majeur pour les voyageurs qui veulent
                 gagner du temps et éviter le stress des transports en commun avec bagages.
               </p>
 
@@ -433,7 +433,7 @@ export default function TaxiAntonyOrly() {
         <section className="py-12 md:py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
-              Questions fréquentes — Taxi {FROM} Orly
+              Questions fréquentes Taxi {FROM} Orly
             </h2>
             <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
               Toutes les réponses aux questions des voyageurs d'Antony qui partent à Orly.

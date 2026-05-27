@@ -27,10 +27,10 @@ const CP = '91600'
 const URL = `${SITE.url}/taxi-savigny-sur-orge`
 
 export const metadata: Metadata = {
-  title: `Taxi Savigny-sur-Orge (${CP}) — Réservation 24h/24`,
+  title: `Taxi Savigny-sur-Orge (${CP}) Réservation 24h/24`,
   description: `Taxi à Savigny-sur-Orge 24h/24. Transferts Orly (à 15 min), CDG, gare RER C, lycée Corot. Réservation au ${SITE.phone.display}. Tarifs fixes, CB et CPAM acceptés.`,
   openGraph: {
-    title: `Taxi Savigny-sur-Orge (${CP}) — Service 24h/24`,
+    title: `Taxi Savigny-sur-Orge (${CP}) Service 24h/24`,
     description: `Votre taxi à Savigny-sur-Orge : aéroport d'Orly à 15 min, RER C, gare de Massy TGV. Note 4.9/5.`,
     url: URL,
   },
@@ -138,11 +138,11 @@ export default function TaxiSavignySurOrge() {
               <div>
                 <div className="flex items-center gap-2 text-yellow-600 mb-4">
                   <MapPin className="w-5 h-5" />
-                  <span className="font-medium">{CITY} ({CP}) — Essonne</span>
+                  <span className="font-medium">{CITY} ({CP}) Essonne</span>
                 </div>
 
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                  Taxi à {CITY} ({CP}) — Réservation 24h/24
+                  Taxi à {CITY} ({CP}) Réservation 24h/24
                 </h1>
 
                 <p className="text-xl text-gray-600 mb-6 leading-relaxed">
@@ -382,7 +382,7 @@ export default function TaxiSavignySurOrge() {
         <section className="py-12 md:py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
-              Questions fréquentes — Taxi {CITY}
+              Questions fréquentes Taxi {CITY}
             </h2>
             <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
               Retrouvez les réponses aux questions les plus posées par nos clients à {CITY}.

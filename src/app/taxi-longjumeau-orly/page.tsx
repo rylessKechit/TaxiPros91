@@ -18,10 +18,10 @@ const DURATION = ROUTE.durationMin
 const URL = `${SITE.url}/taxi-longjumeau-orly`
 
 export const metadata: Metadata = {
-  title: `Taxi ${FROM} → Aéroport Orly — Tarif dès ${PRICE_MIN}€ & Réservation 24h/24`,
+  title: `Taxi ${FROM} → Aéroport Orly Tarif dès ${PRICE_MIN}€ & Réservation 24h/24`,
   description: `Taxi ${FROM} vers Aéroport Orly : tarif fixe dès ${PRICE_MIN}€, trajet en ${DURATION} min via RD117 et A6, suivi de vol inclus. Réservation 24h/24 au ${SITE.phone.display}. Hôpital, gare RER C, tous quartiers desservis.`,
   openGraph: {
-    title: `Taxi ${FROM} → Orly — Dès ${PRICE_MIN}€ • ${DURATION} min`,
+    title: `Taxi ${FROM} → Orly Dès ${PRICE_MIN}€ • ${DURATION} min`,
     description: `Transfert taxi ${FROM} Aéroport d'Orly. Tarif fixe, suivi de vol, prise en charge 24h/24 dans tout Longjumeau (centre, hôpital, gare RER C).`,
     url: URL,
   },
@@ -116,7 +116,7 @@ export default function TaxiLongjumeauOrly() {
                 </div>
 
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
-                  Taxi {FROM} → {TO} — Tarif &amp; Réservation 24h/24
+                  Taxi {FROM} → {TO} Tarif &amp; Réservation 24h/24
                 </h1>
 
                 <div className="flex flex-wrap gap-3 mb-6">
@@ -214,7 +214,7 @@ export default function TaxiLongjumeauOrly() {
                   <strong>À noter :</strong> les forfaits officiels Paris-Orly à 36€ (rive gauche) et 45€ (rive droite)
                   sont réservés aux <strong>taxis parisiens</strong> titulaires de la carte professionnelle Préfecture de Police.
                   TAXI Pro 91 est une compagnie de taxis basée en <strong>Essonne (91)</strong> avec ses propres tarifs fixes
-                  négociés pour vos trajets Longjumeau-Orly — souvent plus avantageux pour les habitants de l'Essonne.
+                  négociés pour vos trajets Longjumeau-Orly souvent plus avantageux pour les habitants de l'Essonne.
                 </p>
               </div>
             </div>
@@ -439,7 +439,7 @@ export default function TaxiLongjumeauOrly() {
         <section className="py-12 md:py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
-              Questions fréquentes — Taxi {FROM} Orly
+              Questions fréquentes Taxi {FROM} Orly
             </h2>
             <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
               Toutes les réponses aux questions des voyageurs qui réservent ce trajet.

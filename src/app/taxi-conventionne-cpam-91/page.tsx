@@ -27,11 +27,11 @@ import {
 const PAGE_URL = `${SITE.url}/taxi-conventionne-cpam-91`
 
 export const metadata: Metadata = {
-  title: 'Taxi conventionné CPAM Essonne 91 — Transport médical 24h/24',
+  title: 'Taxi conventionné CPAM Essonne 91 Transport médical 24h/24',
   description: `Taxi conventionné CPAM en Essonne (91). Tiers payant, 0 avance de frais sur prescription médicale. Dialyse, chimio, hôpitaux. Appelez ${SITE.phone.display}.`,
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Taxi conventionné CPAM Essonne (91) — Transport médical assis 24h/24',
+    title: 'Taxi conventionné CPAM Essonne (91) Transport médical assis 24h/24',
     description:
       'Service de taxi conventionné CPAM 91. Tiers payant sur prescription médicale, transports vers hôpitaux Essonne et Paris. Disponible 24h/24, 7j/7.',
     url: PAGE_URL,
@@ -80,7 +80,7 @@ const hopitaux = [
     desc: 'Diabétologie, rhumatologie, maternité Port-Royal.',
   },
   {
-    name: 'Hôpital Necker — Enfants malades',
+    name: 'Hôpital Necker Enfants malades',
     city: 'Paris 15e',
     desc: 'Hôpital pédiatrique de référence, maladies rares.',
   },
@@ -220,11 +220,11 @@ export default function TaxiConventionneCPAM91() {
               <div>
                 <div className="inline-flex items-center gap-2 bg-white border border-gray-200 text-yellow-700 px-3 py-1.5 rounded-full text-sm font-medium mb-4">
                   <HeartPulse className="w-4 h-4" />
-                  Transport médical assis — Essonne (91)
+                  Transport médical assis Essonne (91)
                 </div>
 
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                  Taxi conventionné CPAM Essonne (91) — Transport médical assis 24h/24
+                  Taxi conventionné CPAM Essonne (91) Transport médical assis 24h/24
                 </h1>
 
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
@@ -396,7 +396,7 @@ export default function TaxiConventionneCPAM91() {
                   </li>
                   <li>
                     Si vous êtes pris en charge à <strong>65&nbsp;%</strong>, seul le <strong>ticket modérateur (35&nbsp;%)</strong>
-                    reste à votre charge — il est très souvent couvert par votre mutuelle, auquel cas vous ne payez rien non plus.
+                    reste à votre charge il est très souvent couvert par votre mutuelle, auquel cas vous ne payez rien non plus.
                   </li>
                   <li>
                     Sans mutuelle et hors prise en charge à 100&nbsp;%, vous réglez uniquement le ticket modérateur,
@@ -645,7 +645,7 @@ export default function TaxiConventionneCPAM91() {
         <section className="py-12 md:py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
-              Questions fréquentes — Taxi CPAM Essonne
+              Questions fréquentes Taxi CPAM Essonne
             </h2>
             <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
               Tout ce que vous devez savoir sur le transport médical conventionné CPAM en Essonne.

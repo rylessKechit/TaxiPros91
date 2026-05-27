@@ -27,10 +27,10 @@ const CP = '91400'
 const URL = `${SITE.url}/taxi-orsay`
 
 export const metadata: Metadata = {
-  title: `Taxi Orsay (${CP}) — Réservation 24h/24`,
+  title: `Taxi Orsay (${CP}) Réservation 24h/24`,
   description: `Taxi à Orsay 24h/24. Transferts Orly, CDG, gare Massy TGV, Université Paris-Saclay, CEA. Réservation au ${SITE.phone.display}. CB et CPAM acceptés.`,
   openGraph: {
-    title: `Taxi Orsay (${CP}) — Service 24h/24`,
+    title: `Taxi Orsay (${CP}) Service 24h/24`,
     description: `Votre taxi à Orsay : Université Paris-Saclay, plateau de Saclay, RER B. Note 4.9/5.`,
     url: URL,
   },
@@ -137,11 +137,11 @@ export default function TaxiOrsay() {
               <div>
                 <div className="flex items-center gap-2 text-yellow-600 mb-4">
                   <MapPin className="w-5 h-5" />
-                  <span className="font-medium">{CITY} ({CP}) — Essonne</span>
+                  <span className="font-medium">{CITY} ({CP}) Essonne</span>
                 </div>
 
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                  Taxi à {CITY} ({CP}) — Réservation 24h/24
+                  Taxi à {CITY} ({CP}) Réservation 24h/24
                 </h1>
 
                 <p className="text-xl text-gray-600 mb-6 leading-relaxed">
@@ -196,7 +196,7 @@ export default function TaxiOrsay() {
                 <p>
                   <strong>{CITY}</strong>, commune de l&apos;Essonne d&apos;environ <strong>16 000 habitants</strong>,
                   est célèbre pour abriter une grande partie de l&apos;<strong>Université Paris-Saclay</strong>{' '}
-                  — notamment la <strong>Faculté des Sciences d&apos;Orsay</strong> — ainsi que de prestigieux organismes
+                  notamment la <strong>Faculté des Sciences d&apos;Orsay</strong> ainsi que de prestigieux organismes
                   de recherche (<strong>CEA</strong>, synchrotron SOLEIL, laboratoires CNRS).
                 </p>
                 <p>
@@ -380,7 +380,7 @@ export default function TaxiOrsay() {
         <section className="py-12 md:py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
-              Questions fréquentes — Taxi {CITY}
+              Questions fréquentes Taxi {CITY}
             </h2>
             <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
               Retrouvez les réponses aux questions les plus posées par nos clients à {CITY}.

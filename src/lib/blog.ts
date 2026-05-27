@@ -11,7 +11,7 @@ export interface BlogPost {
 }
 
 // ============================================================================
-// ARTICLE 1 — Comment aller à Orly depuis Massy
+// ARTICLE 1 Comment aller à Orly depuis Massy
 // ============================================================================
 const post1: BlogPost = {
   slug: 'comment-aller-orly-depuis-massy',
@@ -29,12 +29,12 @@ Dans ce guide, nous comparons en détail le **taxi**, le **RER B + Orlyval**, le
 
 ## Les 4 options pour aller de Massy à Orly
 
-### Option 1 — Le taxi
+### Option 1 Le taxi
 Le taxi reste l'option la plus directe et la plus confortable. Depuis Massy, il faut compter **15 minutes** pour rejoindre l'aéroport via l'autoroute A10, hors trafic. Le tarif est fixe et oscille entre **25 et 35 €** selon l'heure (jour ou nuit) et le terminal de destination (Orly 1, 2, 3 ou 4).
 
-L'avantage majeur du taxi, c'est la prise en charge à votre adresse et la dépose directement devant votre terminal — pas de marche, pas de correspondance, pas de bagages à porter dans les escaliers.
+L'avantage majeur du taxi, c'est la prise en charge à votre adresse et la dépose directement devant votre terminal pas de marche, pas de correspondance, pas de bagages à porter dans les escaliers.
 
-### Option 2 — RER B + Orlyval
+### Option 2 RER B + Orlyval
 Le combo RER B + Orlyval est la solution la plus utilisée par les voyageurs qui veulent éviter la voiture. Depuis la gare Massy-Palaiseau, prenez le **RER B direction Mitry-Claye ou Aéroport CDG**, descendez à **Antony**, puis basculez sur l'**Orlyval** (métro automatique).
 
 - Trajet RER B Massy → Antony : 6 minutes
@@ -43,12 +43,12 @@ Le combo RER B + Orlyval est la solution la plus utilisée par les voyageurs qui
 - **Total porte-à-porte : environ 35 minutes**
 - **Coût : 13 €** (billet combiné Orlyval inclus)
 
-### Option 3 — RER C + bus 91-10
+### Option 3 RER C + bus 91-10
 La solution la plus économique mais aussi la plus lente. Depuis la gare Massy-Palaiseau RER C, descendez à **Pont de Rungis** puis prenez le bus **91-10** vers Orly. Comptez environ **50 minutes** au total pour seulement **4 €**.
 
 Cette option est intéressante uniquement si vous voyagez léger, sans contrainte horaire forte, et que vous cherchez à minimiser le budget.
 
-### Option 4 — Uber / VTC
+### Option 4 Uber / VTC
 Les VTC type Uber, Bolt ou Heetch desservent Massy avec des prix qui varient fortement selon l'heure et la demande : **28 à 40 €** en heures creuses, et **jusqu'à 70 €** en heures de pointe ou en cas de "surge pricing".
 
 Le confort est proche du taxi, mais les prix sont moins prévisibles et le délai de prise en charge plus long, surtout aux heures matinales.
@@ -130,7 +130,7 @@ Le bus 91-10 est l'option la moins confortable, surtout aux heures de pointe : p
 }
 
 // ============================================================================
-// ARTICLE 2 — Prix taxi Massy → Orly 2026
+// ARTICLE 2 Prix taxi Massy → Orly 2026
 // ============================================================================
 const post2: BlogPost = {
   slug: 'prix-taxi-massy-orly-2026',
@@ -248,7 +248,7 @@ Pour réserver, un simple appel suffit : disponibilité 24h/24, prix communiqué
 }
 
 // ============================================================================
-// ARTICLE 3 — Guide gare Massy TGV
+// ARTICLE 3 Guide gare Massy TGV
 // ============================================================================
 const post3: BlogPost = {
   slug: 'guide-gare-massy-tgv',
@@ -299,7 +299,7 @@ La gare Massy TGV dispose de plusieurs parkings gérés par **Effia** :
 
 ## Dépose-minute taxi : où exactement ?
 
-La **dépose-minute taxis** se situe sur le **parvis principal de la gare**, côté Place Maurice Schumann. Le chauffeur peut s'arrêter quelques minutes pour vous laisser descendre avec vos bagages — un agent veille à la fluidité du flux.
+La **dépose-minute taxis** se situe sur le **parvis principal de la gare**, côté Place Maurice Schumann. Le chauffeur peut s'arrêter quelques minutes pour vous laisser descendre avec vos bagages un agent veille à la fluidité du flux.
 
 Si vous arrivez **en taxi commandé**, votre chauffeur peut vous accompagner jusqu'à l'entrée du hall, voire jusqu'au quai en cas d'aide aux personnes à mobilité réduite (sur demande à la réservation).
 
@@ -368,7 +368,7 @@ Si vous arrivez à Massy en TGV et avez besoin d'un taxi pour rentrer ou rejoind
 }
 
 // ============================================================================
-// ARTICLE 4 — Taxi de nuit en Essonne
+// ARTICLE 4 Taxi de nuit en Essonne
 // ============================================================================
 const post4: BlogPost = {
   slug: 'taxi-de-nuit-essonne',

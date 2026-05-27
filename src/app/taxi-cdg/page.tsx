@@ -260,7 +260,7 @@ export default function TaxiCDG() {
             </h2>
             <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
               Le transfert vers Roissy CDG demande une expertise du trafic francilien. Nos
-              chauffeurs assurent quotidiennement la liaison Essonne — CDG avec ponctualité et
+              chauffeurs assurent quotidiennement la liaison Essonne CDG avec ponctualité et
               fiabilité.
             </p>
 
@@ -578,7 +578,7 @@ export default function TaxiCDG() {
         <section className="py-12 md:py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
-              Questions fréquentes — Taxi CDG depuis l&apos;Essonne
+              Questions fréquentes Taxi CDG depuis l&apos;Essonne
             </h2>
             <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
               Les réponses aux questions les plus posées par nos clients pour leurs transferts vers

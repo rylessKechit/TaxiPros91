@@ -25,11 +25,11 @@ import {
 const PAGE_URL = `${SITE.url}/taxi-gare-massy-tgv`
 
 export const metadata: Metadata = {
-  title: 'Taxi gare Massy TGV — Réservation 24h/24 & tarif fixe',
+  title: 'Taxi gare Massy TGV Réservation 24h/24 & tarif fixe',
   description: `Taxi gare Massy TGV disponible 24h/24. Tarifs fixes depuis toute l'Essonne, prise en charge bagages, attente comprise en cas de retard. ${SITE.phone.display}.`,
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Taxi gare Massy TGV — Réservation 24h/24 et tarif fixe',
+    title: 'Taxi gare Massy TGV Réservation 24h/24 et tarif fixe',
     description:
       'Service de taxi pour la gare Massy TGV : tarifs fixes, suivi du TGV, départs matinaux et nuits assurés. Essonne et Hauts-de-Seine.',
     url: PAGE_URL,
@@ -37,14 +37,14 @@ export const metadata: Metadata = {
 }
 
 const tarifs = [
-  { ville: 'Massy', duree: '5 min', prix: '10 — 15 €' },
-  { ville: 'Palaiseau', duree: '10 min', prix: '15 — 22 €' },
-  { ville: 'Antony', duree: '15 min', prix: '20 — 28 €' },
-  { ville: 'Verrières-le-Buisson', duree: '12 min', prix: '18 — 25 €' },
-  { ville: 'Longjumeau', duree: '15 min', prix: '22 — 30 €' },
-  { ville: 'Les Ulis', duree: '15 min', prix: '22 — 30 €' },
-  { ville: 'Saclay', duree: '15 min', prix: '22 — 30 €' },
-  { ville: 'Ballainvilliers', duree: '15 min', prix: '22 — 32 €' },
+  { ville: 'Massy', duree: '5 min', prix: '10 15 €' },
+  { ville: 'Palaiseau', duree: '10 min', prix: '15 22 €' },
+  { ville: 'Antony', duree: '15 min', prix: '20 28 €' },
+  { ville: 'Verrières-le-Buisson', duree: '12 min', prix: '18 25 €' },
+  { ville: 'Longjumeau', duree: '15 min', prix: '22 30 €' },
+  { ville: 'Les Ulis', duree: '15 min', prix: '22 30 €' },
+  { ville: 'Saclay', duree: '15 min', prix: '22 30 €' },
+  { ville: 'Ballainvilliers', duree: '15 min', prix: '22 32 €' },
 ]
 
 const faqs = [
@@ -102,7 +102,7 @@ export default function TaxiGareMassyTGV() {
           <div className="container mx-auto px-4 text-center">
             <p className="text-black font-medium text-sm md:text-base">
               <Train className="w-4 h-4 inline-block mr-1 -mt-0.5" />
-              Tarif fixe pour la gare Massy TGV — Appelez le{' '}
+              Tarif fixe pour la gare Massy TGV Appelez le{' '}
               <a href={SITE.phone.tel} className="font-bold hover:underline">
                 {SITE.phone.display}
               </a>
@@ -121,7 +121,7 @@ export default function TaxiGareMassyTGV() {
                 </div>
 
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                  Taxi gare Massy TGV — Réservation 24h/24 et tarif fixe
+                  Taxi gare Massy TGV Réservation 24h/24 et tarif fixe
                 </h1>
 
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
@@ -308,7 +308,7 @@ export default function TaxiGareMassyTGV() {
               <div className="prose prose-lg text-gray-600 max-w-none space-y-4">
                 <p>
                   Massy compte <strong>deux gares distinctes</strong>, situées à environ 500 mètres l&apos;une de l&apos;autre.
-                  La confusion est très fréquente — voici comment ne pas se tromper&nbsp;:
+                  La confusion est très fréquente voici comment ne pas se tromper&nbsp;:
                 </p>
                 <div className="grid md:grid-cols-2 gap-4 not-prose my-6">
                   <div className="bg-white border border-gray-200 rounded-xl p-5">
@@ -390,7 +390,7 @@ export default function TaxiGareMassyTGV() {
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <div className="bg-white border border-gray-200 rounded-xl p-6">
                   <Sunrise className="w-10 h-10 text-yellow-500 mb-3" />
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Départs matinaux 5h — 7h</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Départs matinaux 5h 7h</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
                     Les premiers TGV au départ de Massy partent dès 5h45 (Lyon, Marseille, Bordeaux).
                     Avant 5h30, ni le RER ni les bus ne circulent. Notre service garantit votre
@@ -434,7 +434,7 @@ export default function TaxiGareMassyTGV() {
                   </li>
                   <li>
                     <strong>Si votre TGV est retardé</strong>, nous adaptons automatiquement l&apos;heure de prise en
-                    charge — aucune action de votre part.
+                    charge aucune action de votre part.
                   </li>
                   <li>
                     <strong>Tarif fixe garanti</strong> à l&apos;aller comme au retour, communiqué au moment de la réservation.
@@ -501,7 +501,7 @@ export default function TaxiGareMassyTGV() {
         <section className="py-12 md:py-16 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
-              Questions fréquentes — Taxi gare Massy TGV
+              Questions fréquentes Taxi gare Massy TGV
             </h2>
             <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
               Les réponses aux questions les plus posées par nos voyageurs.
@@ -535,7 +535,7 @@ export default function TaxiGareMassyTGV() {
                 className="inline-flex items-center gap-3 bg-yellow-400 text-black font-bold text-lg py-3 px-6 rounded-lg hover:bg-yellow-500 transition-colors"
               >
                 <Phone className="w-5 h-5" />
-                Réserver maintenant — {SITE.phone.display}
+                Réserver maintenant {SITE.phone.display}
               </a>
               <p className="text-sm text-gray-500 mt-3 flex items-center justify-center gap-1">
                 <MapPin className="w-4 h-4" />

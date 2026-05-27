@@ -8,12 +8,12 @@ import { SITE } from '@/lib/site'
 import { posts } from '@/lib/blog'
 
 export const metadata: Metadata = {
-  title: 'Blog — Conseils & guides taxi en Essonne',
+  title: 'Blog Conseils & guides taxi en Essonne',
   description:
     "Tous nos articles, guides et conseils sur le taxi en Essonne : tarifs, aéroports Orly et CDG, gare Massy TGV, transport de nuit, et plus encore.",
   alternates: { canonical: `${SITE.url}/blog` },
   openGraph: {
-    title: 'Blog TAXI Pro 91 — Conseils & guides taxi en Essonne',
+    title: 'Blog TAXI Pro 91 Conseils & guides taxi en Essonne',
     description:
       "Articles et guides pratiques sur le taxi en Essonne : tarifs, trajets aéroport, gares, conseils voyageurs.",
     url: `${SITE.url}/blog`,

@@ -27,10 +27,10 @@ const CP = '91100'
 const URL = `${SITE.url}/taxi-corbeil-essonnes`
 
 export const metadata: Metadata = {
-  title: `Taxi Corbeil-Essonnes (${CP}) — Réservation 24h/24`,
+  title: `Taxi Corbeil-Essonnes (${CP}) Réservation 24h/24`,
   description: `Taxi à Corbeil-Essonnes 24h/24. Transferts Orly, CDG, gare RER D, hôpital Sud Francilien, STMicroelectronics. Réservation au ${SITE.phone.display}. CB et CPAM acceptés.`,
   openGraph: {
-    title: `Taxi Corbeil-Essonnes (${CP}) — Service 24h/24`,
+    title: `Taxi Corbeil-Essonnes (${CP}) Service 24h/24`,
     description: `Votre taxi à Corbeil-Essonnes : aéroports Orly et CDG, RER D, hôpital Sud Francilien, sites industriels. Note 4.9/5.`,
     url: URL,
   },
@@ -139,11 +139,11 @@ export default function TaxiCorbeilEssonnes() {
               <div>
                 <div className="flex items-center gap-2 text-yellow-600 mb-4">
                   <MapPin className="w-5 h-5" />
-                  <span className="font-medium">{CITY} ({CP}) — Essonne</span>
+                  <span className="font-medium">{CITY} ({CP}) Essonne</span>
                 </div>
 
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                  Taxi à {CITY} ({CP}) — Réservation 24h/24
+                  Taxi à {CITY} ({CP}) Réservation 24h/24
                 </h1>
 
                 <p className="text-xl text-gray-600 mb-6 leading-relaxed">
@@ -382,7 +382,7 @@ export default function TaxiCorbeilEssonnes() {
         <section className="py-12 md:py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
-              Questions fréquentes — Taxi {CITY}
+              Questions fréquentes Taxi {CITY}
             </h2>
             <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
               Retrouvez les réponses aux questions les plus posées par nos clients à {CITY}.

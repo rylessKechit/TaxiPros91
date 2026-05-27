@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   title: 'Taxi aéroport Essonne | Orly, CDG, Le Bourget, Beauvais 24h/24',
   description: `Taxi aéroport depuis l'Essonne : Orly, Roissy CDG, Le Bourget, Beauvais. Tarifs fixes, suivi de vol, 24h/24. Réservez au ${SITE.phone.display}.`,
   openGraph: {
-    title: 'Taxi aéroport depuis l\'Essonne — Orly, CDG, Le Bourget, Beauvais',
+    title: 'Taxi aéroport depuis l\'Essonne Orly, CDG, Le Bourget, Beauvais',
     description: 'Transferts vers les 4 aéroports parisiens depuis l\'Essonne. Tarifs fixes, suivi de vol en temps réel, 24h/24.',
     url: `${SITE.url}/taxi-aeroport`,
   },
@@ -165,7 +165,7 @@ export default function TaxiAeroport() {
       <Breadcrumb items={[{ name: 'Taxi aéroport' }]} />
 
       <ServiceSchema
-        name="Taxi aéroport depuis l'Essonne — Orly, CDG, Le Bourget, Beauvais"
+        name="Taxi aéroport depuis l'Essonne Orly, CDG, Le Bourget, Beauvais"
         description="Service de taxi 24h/24 vers les 4 aéroports parisiens (Orly, Paris-CDG, Le Bourget, Beauvais) depuis toutes les communes de l'Essonne. Tarifs fixes, suivi de vol, accueil pancarte."
         url={`${SITE.url}/taxi-aeroport`}
         areaServed={['Massy', 'Palaiseau', 'Antony', 'Longjumeau', 'Les Ulis', 'Saclay', 'Évry-Courcouronnes', 'Orsay']}
@@ -196,7 +196,7 @@ export default function TaxiAeroport() {
                 </div>
 
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                  Taxi aéroport depuis l&apos;Essonne — Orly, CDG, Le Bourget, Beauvais
+                  Taxi aéroport depuis l&apos;Essonne Orly, CDG, Le Bourget, Beauvais
                 </h1>
 
                 <p className="text-xl text-gray-600 mb-6 leading-relaxed">
@@ -422,8 +422,8 @@ export default function TaxiAeroport() {
                 </p>
                 <p>
                   Pour vos transferts vers les <strong>FBO (Fixed Base Operators)</strong> du
-                  Bourget — Signature Flight Support, Universal Aviation, Dassault Falcon Service,
-                  Jetex — précisez à la réservation l&apos;opérateur destination pour une dépose
+                  Bourget Signature Flight Support, Universal Aviation, Dassault Falcon Service,
+                  Jetex précisez à la réservation l&apos;opérateur destination pour une dépose
                   optimale côté piste. Service VIP en Mercedes Classe E ou Classe V disponible.
                 </p>
               </div>
@@ -434,7 +434,7 @@ export default function TaxiAeroport() {
                   className="inline-flex items-center gap-3 bg-gray-900 text-white font-bold text-lg py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors"
                 >
                   <Phone className="w-5 h-5" />
-                  Réserver pour Le Bourget — {SITE.phone.display}
+                  Réserver pour Le Bourget {SITE.phone.display}
                 </a>
               </div>
             </div>
@@ -488,7 +488,7 @@ export default function TaxiAeroport() {
                   className="inline-flex items-center gap-3 bg-gray-900 text-white font-bold text-lg py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors"
                 >
                   <Phone className="w-5 h-5" />
-                  Réserver pour Beauvais — {SITE.phone.display}
+                  Réserver pour Beauvais {SITE.phone.display}
                 </a>
               </div>
             </div>
@@ -638,7 +638,7 @@ export default function TaxiAeroport() {
         <section className="py-12 md:py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
-              Questions fréquentes — Taxi aéroport
+              Questions fréquentes Taxi aéroport
             </h2>
             <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
               Les réponses aux questions les plus posées pour vos transferts vers les aéroports.
