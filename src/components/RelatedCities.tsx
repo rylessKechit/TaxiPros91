@@ -1,19 +1,12 @@
 import Link from 'next/link'
 import { MapPin } from 'lucide-react'
-
-const allCities = [
-  { name: 'Massy', slug: 'taxi-massy' },
-  { name: 'Palaiseau', slug: 'taxi-palaiseau' },
-  { name: 'Ballainvilliers', slug: 'taxi-ballainvilliers' },
-  { name: 'Verrières-le-Buisson', slug: 'taxi-verrieres-le-buisson' },
-  { name: 'Les Ulis', slug: 'taxi-les-ulis' },
-  { name: 'Saclay', slug: 'taxi-saclay' },
-  { name: 'Longjumeau', slug: 'taxi-longjumeau' },
-  { name: 'Antony', slug: 'taxi-antony' },
-]
+import { cities } from '@/lib/cities'
 
 export default function RelatedCities({ currentSlug }: { currentSlug: string }) {
-  const otherCities = allCities.filter((city) => city.slug !== currentSlug)
+  // currentSlug est passé avec le préfixe (ex: "taxi-massy")
+  const otherCities = cities
+    .map((c) => ({ name: c.name, slug: `taxi-${c.slug}` }))
+    .filter((city) => city.slug !== currentSlug)
 
   return (
     <section className="py-12 bg-gray-50">
