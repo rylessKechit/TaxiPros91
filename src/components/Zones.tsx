@@ -43,6 +43,14 @@ const zones = [
     population: '25 000 habitants',
   },
   {
+    city: 'Paris-Saclay',
+    postalCode: '91400',
+    slug: 'taxi-paris-saclay',
+    description: 'Taxi pour le cluster Paris-Saclay : Polytechnique, CentraleSupélec, ENS, HEC, CEA Saclay, Synchrotron SOLEIL, EDF Lab. Service 24h/24, comptes entreprise disponibles.',
+    highlights: ['École Polytechnique', 'CEA Saclay', 'CentraleSupélec', 'Synchrotron SOLEIL'],
+    population: '65 000 étudiants',
+  },
+  {
     city: 'Saclay',
     postalCode: '91400',
     slug: 'taxi-saclay',

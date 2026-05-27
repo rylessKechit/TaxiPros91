@@ -502,6 +502,12 @@ export default function TaxiMassy() {
                   Zone d'activité de Massy, pôle technologique Paris-Saclay, centres d'affaires...
                   Nous assurons tous vos déplacements professionnels avec ponctualité et discrétion.
                 </p>
+                <p>
+                  Pour vos trajets vers les grandes écoles et laboratoires du plateau, découvrez notre service dédié{' '}
+                  <Link href="/taxi-paris-saclay" className="text-yellow-700 font-medium hover:underline">
+                    Taxi Paris-Saclay
+                  </Link>.
+                </p>
               </div>
 
               <div className="mt-10 p-6 bg-yellow-50 rounded-xl border border-yellow-200">
