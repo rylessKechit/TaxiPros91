@@ -1,12 +1,16 @@
-import nodemailer from 'nodemailer'
+import { Resend } from 'resend'
 
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.GMAIL_USER,
-    pass: process.env.GMAIL_APP_PASSWORD,
-  },
-})
+const resend = new Resend(process.env.RESEND_API_KEY)
+
+// Expéditeur — doit appartenir à un domaine vérifié sur Resend (ex: reservation@taxipro91.com)
+const FROM = process.env.RESEND_FROM || 'TAXI Pro 91 <onboarding@resend.dev>'
+const REPLY_TO = process.env.CONTACT_EMAIL || 'contact@taxipro91.com'
+
+/** Liste des adresses admin notifiées à chaque réservation (ADMIN_EMAILS séparées par des virgules) */
+function getAdminEmails(): string[] {
+  const raw = process.env.ADMIN_EMAILS || 'contact@taxipro91.com'
+  return raw.split(',').map(e => e.trim()).filter(Boolean)
+}
 
 export interface BookingData {
   firstName: string
@@ -91,18 +95,22 @@ function buildEmailHtml(data: BookingData, isAdmin: boolean): string {
 }
 
 export async function sendBookingEmails(data: BookingData): Promise<void> {
-  const adminEmail = process.env.ADMIN_EMAIL || 'contact@taxipro91.com'
+  const adminEmails = getAdminEmails()
 
   await Promise.all([
-    transporter.sendMail({
-      from: `"TAXI Pro 91" <${process.env.GMAIL_USER}>`,
+    // 1. Confirmation au client
+    resend.emails.send({
+      from: FROM,
       to: data.email,
+      replyTo: REPLY_TO,
       subject: `Confirmation de réservation — TAXI Pro 91`,
       html: buildEmailHtml(data, false),
     }),
-    transporter.sendMail({
-      from: `"TAXI Pro 91" <${process.env.GMAIL_USER}>`,
-      to: adminEmail,
+    // 2. Notification aux adresses admin (1 envoi, plusieurs destinataires)
+    resend.emails.send({
+      from: FROM,
+      to: adminEmails,
+      replyTo: data.email,
       subject: `Nouvelle réservation — ${data.lastName} ${data.firstName} — ${formatDate(data.date)} ${data.time}`,
       html: buildEmailHtml(data, true),
     }),

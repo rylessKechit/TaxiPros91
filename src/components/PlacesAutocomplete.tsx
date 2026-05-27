@@ -36,11 +36,19 @@ function loadGoogleMapsScript(): Promise<void> {
   return scriptLoadPromise
 }
 
+export interface PlaceResult {
+  address: string
+  lat: number | null
+  lng: number | null
+  street: string
+  city: string
+}
+
 interface PlacesAutocompleteProps {
   placeholder: string
   className: string
   defaultValue?: string
-  onPlaceSelected: (address: string) => void
+  onPlaceSelected: (place: PlaceResult) => void
   label?: string
 }
 
@@ -137,13 +145,28 @@ export default function PlacesAutocomplete({
   const handleSelect = async (suggestion: Suggestion) => {
     try {
       const place = suggestion.prediction.toPlace()
-      await place.fetchFields({ fields: ['formattedAddress', 'displayName'] })
+      await place.fetchFields({ fields: ['formattedAddress', 'displayName', 'location', 'addressComponents'] })
       const address = place.formattedAddress || suggestion.text
+
+      // Coordonnées GPS
+      const lat = place.location ? place.location.lat() : null
+      const lng = place.location ? place.location.lng() : null
+
+      // Découpage rue + ville depuis les addressComponents
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const components: any[] = place.addressComponents || []
+      const getComp = (type: string) =>
+        components.find(c => (c.types || []).includes(type))?.longText || ''
+      const streetNumber = getComp('street_number')
+      const route = getComp('route')
+      const street = [streetNumber, route].filter(Boolean).join(' ').trim()
+      const city = getComp('locality') || getComp('postal_town') || getComp('administrative_area_level_2') || ''
+
       setInputValue(address)
-      onPlaceSelected(address)
+      onPlaceSelected({ address, lat, lng, street, city })
     } catch {
       setInputValue(suggestion.text)
-      onPlaceSelected(suggestion.text)
+      onPlaceSelected({ address: suggestion.text, lat: null, lng: null, street: '', city: '' })
     }
 
     setSuggestions([])

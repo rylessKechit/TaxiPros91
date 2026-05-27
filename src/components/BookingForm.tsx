@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { Loader2, ArrowLeft, ArrowRight, Check, MapPin, Calendar, Car, User, Zap, Crown, Bus } from 'lucide-react'
 import { isStationOrAirport } from '@/lib/pricing'
-import PlacesAutocomplete from './PlacesAutocomplete'
+import PlacesAutocomplete, { type PlaceResult } from './PlacesAutocomplete'
 
 interface BookingFormProps {
   compact?: boolean
@@ -86,11 +86,18 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
   const [showRoundTrip, setShowRoundTrip] = useState(false)
   const [vehiclePrices, setVehiclePrices] = useState<Record<string, { min: number; max: number; distanceKm: number; durationMin: number }> | null>(null)
 
+  // Coordonnées GPS + adresse découpée par champ (requis par AppSolu)
+  const [places, setPlaces] = useState<Record<string, PlaceResult>>({})
+
   const mapRef = useRef<HTMLDivElement>(null)
 
-  const handlePlaceSelected = (address: string, field: keyof FormData) => {
+  const handlePlaceSelected = (place: PlaceResult, field: keyof FormData) => {
+    setPlaces(prev => ({ ...prev, [field]: place }))
+    // Toute nouvelle adresse invalide l'estimation précédente
+    setVehiclePrices(null)
+    setPriceEstimate(null)
     setFormData(prev => {
-      const updated = { ...prev, [field]: address }
+      const updated = { ...prev, [field]: place.address }
       if (field === 'pickup' || field === 'destination') {
         const shouldShow = isStationOrAirport(updated.pickup) || isStationOrAirport(updated.destination)
         setShowRoundTrip(shouldShow)
@@ -103,47 +110,63 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
     })
   }
 
+  // Combine date + heure (locales) en ISO 8601 UTC pour AppSolu
+  const buildBookedDate = (): string => {
+    const d = new Date(`${formData.date}T${formData.time}`)
+    return isNaN(d.getTime()) ? '' : d.toISOString()
+  }
+
   // Auto-calculate prices for all vehicles when entering step 2
   useEffect(() => {
     if (step !== 2 || vehiclePrices) return
 
-    const fetchAllPrices = async () => {
+    const from = places.pickup
+    const to = places.destination
+
+    const fetchEstimate = async () => {
+      // AppSolu exige les coordonnées GPS (adresse choisie dans les suggestions)
+      if (!from?.lat || !from?.lng || !to?.lat || !to?.lng) {
+        setError('Merci de sélectionner le départ et l\'arrivée dans la liste de suggestions.')
+        return
+      }
+      const bookedDate = buildBookedDate()
+      if (!bookedDate) {
+        setError('Date ou heure invalide.')
+        return
+      }
+
       setIsCalculating(true)
       try {
-        const results: Record<string, { min: number; max: number; distanceKm: number; durationMin: number }> = {}
-        for (const v of ['electrique', 'premium', 'van'] as const) {
-          const res = await fetch('/api/calculate-price', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              origin: formData.pickup,
-              destination: formData.destination,
-              vehicle: v,
-              date: formData.date,
-              time: formData.time,
-              isRoundTrip: formData.isRoundTrip,
-            }),
-          })
-          if (res.ok) {
-            const data = await res.json()
-            results[v] = { min: data.min, max: data.max, distanceKm: data.distanceKm, durationMin: data.durationMin }
-          }
-        }
-        setVehiclePrices(results)
-        // Set price estimate for the currently selected vehicle
-        const selected = results[formData.vehicle]
-        if (selected) {
-          setPriceEstimate({ ...selected, tariff: '', originAddress: '', destinationAddress: '' })
-        }
+        const res = await fetch('/api/appsolu/estimate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            fromLat: from.lat, fromLng: from.lng,
+            toLat: to.lat, toLng: to.lng,
+            bookedDate,
+            nbPlaces: Number(formData.passengers) || 1,
+          }),
+        })
+        if (!res.ok) throw new Error('estimate failed')
+        const data = await res.json()
+        const min = Math.round((data.estimatedPriceInCents || 0) / 100)
+        const max = Math.round((data.estimatedPriceInCentsHigh || 0) / 100)
+        const distanceKm = Math.round((data.distanceMeters || 0) / 1000)
+        const durationMin = data.durationMinutes || 0
+        const price = { min, max, distanceKm, durationMin }
+
+        // Estimation AppSolu unique : même tarif quel que soit le véhicule choisi
+        setVehiclePrices({ electrique: price, premium: price, van: price })
+        setPriceEstimate({ ...price, tariff: '', originAddress: '', destinationAddress: '' })
       } catch {
-        setError('Erreur de calcul des prix')
+        setError('Impossible d\'estimer le prix pour le moment. Réessayez ou appelez-nous.')
       } finally {
         setIsCalculating(false)
       }
     }
 
-    fetchAllPrices()
-  }, [step, vehiclePrices, formData.pickup, formData.destination, formData.date, formData.time, formData.isRoundTrip, formData.vehicle])
+    fetchEstimate()
+  }, [step, vehiclePrices, places, formData.passengers, formData.date, formData.time])
 
   useEffect(() => {
     if (step === 3 && mapRef.current && window.google?.maps) {
@@ -211,20 +234,44 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
     setIsSubmitting(true)
     setError('')
 
+    const from = places.pickup
+    const to = places.destination
+    const bookedDate = buildBookedDate()
+
+    if (!from?.lat || !from?.lng || !to?.lat || !to?.lng || !bookedDate) {
+      setError('Adresses incomplètes. Sélectionnez le départ et l\'arrivée dans les suggestions.')
+      setIsSubmitting(false)
+      return
+    }
+
+    const vehicleLabel = { electrique: 'Électrique', van: 'Van', premium: 'Premium' }[formData.vehicle]
+    const commentParts = [`Véhicule souhaité : ${vehicleLabel}`]
+    if (formData.isRoundTrip) {
+      commentParts.push(`Aller-retour (retour : ${formData.returnDate ? formatDate(formData.returnDate) : '-'} ${formData.returnTime || ''})`)
+    }
+    const comment = commentParts.join(' — ')
+
     try {
-      const res = await fetch('/api/booking', {
+      const res = await fetch('/api/appsolu/booking', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          // Données AppSolu (coordonnées + adresse découpée)
+          from: { lat: from.lat, lng: from.lng, street: from.street, city: from.city, address: from.address, label: from.address },
+          to: { lat: to.lat, lng: to.lng, street: to.street, city: to.city, address: to.address, label: to.address },
+          bookedDate,
           firstName: formData.firstName,
           lastName: formData.lastName,
           email: formData.email,
           phone: formData.phone,
+          passengers: formData.passengers,
+          baggages: 0,
+          comment,
+          // Données pour l'email de backup
           pickup: formData.pickup,
           destination: formData.destination,
           date: formData.date,
           time: formData.time,
-          passengers: formData.passengers,
           vehicle: formData.vehicle,
           isRoundTrip: formData.isRoundTrip,
           returnPickup: formData.returnPickup,
