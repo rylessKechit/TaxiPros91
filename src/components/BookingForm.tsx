@@ -15,6 +15,7 @@ interface FormData {
   date: string
   time: string
   passengers: string
+  baggages: string
   isRoundTrip: boolean
   returnPickup: string
   returnDestination: string
@@ -67,6 +68,7 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
     date: '',
     time: '',
     passengers: '1',
+    baggages: '0',
     isRoundTrip: false,
     returnPickup: '',
     returnDestination: '',
@@ -265,7 +267,7 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
           email: formData.email,
           phone: formData.phone,
           passengers: formData.passengers,
-          baggages: 0,
+          baggages: Number(formData.baggages) || 0,
           comment,
           // Données pour l'email de backup
           pickup: formData.pickup,
@@ -528,21 +530,40 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
             </div>
           )}
 
-          <div>
-            <label htmlFor="booking-passengers" className="block text-gray-700 text-sm font-medium mb-1">Passagers</label>
-            <select
-              id="booking-passengers"
-              name="passengers"
-              value={formData.passengers}
-              onChange={handleInputChange}
-              className={inputClass}
-            >
-              <option value="1">1 passager</option>
-              <option value="2">2 passagers</option>
-              <option value="3">3 passagers</option>
-              <option value="4">4 passagers</option>
-              <option value="5">5+ passagers</option>
-            </select>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label htmlFor="booking-passengers" className="block text-gray-700 text-sm font-medium mb-1">Passagers</label>
+              <select
+                id="booking-passengers"
+                name="passengers"
+                value={formData.passengers}
+                onChange={handleInputChange}
+                className={inputClass}
+              >
+                <option value="1">1 passager</option>
+                <option value="2">2 passagers</option>
+                <option value="3">3 passagers</option>
+                <option value="4">4 passagers</option>
+                <option value="5">5+ passagers</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor="booking-baggages" className="block text-gray-700 text-sm font-medium mb-1">Bagages</label>
+              <select
+                id="booking-baggages"
+                name="baggages"
+                value={formData.baggages}
+                onChange={handleInputChange}
+                className={inputClass}
+              >
+                <option value="0">Aucun bagage</option>
+                <option value="1">1 bagage</option>
+                <option value="2">2 bagages</option>
+                <option value="3">3 bagages</option>
+                <option value="4">4 bagages</option>
+                <option value="5">5+ bagages</option>
+              </select>
+            </div>
           </div>
         </div>
       )}
