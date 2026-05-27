@@ -494,6 +494,13 @@ export default function TaxiSaclay() {
                   Que vous soyez étudiant rentrant d'un week-end, chercheur participant à un colloque international
                   ou professeur invité, nous vous accompagnons 24h/24 avec des tarifs adaptés.
                 </p>
+                <p>
+                  Pour une vue complète de nos services sur l&apos;ensemble du cluster, consultez notre page dédiée{' '}
+                  <Link href="/taxi-paris-saclay" className="text-yellow-700 font-medium hover:underline">
+                    Taxi Paris-Saclay
+                  </Link>{' '}
+                  — grandes écoles, CEA, Synchrotron SOLEIL et tous les centres de R&amp;D.
+                </p>
 
                 <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Transport pour les entreprises tech et startups</h3>
                 <p>
