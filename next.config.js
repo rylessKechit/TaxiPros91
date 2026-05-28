@@ -12,6 +12,18 @@ const nextConfig = {
       },
     ],
   },
+  // Canonicalisation SEO : non-www -> www (301).
+  // Vercel force HTTPS automatiquement ; on ne gère que le host.
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'taxipro91.com' }],
+        destination: 'https://www.taxipro91.com/:path*',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig
