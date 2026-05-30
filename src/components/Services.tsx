@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Plane, Train, Stethoscope, Briefcase, GraduationCap, PartyPopper, Phone } from 'lucide-react'
 
 const services = [
@@ -68,11 +69,21 @@ export default function Services() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-1">{service.title}</h3>
                   <div className="flex flex-wrap gap-2">
-                    {service.destinations.map((dest) => (
-                      <span key={dest} className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">
-                        {dest}
-                      </span>
-                    ))}
+                    {service.destinations.map((dest) =>
+                      dest === 'Roissy CDG' ? (
+                        <Link
+                          key={dest}
+                          href="/taxi-cdg"
+                          className="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded hover:bg-yellow-200 transition-colors"
+                        >
+                          {dest}
+                        </Link>
+                      ) : (
+                        <span key={dest} className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">
+                          {dest}
+                        </span>
+                      )
+                    )}
                   </div>
                 </div>
               </div>
