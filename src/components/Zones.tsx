@@ -122,13 +122,24 @@ export default function Zones() {
                 ))}
               </div>
 
-              <Link
-                href={`/${zone.slug}`}
-                className="inline-flex items-center gap-2 text-yellow-700 font-semibold hover:text-yellow-700"
-              >
-                En savoir plus
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+              <div className="flex flex-col gap-2">
+                <Link
+                  href={`/${zone.slug}`}
+                  className="inline-flex items-center gap-2 text-yellow-700 font-semibold hover:text-yellow-700"
+                >
+                  En savoir plus
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                {zone.slug === 'taxi-palaiseau' && (
+                  <Link
+                    href="/taxi-ecole-polytechnique"
+                    className="inline-flex items-center gap-1 text-gray-500 text-xs hover:text-yellow-600"
+                  >
+                    <ArrowRight className="w-3 h-3" />
+                    Taxi dédié École Polytechnique (X)
+                  </Link>
+                )}
+              </div>
             </article>
           ))}
         </div>
