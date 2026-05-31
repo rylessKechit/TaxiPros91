@@ -31,7 +31,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Taxi entreprise Essonne : compte pro B2B',
-  description: `Taxi entreprise B2B en Essonne : compte dédié, facturation mensuelle, paiement 30 jours, justificatifs détaillés. Saclay, Massy, Évry, Orly, CDG. Devis au ${SITE.phone.display}.`,
+  description: `Taxi entreprise B2B Essonne : compte dédié, facturation mensuelle, justificatifs détaillés. Devis au ${SITE.phone.display}.`,
   openGraph: {
     title: 'Taxi entreprise Essonne : compte pro B2B',
     description: `Compte entreprise, facturation mensuelle, transferts collaborateurs et VIP. Mercedes Classe E, Tesla, Van 7 places. Devis personnalisé au ${SITE.phone.display}.`,

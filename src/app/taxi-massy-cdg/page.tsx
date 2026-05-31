@@ -19,7 +19,7 @@ const URL = `${SITE.url}/taxi-massy-cdg`
 
 export const metadata: Metadata = {
   title: `Taxi ${FROM} → CDG : tarif fixe dès ${PRICE_MIN}€`,
-  description: `Taxi ${FROM} vers Roissy Charles de Gaulle : tarif fixe dès ${PRICE_MIN}€, trajet ${DURATION} min, suivi de vol inclus. Tous terminaux T1, T2A-G, T3 desservis. Appelez le ${SITE.phone.display}.`,
+  description: `Taxi ${FROM} → CDG Roissy : tarif fixe dès ${PRICE_MIN}€, ${DURATION} min, suivi de vol, tous terminaux. Réservez 24h/24 au ${SITE.phone.display}.`,
   openGraph: {
     title: `Taxi ${FROM} → CDG : tarif fixe dès ${PRICE_MIN}€`,
     description: `Transfert taxi ${FROM} Roissy CDG : tarif fixe, suivi de vol, prise en charge 24h/24, tous terminaux.`,

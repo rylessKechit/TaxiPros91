@@ -19,7 +19,7 @@ const URL = `${SITE.url}/taxi-essonne-versailles`
 
 export const metadata: Metadata = {
   title: `Taxi ${FROM} → Versailles : tarif dès ${PRICE_MIN}€`,
-  description: `Taxi depuis l'${FROM} vers le Château de ${TO} : tarif fixe dès ${PRICE_MIN}€, trajet en ${DURATION} min via RN118 et A86. Dépose Château, Trianon, Grandes Eaux. Réservation 24h/24 au ${SITE.phone.display}.`,
+  description: `Taxi ${FROM} → Versailles : tarif fixe dès ${PRICE_MIN}€, ${DURATION} min, dépose Château, Trianon, Grandes Eaux. ${SITE.phone.display}.`,
   openGraph: {
     title: `Taxi ${FROM} → Versailles : tarif dès ${PRICE_MIN}€`,
     description: `Transfert direct depuis l'Essonne vers Versailles. Tarif fixe, dépose au Château, au Trianon ou au hameau de la Reine. Service 24h/24.`,

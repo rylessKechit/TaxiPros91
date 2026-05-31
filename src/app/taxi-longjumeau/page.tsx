@@ -10,7 +10,7 @@ import { Phone, MapPin, Train, Plane, Clock, CheckCircle, Star, CreditCard, Shie
 
 export const metadata: Metadata = {
   title: 'Taxi Longjumeau (91160) : Hôpital, Orly 24h/24',
-  description: 'Reservez votre taxi a Longjumeau 91160. Service disponible 24h/24 pour vos trajets hopital, gare RER C, aeroport Orly. Transport medical conventionne CPAM. Appelez maintenant le 01 80 85 91 91 !',
+  description: 'Taxi à Longjumeau 24h/24 : hôpital, RER C, aéroport Orly. CPAM, chauffeurs pro, tarifs transparents. Réservez au 01 80 85 91 91.',
   openGraph: {
     title: 'Taxi Longjumeau (91160) : Hôpital, Orly 24h/24',
     description: 'Votre taxi a Longjumeau : hopital, gare RER C, aeroport Orly. Reservation rapide, tarifs transparents.',

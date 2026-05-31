@@ -28,7 +28,7 @@ const URL = `${SITE.url}/taxi-gif-sur-yvette`
 
 export const metadata: Metadata = {
   title: `Taxi Gif-sur-Yvette (${CP}) : Saclay 24h/24`,
-  description: `Taxi à Gif-sur-Yvette 24h/24. Transferts Orly, CDG, gare Massy TGV, CentraleSupélec, CNRS, INRAE. Réservation au ${SITE.phone.display}. CB et CPAM acceptés.`,
+  description: `Taxi à Gif-sur-Yvette 24h/24 : CentraleSupélec, CNRS, plateau de Saclay, Orly. CB et CPAM. Réservez au ${SITE.phone.display}.`,
   openGraph: {
     title: `Taxi Gif-sur-Yvette (${CP}) : Saclay 24h/24`,
     description: `Votre taxi à Gif-sur-Yvette : CentraleSupélec, CNRS, vallée de Chevreuse, RER B.`,

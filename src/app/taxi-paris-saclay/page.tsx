@@ -28,7 +28,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Taxi Paris-Saclay : grandes écoles 24h/24',
-  description: `Taxi Paris-Saclay 24h/24 : Polytechnique, CentraleSupélec, HEC, CEA, Synchrotron SOLEIL, EDF Lab, Thales R&T. Tarifs fixes, comptes entreprise. ${SITE.phone.display}.`,
+  description: `Taxi Paris-Saclay 24h/24 : Polytechnique, CentraleSupélec, HEC, CEA, EDF Lab. Tarifs fixes, comptes entreprise. ${SITE.phone.display}.`,
   openGraph: {
     title: 'Taxi Paris-Saclay : grandes écoles 24h/24',
     description: 'Service de taxi dédié au cluster Paris-Saclay : grandes écoles, CEA, Synchrotron SOLEIL, EDF Lab, Thales, Servier, Danone Nutricia.',

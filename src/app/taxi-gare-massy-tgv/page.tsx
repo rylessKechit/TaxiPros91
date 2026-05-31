@@ -26,7 +26,7 @@ const PAGE_URL = `${SITE.url}/taxi-gare-massy-tgv`
 
 export const metadata: Metadata = {
   title: 'Taxi gare Massy TGV : tarif fixe 24h/24',
-  description: `Taxi gare Massy TGV disponible 24h/24. Tarifs fixes depuis toute l'Essonne, prise en charge bagages, attente comprise en cas de retard. ${SITE.phone.display}.`,
+  description: `Taxi gare Massy TGV 24h/24 : tarifs fixes depuis l'Essonne, bagages inclus, attente en cas de retard. ${SITE.phone.display}.`,
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Taxi gare Massy TGV : tarif fixe 24h/24',

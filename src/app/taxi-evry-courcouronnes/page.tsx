@@ -28,7 +28,7 @@ const URL = `${SITE.url}/taxi-evry-courcouronnes`
 
 export const metadata: Metadata = {
   title: `Taxi Évry-Courcouronnes (${CP}) : Orly 24h/24`,
-  description: `Taxi à Évry-Courcouronnes 24h/24. Transferts Orly, CDG, gare RER D, Génopole, hôpital. Réservation au ${SITE.phone.display}. Tarifs fixes, paiement CB et CPAM.`,
+  description: `Taxi à Évry-Courcouronnes 24h/24 : Orly, CDG, RER D, Génopole, hôpital. Tarifs fixes, CB et CPAM. Réservez au ${SITE.phone.display}.`,
   openGraph: {
     title: `Taxi Évry-Courcouronnes (${CP}) : Orly 24h/24`,
     description: `Votre taxi à Évry-Courcouronnes : aéroports Orly et CDG, gare RER D, Génopole, hôpital Sud Francilien.`,

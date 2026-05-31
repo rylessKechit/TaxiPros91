@@ -10,7 +10,7 @@ import { Phone, MapPin, Train, Plane, Clock, CheckCircle, Star, CreditCard, Shie
 
 export const metadata: Metadata = {
   title: 'Taxi Les Ulis (91940) : Courtaboeuf, Orly 24h/24',
-  description: 'Réservez votre taxi aux Ulis 91940. Service disponible 24h/24 pour la zone d\'activités Courtaboeuf, centres commerciaux, aéroport Orly. Chauffeurs professionnels, tarifs transparents. Appelez maintenant le 01 80 85 91 91 !',
+  description: 'Taxi aux Ulis 24h/24 : Courtaboeuf, centres commerciaux, aéroport Orly. Chauffeurs pro, tarifs transparents. Réservez au 01 80 85 91 91.',
   openGraph: {
     title: 'Taxi Les Ulis (91940) : Courtaboeuf, Orly 24h/24',
     description: 'Votre taxi aux Ulis : zone Courtaboeuf, centres commerciaux, aéroport Orly. Réservation rapide, tarifs transparents.',

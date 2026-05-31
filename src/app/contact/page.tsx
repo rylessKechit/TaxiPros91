@@ -6,7 +6,7 @@ import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Contact : réservation taxi Essonne 24h/24',
-  description: 'Contactez TAXI Pro 91 pour réserver votre taxi en Essonne. Disponible 24h/24, 7j/7. Téléphone, email, formulaire. Massy, Palaiseau, Longjumeau, Antony.',
+  description: 'Contactez TAXI Pro 91 pour réserver votre taxi en Essonne 24h/24, 7j/7. Téléphone, email, formulaire. Massy, Palaiseau, Antony, Longjumeau.',
   openGraph: {
     title: 'Contact TAXI Pro 91',
     description: 'Réservez votre taxi en Essonne. Disponible 24h/24.',

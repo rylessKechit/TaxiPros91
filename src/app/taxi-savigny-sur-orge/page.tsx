@@ -28,7 +28,7 @@ const URL = `${SITE.url}/taxi-savigny-sur-orge`
 
 export const metadata: Metadata = {
   title: `Taxi Savigny-sur-Orge (${CP}) : Orly 24h/24`,
-  description: `Taxi à Savigny-sur-Orge 24h/24. Transferts Orly (à 15 min), CDG, gare RER C, lycée Corot. Réservation au ${SITE.phone.display}. Tarifs fixes, CB et CPAM acceptés.`,
+  description: `Taxi à Savigny-sur-Orge 24h/24 : Orly (15 min), RER C, gare Massy TGV. Tarifs fixes, CB et CPAM. Réservez au ${SITE.phone.display}.`,
   openGraph: {
     title: `Taxi Savigny-sur-Orge (${CP}) : Orly 24h/24`,
     description: `Votre taxi à Savigny-sur-Orge : aéroport d'Orly à 15 min, RER C, gare de Massy TGV.`,

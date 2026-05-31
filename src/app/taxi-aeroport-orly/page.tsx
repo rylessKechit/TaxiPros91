@@ -23,7 +23,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Taxi aéroport Orly : tarifs fixes 24h/24',
-  description: `Réservez votre taxi aéroport Orly en 1 appel : ${SITE.phone.display}. Tarifs fixes dès 25€, suivi de vol inclus, tous terminaux (Orly 1, 2, 3, 4), 24h/24.`,
+  description: `Taxi aéroport Orly 24h/24 : tarifs fixes dès 25€, suivi de vol, tous terminaux (Orly 1, 2, 3, 4). Réservez au ${SITE.phone.display}.`,
   openGraph: {
     title: 'Taxi aéroport Orly : tarifs fixes 24h/24',
     description:

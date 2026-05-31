@@ -10,7 +10,7 @@ import { Phone, MapPin, Train, Plane, Clock, CheckCircle, Star, CreditCard, Shie
 
 export const metadata: Metadata = {
   title: 'Taxi Antony (92160) : Orly, RER B 24h/24',
-  description: 'Réservez votre taxi à Antony 92160. Service disponible 24h/24 pour vos trajets Orlyval, RER B Antony, aéroport Orly, Parc de Sceaux. Chauffeurs professionnels, tarifs transparents. Appelez maintenant le 01 80 85 91 91 !',
+  description: 'Taxi à Antony 24h/24 : Orly, RER B, Orlyval, Parc de Sceaux. Chauffeurs pro, tarifs transparents. Réservez au 01 80 85 91 91.',
   openGraph: {
     title: 'Taxi Antony (92160) : Orly, RER B 24h/24',
     description: 'Votre taxi à Antony : Orlyval, RER B, aéroport Orly, Parc de Sceaux. Réservation rapide, tarifs transparents.',

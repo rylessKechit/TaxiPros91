@@ -28,7 +28,7 @@ const URL = `${SITE.url}/taxi-chilly-mazarin`
 
 export const metadata: Metadata = {
   title: `Taxi Chilly-Mazarin (${CP}) : Orly 24h/24`,
-  description: `Taxi à Chilly-Mazarin 24h/24. Orly à 10 min, transferts CDG, gare Massy TGV, Mercedes-Benz France. Réservation au ${SITE.phone.display}. CB et CPAM acceptés.`,
+  description: `Taxi à Chilly-Mazarin 24h/24 : Orly (10 min), RER C, gare Massy TGV. Tarifs fixes, CB et CPAM. Réservez au ${SITE.phone.display}.`,
   openGraph: {
     title: `Taxi Chilly-Mazarin (${CP}) : Orly 24h/24`,
     description: `Votre taxi à Chilly-Mazarin : Orly à 10 min, RER C, Mercedes-Benz France, zones d'activité.`,

@@ -28,7 +28,7 @@ const URL = `${SITE.url}/taxi-corbeil-essonnes`
 
 export const metadata: Metadata = {
   title: `Taxi Corbeil-Essonnes (${CP}) : Orly 24h/24`,
-  description: `Taxi à Corbeil-Essonnes 24h/24. Transferts Orly, CDG, gare RER D, hôpital Sud Francilien, STMicroelectronics. Réservation au ${SITE.phone.display}. CB et CPAM acceptés.`,
+  description: `Taxi à Corbeil-Essonnes 24h/24 : Orly, CDG, RER D, hôpital Sud Francilien. CB et CPAM. Réservez au ${SITE.phone.display}.`,
   openGraph: {
     title: `Taxi Corbeil-Essonnes (${CP}) : Orly 24h/24`,
     description: `Votre taxi à Corbeil-Essonnes : aéroports Orly et CDG, RER D, hôpital Sud Francilien, sites industriels.`,

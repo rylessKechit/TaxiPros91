@@ -24,7 +24,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Taxi aéroport Essonne : Orly, CDG 24h/24',
-  description: `Taxi aéroport depuis l'Essonne : Orly, Roissy CDG, Le Bourget, Beauvais. Tarifs fixes, suivi de vol, 24h/24. Réservez au ${SITE.phone.display}.`,
+  description: `Taxi aéroport depuis l'Essonne : Orly, CDG, Le Bourget, Beauvais. Tarifs fixes, suivi de vol, 24h/24. ${SITE.phone.display}.`,
   openGraph: {
     title: 'Taxi aéroport Essonne : Orly, CDG 24h/24',
     description: 'Transferts vers les 4 aéroports parisiens depuis l\'Essonne. Tarifs fixes, suivi de vol en temps réel, 24h/24.',

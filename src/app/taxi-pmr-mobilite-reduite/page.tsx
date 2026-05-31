@@ -27,7 +27,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Taxi PMR Essonne : mobilité réduite 24h/24',
-  description: `Taxi PMR Essonne 24h/24 : véhicule adapté, rampe, chauffeurs formés, accompagnement porte-à-porte. Conventionné CPAM. Même tarif qu'un taxi classique. ${SITE.phone.display}.`,
+  description: `Taxi PMR Essonne 24h/24 : véhicule adapté, rampe, chauffeurs formés, porte-à-porte. Conventionné CPAM. ${SITE.phone.display}.`,
   openGraph: {
     title: 'Taxi PMR Essonne : mobilité réduite 24h/24',
     description: 'Service de taxi adapté aux personnes à mobilité réduite en Essonne. Véhicule équipé, chauffeurs formés, conventionné CPAM, porte-à-porte.',

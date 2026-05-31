@@ -19,7 +19,7 @@ const URL = `${SITE.url}/taxi-essonne-disneyland`
 
 export const metadata: Metadata = {
   title: `Taxi ${FROM} → Disneyland : tarif dès ${PRICE_MIN}€`,
-  description: `Taxi depuis l'${FROM} vers Disneyland Paris : tarif fixe dès ${PRICE_MIN}€, trajet en ${DURATION} min via A6, A86 et A4. Dépose Parcs, hôtels Disney ou gare TGV Chessy. Réservation 24h/24 au ${SITE.phone.display}.`,
+  description: `Taxi ${FROM} → Disneyland : tarif fixe dès ${PRICE_MIN}€, ${DURATION} min, dépose Parcs, hôtels Disney ou TGV Chessy. ${SITE.phone.display}.`,
   openGraph: {
     title: `Taxi ${FROM} → Disneyland : tarif dès ${PRICE_MIN}€`,
     description: `Transfert direct depuis l'Essonne vers Disneyland Paris (Marne-la-Vallée). Tarif fixe, dépose aux Parcs et hôtels Disney, service 24h/24.`,

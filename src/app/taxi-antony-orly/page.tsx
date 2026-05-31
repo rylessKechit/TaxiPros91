@@ -19,7 +19,7 @@ const URL = `${SITE.url}/taxi-antony-orly`
 
 export const metadata: Metadata = {
   title: `Taxi ${FROM} → Orly : tarif fixe dès ${PRICE_MIN}€`,
-  description: `Taxi ${FROM} (92160) vers Aéroport Orly : tarif fixe dès ${PRICE_MIN}€, trajet ${DURATION} min, suivi de vol inclus. Tous terminaux Orly 1, 2, 3, 4. Réservez au ${SITE.phone.display}.`,
+  description: `Taxi ${FROM} → Orly : tarif fixe dès ${PRICE_MIN}€, ${DURATION} min, suivi de vol, tous terminaux. Réservez 24h/24 au ${SITE.phone.display}.`,
   openGraph: {
     title: `Taxi ${FROM} → Orly : tarif fixe dès ${PRICE_MIN}€`,
     description: `Transfert taxi ${FROM} (92) Aéroport Orly : tarif fixe, suivi de vol, prise en charge 24h/24.`,

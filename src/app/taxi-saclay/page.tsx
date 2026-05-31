@@ -10,7 +10,7 @@ import { Phone, MapPin, Train, Plane, Clock, CheckCircle, Star, CreditCard, Shie
 
 export const metadata: Metadata = {
   title: 'Taxi Saclay (91400) : Plateau, Orly 24h/24',
-  description: 'Réservez votre taxi à Saclay 91400. Service disponible 24h/24 pour le plateau de Saclay, CEA, Université Paris-Saclay, Polytechnique. Chauffeurs professionnels, tarifs transparents. Appelez maintenant le 01 80 85 91 91 !',
+  description: 'Taxi à Saclay 24h/24 : plateau, CEA, Université Paris-Saclay, Polytechnique. Chauffeurs pro, tarifs transparents. Réservez au 01 80 85 91 91.',
   openGraph: {
     title: 'Taxi Saclay (91400) : Plateau, Orly 24h/24',
     description: 'Votre taxi à Saclay : CEA, universités, Polytechnique, entreprises tech. Réservation rapide, tarifs transparents.',

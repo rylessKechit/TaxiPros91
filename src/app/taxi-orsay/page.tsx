@@ -28,7 +28,7 @@ const URL = `${SITE.url}/taxi-orsay`
 
 export const metadata: Metadata = {
   title: `Taxi Orsay (${CP}) : Saclay, RER B 24h/24`,
-  description: `Taxi à Orsay 24h/24. Transferts Orly, CDG, gare Massy TGV, Université Paris-Saclay, CEA. Réservation au ${SITE.phone.display}. CB et CPAM acceptés.`,
+  description: `Taxi à Orsay 24h/24 : Université Paris-Saclay, CEA, Orly, gare Massy TGV. CB et CPAM. Réservez au ${SITE.phone.display}.`,
   openGraph: {
     title: `Taxi Orsay (${CP}) : Saclay, RER B 24h/24`,
     description: `Votre taxi à Orsay : Université Paris-Saclay, plateau de Saclay, RER B.`,

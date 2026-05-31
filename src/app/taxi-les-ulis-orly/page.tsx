@@ -19,7 +19,7 @@ const URL = `${SITE.url}/taxi-les-ulis-orly`
 
 export const metadata: Metadata = {
   title: `Taxi ${FROM} → Orly : tarif fixe dès ${PRICE_MIN}€`,
-  description: `Taxi ${FROM} vers Aéroport Orly : tarif fixe dès ${PRICE_MIN}€, trajet en ${DURATION} min via RN118 et A10, suivi de vol inclus. Réservation 24h/24 au ${SITE.phone.display}. Courtaboeuf, ZA, gare RER B Orsay desservis.`,
+  description: `Taxi ${FROM} → Orly : tarif fixe dès ${PRICE_MIN}€, ${DURATION} min, suivi de vol, tous terminaux. Réservez 24h/24 au ${SITE.phone.display}.`,
   openGraph: {
     title: `Taxi ${FROM} → Orly : tarif fixe dès ${PRICE_MIN}€`,
     description: `Transfert taxi ${FROM} Aéroport d'Orly. Tarif fixe, suivi de vol, prise en charge 24h/24 à Courtaboeuf et dans tout Les Ulis.`,

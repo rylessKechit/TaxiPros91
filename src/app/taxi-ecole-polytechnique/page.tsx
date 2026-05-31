@@ -27,7 +27,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Taxi École Polytechnique Palaiseau 24h/24',
-  description: `Taxi École Polytechnique 24h/24 à Palaiseau (91128). Élèves, enseignants, doctorants, événements (Bal de l'X, JX). Orly, CDG, gare Massy TGV. Tarifs fixes au ${SITE.phone.display}.`,
+  description: `Taxi École Polytechnique Palaiseau 24h/24 : élèves, enseignants, événements. Orly, CDG, Massy TGV. Tarifs fixes au ${SITE.phone.display}.`,
   openGraph: {
     title: 'Taxi École Polytechnique Palaiseau 24h/24',
     description: 'Service de taxi dédié à l\'École Polytechnique et au campus du Plateau de Saclay. Tarifs fixes, suivi de vol, événements et soutenances.',
