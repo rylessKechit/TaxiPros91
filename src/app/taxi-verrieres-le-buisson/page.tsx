@@ -9,10 +9,10 @@ import { ServiceSchema, FAQSchema } from '@/components/seo/Schemas'
 import { Phone, MapPin, Train, Plane, Clock, CheckCircle, Star, CreditCard, Shield, Users, Car, HelpCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Taxi Verrières-le-Buisson (91370) | Réservation 24h/24 - Antony & Massy',
+  title: 'Taxi Verrières-le-Buisson (91370) 24h/24',
   description: 'Réservez votre taxi à Verrières-le-Buisson 91370. Service disponible 24h/24 pour vos trajets vers Antony RER B, Massy TGV, aéroport Orly. Chauffeurs professionnels, tarifs transparents. Appelez maintenant le 01 80 85 91 91 !',
   openGraph: {
-    title: 'Taxi Verrières-le-Buisson (91370) | Service 24h/24 - Antony & Massy',
+    title: 'Taxi Verrières-le-Buisson (91370) 24h/24',
     description: 'Votre taxi à Verrières-le-Buisson : Antony RER B, Massy TGV, aéroport Orly. Réservation rapide, tarifs transparents.',
     url: 'https://www.taxipro91.com/taxi-verrieres-le-buisson',
   },

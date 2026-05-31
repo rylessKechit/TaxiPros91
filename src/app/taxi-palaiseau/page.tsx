@@ -9,10 +9,10 @@ import { ServiceSchema, FAQSchema } from '@/components/seo/Schemas'
 import { Phone, MapPin, Train, Plane, Clock, CheckCircle, Star, CreditCard, Shield, Users, Car, HelpCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Taxi Palaiseau (91120) | Plateau de Saclay & Polytechnique - 24h/24',
+  title: 'Taxi Palaiseau (91120) : Saclay, Orly 24h/24',
   description: 'Taxi Palaiseau 91120 : plateau de Saclay, Polytechnique, CentraleSupelec, ENS, HEC. Service 24h/24, gare RER B Palaiseau. Tarifs transparents. Appelez le 01 80 85 91 91 !',
   openGraph: {
-    title: 'Taxi Palaiseau (91120) | Plateau de Saclay & Grandes Ecoles',
+    title: 'Taxi Palaiseau (91120) : Saclay, Orly 24h/24',
     description: 'Votre taxi à Palaiseau : Polytechnique, plateau de Saclay, grandes écoles, gare RER B. Disponible 24h/24.',
     url: 'https://www.taxipro91.com/taxi-palaiseau',
   },

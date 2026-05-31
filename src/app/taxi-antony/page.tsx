@@ -9,10 +9,10 @@ import { ServiceSchema, FAQSchema } from '@/components/seo/Schemas'
 import { Phone, MapPin, Train, Plane, Clock, CheckCircle, Star, CreditCard, Shield, Users, Car, HelpCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Taxi Antony (92160) | Réservation 24h/24 - Orlyval, RER B & Aéroport Orly',
+  title: 'Taxi Antony (92160) : Orly, RER B 24h/24',
   description: 'Réservez votre taxi à Antony 92160. Service disponible 24h/24 pour vos trajets Orlyval, RER B Antony, aéroport Orly, Parc de Sceaux. Chauffeurs professionnels, tarifs transparents. Appelez maintenant le 01 80 85 91 91 !',
   openGraph: {
-    title: 'Taxi Antony (92160) | Service 24h/24 - Orlyval & Orly',
+    title: 'Taxi Antony (92160) : Orly, RER B 24h/24',
     description: 'Votre taxi à Antony : Orlyval, RER B, aéroport Orly, Parc de Sceaux. Réservation rapide, tarifs transparents.',
     url: 'https://www.taxipro91.com/taxi-antony',
   },

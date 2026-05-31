@@ -23,10 +23,10 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Taxi aéroport Essonne | Orly, CDG, Le Bourget, Beauvais 24h/24',
+  title: 'Taxi aéroport Essonne : Orly, CDG 24h/24',
   description: `Taxi aéroport depuis l'Essonne : Orly, Roissy CDG, Le Bourget, Beauvais. Tarifs fixes, suivi de vol, 24h/24. Réservez au ${SITE.phone.display}.`,
   openGraph: {
-    title: 'Taxi aéroport depuis l\'Essonne : Orly, CDG, Le Bourget, Beauvais',
+    title: 'Taxi aéroport Essonne : Orly, CDG 24h/24',
     description: 'Transferts vers les 4 aéroports parisiens depuis l\'Essonne. Tarifs fixes, suivi de vol en temps réel, 24h/24.',
     url: `${SITE.url}/taxi-aeroport`,
   },

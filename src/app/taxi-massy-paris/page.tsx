@@ -18,10 +18,10 @@ const DURATION = ROUTE.durationMin
 const URL = `${SITE.url}/taxi-massy-paris`
 
 export const metadata: Metadata = {
-  title: `Taxi ${FROM} → Paris Centre : Tarif dès ${PRICE_MIN}€ & Réservation 24h/24`,
+  title: `Taxi ${FROM} → Paris : tarif fixe dès ${PRICE_MIN}€`,
   description: `Taxi ${FROM} vers Paris Centre : tarif fixe dès ${PRICE_MIN}€, trajet ${DURATION} min, dépose à toutes les gares et tous les arrondissements. Réservation 24h/24 au ${SITE.phone.display}.`,
   openGraph: {
-    title: `Taxi ${FROM} → Paris : Dès ${PRICE_MIN}€ • ${DURATION} min`,
+    title: `Taxi ${FROM} → Paris : tarif fixe dès ${PRICE_MIN}€`,
     description: `Transfert taxi ${FROM} Paris Centre : tarif fixe, gares parisiennes et tous arrondissements, prise en charge 24h/24.`,
     url: URL,
   },

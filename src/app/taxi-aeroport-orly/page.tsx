@@ -22,10 +22,10 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Taxi aéroport Orly | TAXI Pro 91 : réservation 24h/24',
+  title: 'Taxi aéroport Orly : tarifs fixes 24h/24',
   description: `Réservez votre taxi aéroport Orly en 1 appel : ${SITE.phone.display}. Tarifs fixes dès 25€, suivi de vol inclus, tous terminaux (Orly 1, 2, 3, 4), 24h/24.`,
   openGraph: {
-    title: 'Taxi aéroport Orly | TAXI Pro 91 : tarifs fixes 24h/24',
+    title: 'Taxi aéroport Orly : tarifs fixes 24h/24',
     description:
       "Taxi pour l'aéroport d'Orly depuis l'Essonne. Tarifs fixes annoncés à la réservation, suivi de vol en temps réel, 4 terminaux desservis.",
     url: `${SITE.url}/taxi-aeroport-orly`,

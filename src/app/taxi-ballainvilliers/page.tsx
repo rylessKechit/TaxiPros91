@@ -9,10 +9,10 @@ import { ServiceSchema, FAQSchema } from '@/components/seo/Schemas'
 import { Phone, MapPin, Train, Plane, Clock, CheckCircle, Star, CreditCard, Shield, Users, Car, HelpCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Taxi Ballainvilliers (91160) | Reservation 24h/24 - Aeroport Orly & Gares',
+  title: 'Taxi Ballainvilliers (91160) : Orly 24h/24',
   description: 'Reservez votre taxi a Ballainvilliers 91160. Service disponible 24h/24 pour vos trajets aeroport Orly, gare Massy TGV, Paris. Village residentiel proche A10. Chauffeurs professionnels, tarifs transparents. Appelez maintenant le 01 80 85 91 91 !',
   openGraph: {
-    title: 'Taxi Ballainvilliers (91160) | Service 24h/24 - Orly & Massy TGV',
+    title: 'Taxi Ballainvilliers (91160) : Orly 24h/24',
     description: 'Votre taxi a Ballainvilliers : aeroport Orly, gare Massy TGV, Paris. Reservation rapide, tarifs transparents.',
     url: 'https://www.taxipro91.com/taxi-ballainvilliers',
   },

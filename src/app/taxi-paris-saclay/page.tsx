@@ -27,10 +27,10 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Taxi Paris-Saclay | Grandes écoles, CEA, R&D Plateau 24h/24',
+  title: 'Taxi Paris-Saclay : grandes écoles 24h/24',
   description: `Taxi Paris-Saclay 24h/24 : Polytechnique, CentraleSupélec, HEC, CEA, Synchrotron SOLEIL, EDF Lab, Thales R&T. Tarifs fixes, comptes entreprise. ${SITE.phone.display}.`,
   openGraph: {
-    title: 'Taxi Paris-Saclay : Grandes écoles & R&D du Plateau',
+    title: 'Taxi Paris-Saclay : grandes écoles 24h/24',
     description: 'Service de taxi dédié au cluster Paris-Saclay : grandes écoles, CEA, Synchrotron SOLEIL, EDF Lab, Thales, Servier, Danone Nutricia.',
     url: `${SITE.url}/taxi-paris-saclay`,
   },

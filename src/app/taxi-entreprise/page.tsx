@@ -30,10 +30,10 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Taxi entreprise Essonne | Compte pro & facturation mensuelle B2B',
+  title: 'Taxi entreprise Essonne : compte pro B2B',
   description: `Taxi entreprise B2B en Essonne : compte dédié, facturation mensuelle, paiement 30 jours, justificatifs détaillés. Saclay, Massy, Évry, Orly, CDG. Devis au ${SITE.phone.display}.`,
   openGraph: {
-    title: 'Taxi entreprise Essonne | TAXI Pro 91 : Solutions B2B',
+    title: 'Taxi entreprise Essonne : compte pro B2B',
     description: `Compte entreprise, facturation mensuelle, transferts collaborateurs et VIP. Mercedes Classe E, Tesla, Van 7 places. Devis personnalisé au ${SITE.phone.display}.`,
     url: `${SITE.url}/taxi-entreprise`,
   },

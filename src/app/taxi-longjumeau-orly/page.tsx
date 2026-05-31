@@ -18,10 +18,10 @@ const DURATION = ROUTE.durationMin
 const URL = `${SITE.url}/taxi-longjumeau-orly`
 
 export const metadata: Metadata = {
-  title: `Taxi ${FROM} → Aéroport Orly : Tarif dès ${PRICE_MIN}€ & Réservation 24h/24`,
+  title: `Taxi ${FROM} → Orly : tarif fixe dès ${PRICE_MIN}€`,
   description: `Taxi ${FROM} vers Aéroport Orly : tarif fixe dès ${PRICE_MIN}€, trajet en ${DURATION} min via RD117 et A6, suivi de vol inclus. Réservation 24h/24 au ${SITE.phone.display}. Hôpital, gare RER C, tous quartiers desservis.`,
   openGraph: {
-    title: `Taxi ${FROM} → Orly : Dès ${PRICE_MIN}€ • ${DURATION} min`,
+    title: `Taxi ${FROM} → Orly : tarif fixe dès ${PRICE_MIN}€`,
     description: `Transfert taxi ${FROM} Aéroport d'Orly. Tarif fixe, suivi de vol, prise en charge 24h/24 dans tout Longjumeau (centre, hôpital, gare RER C).`,
     url: URL,
   },

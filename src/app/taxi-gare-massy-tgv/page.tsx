@@ -25,11 +25,11 @@ import {
 const PAGE_URL = `${SITE.url}/taxi-gare-massy-tgv`
 
 export const metadata: Metadata = {
-  title: 'Taxi gare Massy TGV : réservation 24h/24 & tarif fixe',
+  title: 'Taxi gare Massy TGV : tarif fixe 24h/24',
   description: `Taxi gare Massy TGV disponible 24h/24. Tarifs fixes depuis toute l'Essonne, prise en charge bagages, attente comprise en cas de retard. ${SITE.phone.display}.`,
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Taxi gare Massy TGV : réservation 24h/24 et tarif fixe',
+    title: 'Taxi gare Massy TGV : tarif fixe 24h/24',
     description:
       'Service de taxi pour la gare Massy TGV : tarifs fixes, suivi du TGV, départs matinaux et nuits assurés. Essonne et Hauts-de-Seine.',
     url: PAGE_URL,

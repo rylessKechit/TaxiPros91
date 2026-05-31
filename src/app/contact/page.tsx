@@ -5,7 +5,7 @@ import Footer from '@/components/Footer'
 import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Contact TAXI Pro 91 | Réservation Taxi Essonne - 24h/24',
+  title: 'Contact : réservation taxi Essonne 24h/24',
   description: 'Contactez TAXI Pro 91 pour réserver votre taxi en Essonne. Disponible 24h/24, 7j/7. Téléphone, email, formulaire. Massy, Palaiseau, Longjumeau, Antony.',
   openGraph: {
     title: 'Contact TAXI Pro 91',

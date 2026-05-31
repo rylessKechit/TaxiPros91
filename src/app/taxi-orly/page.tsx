@@ -22,10 +22,10 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Taxi Aéroport Orly depuis l\'Essonne | Réservation 24h/24',
+  title: 'Taxi Aéroport Orly depuis l\'Essonne',
   description: `Taxi pour l'aéroport d'Orly depuis Massy, Palaiseau, Antony, Les Ulis, Saclay. Tarifs fixes, suivi de vol, 24h/24. Réservez au ${SITE.phone.display}.`,
   openGraph: {
-    title: 'Taxi Aéroport Orly depuis l\'Essonne | TAXI Pro 91',
+    title: 'Taxi Aéroport Orly depuis l\'Essonne',
     description: 'Transfert taxi vers Orly 1, 2, 3, 4 depuis toute l\'Essonne. Tarifs fixes, suivi de vol en temps réel, service 24h/24.',
     url: `${SITE.url}/taxi-orly`,
   },
