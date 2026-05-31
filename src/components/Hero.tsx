@@ -34,7 +34,7 @@ export default function Hero() {
                     <Star key={i} className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-yellow-400 fill-yellow-400" />
                   ))}
                 </div>
-                <span className="text-gray-300 text-xs sm:text-base">4.9/5 Google</span>
+                <span className="text-gray-300 text-xs sm:text-base">Service reconnu localement</span>
               </div>
 
               <h1 className="text-[1.875rem] sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold mb-3 sm:mb-4 lg:mb-6 leading-tight">
@@ -42,7 +42,7 @@ export default function Hero() {
               </h1>
 
               <p className="text-sm sm:text-xl md:text-2xl text-gray-200 mb-4 sm:mb-6 lg:mb-8 max-w-lg">
-                Réservation rapide • Transferts Orly &amp; CDG • Conventionné CPAM • Note <strong className="text-white">4.9/5</strong> sur 500+ avis.
+                Réservation rapide • Transferts Orly &amp; CDG • Conventionné CPAM • <strong className="text-white">Avis clients vérifiés</strong>.
               </p>
 
               {/* Valeurs */}

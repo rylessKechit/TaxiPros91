@@ -20,10 +20,6 @@ export const SITE = {
     serviceCenter: { lat: 48.7308, lng: 2.2737 },
     serviceRadiusMeters: 25000,
   },
-  rating: {
-    value: '4.9',
-    count: '500',
-  },
   social: {
     facebook: 'https://www.facebook.com/taxipros91',
     instagram: 'https://www.instagram.com/taxipros91',

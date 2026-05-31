@@ -60,10 +60,10 @@ export default function Testimonials() {
                 <Star key={star} className="w-7 h-7 text-yellow-400 fill-current" />
               ))}
             </div>
-            <span className="text-gray-900 font-bold text-2xl">4.9/5</span>
+            <span className="text-gray-900 font-bold text-2xl">Avis vérifiés</span>
           </div>
           <p className="text-gray-600 text-lg">
-            Note basée sur plus de 500 avis clients
+            Service de qualité reconnu en Essonne
           </p>
         </div>
 
@@ -110,12 +110,12 @@ export default function Testimonials() {
         <div className="bg-white rounded-xl p-6 border border-gray-200">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <p className="text-3xl font-bold text-gray-900">500+</p>
-              <p className="text-gray-600">Clients satisfaits</p>
+              <p className="text-3xl font-bold text-gray-900">Vérifiés</p>
+              <p className="text-gray-600">Avis clients</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-gray-900">4.9/5</p>
-              <p className="text-gray-600">Note moyenne</p>
+              <p className="text-3xl font-bold text-gray-900">Qualité</p>
+              <p className="text-gray-600">Service reconnu</p>
             </div>
             <div>
               <p className="text-3xl font-bold text-gray-900">15 min</p>

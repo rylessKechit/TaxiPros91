@@ -97,7 +97,7 @@ const usps = [
   {
     icon: Star,
     title: 'Chauffeurs experts',
-    description: `Plus de ${SITE.rating.count} clients satisfaits. Connaissance fine des axes A6, A10, A86, A1, RN118 et RN20.`,
+    description: `Service de qualité reconnu. Connaissance fine des axes A6, A10, A86, A1, RN118 et RN20.`,
   },
 ]
 

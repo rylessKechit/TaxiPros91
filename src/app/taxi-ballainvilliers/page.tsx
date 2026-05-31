@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: 'Reservez votre taxi a Ballainvilliers 91160. Service disponible 24h/24 pour vos trajets aeroport Orly, gare Massy TGV, Paris. Village residentiel proche A10. Chauffeurs professionnels, tarifs transparents. Appelez maintenant le 01 80 85 91 91 !',
   openGraph: {
     title: 'Taxi Ballainvilliers (91160) | Service 24h/24 - Orly & Massy TGV',
-    description: 'Votre taxi a Ballainvilliers : aeroport Orly, gare Massy TGV, Paris. Reservation rapide, tarifs transparents. Note 4.9/5.',
+    description: 'Votre taxi a Ballainvilliers : aeroport Orly, gare Massy TGV, Paris. Reservation rapide, tarifs transparents.',
     url: 'https://www.taxipro91.com/taxi-ballainvilliers',
   },
   alternates: {
@@ -50,7 +50,7 @@ const avantages = [
   { icon: Clock, title: 'Disponible 24h/24', description: 'Service de taxi a Ballainvilliers jour et nuit, week-ends et jours feries inclus.' },
   { icon: CreditCard, title: 'Paiement flexible', description: 'CB, especes, bons CPAM. Facturation entreprise sur demande.' },
   { icon: Shield, title: 'Chauffeurs professionnels', description: 'Conducteurs experimentes connaissant parfaitement ce village residentiel.' },
-  { icon: Star, title: 'Note 4.9/5', description: 'Plus de 89 avis clients positifs. Satisfaction garantie.' },
+  { icon: Star, title: 'Avis clients vérifiés', description: 'Service de qualité reconnu en Essonne. Satisfaction garantie.' },
 ]
 
 const avisClients = [
@@ -145,8 +145,8 @@ export default function TaxiBallainvilliers() {
                   <div className="flex">
                     {[1,2,3,4,5].map(i => <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />)}
                   </div>
-                  <span className="font-bold text-gray-900">4.9/5</span>
-                  <span className="text-gray-500">- 89 avis clients</span>
+                  <span className="font-bold text-gray-900">Avis vérifiés</span>
+                  <span className="text-gray-500">— Avis clients vérifiés</span>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4 mb-8">
@@ -321,8 +321,8 @@ export default function TaxiBallainvilliers() {
               <div className="flex">
                 {[1,2,3,4,5].map(i => <Star key={i} className="w-6 h-6 text-yellow-400 fill-yellow-400" />)}
               </div>
-              <span className="font-bold text-xl text-gray-900">4.9/5</span>
-              <span className="text-gray-500">base sur 89 avis</span>
+              <span className="font-bold text-xl text-gray-900">Avis vérifiés</span>
+              <span className="text-gray-500">Avis clients vérifiés</span>
             </div>
 
             <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">

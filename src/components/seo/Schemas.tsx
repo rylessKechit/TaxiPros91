@@ -54,13 +54,9 @@ export function LocalBusinessSchema() {
       opens: '00:00',
       closes: '23:59',
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: SITE.rating.value,
-      reviewCount: SITE.rating.count,
-      bestRating: '5',
-      worstRating: '1',
-    },
+    // TODO: réactiver aggregateRating UNIQUEMENT quand de vrais avis Google
+    // (API ou widget) seront branchés, avec entrées Review correspondantes
+    // (auteur, date, note réels). Sans ça = risque action manuelle Google.
     sameAs: [SITE.social.facebook, SITE.social.instagram],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',

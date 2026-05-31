@@ -382,8 +382,8 @@ export default function TaxiEssonneVersailles() {
             </h2>
             <div className="flex items-center justify-center gap-2 mb-10">
               <div className="flex">{[1,2,3,4,5].map(i => <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />)}</div>
-              <span className="font-bold text-gray-900">4.9/5</span>
-              <span className="text-gray-500">basé sur les retours clients</span>
+              <span className="font-bold text-gray-900">Avis vérifiés</span>
+              <span className="text-gray-500">Avis clients vérifiés</span>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               {avis.map((a, i) => (

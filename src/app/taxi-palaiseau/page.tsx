@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: 'Taxi Palaiseau 91120 : plateau de Saclay, Polytechnique, CentraleSupelec, ENS, HEC. Service 24h/24, gare RER B Palaiseau. Tarifs transparents. Appelez le 01 80 85 91 91 !',
   openGraph: {
     title: 'Taxi Palaiseau (91120) | Plateau de Saclay & Grandes Ecoles',
-    description: 'Votre taxi à Palaiseau : Polytechnique, plateau de Saclay, grandes écoles, gare RER B. Disponible 24h/24. Note 4.9/5.',
+    description: 'Votre taxi à Palaiseau : Polytechnique, plateau de Saclay, grandes écoles, gare RER B. Disponible 24h/24.',
     url: 'https://www.taxipro91.com/taxi-palaiseau',
   },
   alternates: {
@@ -50,7 +50,7 @@ const avantages = [
   { icon: Clock, title: 'Disponible 24h/24', description: 'Service de taxi à Palaiseau jour et nuit, idéal pour les horaires décalés des étudiants.' },
   { icon: CreditCard, title: 'Paiement flexible', description: 'CB, espèces, Lydia, PayPal. Facturation entreprise sur demande.' },
   { icon: Shield, title: 'Experts du plateau', description: 'Nos chauffeurs connaissent parfaitement le plateau de Saclay et ses accès.' },
-  { icon: Star, title: 'Note 4.9/5', description: 'Plus de 400 avis clients positifs. Satisfaction garantie.' },
+  { icon: Star, title: 'Avis clients vérifiés', description: 'Service de qualité reconnu en Essonne. Satisfaction garantie.' },
 ]
 
 const avisClients = [
@@ -145,8 +145,8 @@ export default function TaxiPalaiseau() {
                   <div className="flex">
                     {[1,2,3,4,5].map(i => <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />)}
                   </div>
-                  <span className="font-bold text-gray-900">4.9/5</span>
-                  <span className="text-gray-500">- 98 avis clients</span>
+                  <span className="font-bold text-gray-900">Avis vérifiés</span>
+                  <span className="text-gray-500">— Avis clients vérifiés</span>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4 mb-8">
@@ -323,8 +323,8 @@ export default function TaxiPalaiseau() {
               <div className="flex">
                 {[1,2,3,4,5].map(i => <Star key={i} className="w-6 h-6 text-yellow-400 fill-yellow-400" />)}
               </div>
-              <span className="font-bold text-xl text-gray-900">4.9/5</span>
-              <span className="text-gray-500">basé sur 98 avis</span>
+              <span className="font-bold text-xl text-gray-900">Avis vérifiés</span>
+              <span className="text-gray-500">Avis clients vérifiés</span>
             </div>
 
             <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">

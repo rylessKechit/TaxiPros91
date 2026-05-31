@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   description: `Taxi à Évry-Courcouronnes 24h/24. Transferts Orly, CDG, gare RER D, Génopole, hôpital. Réservation au ${SITE.phone.display}. Tarifs fixes, paiement CB et CPAM.`,
   openGraph: {
     title: `Taxi Évry-Courcouronnes (${CP}) : Service 24h/24`,
-    description: `Votre taxi à Évry-Courcouronnes : aéroports Orly et CDG, gare RER D, Génopole, hôpital Sud Francilien. Note 4.9/5.`,
+    description: `Votre taxi à Évry-Courcouronnes : aéroports Orly et CDG, gare RER D, Génopole, hôpital Sud Francilien.`,
     url: URL,
   },
   alternates: {
@@ -67,7 +67,7 @@ const avantages = [
   { icon: Clock, title: 'Disponible 24h/24', description: 'Service de taxi à Évry-Courcouronnes jour et nuit, week-ends et jours fériés inclus.' },
   { icon: Shield, title: 'Chauffeurs professionnels', description: 'Conducteurs expérimentés, véhicules récents, propres et entretenus.' },
   { icon: CreditCard, title: 'Paiement flexible', description: 'CB, espèces, bons CPAM. Facturation entreprise sur demande.' },
-  { icon: Star, title: 'Note 4.9/5', description: 'Plus de 500 avis clients positifs en Essonne. Satisfaction garantie.' },
+  { icon: Star, title: 'Avis clients vérifiés', description: 'Service de qualité reconnu en Essonne. Satisfaction garantie.' },
 ]
 
 const avisClients = [
@@ -130,7 +130,7 @@ export default function TaxiEvryCourcouronnes() {
         {/* Bandeau confiance */}
         <section className="bg-yellow-400 py-3">
           <div className="container mx-auto px-4 text-center text-black text-sm md:text-base font-medium">
-            4.9/5 <span className="text-yellow-700">★</span> • 24h/24 • CB acceptée • Conventionné CPAM • Appelez le{' '}
+            24h/24 • CB acceptée • Conventionné CPAM • Appelez le{' '}
             <a href={SITE.phone.tel} className="font-bold hover:underline">{SITE.phone.display}</a>
           </div>
         </section>
@@ -161,8 +161,8 @@ export default function TaxiEvryCourcouronnes() {
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
                     ))}
                   </div>
-                  <span className="font-bold text-gray-900">4.9/5</span>
-                  <span className="text-gray-500">, plus de 500 avis</span>
+                  <span className="font-bold text-gray-900">Avis vérifiés</span>
+                  <span className="text-gray-500"> — Avis clients vérifiés</span>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4 mb-8">
@@ -302,8 +302,8 @@ export default function TaxiEvryCourcouronnes() {
                   <Star key={i} className="w-6 h-6 text-yellow-400 fill-yellow-400" />
                 ))}
               </div>
-              <span className="font-bold text-xl text-gray-900">4.9/5</span>
-              <span className="text-gray-500">, plus de 500 avis clients</span>
+              <span className="font-bold text-xl text-gray-900">Avis vérifiés</span>
+              <span className="text-gray-500"> — Avis clients vérifiés</span>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
