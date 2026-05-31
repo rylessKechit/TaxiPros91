@@ -289,7 +289,9 @@ export default function Tarifs() {
                 <tbody>
                   {forfaits.map((f, i) => (
                     <tr key={f.dest} className={i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
-                      <td className="py-4 px-4 font-medium text-gray-900">{f.dest}</td>
+                      <td className="py-4 px-4 font-medium text-gray-900">
+                        {f.dest === "Aéroport d'Orly" ? <Link href="/taxi-orly" className="text-yellow-700 hover:underline">{f.dest}</Link> : f.dest}
+                      </td>
                       <td className="text-center py-4 px-4 text-gray-600">{f.duree}</td>
                       <td className="text-right py-4 px-4">
                         <span className="bg-yellow-400 text-black font-bold px-3 py-1 rounded">

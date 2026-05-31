@@ -78,12 +78,19 @@ export default function PopularRoutes() {
           })}
         </div>
 
-        <div className="text-center mt-8">
+        <div className="mt-8 flex flex-wrap justify-center gap-6">
           <Link
             href="/tarifs"
             className="inline-flex items-center gap-2 text-yellow-700 font-semibold hover:text-yellow-800"
           >
             Voir tous les tarifs
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+          <Link
+            href="/taxi-orly"
+            className="inline-flex items-center gap-2 text-yellow-700 font-semibold hover:text-yellow-800"
+          >
+            Taxi aéroport Orly
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
