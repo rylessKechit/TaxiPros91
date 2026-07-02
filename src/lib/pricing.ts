@@ -15,9 +15,9 @@ const TARIFFS = {
   D: { rate: 3.00, label: 'Nuit/Dimanche + Aller Simple' },
 } as const
 
-const PICKUP_FEE = { day: 10, night: 5 } as const
+const PICKUP_FEE = { day: 18, night: 8 } as const
 const MIN_PRICE = 20
-const VAN_SUPPLEMENT = 10
+const VAN_SUPPLEMENT = 25
 const PRICE_RANGE = 5
 
 function isNightOrSunday(dateStr: string, timeStr: string): boolean {

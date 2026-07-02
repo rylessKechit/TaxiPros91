@@ -34,7 +34,7 @@ export interface BookingData {
 }
 
 const VEHICLE_LABELS = {
-  electrique: 'Électrique',
+  electrique: 'Électrique / Hybride',
   van: 'Van',
   premium: 'Premium',
 }

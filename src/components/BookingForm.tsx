@@ -246,7 +246,7 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
       return
     }
 
-    const vehicleLabel = { electrique: 'Électrique', van: 'Van', premium: 'Premium' }[formData.vehicle]
+    const vehicleLabel = { electrique: 'Électrique / Hybride', van: 'Van', premium: 'Premium' }[formData.vehicle]
     const commentParts = [`Véhicule souhaité : ${vehicleLabel}`]
     if (formData.isRoundTrip) {
       commentParts.push(`Aller-retour (retour : ${formData.returnDate ? formatDate(formData.returnDate) : '-'} ${formData.returnTime || ''})`)
@@ -331,7 +331,7 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
   const { minDate } = getMinDateTime()
 
   const VEHICLES = [
-    { id: 'electrique' as const, name: 'Électrique', desc: 'Tesla Model 3 ou équivalent', icon: Zap },
+    { id: 'electrique' as const, name: 'Électrique / Hybride', desc: 'Tesla Model 3, Toyota Prius ou équivalent', icon: Zap },
     { id: 'premium' as const, name: 'Premium', desc: 'Mercedes Classe E ou équivalent', icon: Crown },
     { id: 'van' as const, name: 'Van', desc: 'Mercedes Classe V : jusqu\'à 7 passagers', icon: Bus },
   ]
