@@ -28,6 +28,8 @@ export interface BookingData {
   returnDestination?: string
   returnDate?: string
   returnTime?: string
+  flightNumber?: string
+  trainNumber?: string
   priceMin: number
   priceMax: number
   distanceKm: number
@@ -69,6 +71,8 @@ function buildEmailHtml(data: BookingData, isAdmin: boolean): string {
           <tr><td style="padding:6px 0;color:#999;">Arrivée</td><td style="padding:6px 0;color:#fff;">${data.destination}</td></tr>
           <tr><td style="padding:6px 0;color:#999;">Date</td><td style="padding:6px 0;color:#fff;">${formatDate(data.date)}</td></tr>
           <tr><td style="padding:6px 0;color:#999;">Heure</td><td style="padding:6px 0;color:#fff;">${data.time}</td></tr>
+          ${data.flightNumber ? `<tr><td style="padding:6px 0;color:#999;">N° de vol</td><td style="padding:6px 0;color:#fff;">${data.flightNumber}</td></tr>` : ''}
+          ${data.trainNumber ? `<tr><td style="padding:6px 0;color:#999;">N° de train</td><td style="padding:6px 0;color:#fff;">${data.trainNumber}</td></tr>` : ''}
           ${roundTripBlock}
           <tr><td colspan="2" style="padding:16px 0 8px;font-weight:bold;font-size:16px;color:#facc15;border-top:1px solid #333;">🚗 Véhicule</td></tr>
           <tr><td style="padding:6px 0;color:#999;">Catégorie</td><td style="padding:6px 0;color:#fff;">${VEHICLE_LABELS[data.vehicle]}</td></tr>

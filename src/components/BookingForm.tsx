@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { Loader2, ArrowLeft, ArrowRight, Check, MapPin, Calendar, Car, User, Zap, Crown, Bus } from 'lucide-react'
-import { isStationOrAirport } from '@/lib/pricing'
+import { isStationOrAirport, isAirport, isTrainStation } from '@/lib/pricing'
 import PlacesAutocomplete, { type PlaceResult } from './PlacesAutocomplete'
 
 interface BookingFormProps {
@@ -22,6 +22,8 @@ interface FormData {
   returnDate: string
   returnTime: string
   vehicle: 'electrique' | 'van' | 'premium'
+  flightNumber: string
+  trainNumber: string
   firstName: string
   lastName: string
   email: string
@@ -75,6 +77,8 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
     returnDate: '',
     returnTime: '',
     vehicle: 'electrique',
+    flightNumber: '',
+    trainNumber: '',
     firstName: '',
     lastName: '',
     email: '',
@@ -157,8 +161,10 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
         const durationMin = data.durationMinutes || 0
         const price = { min, max, distanceKm, durationMin }
 
-        // Estimation AppSolu unique : même tarif quel que soit le véhicule choisi
-        setVehiclePrices({ electrique: price, premium: price, van: price })
+        // Estimation AppSolu : même base pour électrique/premium, +15€ pour van (supplément 7 places)
+        const VAN_EXTRA = 15
+        const vanPrice = { ...price, min: price.min + VAN_EXTRA, max: price.max + VAN_EXTRA }
+        setVehiclePrices({ electrique: price, premium: price, van: vanPrice })
         setPriceEstimate({ ...price, tariff: '', originAddress: '', destinationAddress: '' })
       } catch {
         setError('Impossible d\'estimer le prix pour le moment. Réessayez ou appelez-nous.')
@@ -248,6 +254,12 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
 
     const vehicleLabel = { electrique: 'Électrique / Hybride', van: 'Van', premium: 'Premium' }[formData.vehicle]
     const commentParts = [`Véhicule souhaité : ${vehicleLabel}`]
+    if (formData.flightNumber.trim()) {
+      commentParts.push(`N° de vol : ${formData.flightNumber.trim()}`)
+    }
+    if (formData.trainNumber.trim()) {
+      commentParts.push(`N° de train : ${formData.trainNumber.trim()}`)
+    }
     if (formData.isRoundTrip) {
       commentParts.push(`Aller-retour (retour : ${formData.returnDate ? formatDate(formData.returnDate) : '-'} ${formData.returnTime || ''})`)
     }
@@ -280,6 +292,8 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
           returnDestination: formData.returnDestination,
           returnDate: formData.returnDate,
           returnTime: formData.returnTime,
+          flightNumber: formData.flightNumber || undefined,
+          trainNumber: formData.trainNumber || undefined,
           priceMin: priceEstimate?.min || 0,
           priceMax: priceEstimate?.max || 0,
           distanceKm: priceEstimate?.distanceKm || 0,
@@ -445,6 +459,44 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
               />
               <span className="text-gray-900 font-medium">Aller / Retour</span>
             </label>
+          )}
+
+          {(isAirport(formData.pickup) || isAirport(formData.destination)) && (
+            <div>
+              <label htmlFor="booking-flight" className="block text-gray-700 text-sm font-medium mb-1">
+                Numéro de vol <span className="text-gray-400 font-normal">(pour suivi du vol)</span>
+              </label>
+              <input
+                id="booking-flight"
+                type="text"
+                name="flightNumber"
+                value={formData.flightNumber}
+                onChange={handleInputChange}
+                placeholder="Ex : AF1234"
+                className={inputClass}
+                autoComplete="off"
+                inputMode="text"
+              />
+            </div>
+          )}
+
+          {(isTrainStation(formData.pickup) || isTrainStation(formData.destination)) && (
+            <div>
+              <label htmlFor="booking-train" className="block text-gray-700 text-sm font-medium mb-1">
+                Numéro de train <span className="text-gray-400 font-normal">(pour suivi)</span>
+              </label>
+              <input
+                id="booking-train"
+                type="text"
+                name="trainNumber"
+                value={formData.trainNumber}
+                onChange={handleInputChange}
+                placeholder="Ex : TGV 8451"
+                className={inputClass}
+                autoComplete="off"
+                inputMode="text"
+              />
+            </div>
           )}
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
