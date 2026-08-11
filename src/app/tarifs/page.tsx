@@ -197,6 +197,12 @@ export default function Tarifs() {
                   délivrant un reçu détaillé. Nos tarifs respectent strictement la réglementation préfectorale
                   applicable au département de l&apos;Essonne (91).
                 </p>
+                <p>
+                  Des questions sur nos tarifs ou votre prochain trajet&nbsp;?{' '}
+                  <Link href="/blog" className="text-yellow-700 hover:text-yellow-800 font-medium underline">
+                    Retrouvez nos guides pratiques et conseils voyageurs sur le blog TAXI Pro 91
+                  </Link>.
+                </p>
               </div>
             </div>
           </div>
