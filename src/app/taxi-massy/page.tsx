@@ -468,6 +468,13 @@ export default function TaxiMassy() {
                   Pour vos départs en TGV, nous vous recommandons d'arriver 20 minutes avant l'heure de votre train.
                   À l'arrivée, votre chauffeur vous attend à la sortie avec une pancarte à votre nom.
                 </p>
+                <p>
+                  Tarifs fixes, suivi du TGV en temps réel et départs garantis dès 5h&nbsp;: retrouvez toutes les
+                  informations sur notre page dédiée{' '}
+                  <Link href="/taxi-gare-massy-tgv" className="text-yellow-700 font-medium hover:underline">
+                    taxi gare Massy TGV
+                  </Link>.
+                </p>
 
                 <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Navettes Aéroport Orly : rapidité et ponctualité</h3>
                 <p>

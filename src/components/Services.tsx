@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Plane, Train, Stethoscope, Briefcase, GraduationCap, PartyPopper, Phone } from 'lucide-react'
 
 const services = [
@@ -12,6 +13,7 @@ const services = [
     title: 'Gares & Stations',
     description: 'Transport vers toutes les gares parisiennes et les stations RER de l\'Essonne. Nous vous déposons au plus près des quais pour votre confort.',
     destinations: ['Gare Massy TGV', 'Gare de Lyon', 'Gare Montparnasse'],
+    link: '/taxi-gare-massy-tgv',
   },
   {
     icon: Stethoscope,
@@ -77,6 +79,14 @@ export default function Services() {
                 </div>
               </div>
               <p className="text-gray-600 leading-relaxed">{service.description}</p>
+              {service.link && (
+                <Link
+                  href={service.link}
+                  className="text-sm font-medium text-yellow-700 hover:underline mt-3 inline-block"
+                >
+                  En savoir plus →
+                </Link>
+              )}
             </div>
           ))}
         </div>
