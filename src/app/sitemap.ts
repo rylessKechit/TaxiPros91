@@ -14,8 +14,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE.url}/taxi-cdg`, lastModified: now, changeFrequency: 'monthly', priority: 1.0 },
     { url: `${SITE.url}/taxi-aeroport`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE.url}/taxi-gare-massy-tgv`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${SITE.url}/taxi-conventionne-cpam-91`, lastModified: now, changeFrequency: 'monthly', priority: 1.0 },
-    { url: `${SITE.url}/taxi-pmr-mobilite-reduite`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${SITE.url}/taxi-entreprise`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE.url}/taxi-ecole-polytechnique`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${SITE.url}/taxi-paris-saclay`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 },

@@ -22,6 +22,9 @@ const nextConfig = {
         destination: 'https://www.taxipro91.com/:path*',
         permanent: true,
       },
+      // Pages CPAM/PMR supprimées : le client n'est ni conventionné ni équipé PMR.
+      { source: '/taxi-conventionne-cpam-91', destination: '/', permanent: true },
+      { source: '/taxi-pmr-mobilite-reduite', destination: '/', permanent: true },
     ]
   },
 }

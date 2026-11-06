@@ -22,12 +22,10 @@ const cityPagesExisting = [
 const citiesWithPages = cities.filter(c => cityPagesExisting.includes(c.slug))
 
 const services = [
-  { href: '/taxi-conventionne-cpam-91', label: 'Taxi conventionné CPAM 91' },
   { href: '/taxi-gare-massy-tgv', label: 'Taxi gare Massy TGV' },
   { href: '/taxi-entreprise', label: 'Taxi entreprise' },
   { href: '/taxi-ecole-polytechnique', label: 'Taxi École Polytechnique' },
   { href: '/taxi-paris-saclay', label: 'Taxi Paris-Saclay' },
-  { href: '/taxi-pmr-mobilite-reduite', label: 'Taxi PMR mobilité réduite' },
 ]
 
 const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (

@@ -84,8 +84,6 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-4">Services</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/taxi-conventionne-cpam-91" className={linkClass}>Conventionné CPAM</Link></li>
-              <li><Link href="/taxi-pmr-mobilite-reduite" className={linkClass}>Taxi PMR</Link></li>
               <li><Link href="/taxi-entreprise" className={linkClass}>Taxi entreprise</Link></li>
               <li><Link href="/taxi-ecole-polytechnique" className={linkClass}>École Polytechnique</Link></li>
               <li><Link href="/taxi-paris-saclay" className={linkClass}>Paris-Saclay</Link></li>
@@ -115,7 +113,7 @@ export default function Footer() {
           TAXI Pro 91, service de taxi professionnel en Essonne basé à Palaiseau (1A avenue du 1er Mai, 91120).
           Nous intervenons en priorité à Massy (91300) et desservons Palaiseau, Antony, Longjumeau, Les Ulis, Saclay,
           Ballainvilliers, Verrières-le-Buisson, Évry-Courcouronnes, Corbeil-Essonnes et toute l&apos;Essonne.
-          Transferts aéroport Orly et Roissy CDG, gare Massy TGV, transport médical conventionné CPAM. Disponible 24h/24, 7j/7.
+          Transferts aéroport Orly et Roissy CDG, gare Massy TGV, trajets en Île-de-France. Disponible 24h/24, 7j/7.
         </p>
       </div>
     </footer>

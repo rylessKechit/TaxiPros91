@@ -54,7 +54,6 @@ export default function NotFound() {
               <li><Link href="/taxi-cdg" className="text-gray-700 hover:text-yellow-600">→ Taxi aéroport CDG</Link></li>
               <li><Link href="/taxi-gare-massy-tgv" className="text-gray-700 hover:text-yellow-600">→ Taxi gare Massy TGV</Link></li>
               <li><Link href="/taxi-palaiseau" className="text-gray-700 hover:text-yellow-600">→ Taxi Palaiseau</Link></li>
-              <li><Link href="/taxi-conventionne-cpam-91" className="text-gray-700 hover:text-yellow-600">→ Taxi conventionné CPAM</Link></li>
               <li><Link href="/tarifs" className="text-gray-700 hover:text-yellow-600">→ Tarifs</Link></li>
               <li><Link href="/contact" className="text-gray-700 hover:text-yellow-600">→ Contact</Link></li>
             </ul>

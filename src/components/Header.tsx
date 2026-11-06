@@ -22,11 +22,9 @@ const airportLinks: NavLink[] = [
 ]
 
 const serviceLinks: NavLink[] = [
-  { label: 'Conventionné CPAM', href: '/taxi-conventionne-cpam-91' },
   { label: 'Taxi entreprise', href: '/taxi-entreprise' },
   { label: 'École Polytechnique', href: '/taxi-ecole-polytechnique' },
   { label: 'Paris-Saclay', href: '/taxi-paris-saclay' },
-  { label: 'PMR / mobilité réduite', href: '/taxi-pmr-mobilite-reduite' },
   { label: 'Tarifs', href: '/tarifs' },
 ]
 

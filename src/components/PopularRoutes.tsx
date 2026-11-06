@@ -11,7 +11,6 @@ const routes = [
   { slug: 'taxi-massy-paris', from: 'Massy', to: 'Paris Centre', price: '55-80€', duration: '30 min', icon: Building2 },
   { slug: 'taxi-antony-orly', from: 'Antony', to: 'Aéroport Orly', price: '35-45€', duration: '12 min', icon: Plane },
   { slug: 'taxi-gare-massy-tgv', from: 'Essonne', to: 'Gare Massy TGV', price: 'Dès 20€', duration: 'Variable', icon: Train },
-  { slug: 'taxi-conventionne-cpam-91', from: 'Essonne', to: 'Hôpitaux & cliniques', price: 'Tiers payant', duration: 'Sur prescription', icon: Building2 },
 ]
 
 export default function PopularRoutes() {
