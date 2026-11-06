@@ -28,7 +28,7 @@ const URL = `${SITE.url}/taxi-chilly-mazarin`
 
 export const metadata: Metadata = {
   title: `Taxi Chilly-Mazarin (${CP}) : Orly 24h/24`,
-  description: `Taxi à Chilly-Mazarin 24h/24 : Orly (10 min), RER C, gare Massy TGV. Tarifs fixes, CB et CPAM. Réservez au ${SITE.phone.display}.`,
+  description: `Taxi à Chilly-Mazarin 24h/24 : Orly (10 min), RER C, gare Massy TGV. Tarifs fixes, CB acceptée. Réservez au ${SITE.phone.display}.`,
   openGraph: {
     title: `Taxi Chilly-Mazarin (${CP}) : Orly 24h/24`,
     description: `Votre taxi à Chilly-Mazarin : Orly à 10 min, RER C, Mercedes-Benz France, zones d'activité.`,
@@ -63,7 +63,7 @@ const quartiers = [
 const avantages = [
   { icon: Clock, title: 'Disponible 24h/24', description: 'Service de taxi à Chilly-Mazarin jour et nuit, week-ends et jours fériés inclus.' },
   { icon: Shield, title: 'Chauffeurs professionnels', description: 'Conducteurs expérimentés, véhicules récents, propres et entretenus.' },
-  { icon: CreditCard, title: 'Paiement flexible', description: 'CB, espèces, bons CPAM. Facturation entreprise sur demande.' },
+  { icon: CreditCard, title: 'Paiement flexible', description: 'CB, espèces. Facturation entreprise sur demande.' },
   { icon: Star, title: 'Avis clients vérifiés', description: 'Service de qualité reconnu en Essonne. Satisfaction garantie.' },
 ]
 
@@ -71,7 +71,6 @@ const avisClients = [
   { nom: 'Stéphane J.', note: 5, texte: 'Trajet Chilly → Orly en 10 minutes seulement, parfait pour mon vol de 6h. Chauffeur ponctuel et discret.', date: 'Mars 2025' },
   { nom: 'Aurélie M.', note: 5, texte: 'Commande pour un déplacement pro vers Mercedes-Benz France, véhicule premium, conduite irréprochable. Je recommande.', date: 'Février 2025' },
   { nom: 'Tristan W.', note: 5, texte: 'Aller-retour vers la gare Massy TGV en famille, van confortable pour 5 personnes + bagages. Au top.', date: 'Janvier 2025' },
-  { nom: 'Émilie F.', note: 5, texte: 'Transport médical conventionné vers Longjumeau, prise en charge CPAM nickel, conducteur très patient.', date: 'Décembre 2024' },
 ]
 
 const faqs = [
@@ -82,10 +81,6 @@ const faqs = [
   {
     q: `Comment réserver un taxi à Chilly-Mazarin ?`,
     a: `Pour réserver un taxi à Chilly-Mazarin, appelez le ${SITE.phone.display} disponible 24h/24, utilisez notre formulaire de réservation en ligne, ou envoyez vos coordonnées par SMS. Confirmation immédiate et SMS de rappel envoyé avant la course.`,
-  },
-  {
-    q: `Proposez-vous le transport médical conventionné à Chilly-Mazarin ?`,
-    a: `Oui, nous sommes conventionnés CPAM pour le transport médical assis. Nous assurons vos trajets vers l'hôpital de Longjumeau, les cliniques de Massy, Antony et Paris, ainsi que les centres de dialyse et cabinets médicaux. Bon de transport accepté.`,
   },
   {
     q: `Desservez-vous Mercedes-Benz France et les zones d'activité de Chilly ?`,
@@ -101,11 +96,7 @@ const faqs = [
   },
   {
     q: `Acceptez-vous les paiements par carte bancaire ?`,
-    a: `Oui, tous nos véhicules sont équipés de terminaux de paiement. Cartes Visa, Mastercard, American Express, espèces et bons CPAM acceptés. Facturation entreprise possible.`,
-  },
-  {
-    q: `Vos taxis sont-ils équipés pour les personnes à mobilité réduite ?`,
-    a: `Nous disposons de véhicules adaptés aux personnes à mobilité réduite (PMR). Précisez votre besoin lors de la réservation pour bénéficier du véhicule approprié.`,
+    a: `Oui, tous nos véhicules sont équipés de terminaux de paiement. Cartes Visa, Mastercard, American Express et espèces acceptés. Facturation entreprise possible.`,
   },
 ]
 
@@ -117,7 +108,7 @@ export default function TaxiChillyMazarin() {
 
       <ServiceSchema
         name={`Taxi ${CITY}`}
-        description={`Service de taxi professionnel à ${CITY} (${CP}), 24h/24. Aéroport Orly à 10 min, transferts CDG, gare Massy TGV, Mercedes-Benz France, transport médical CPAM.`}
+        description={`Service de taxi professionnel à ${CITY} (${CP}), 24h/24. Aéroport Orly à 10 min, transferts CDG, gare Massy TGV, Mercedes-Benz France.`}
         url={URL}
         areaServed={[CITY, 'Essonne']}
       />
@@ -126,7 +117,7 @@ export default function TaxiChillyMazarin() {
       <main>
         <section className="bg-yellow-400 py-3">
           <div className="container mx-auto px-4 text-center text-black text-sm md:text-base font-medium">
-            24h/24 • CB acceptée • Conventionné CPAM • Appelez le{' '}
+            24h/24 • CB acceptée • Appelez le{' '}
             <a href={SITE.phone.tel} className="font-bold hover:underline">{SITE.phone.display}</a>
           </div>
         </section>
@@ -164,7 +155,7 @@ export default function TaxiChillyMazarin() {
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   <div className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-500" /> <span className="text-gray-700">Disponible 24h/24</span></div>
                   <div className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-500" /> <span className="text-gray-700">Tarifs transparents</span></div>
-                  <div className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-500" /> <span className="text-gray-700">CB & CPAM acceptés</span></div>
+                  <div className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-500" /> <span className="text-gray-700">CB acceptée</span></div>
                   <div className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-500" /> <span className="text-gray-700">Chauffeurs pro</span></div>
                 </div>
 
@@ -297,7 +288,7 @@ export default function TaxiChillyMazarin() {
               <span className="text-gray-500"> — Avis clients vérifiés</span>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {avisClients.map((avis, index) => (
                 <div key={index} className="bg-gray-50 rounded-xl p-6 border border-gray-200">
                   <div className="flex items-center gap-1 mb-3">
@@ -416,7 +407,7 @@ export default function TaxiChillyMazarin() {
                 Nos services à {CITY}
               </h2>
 
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid md:grid-cols-3 gap-8">
                 <div>
                   <div className="flex items-center gap-3 mb-3">
                     <Plane className="w-6 h-6 text-yellow-500" />
@@ -438,18 +429,6 @@ export default function TaxiChillyMazarin() {
                     Desserte de la gare RER C de Chilly-Mazarin, des gares de Longjumeau et Gravigny-Balizy, et de
                     la <Link href="/taxi-gare-massy-tgv" className="text-yellow-600 underline">gare Massy TGV</Link>{' '}
                     (à 15 min) pour vos voyages grandes lignes.
-                  </p>
-                </div>
-
-                <div>
-                  <div className="flex items-center gap-3 mb-3">
-                    <Shield className="w-6 h-6 text-yellow-500" />
-                    <h3 className="text-xl font-bold text-gray-900">Transport médical CPAM</h3>
-                  </div>
-                  <p className="text-gray-600">
-                    <Link href="/taxi-conventionne-cpam-91" className="text-yellow-600 underline">Taxi conventionné CPAM</Link> pour
-                    vos trajets vers l&apos;hôpital de Longjumeau, les cliniques d&apos;Antony et Massy, et tous les établissements
-                    de soins de la région. Bon de transport accepté.
                   </p>
                 </div>
 

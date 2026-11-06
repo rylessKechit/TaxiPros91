@@ -28,10 +28,10 @@ const URL = `${SITE.url}/taxi-corbeil-essonnes`
 
 export const metadata: Metadata = {
   title: `Taxi Corbeil-Essonnes (${CP}) : Orly 24h/24`,
-  description: `Taxi à Corbeil-Essonnes 24h/24 : Orly, CDG, RER D, hôpital Sud Francilien. CB et CPAM. Réservez au ${SITE.phone.display}.`,
+  description: `Taxi à Corbeil-Essonnes 24h/24 : Orly, CDG, RER D, sites industriels. CB acceptée. Réservez au ${SITE.phone.display}.`,
   openGraph: {
     title: `Taxi Corbeil-Essonnes (${CP}) : Orly 24h/24`,
-    description: `Votre taxi à Corbeil-Essonnes : aéroports Orly et CDG, RER D, hôpital Sud Francilien, sites industriels.`,
+    description: `Votre taxi à Corbeil-Essonnes : aéroports Orly et CDG, RER D, sites industriels.`,
     url: URL,
   },
   alternates: {
@@ -65,12 +65,11 @@ const quartiers = [
 const avantages = [
   { icon: Clock, title: 'Disponible 24h/24', description: 'Service de taxi à Corbeil-Essonnes jour et nuit, week-ends et jours fériés inclus.' },
   { icon: Shield, title: 'Chauffeurs professionnels', description: 'Conducteurs expérimentés, véhicules récents, propres et entretenus.' },
-  { icon: CreditCard, title: 'Paiement flexible', description: 'CB, espèces, bons CPAM. Facturation entreprise sur demande.' },
+  { icon: CreditCard, title: 'Paiement flexible', description: 'CB, espèces. Facturation entreprise sur demande.' },
   { icon: Star, title: 'Avis clients vérifiés', description: 'Service de qualité reconnu en Essonne. Satisfaction garantie.' },
 ]
 
 const avisClients = [
-  { nom: 'Nadia O.', note: 5, texte: 'Transport CPAM pour mes séances de dialyse à l\'hôpital Sud Francilien. Toujours à l\'heure, chauffeurs très attentionnés.', date: 'Mars 2025' },
   { nom: 'Christophe P.', note: 5, texte: 'Aller Corbeil → Orly à 4h du matin pour un vol pro. Réservation simple, chauffeur ponctuel et véhicule impeccable.', date: 'Janvier 2025' },
   { nom: 'Lucile V.', note: 5, texte: 'Course depuis le centre-ville vers la gare RER D, prix correct et conducteur sympathique. Je recommande pour Corbeil.', date: 'Février 2025' },
   { nom: 'Damien F.', note: 5, texte: 'Mission longue durée pour un déplacement client à Versailles. Service premium, ponctualité parfaite.', date: 'Décembre 2024' },
@@ -86,28 +85,16 @@ const faqs = [
     a: `Pour réserver un taxi à Corbeil-Essonnes, appelez le ${SITE.phone.display} disponible 24h/24, utilisez notre formulaire de réservation en ligne, ou envoyez vos coordonnées par SMS. Confirmation immédiate et SMS de rappel envoyé avant la course.`,
   },
   {
-    q: `Êtes-vous conventionnés pour le transport médical à Corbeil-Essonnes ?`,
-    a: `Oui, nous sommes conventionnés CPAM pour le transport médical assis. Nous assurons les trajets vers l'hôpital Sud Francilien situé à Corbeil-Essonnes, les centres de dialyse et tous les établissements de soins de la région. Présentez votre bon de transport.`,
-  },
-  {
     q: `Quel délai pour avoir un taxi à Corbeil-Essonnes ?`,
     a: `En réservation immédiate, un taxi peut être à votre adresse à Corbeil-Essonnes en 15 à 25 minutes selon le quartier (Tarterêts, Centre-Ville, Robinson, Essonnes...). Pour les aéroports et gares, réservation conseillée au moins 2 heures à l'avance.`,
   },
   {
     q: `Acceptez-vous les paiements par carte bancaire ?`,
-    a: `Oui, tous nos véhicules disposent d'un terminal de paiement. Cartes Visa, Mastercard, American Express, espèces et bons CPAM acceptés. Facturation entreprise possible sur demande.`,
+    a: `Oui, tous nos véhicules disposent d'un terminal de paiement. Cartes Visa, Mastercard, American Express et espèces acceptés. Facturation entreprise possible sur demande.`,
   },
   {
     q: `Desservez-vous les sites industriels de Corbeil (STMicroelectronics, Altis) ?`,
     a: `Oui, nous transportons régulièrement les collaborateurs et visiteurs des sites STMicroelectronics et Altis Semiconductor. Comptes entreprise, navettes ponctuelles ou récurrentes, facturation mensuelle.`,
-  },
-  {
-    q: `Effectuez-vous des courses vers l'hôpital Sud Francilien ?`,
-    a: `Bien entendu, l'hôpital Sud Francilien (CHSF) est l'un des sites les plus desservis depuis Corbeil-Essonnes. Nous assurons les transferts en taxi conventionné CPAM ainsi que les courses standard pour les visites, hospitalisations ou consultations.`,
-  },
-  {
-    q: `Vos taxis sont-ils équipés pour les personnes à mobilité réduite ?`,
-    a: `Nous disposons de véhicules adaptés aux personnes à mobilité réduite (PMR). Précisez votre besoin lors de la réservation pour bénéficier du véhicule approprié.`,
   },
 ]
 
@@ -119,7 +106,7 @@ export default function TaxiCorbeilEssonnes() {
 
       <ServiceSchema
         name={`Taxi ${CITY}`}
-        description={`Service de taxi professionnel à ${CITY} (${CP}), 24h/24. Transferts Orly, CDG, gare RER D, hôpital Sud Francilien, transport médical CPAM, sites industriels.`}
+        description={`Service de taxi professionnel à ${CITY} (${CP}), 24h/24. Transferts Orly, CDG, gare RER D, sites industriels.`}
         url={URL}
         areaServed={[CITY, 'Essonne']}
       />
@@ -128,7 +115,7 @@ export default function TaxiCorbeilEssonnes() {
       <main>
         <section className="bg-yellow-400 py-3">
           <div className="container mx-auto px-4 text-center text-black text-sm md:text-base font-medium">
-            24h/24 • CB acceptée • Conventionné CPAM • Appelez le{' '}
+            24h/24 • CB acceptée • Appelez le{' '}
             <a href={SITE.phone.tel} className="font-bold hover:underline">{SITE.phone.display}</a>
           </div>
         </section>
@@ -149,7 +136,7 @@ export default function TaxiCorbeilEssonnes() {
                 <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                   Votre service de <strong>taxi à {CITY}</strong> disponible 24h/24 et 7j/7.
                   Nous assurons vos trajets vers <strong>les aéroports d&apos;Orly et de Roissy-CDG</strong>,
-                  la <strong>gare RER D</strong>, <strong>l&apos;hôpital Sud Francilien</strong> et les grands sites industriels
+                  la <strong>gare RER D</strong> et les grands sites industriels
                   (<strong>STMicroelectronics, Altis</strong>).
                 </p>
 
@@ -166,7 +153,7 @@ export default function TaxiCorbeilEssonnes() {
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   <div className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-500" /> <span className="text-gray-700">Disponible 24h/24</span></div>
                   <div className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-500" /> <span className="text-gray-700">Tarifs transparents</span></div>
-                  <div className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-500" /> <span className="text-gray-700">CB & CPAM acceptés</span></div>
+                  <div className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-500" /> <span className="text-gray-700">CB acceptée</span></div>
                   <div className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-500" /> <span className="text-gray-700">Chauffeurs pro</span></div>
                 </div>
 
@@ -197,9 +184,8 @@ export default function TaxiCorbeilEssonnes() {
               <div className="prose prose-lg text-gray-600 max-w-none">
                 <p>
                   <strong>{CITY}</strong>, sous-préfecture de l&apos;Essonne, compte environ <strong>51 000 habitants</strong> et
-                  s&apos;étend sur les deux rives de la Seine. La ville est un pôle industriel et médical majeur du sud de l&apos;Île-de-France,
-                  abritant le site historique <strong>STMicroelectronics / Altis Semiconductor</strong> ainsi que le <strong>Centre
-                  Hospitalier Sud Francilien (CHSF)</strong>, l&apos;un des plus grands hôpitaux d&apos;Île-de-France.
+                  s&apos;étend sur les deux rives de la Seine. La ville est un pôle industriel du sud de l&apos;Île-de-France,
+                  abritant le site historique <strong>STMicroelectronics / Altis Semiconductor</strong>.
                 </p>
                 <p>
                   Côté transports, {CITY} est traversée par l&apos;<strong>autoroute A6</strong> et la <strong>N7</strong>,
@@ -299,7 +285,7 @@ export default function TaxiCorbeilEssonnes() {
               <span className="text-gray-500"> — Avis clients vérifiés</span>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {avisClients.map((avis, index) => (
                 <div key={index} className="bg-gray-50 rounded-xl p-6 border border-gray-200">
                   <div className="flex items-center gap-1 mb-3">
@@ -418,7 +404,7 @@ export default function TaxiCorbeilEssonnes() {
                 Nos services à {CITY}
               </h2>
 
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid md:grid-cols-3 gap-8">
                 <div>
                   <div className="flex items-center gap-3 mb-3">
                     <Plane className="w-6 h-6 text-yellow-500" />
@@ -440,18 +426,6 @@ export default function TaxiCorbeilEssonnes() {
                     Desserte de la gare RER D de Corbeil-Essonnes, des gares d&apos;Essonnes-Robinson, Moulin Galant et de
                     la <Link href="/taxi-gare-massy-tgv" className="text-yellow-600 underline">gare Massy TGV</Link> pour
                     vos voyages grandes lignes.
-                  </p>
-                </div>
-
-                <div>
-                  <div className="flex items-center gap-3 mb-3">
-                    <Shield className="w-6 h-6 text-yellow-500" />
-                    <h3 className="text-xl font-bold text-gray-900">Transport médical CPAM</h3>
-                  </div>
-                  <p className="text-gray-600">
-                    <Link href="/taxi-conventionne-cpam-91" className="text-yellow-600 underline">Taxi conventionné CPAM</Link> pour
-                    vos trajets vers l&apos;hôpital Sud Francilien (CHSF), les centres de dialyse et cabinets médicaux.
-                    Prise en charge administrative simplifiée sur bon de transport.
                   </p>
                 </div>
 

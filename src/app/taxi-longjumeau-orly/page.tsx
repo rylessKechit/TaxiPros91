@@ -7,7 +7,7 @@ import BookingForm from '@/components/BookingForm'
 import { FAQSchema, ServiceSchema } from '@/components/seo/Schemas'
 import { SITE } from '@/lib/site'
 import { popularRoutes } from '@/lib/routes'
-import { Phone, Clock, CheckCircle, Star, CreditCard, Shield, Plane, HelpCircle, MapPin, Car, Briefcase, Route as RouteIcon } from 'lucide-react'
+import { Phone, Clock, CheckCircle, Star, CreditCard, Plane, HelpCircle, MapPin, Car, Briefcase, Route as RouteIcon } from 'lucide-react'
 
 const ROUTE = popularRoutes.find(r => r.slug === 'taxi-longjumeau-orly')!
 const FROM = ROUTE.from
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   description: `Taxi ${FROM} → Orly : tarif fixe dès ${PRICE_MIN}€, ${DURATION} min, suivi de vol, tous terminaux. Réservez 24h/24 au ${SITE.phone.display}.`,
   openGraph: {
     title: `Taxi ${FROM} → Orly : tarif fixe dès ${PRICE_MIN}€`,
-    description: `Transfert taxi ${FROM} Aéroport d'Orly. Tarif fixe, suivi de vol, prise en charge 24h/24 dans tout Longjumeau (centre, hôpital, gare RER C).`,
+    description: `Transfert taxi ${FROM} Aéroport d'Orly. Tarif fixe, suivi de vol, prise en charge 24h/24 dans tout Longjumeau (centre, gare RER C, Balizy).`,
     url: URL,
   },
   alternates: { canonical: URL },
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: `Quel est le prix d'un taxi ${FROM} → Aéroport Orly ?`,
-    a: `Le prix d'un taxi de ${FROM} vers l'aéroport d'Orly est compris entre ${PRICE_MIN}€ et ${PRICE_MAX}€ selon l'heure (tarif jour ou tarif nuit/dimanche/jours fériés) et les conditions de circulation. Ce tarif est fixe, communiqué à la réservation et inclut la prise en charge à votre adresse (centre-ville, quartier de la gare RER C, hôpital), l'attente au terminal et l'aide aux bagages.`,
+    a: `Le prix d'un taxi de ${FROM} vers l'aéroport d'Orly est compris entre ${PRICE_MIN}€ et ${PRICE_MAX}€ selon l'heure (tarif jour ou tarif nuit/dimanche/jours fériés) et les conditions de circulation. Ce tarif est fixe, communiqué à la réservation et inclut la prise en charge à votre adresse (centre-ville, quartier de la gare RER C, Balizy), l'attente au terminal et l'aide aux bagages.`,
   },
   {
     q: `Combien de temps dure le trajet ${FROM} Orly en taxi ?`,
@@ -42,12 +42,12 @@ const faqs = [
     a: `Trois options : appelez le ${SITE.phone.display} disponible 24h/24, utilisez le formulaire de réservation en ligne (confirmation immédiate par email et SMS), ou réservez à l'avance pour un trajet matinal. Pour un vol tôt le matin depuis Longjumeau, nous recommandons de réserver au moins la veille (J-1).`,
   },
   {
-    q: `Desservez-vous l'hôpital de ${FROM} et la gare RER C ?`,
-    a: `Oui, nous prenons en charge à toutes les adresses de Longjumeau : centre-ville, gare RER C Longjumeau, hôpital de Longjumeau (Groupe Hospitalier Nord-Essonne), quartier Saint-Martin, Balizy, et ZAE de Longjumeau. Nous proposons également le transport conventionné CPAM pour les sorties d'hôpital vers Orly ou Paris.`,
+    q: `Desservez-vous la gare RER C de ${FROM} ?`,
+    a: `Oui, nous prenons en charge à toutes les adresses de Longjumeau : centre-ville, gare RER C Longjumeau, quartier Saint-Martin, Balizy, et ZAE de Longjumeau.`,
   },
   {
     q: 'Quels moyens de paiement acceptez-vous ?',
-    a: `Tous nos taxis acceptent la carte bancaire (Visa, Mastercard, American Express), les espèces et les bons de transport CPAM. La facturation entreprise est disponible sur demande pour vos déplacements professionnels depuis Longjumeau vers Orly.`,
+    a: `Tous nos taxis acceptent la carte bancaire (Visa, Mastercard, American Express) et les espèces. La facturation entreprise est disponible sur demande pour vos déplacements professionnels depuis Longjumeau vers Orly.`,
   },
   {
     q: `Proposez-vous l'aller-retour ${FROM} ↔ Orly ?`,
@@ -78,13 +78,11 @@ const usp = [
   { icon: Clock, title: 'Disponible 24h/24', desc: `Vols tôt le matin, vols de nuit, week-ends : nous sommes là à toute heure pour votre trajet ${FROM} Orly.` },
   { icon: Plane, title: 'Suivi de vol inclus', desc: 'Votre numéro de vol est tracké en temps réel : aucune attente facturée en cas de retard.' },
   { icon: CreditCard, title: 'Tarif fixe sans surprise', desc: `Prix communiqué à la réservation, entre ${PRICE_MIN}€ et ${PRICE_MAX}€. Pas de compteur qui tourne dans les bouchons.` },
-  { icon: Shield, title: 'Transport conventionné CPAM', desc: 'Spécialistes des transferts depuis l\'hôpital de Longjumeau, prise en charge médicale et bons CPAM acceptés.' },
 ]
 
 const avis = [
   { nom: 'Nadia K. (Longjumeau centre)', note: 5, texte: `Réservé pour un vol à 7h depuis Orly 2. Chauffeur ponctuel à 5h15, trajet rapide par l'A6, prix annoncé respecté. Bien plus simple que le RER C avec mes deux valises.`, date: 'Mars 2025' },
   { nom: 'Marc V. (quartier Balizy)', note: 5, texte: `Je prends TAXI Pro 91 chaque mois pour mes déplacements pros vers Orly. Toujours ponctuel, voiture propre, et la facturation entreprise simplifie ma comptabilité.`, date: 'Février 2025' },
-  { nom: 'Sylvie P. (sortie hôpital)', note: 5, texte: `Sortie de l'hôpital de Longjumeau avec un bon CPAM, transfert vers Orly pour rejoindre ma famille. Chauffeur très attentionné, voiture confortable, pas un euro à avancer.`, date: 'Janvier 2025' },
   { nom: 'Karim H. (gare Longjumeau)', note: 5, texte: `Aller-retour Longjumeau-Orly pour un week-end à Marrakech. Tarif imbattable comparé aux applications VTC, chauffeur sympa, recommandé sans hésiter.`, date: 'Avril 2025' },
 ]
 
@@ -134,14 +132,14 @@ export default function TaxiLongjumeauOrly() {
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                   Votre <strong>taxi {FROM} Orly</strong> au tarif fixe, sans surprise.
                   Trajet rapide en <strong>{DURATION} minutes</strong> via la RD117 puis l'A6 et l'A106, prise en charge à votre adresse
-                  à {FROM} (centre, hôpital, gare RER C, Balizy) et dépose directe à votre terminal (Orly 1, 2, 3 ou 4). Service 24h/24.
+                  à {FROM} (centre, gare RER C, Balizy) et dépose directe à votre terminal (Orly 1, 2, 3 ou 4). Service 24h/24.
                 </p>
 
                 <div className="grid grid-cols-2 gap-3 mb-6">
                   <div className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" /><span className="text-gray-700 text-sm">Tarif fixe garanti</span></div>
                   <div className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" /><span className="text-gray-700 text-sm">Suivi de vol inclus</span></div>
                   <div className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" /><span className="text-gray-700 text-sm">Tous terminaux Orly</span></div>
-                  <div className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" /><span className="text-gray-700 text-sm">Conventionné CPAM</span></div>
+                  <div className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" /><span className="text-gray-700 text-sm">CB acceptée</span></div>
                 </div>
 
                 <div className="flex flex-wrap gap-3">
@@ -172,7 +170,7 @@ export default function TaxiLongjumeauOrly() {
               <p className="text-gray-600 mb-8">
                 Tarification claire et fixe, communiquée lors de la réservation. Aucun supplément caché.
                 Voici notre grille indicative pour le trajet {FROM} Orly, applicable depuis tous les quartiers
-                (centre-ville, gare RER C, hôpital de Longjumeau, Balizy, Saint-Martin).
+                (centre-ville, gare RER C, Balizy, Saint-Martin).
               </p>
 
               <div className="overflow-x-auto rounded-xl border border-gray-200">
@@ -267,8 +265,7 @@ export default function TaxiLongjumeauOrly() {
               </p>
 
               <p className="text-gray-600">
-                Pour les patients sortant de l'<strong>hôpital de Longjumeau</strong> (Groupe Hospitalier Nord-Essonne), nous avons un accès
-                privilégié au parking de l'hôpital. Pour les voyageurs venant de la <strong>gare RER C de Longjumeau</strong>,
+                Pour les voyageurs venant de la <strong>gare RER C de Longjumeau</strong>,
                 notre standard peut suivre votre arrivée et synchroniser la prise en charge.
               </p>
             </div>
@@ -388,9 +385,9 @@ export default function TaxiLongjumeauOrly() {
               Pourquoi choisir TAXI Pro 91 pour votre trajet {FROM} → Orly
             </h2>
             <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
-              Plus de 10 ans d'expérience sur l'axe Longjumeau-Orly, partenaire de l'hôpital de Longjumeau pour les transports médicaux.
+              Plus de 10 ans d'expérience sur l'axe Longjumeau-Orly.
             </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {usp.map(u => {
                 const Icon = u.icon
                 return (
@@ -418,7 +415,7 @@ export default function TaxiLongjumeauOrly() {
               <span className="font-bold text-gray-900">Avis vérifiés</span>
               <span className="text-gray-500">Avis clients vérifiés</span>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {avis.map((a, i) => (
                 <div key={i} className="bg-gray-50 rounded-xl p-6 border border-gray-200">
                   <div className="flex items-center gap-1 mb-3">
@@ -508,7 +505,7 @@ export default function TaxiLongjumeauOrly() {
                   <span className="text-sm font-medium">Ville</span>
                 </div>
                 <h3 className="font-bold text-gray-900 text-lg mb-2">Taxi {FROM}</h3>
-                <p className="text-gray-600 text-sm mb-3">Toutes nos prestations à {FROM} : gares, aéroports, hôpital, transport conventionné CPAM.</p>
+                <p className="text-gray-600 text-sm mb-3">Toutes nos prestations à {FROM} : gares, aéroports, Paris.</p>
                 <span className="text-yellow-600 font-medium text-sm">Voir la page ville</span>
               </Link>
             </div>

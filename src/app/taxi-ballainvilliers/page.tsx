@@ -28,7 +28,6 @@ const faqs = [
   { q: 'Quel delai pour avoir un taxi a Ballainvilliers ?', a: 'En moyenne, un taxi peut etre disponible a Ballainvilliers en 10 a 15 minutes. Etant un village residentiel calme, nous recommandons de reserver a l\'avance pour garantir votre prise en charge, surtout pour les trajets aeroport.' },
   { q: 'Desservez-vous les zones pavillonnaires de Ballainvilliers ?', a: 'Oui, nous desservons tous les quartiers de Ballainvilliers : le Centre-bourg, la zone pavillonnaire, et les secteurs proches des Music\'Halles. Nos chauffeurs connaissent parfaitement les rues du village.' },
   { q: 'L\'acces a l\'A10 est-il rapide depuis Ballainvilliers ?', a: 'Oui, Ballainvilliers beneficie d\'un acces direct a l\'autoroute A10 en quelques minutes, ce qui permet des trajets rapides vers Paris, Orly et les autres destinations. Nos chauffeurs optimisent les itineraires selon le trafic.' },
-  { q: 'Proposez-vous le transport medical a Ballainvilliers ?', a: 'Oui, nous sommes conventionnes CPAM pour le transport medical a Ballainvilliers. Nous assurons vos trajets vers les hopitaux, cliniques et centres medicaux de la region avec prise en charge de votre bon de transport.' },
   { q: 'Peut-on reserver un taxi pour un aller-retour depuis Ballainvilliers ?', a: 'Absolument ! Nous proposons des forfaits aller-retour avantageux, notamment pour les trajets gare et aeroport. Ideal pour les habitants de ce village residentiel sans transports en commun directs.' },
 ]
 
@@ -48,7 +47,7 @@ const quartiers = [
 
 const avantages = [
   { icon: Clock, title: 'Disponible 24h/24', description: 'Service de taxi a Ballainvilliers jour et nuit, week-ends et jours feries inclus.' },
-  { icon: CreditCard, title: 'Paiement flexible', description: 'CB, especes, bons CPAM. Facturation entreprise sur demande.' },
+  { icon: CreditCard, title: 'Paiement flexible', description: 'CB, especes. Facturation entreprise sur demande.' },
   { icon: Shield, title: 'Chauffeurs professionnels', description: 'Conducteurs experimentes connaissant parfaitement ce village residentiel.' },
   { icon: Star, title: 'Avis clients vérifiés', description: 'Service de qualité reconnu en Essonne. Satisfaction garantie.' },
 ]
@@ -85,10 +84,6 @@ const faqItems = [
     answer: 'Absolument ! Ballainvilliers beneficie d\'une situation privilegiee a proximite immediate de l\'autoroute A10. Cet acces permet des trajets rapides vers Paris (30 min), Orly (15 min) et le sud de la France. Nos chauffeurs connaissent les meilleurs horaires pour eviter les bouchons.'
   },
   {
-    question: 'Proposez-vous le transport medical a Ballainvilliers ?',
-    answer: 'Oui, nous sommes conventionnes par la CPAM pour le transport medical. Nous assurons vos trajets vers les hopitaux, cliniques, centres de dialyse et cabinets medicaux de la region. Presentez votre bon de transport et nous nous occupons des formalites. Service particulierement apprecie dans ce village sans transports en commun.'
-  },
-  {
     question: 'Peut-on reserver pour un aller-retour ?',
     answer: 'Oui, nous proposons des forfaits aller-retour particulierement avantageux pour les habitants de Ballainvilliers, notamment pour les trajets vers les gares et aeroports. Le chauffeur vous attend sur place et vous ramene a votre domicile. Ideal pour ce village residentiel sans acces direct aux transports en commun.'
   }
@@ -103,7 +98,7 @@ export default function TaxiBallainvilliers() {
       {/* Schema.org JSON-LD */}
       <ServiceSchema
         name="Taxi à Ballainvilliers"
-        description="Service de taxi professionnel à Ballainvilliers (91160). Réservation 24h/24, transferts aéroport, gare, transport médical CPAM."
+        description="Service de taxi professionnel à Ballainvilliers (91160). Réservation 24h/24, transferts aéroport et gare."
         url="https://www.taxipro91.com/taxi-ballainvilliers"
         areaServed={['Ballainvilliers']}
       />
@@ -491,19 +486,6 @@ export default function TaxiBallainvilliers() {
                   Notre service couvre tous les terminaux : Orly 1, Orly 2, Orly 3 et Orly 4.
                   Le tarif de 25EUR a 35EUR est fixe et connu a l'avance, sans mauvaise surprise a l'arrivee.
                   Pour les departs tres matinaux (4h-6h), nous assurons une prise en charge ponctuelle dans votre quartier pavillonnaire.
-                </p>
-
-                <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Transport medical conventionne CPAM</h3>
-                <p>
-                  Nous sommes <strong>agrees par la CPAM</strong> pour le transport medical assis, un service particulierement
-                  utile dans un village sans transports en commun comme Ballainvilliers. Si vous disposez d'une
-                  prescription medicale de transport, nous assurons vos trajets vers les hopitaux, cliniques,
-                  centres de dialyse et cabinets medicaux de la region.
-                </p>
-                <p>
-                  Nos chauffeurs sont formes a l'accompagnement des personnes a mobilite reduite et font preuve
-                  de patience et de bienveillance. La prise en charge administrative est simplifiee :
-                  presentez simplement votre bon de transport.
                 </p>
 
                 <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Connaissance parfaite du village et de ses quartiers</h3>

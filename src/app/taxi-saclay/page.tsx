@@ -28,7 +28,7 @@ const faqs = [
   { q: 'Y a-t-il des transports en commun sur le plateau de Saclay ?', a: 'Les transports en commun sur le plateau de Saclay sont limités à quelques lignes de bus. En attendant l\'arrivée de la ligne 18 du métro, le taxi reste le moyen le plus efficace pour se déplacer, surtout le soir et le week-end.' },
   { q: 'Pouvez-vous récupérer des chercheurs ou visiteurs à l\'aéroport pour le CEA ?', a: 'Absolument ! Nous assurons régulièrement les transferts aéroport (Orly et CDG) pour les chercheurs, visiteurs et professionnels se rendant au CEA, à l\'Université Paris-Saclay ou dans les entreprises du plateau.' },
   { q: 'Quel délai pour avoir un taxi à Saclay ?', a: 'En moyenne, un taxi peut être disponible à Saclay en 15 à 20 minutes. Le plateau étant moins desservi que les villes voisines, nous recommandons de réserver à l\'avance pour garantir votre prise en charge.' },
-  { q: 'Acceptez-vous les paiements par carte bancaire ?', a: 'Oui, tous nos taxis acceptent le paiement par carte bancaire (Visa, Mastercard), en espèces, et les bons de transport CPAM. Facturation entreprise disponible pour les sociétés du plateau.' },
+  { q: 'Acceptez-vous les paiements par carte bancaire ?', a: 'Oui, tous nos taxis acceptent le paiement par carte bancaire (Visa, Mastercard), et en espèces. Facturation entreprise disponible pour les sociétés du plateau.' },
   { q: 'Proposez-vous des forfaits pour les entreprises tech de Saclay ?', a: 'Oui, nous proposons des comptes entreprise avec facturation mensuelle et tarifs négociés pour les sociétés du plateau de Saclay. Idéal pour les déplacements réguliers de vos collaborateurs et visiteurs.' },
 ]
 
@@ -86,7 +86,7 @@ const faqItems = [
   },
   {
     question: 'Acceptez-vous les paiements par carte bancaire ?',
-    answer: 'Oui, tous nos véhicules sont équipés de terminaux de paiement. Nous acceptons les cartes Visa, Mastercard, American Express, ainsi que les espèces et les bons de transport CPAM. Facturation entreprise disponible pour les sociétés et laboratoires du plateau.'
+    answer: 'Oui, tous nos véhicules sont équipés de terminaux de paiement. Nous acceptons les cartes Visa, Mastercard, American Express, ainsi que les espèces. Facturation entreprise disponible pour les sociétés et laboratoires du plateau.'
   },
   {
     question: 'Proposez-vous des forfaits pour les entreprises tech de Saclay ?',
@@ -103,7 +103,7 @@ export default function TaxiSaclay() {
       {/* Schema.org JSON-LD */}
       <ServiceSchema
         name="Taxi à Saclay"
-        description="Service de taxi professionnel à Saclay (91400). Réservation 24h/24, transferts aéroport, gare, transport médical CPAM."
+        description="Service de taxi professionnel à Saclay (91400). Réservation 24h/24, transferts aéroport et gare."
         url="https://www.taxipro91.com/taxi-saclay"
         areaServed={['Saclay']}
       />
@@ -505,18 +505,6 @@ export default function TaxiSaclay() {
                   Transferts de collaborateurs, accueil de clients internationaux, trajets vers les aéroports...
                   Nous assurons tous vos déplacements professionnels avec ponctualité et discrétion.
                   De nombreuses entreprises du plateau nous font confiance pour le transport de leurs équipes.
-                </p>
-
-                <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Transport médical conventionné CPAM</h3>
-                <p>
-                  Nous sommes <strong>agréés par la CPAM</strong> pour le transport médical assis. Si vous disposez d'une
-                  prescription médicale de transport, nous assurons vos trajets vers les hôpitaux, cliniques et
-                  centres médicaux de la région depuis Saclay.
-                </p>
-                <p>
-                  Nos chauffeurs sont formés à l'accompagnement des personnes à mobilité réduite et font preuve
-                  de patience et de bienveillance. La prise en charge administrative est simplifiée :
-                  présentez simplement votre bon de transport.
                 </p>
               </div>
 

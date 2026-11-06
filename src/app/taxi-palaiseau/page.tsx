@@ -103,7 +103,7 @@ export default function TaxiPalaiseau() {
       {/* Schema.org JSON-LD */}
       <ServiceSchema
         name="Taxi à Palaiseau"
-        description="Service de taxi professionnel à Palaiseau (91120). Réservation 24h/24, transferts aéroport, gare, transport médical CPAM."
+        description="Service de taxi professionnel à Palaiseau (91120). Réservation 24h/24, transferts aéroport et gare."
         url="https://www.taxipro91.com/taxi-palaiseau"
         areaServed={['Palaiseau']}
       />

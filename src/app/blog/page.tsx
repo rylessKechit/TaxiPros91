@@ -47,7 +47,7 @@ export default function BlogHubPage() {
               </h1>
               <p className="text-lg text-gray-600">
                 Tout ce qu&apos;il faut savoir pour vos déplacements en Essonne : tarifs, aéroports, gares,
-                transport de nuit, transport médical… Nos chauffeurs partagent leur expertise pour vous aider à
+                transport de nuit… Nos chauffeurs partagent leur expertise pour vous aider à
                 voyager mieux.
               </p>
             </div>

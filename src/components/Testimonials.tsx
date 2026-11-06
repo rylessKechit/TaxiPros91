@@ -16,13 +16,6 @@ const testimonials = [
     date: 'Décembre 2024',
   },
   {
-    name: 'Sophie M.',
-    location: 'Longjumeau',
-    service: 'Transport médical',
-    text: 'Excellent service pour mes rendez-vous médicaux hebdomadaires. Les chauffeurs sont patients, m\'aident à monter et descendre du véhicule, et me raccompagnent jusqu\'à ma porte. Un grand merci à toute l\'équipe !',
-    date: 'Janvier 2025',
-  },
-  {
     name: 'Jean-Pierre R.',
     location: 'Antony',
     service: 'Course quotidienne',

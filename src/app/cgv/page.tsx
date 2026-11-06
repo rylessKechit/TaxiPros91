@@ -97,7 +97,6 @@ const articles = [
         <ul className="list-disc pl-6 space-y-1 my-3">
           <li><strong>Espèces</strong> (jusqu&apos;à 1 000 € selon la réglementation en vigueur) ;</li>
           <li><strong>Carte bancaire</strong> (Visa, Mastercard, American Express) via terminal embarqué ;</li>
-          <li><strong>Bon de transport CPAM</strong> pour les courses conventionnées (transport médical) ;</li>
           <li><strong>Facturation entreprise</strong> sur compte client préalablement ouvert, paiement à 30 jours fin de mois.</li>
         </ul>
         <p>

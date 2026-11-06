@@ -42,7 +42,7 @@ export default function Hero() {
               </h1>
 
               <p className="text-sm sm:text-xl md:text-2xl text-gray-200 mb-4 sm:mb-6 lg:mb-8 max-w-lg">
-                Réservation rapide • Transferts Orly &amp; CDG • Conventionné CPAM • <strong className="text-white">Avis clients vérifiés</strong>.
+                Réservation rapide • Transferts Orly &amp; CDG • <strong className="text-white">Avis clients vérifiés</strong>.
               </p>
 
               {/* Valeurs */}

@@ -28,10 +28,10 @@ const URL = `${SITE.url}/taxi-evry-courcouronnes`
 
 export const metadata: Metadata = {
   title: `Taxi Évry-Courcouronnes (${CP}) : Orly 24h/24`,
-  description: `Taxi à Évry-Courcouronnes 24h/24 : Orly, CDG, RER D, Génopole, hôpital. Tarifs fixes, CB et CPAM. Réservez au ${SITE.phone.display}.`,
+  description: `Taxi à Évry-Courcouronnes 24h/24 : Orly, CDG, RER D, Génopole. Tarifs fixes, CB acceptée. Réservez au ${SITE.phone.display}.`,
   openGraph: {
     title: `Taxi Évry-Courcouronnes (${CP}) : Orly 24h/24`,
-    description: `Votre taxi à Évry-Courcouronnes : aéroports Orly et CDG, gare RER D, Génopole, hôpital Sud Francilien.`,
+    description: `Votre taxi à Évry-Courcouronnes : aéroports Orly et CDG, gare RER D, Génopole.`,
     url: URL,
   },
   alternates: {
@@ -66,13 +66,12 @@ const quartiers = [
 const avantages = [
   { icon: Clock, title: 'Disponible 24h/24', description: 'Service de taxi à Évry-Courcouronnes jour et nuit, week-ends et jours fériés inclus.' },
   { icon: Shield, title: 'Chauffeurs professionnels', description: 'Conducteurs expérimentés, véhicules récents, propres et entretenus.' },
-  { icon: CreditCard, title: 'Paiement flexible', description: 'CB, espèces, bons CPAM. Facturation entreprise sur demande.' },
+  { icon: CreditCard, title: 'Paiement flexible', description: 'CB, espèces. Facturation entreprise sur demande.' },
   { icon: Star, title: 'Avis clients vérifiés', description: 'Service de qualité reconnu en Essonne. Satisfaction garantie.' },
 ]
 
 const avisClients = [
   { nom: 'Karim B.', note: 5, texte: 'Pris en charge à Évry tôt le matin pour aller à Orly, chauffeur ponctuel et très courtois. Tarif respecté. Je recommande !', date: 'Février 2025' },
-  { nom: 'Isabelle T.', note: 5, texte: 'Transport médical depuis Courcouronnes vers l\'hôpital Sud Francilien, prise en charge CPAM nickel. Chauffeur très patient.', date: 'Janvier 2025' },
   { nom: 'Mehdi A.', note: 5, texte: 'Aller-retour Évry, gare Massy TGV pour un déplacement pro. Véhicule premium, conduite calme. Parfait.', date: 'Décembre 2024' },
   { nom: 'Sandrine R.', note: 5, texte: 'Réservation la veille pour un vol tôt à CDG, le chauffeur était devant chez moi 10 min avant. Service top.', date: 'Mars 2025' },
 ]
@@ -87,16 +86,12 @@ const faqs = [
     a: `Pour réserver un taxi à Évry-Courcouronnes, trois options : appelez le ${SITE.phone.display} disponible 24h/24, utilisez notre formulaire de réservation en ligne, ou envoyez vos coordonnées par SMS. La confirmation est immédiate et un SMS de rappel vous est envoyé avant la course.`,
   },
   {
-    q: `Proposez-vous le transport médical conventionné à Évry-Courcouronnes ?`,
-    a: `Oui, nous sommes conventionnés CPAM pour le transport médical assis. Nous assurons vos trajets vers l'hôpital Sud Francilien de Corbeil-Essonnes, les centres de dialyse, cliniques et cabinets médicaux. Présentez simplement votre bon de transport.`,
-  },
-  {
     q: `Quel délai pour avoir un taxi à Évry-Courcouronnes ?`,
     a: `En réservation immédiate, un taxi peut être à votre adresse à Évry-Courcouronnes en 10 à 20 minutes selon le quartier et l'heure. Pour les trajets vers les aéroports ou gares, nous recommandons de réserver au moins 2 heures à l'avance.`,
   },
   {
     q: `Acceptez-vous les paiements par carte bancaire ?`,
-    a: `Oui, tous nos véhicules sont équipés de terminaux de paiement. Nous acceptons les cartes Visa, Mastercard, American Express, les espèces et les bons de transport CPAM. Facturation entreprise disponible.`,
+    a: `Oui, tous nos véhicules sont équipés de terminaux de paiement. Nous acceptons les cartes Visa, Mastercard, American Express et les espèces. Facturation entreprise disponible.`,
   },
   {
     q: `Desservez-vous la gare d'Évry-Courcouronnes Centre (RER D) ?`,
@@ -105,10 +100,6 @@ const faqs = [
   {
     q: `Effectuez-vous des courses vers le Génopole ou l'Université d'Évry ?`,
     a: `Oui, nous transportons quotidiennement des collaborateurs, chercheurs et étudiants vers le Génopole, l'Université d'Évry-Val-d'Essonne et les sièges sociaux implantés sur le campus. Comptes entreprise et facturation mensuelle disponibles.`,
-  },
-  {
-    q: `Vos taxis sont-ils équipés pour les personnes à mobilité réduite ?`,
-    a: `Nous disposons de véhicules adaptés aux personnes à mobilité réduite (PMR). Merci de le préciser lors de votre réservation afin que nous puissions vous envoyer le véhicule approprié.`,
   },
 ]
 
@@ -120,7 +111,7 @@ export default function TaxiEvryCourcouronnes() {
 
       <ServiceSchema
         name={`Taxi ${CITY}`}
-        description={`Service de taxi professionnel à ${CITY} (${CP}), 24h/24. Transferts Orly, CDG, gare Massy TGV, gare RER D, Génopole, transport médical CPAM.`}
+        description={`Service de taxi professionnel à ${CITY} (${CP}), 24h/24. Transferts Orly, CDG, gare Massy TGV, gare RER D, Génopole.`}
         url={URL}
         areaServed={[CITY, 'Essonne']}
       />
@@ -130,7 +121,7 @@ export default function TaxiEvryCourcouronnes() {
         {/* Bandeau confiance */}
         <section className="bg-yellow-400 py-3">
           <div className="container mx-auto px-4 text-center text-black text-sm md:text-base font-medium">
-            24h/24 • CB acceptée • Conventionné CPAM • Appelez le{' '}
+            24h/24 • CB acceptée • Appelez le{' '}
             <a href={SITE.phone.tel} className="font-bold hover:underline">{SITE.phone.display}</a>
           </div>
         </section>
@@ -168,7 +159,7 @@ export default function TaxiEvryCourcouronnes() {
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   <div className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-500" /> <span className="text-gray-700">Disponible 24h/24</span></div>
                   <div className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-500" /> <span className="text-gray-700">Tarifs transparents</span></div>
-                  <div className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-500" /> <span className="text-gray-700">CB & CPAM acceptés</span></div>
+                  <div className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-500" /> <span className="text-gray-700">CB acceptée</span></div>
                   <div className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-500" /> <span className="text-gray-700">Chauffeurs pro</span></div>
                 </div>
 
@@ -306,7 +297,7 @@ export default function TaxiEvryCourcouronnes() {
               <span className="text-gray-500"> — Avis clients vérifiés</span>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {avisClients.map((avis, index) => (
                 <div key={index} className="bg-gray-50 rounded-xl p-6 border border-gray-200">
                   <div className="flex items-center gap-1 mb-3">
@@ -429,7 +420,7 @@ export default function TaxiEvryCourcouronnes() {
                 Nos services à {CITY}
               </h2>
 
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid md:grid-cols-3 gap-8">
                 <div>
                   <div className="flex items-center gap-3 mb-3">
                     <Plane className="w-6 h-6 text-yellow-500" />
@@ -451,18 +442,6 @@ export default function TaxiEvryCourcouronnes() {
                     Desserte de la gare RER D d&apos;Évry-Courcouronnes Centre, des gares de Bras-de-Fer et Évry-Val-de-Seine,
                     et de la <Link href="/taxi-gare-massy-tgv" className="text-yellow-600 underline">gare Massy TGV</Link> pour
                     vos voyages grandes lignes vers Lyon, Marseille, Bordeaux ou Nantes.
-                  </p>
-                </div>
-
-                <div>
-                  <div className="flex items-center gap-3 mb-3">
-                    <Shield className="w-6 h-6 text-yellow-500" />
-                    <h3 className="text-xl font-bold text-gray-900">Transport médical CPAM</h3>
-                  </div>
-                  <p className="text-gray-600">
-                    <Link href="/taxi-conventionne-cpam-91" className="text-yellow-600 underline">Taxi conventionné CPAM</Link> pour
-                    vos trajets vers l&apos;hôpital Sud Francilien de Corbeil-Essonnes, les centres de dialyse et cabinets médicaux.
-                    Prise en charge administrative simplifiée sur présentation du bon de transport.
                   </p>
                 </div>
 

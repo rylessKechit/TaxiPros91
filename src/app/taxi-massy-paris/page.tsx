@@ -39,11 +39,11 @@ const faqs = [
   },
   {
     q: 'Comment réserver un taxi de Massy vers Paris ?',
-    a: `Trois options : appelez le ${SITE.phone.display} (24h/24), utilisez le formulaire en ligne (confirmation immédiate), ou réservez à l'avance pour un déplacement important (rendez-vous médical, train, événement). Les SMS de rappel sont envoyés systématiquement.`,
+    a: `Trois options : appelez le ${SITE.phone.display} (24h/24), utilisez le formulaire en ligne (confirmation immédiate), ou réservez à l'avance pour un déplacement important (train, rendez-vous d'affaires, événement). Les SMS de rappel sont envoyés systématiquement.`,
   },
   {
     q: 'Quels moyens de paiement acceptez-vous ?',
-    a: `Tous nos taxis acceptent la carte bancaire (Visa, Mastercard, American Express), les espèces et les bons de transport CPAM. La facturation entreprise mensuelle est possible pour vos déplacements professionnels Massy → Paris.`,
+    a: `Tous nos taxis acceptent la carte bancaire (Visa, Mastercard, American Express), et les espèces. La facturation entreprise mensuelle est possible pour vos déplacements professionnels Massy → Paris.`,
   },
   {
     q: 'Proposez-vous l\'aller-retour Massy ↔ Paris dans la journée ?',
@@ -58,8 +58,8 @@ const faqs = [
     a: `Les bagages standards (valises, sacs) sont inclus dans le tarif. Pour les bagages volumineux, les groupes jusqu'à 7 personnes ou les déménagements ponctuels, nous proposons notre service Van. Précisez votre besoin à la réservation.`,
   },
   {
-    q: 'Pouvez-vous me déposer à une adresse précise (hôtel, bureau, hôpital) ?',
-    a: `Bien sûr. Communiquez l'adresse exacte à la réservation (numéro, rue, arrondissement, code d'accès si nécessaire). Nos chauffeurs connaissent parfaitement Paris et utilisent le GPS pour vous déposer au plus près. Idéal pour les rendez-vous d'affaires, hôtels, hôpitaux ou théâtres.`,
+    q: 'Pouvez-vous me déposer à une adresse précise (hôtel, bureau, théâtre) ?',
+    a: `Bien sûr. Communiquez l'adresse exacte à la réservation (numéro, rue, arrondissement, code d'accès si nécessaire). Nos chauffeurs connaissent parfaitement Paris et utilisent le GPS pour vous déposer au plus près. Idéal pour les rendez-vous d'affaires, hôtels ou théâtres.`,
   },
 ]
 
@@ -80,7 +80,7 @@ const depotsParis = [
 
 const usp = [
   { icon: Clock, title: 'Disponible 24h/24', desc: 'Pour vos trains tôt le matin, vos sorties à Paris ou vos retours de soirée, toujours présent.' },
-  { icon: MapPin, title: 'Dépose précise', desc: 'À votre adresse exacte (hôtel, bureau, théâtre, gare, hôpital). Pas besoin de finir en métro.' },
+  { icon: MapPin, title: 'Dépose précise', desc: 'À votre adresse exacte (hôtel, bureau, théâtre, gare). Pas besoin de finir en métro.' },
   { icon: CreditCard, title: 'Tarif fixe annoncé', desc: `Entre ${PRICE_MIN}€ et ${PRICE_MAX}€ communiqué à la réservation. Pas de compteur dans les bouchons.` },
   { icon: Shield, title: 'Chauffeurs experts Paris', desc: 'Connaissance fine des axes parisiens, des itinéraires bis et des zones piétonnes.' },
 ]
@@ -88,7 +88,6 @@ const usp = [
 const avis = [
   { nom: 'Marie L. (Massy)', note: 5, texte: `Réservé pour un TGV à Gare de Lyon. Trajet en 35 minutes par la RN20 en évitant l'A6 chargée. Dépose pile devant l'entrée de la gare, je n'ai même pas eu à courir. Parfait.`, date: 'Avril 2025' },
   { nom: 'Pierre D. (Massy-Villaine)', note: 5, texte: `Aller-retour Massy ↔ Gare du Nord pour un Eurostar. Forfait avantageux, et au retour le chauffeur m'attendait avec une pancarte malgré l'heure tardive (23h45). Service au top.`, date: 'Mars 2025' },
-  { nom: 'Sophie M. (Atlantis)', note: 5, texte: `J'ai un rendez-vous médical mensuel à l'hôpital Necker (15e). Toujours pris en charge avec ma CPAM, chauffeur courtois et ponctuel. Bien mieux qu'un VTC.`, date: 'Février 2025' },
   { nom: 'Jean B. (Massy-Opéra)', note: 5, texte: `Soirée à Bastille avec mon épouse, retour à 1h du matin sans soucis. Tarif fixe annoncé, pas de surge comme les applications. Je recommande pour Paris.`, date: 'Janvier 2025' },
 ]
 
@@ -274,7 +273,7 @@ export default function TaxiMassyParis() {
                 Tous les points de dépose à Paris
               </h2>
               <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
-                Gares, quartiers d'affaires, hôtels, théâtres, hôpitaux : nous desservons l'ensemble
+                Gares, quartiers d'affaires, hôtels, théâtres : nous desservons l'ensemble
                 de la capitale. Indiquez votre adresse exacte à la réservation.
               </p>
 
@@ -376,7 +375,7 @@ export default function TaxiMassyParis() {
               <span className="font-bold text-gray-900">Avis vérifiés</span>
               <span className="text-gray-500">Avis clients vérifiés</span>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {avis.map((a, i) => (
                 <div key={i} className="bg-white rounded-xl p-6 border border-gray-200">
                   <div className="flex items-center gap-1 mb-3">
@@ -454,7 +453,7 @@ export default function TaxiMassyParis() {
                   <span className="text-sm font-medium">Ville</span>
                 </div>
                 <h3 className="font-bold text-gray-900 text-lg mb-2">Taxi {FROM}</h3>
-                <p className="text-gray-600 text-sm mb-3">Toutes nos prestations à {FROM} : gares, aéroports, transport médical.</p>
+                <p className="text-gray-600 text-sm mb-3">Toutes nos prestations à {FROM} : gares, aéroports, Paris.</p>
                 <span className="text-yellow-600 font-medium text-sm">Voir la page ville</span>
               </Link>
             </div>

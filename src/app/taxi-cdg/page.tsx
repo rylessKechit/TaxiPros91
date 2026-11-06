@@ -203,10 +203,6 @@ export default function TaxiCDG() {
                     <CreditCard className="w-4 h-4 text-yellow-500" />
                     CB acceptée
                   </div>
-                  <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg border border-gray-200 text-sm text-gray-700">
-                    <Shield className="w-4 h-4 text-yellow-500" />
-                    Conventionné CPAM
-                  </div>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4 mb-8">

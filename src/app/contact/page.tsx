@@ -39,14 +39,6 @@ const faqJsonLd = {
     },
     {
       '@type': 'Question',
-      name: 'Proposez-vous le transport médical ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Oui, nous sommes agréés par la CPAM pour le transport médical conventionné. Contactez-nous pour plus d\'informations sur la prise en charge.'
-      }
-    },
-    {
-      '@type': 'Question',
       name: 'Quelle est votre zone d\'intervention ?',
       acceptedAnswer: {
         '@type': 'Answer',
@@ -274,14 +266,6 @@ export default function Contact() {
                 <p className="text-gray-600">
                   Nous acceptons les paiements en espèces, par carte bancaire et par virement pour les entreprises.
                   Le paiement s'effectue à bord du véhicule.
-                </p>
-              </div>
-
-              <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-                <h3 className="font-bold text-gray-900 mb-2">Proposez-vous le transport médical ?</h3>
-                <p className="text-gray-600">
-                  Oui, nous sommes agréés par la CPAM pour le transport médical conventionné.
-                  Contactez-nous pour plus d'informations sur la prise en charge.
                 </p>
               </div>
 

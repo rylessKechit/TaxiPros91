@@ -24,11 +24,9 @@ export const metadata: Metadata = {
 const faqs = [
   { q: 'Quel est le prix d\'un taxi Massy → Orly ?', a: 'Le prix d\'un taxi de Massy vers l\'aéroport d\'Orly est d\'environ 25€ à 35€ selon l\'heure et le trafic. Ce tarif est fixe et comprend la prise en charge. Réservez à l\'avance pour bénéficier du meilleur tarif.' },
   { q: 'Comment réserver un taxi à Massy ?', a: 'Pour réserver un taxi à Massy, vous pouvez appeler le 01 80 85 91 91 disponible 24h/24, ou utiliser notre formulaire de réservation en ligne. La confirmation est immédiate et vous recevez un SMS de rappel.' },
-  { q: 'Proposez-vous le transport médical à Massy ?', a: 'Oui, nous sommes conventionnés CPAM pour le transport médical à Massy. Nous assurons vos trajets vers les hôpitaux, cliniques et centres médicaux avec prise en charge de votre bon de transport.' },
   { q: 'Quel délai pour avoir un taxi à Massy ?', a: 'En moyenne, un taxi peut être disponible à Massy en 10 à 15 minutes. Pour les trajets vers les gares ou aéroports, nous recommandons de réserver à l\'avance pour garantir votre prise en charge.' },
-  { q: 'Acceptez-vous les paiements par carte bancaire ?', a: 'Oui, tous nos taxis acceptent le paiement par carte bancaire (Visa, Mastercard), en espèces, et les bons de transport CPAM. Le paiement s\'effectue à la fin de la course.' },
+  { q: 'Acceptez-vous les paiements par carte bancaire ?', a: 'Oui, tous nos taxis acceptent le paiement par carte bancaire (Visa, Mastercard), et en espèces. Le paiement s\'effectue à la fin de la course.' },
   { q: 'Peut-on réserver un taxi pour un aller-retour Massy ?', a: 'Absolument ! Nous proposons des forfaits aller-retour avantageux, notamment pour les trajets gare et aéroport. Précisez votre besoin lors de la réservation pour obtenir le meilleur tarif.' },
-  { q: 'Vos taxis sont-ils équipés pour les personnes à mobilité réduite ?', a: 'Nous disposons de véhicules adaptés aux personnes à mobilité réduite (PMR). Merci de le préciser lors de votre réservation afin que nous puissions vous envoyer le véhicule approprié.' },
   { q: 'Y a-t-il un supplément pour les bagages ?', a: 'Non, les bagages standards sont inclus dans le tarif. Pour les bagages volumineux ou nombreux, nous vous recommandons notre service Van qui offre plus d\'espace sans supplément.' },
 ]
 
@@ -48,7 +46,7 @@ const quartiers = [
 
 const avantages = [
   { icon: Clock, title: 'Disponible 24h/24', description: 'Service de taxi à Massy jour et nuit, week-ends et jours fériés inclus.' },
-  { icon: CreditCard, title: 'Paiement flexible', description: 'CB, espèces, bons CPAM. Facturation entreprise sur demande.' },
+  { icon: CreditCard, title: 'Paiement flexible', description: 'CB, espèces. Facturation entreprise sur demande.' },
   { icon: Shield, title: 'Chauffeurs professionnels', description: 'Conducteurs expérimentés, véhicules récents et entretenus.' },
   { icon: Star, title: 'Avis clients vérifiés', description: 'Service de qualité reconnu en Essonne. Satisfaction garantie.' },
 ]
@@ -56,7 +54,6 @@ const avantages = [
 const avisClients = [
   { nom: 'Marie L.', note: 5, texte: 'Excellent service pour mon transfert Massy-Orly. Chauffeur ponctuel et véhicule très propre. Je recommande !', date: 'Janvier 2025' },
   { nom: 'Pierre D.', note: 5, texte: 'Taxi réservé pour la gare TGV, arrivé 5 minutes avant l\'heure. Prix conforme à l\'estimation. Parfait.', date: 'Décembre 2024' },
-  { nom: 'Sophie M.', note: 5, texte: 'Transport médical impeccable. Le chauffeur m\'a aidée avec mes béquilles. Très professionnel.', date: 'Janvier 2025' },
 ]
 
 const faqItems = [
@@ -69,24 +66,16 @@ const faqItems = [
     answer: 'Pour réserver un taxi à Massy, trois options s\'offrent à vous : appelez le 01 80 85 91 91 (disponible 24h/24), utilisez notre formulaire de réservation en ligne, ou envoyez un SMS. La confirmation est immédiate et vous recevez un rappel avant votre course.'
   },
   {
-    question: 'Proposez-vous le transport médical à Massy ?',
-    answer: 'Oui, nous sommes conventionnés par la CPAM (Caisse Primaire d\'Assurance Maladie) pour le transport médical. Nous assurons vos trajets vers les hôpitaux, cliniques, centres de dialyse et cabinets médicaux. Présentez votre bon de transport et nous nous occupons des formalités.'
-  },
-  {
     question: 'Quel délai pour avoir un taxi à Massy ?',
     answer: 'En réservation immédiate, un taxi peut être à votre adresse à Massy en 10 à 15 minutes en moyenne. Pour les trajets vers les gares ou aéroports, nous recommandons de réserver au moins 2 heures à l\'avance pour garantir la disponibilité.'
   },
   {
     question: 'Acceptez-vous les paiements par carte bancaire ?',
-    answer: 'Oui, tous nos véhicules sont équipés de terminaux de paiement. Nous acceptons les cartes Visa, Mastercard, American Express, ainsi que les espèces et les bons de transport CPAM. Facturation entreprise disponible sur demande.'
+    answer: 'Oui, tous nos véhicules sont équipés de terminaux de paiement. Nous acceptons les cartes Visa, Mastercard, American Express ainsi que les espèces. Facturation entreprise disponible sur demande.'
   },
   {
     question: 'Peut-on réserver un taxi pour un aller-retour ?',
     answer: 'Absolument ! Nous proposons des forfaits aller-retour particulièrement avantageux pour les trajets gare et aéroport. Le chauffeur vous attend sur place et vous ramène à votre point de départ. Précisez votre besoin lors de la réservation.'
-  },
-  {
-    question: 'Vos taxis sont-ils équipés pour les personnes à mobilité réduite ?',
-    answer: 'Nous disposons de véhicules adaptés aux personnes à mobilité réduite (PMR) et aux fauteuils roulants. Merci de le préciser lors de votre réservation afin que nous puissions vous envoyer le véhicule approprié.'
   },
   {
     question: 'Y a-t-il un supplément pour les bagages ?',
@@ -103,7 +92,7 @@ export default function TaxiMassy() {
       {/* Schema.org JSON-LD */}
       <ServiceSchema
         name="Taxi à Massy"
-        description="Service de taxi professionnel à Massy (91300). Réservation 24h/24, transferts aéroport, gare, transport médical CPAM."
+        description="Service de taxi professionnel à Massy (91300). Réservation 24h/24, transferts aéroport, gare."
         url="https://www.taxipro91.com/taxi-massy"
         areaServed={['Massy']}
       />
@@ -327,7 +316,7 @@ export default function TaxiMassy() {
               <span className="text-gray-500">Avis clients vérifiés</span>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
               {avisClients.map((avis, index) => (
                 <div key={index} className="bg-gray-50 rounded-xl p-6 border border-gray-200">
                   <div className="flex items-center gap-1 mb-3">
@@ -478,18 +467,6 @@ export default function TaxiMassy() {
                 <p>
                   Notre service couvre tous les terminaux : Orly 1, Orly 2, Orly 3 et Orly 4.
                   Le tarif est fixe et connu à l'avance, sans mauvaise surprise à l'arrivée.
-                </p>
-
-                <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Transport médical conventionné CPAM</h3>
-                <p>
-                  Nous sommes <strong>agréés par la CPAM</strong> pour le transport médical assis. Si vous disposez d'une
-                  prescription médicale de transport, nous assurons vos trajets vers les hôpitaux, cliniques,
-                  centres de dialyse et cabinets médicaux de la région.
-                </p>
-                <p>
-                  Nos chauffeurs sont formés à l'accompagnement des personnes à mobilité réduite et font preuve
-                  de patience et de bienveillance. La prise en charge administrative est simplifiée :
-                  présentez simplement votre bon de transport.
                 </p>
 
                 <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Transport professionnel et facturation entreprise</h3>

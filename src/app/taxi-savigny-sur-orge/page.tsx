@@ -28,7 +28,7 @@ const URL = `${SITE.url}/taxi-savigny-sur-orge`
 
 export const metadata: Metadata = {
   title: `Taxi Savigny-sur-Orge (${CP}) : Orly 24h/24`,
-  description: `Taxi à Savigny-sur-Orge 24h/24 : Orly (15 min), RER C, gare Massy TGV. Tarifs fixes, CB et CPAM. Réservez au ${SITE.phone.display}.`,
+  description: `Taxi à Savigny-sur-Orge 24h/24 : Orly (15 min), RER C, gare Massy TGV. Tarifs fixes, paiement CB. Réservez au ${SITE.phone.display}.`,
   openGraph: {
     title: `Taxi Savigny-sur-Orge (${CP}) : Orly 24h/24`,
     description: `Votre taxi à Savigny-sur-Orge : aéroport d'Orly à 15 min, RER C, gare de Massy TGV.`,
@@ -64,14 +64,13 @@ const quartiers = [
 const avantages = [
   { icon: Clock, title: 'Disponible 24h/24', description: 'Service de taxi à Savigny-sur-Orge jour et nuit, week-ends et jours fériés inclus.' },
   { icon: Shield, title: 'Chauffeurs professionnels', description: 'Conducteurs expérimentés, véhicules récents, propres et entretenus.' },
-  { icon: CreditCard, title: 'Paiement flexible', description: 'CB, espèces, bons CPAM. Facturation entreprise sur demande.' },
+  { icon: CreditCard, title: 'Paiement flexible', description: 'CB, espèces. Facturation entreprise sur demande.' },
   { icon: Star, title: 'Avis clients vérifiés', description: 'Service de qualité reconnu en Essonne. Satisfaction garantie.' },
 ]
 
 const avisClients = [
   { nom: 'Hélène M.', note: 5, texte: 'Transfert Savigny → Orly à 5h du matin, chauffeur ponctuel et sympa. Trajet de 15 minutes seulement, prix correct.', date: 'Février 2025' },
   { nom: 'Jérôme K.', note: 5, texte: 'Réservé un van pour 6 personnes vers Disneyland, super service et grande propreté du véhicule.', date: 'Mars 2025' },
-  { nom: 'Patricia D.', note: 5, texte: 'Transport régulier conventionné CPAM pour mes soins, équipe à l\'écoute et toujours à l\'heure depuis Grand-Vaux.', date: 'Janvier 2025' },
   { nom: 'Yannick L.', note: 5, texte: 'Course depuis la gare RER C de Savigny vers Paris en soirée, paiement CB sans souci. Top.', date: 'Décembre 2024' },
 ]
 
@@ -85,16 +84,12 @@ const faqs = [
     a: `Pour réserver un taxi à Savigny-sur-Orge, appelez le ${SITE.phone.display} disponible 24h/24, utilisez notre formulaire de réservation en ligne, ou envoyez vos coordonnées par SMS. Confirmation immédiate et SMS de rappel.`,
   },
   {
-    q: `Proposez-vous le transport médical à Savigny-sur-Orge ?`,
-    a: `Oui, nous sommes conventionnés CPAM pour le transport médical assis. Nous assurons les trajets vers les hôpitaux d'Athis-Mons, Juvisy, Longjumeau et Paris, ainsi que les centres de dialyse et cabinets médicaux. Bon de transport accepté.`,
-  },
-  {
     q: `Quel délai pour avoir un taxi à Savigny-sur-Orge ?`,
     a: `En réservation immédiate, un taxi peut être à votre adresse à Savigny-sur-Orge en 10 à 15 minutes selon le quartier. Pour les trajets vers les aéroports ou les gares, nous recommandons de réserver au moins 2 heures à l'avance.`,
   },
   {
     q: `Acceptez-vous les paiements par carte bancaire ?`,
-    a: `Oui, tous nos véhicules disposent d'un terminal de paiement. Cartes Visa, Mastercard, American Express, espèces et bons CPAM acceptés. Facturation entreprise possible sur demande.`,
+    a: `Oui, tous nos véhicules disposent d'un terminal de paiement. Cartes Visa, Mastercard, American Express et espèces acceptées. Facturation entreprise possible sur demande.`,
   },
   {
     q: `Desservez-vous la gare RER C de Savigny-sur-Orge ?`,
@@ -103,10 +98,6 @@ const faqs = [
   {
     q: `Effectuez-vous des courses depuis le lycée Jean-Baptiste-Corot ?`,
     a: `Oui, nous transportons régulièrement les lycéens et les visiteurs depuis et vers le lycée Jean-Baptiste-Corot, l'un des plus grands lycées d'Île-de-France. Service ponctuel ou récurrent disponible.`,
-  },
-  {
-    q: `Vos taxis sont-ils équipés pour les personnes à mobilité réduite ?`,
-    a: `Nous disposons de véhicules adaptés aux personnes à mobilité réduite (PMR). Précisez votre besoin lors de la réservation pour bénéficier du véhicule approprié.`,
   },
 ]
 
@@ -118,7 +109,7 @@ export default function TaxiSavignySurOrge() {
 
       <ServiceSchema
         name={`Taxi ${CITY}`}
-        description={`Service de taxi professionnel à ${CITY} (${CP}), 24h/24. Transferts Orly à 15 min, CDG, gare RER C, lycée Corot, transport médical CPAM.`}
+        description={`Service de taxi professionnel à ${CITY} (${CP}), 24h/24. Transferts Orly à 15 min, CDG, gare RER C, lycée Corot.`}
         url={URL}
         areaServed={[CITY, 'Essonne']}
       />
@@ -127,7 +118,7 @@ export default function TaxiSavignySurOrge() {
       <main>
         <section className="bg-yellow-400 py-3">
           <div className="container mx-auto px-4 text-center text-black text-sm md:text-base font-medium">
-            24h/24 • CB acceptée • Conventionné CPAM • Appelez le{' '}
+            24h/24 • CB acceptée • Appelez le{' '}
             <a href={SITE.phone.tel} className="font-bold hover:underline">{SITE.phone.display}</a>
           </div>
         </section>
@@ -165,7 +156,7 @@ export default function TaxiSavignySurOrge() {
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   <div className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-500" /> <span className="text-gray-700">Disponible 24h/24</span></div>
                   <div className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-500" /> <span className="text-gray-700">Tarifs transparents</span></div>
-                  <div className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-500" /> <span className="text-gray-700">CB & CPAM acceptés</span></div>
+                  <div className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-500" /> <span className="text-gray-700">CB acceptée</span></div>
                   <div className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-500" /> <span className="text-gray-700">Chauffeurs pro</span></div>
                 </div>
 
@@ -299,7 +290,7 @@ export default function TaxiSavignySurOrge() {
               <span className="text-gray-500"> — Avis clients vérifiés</span>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {avisClients.map((avis, index) => (
                 <div key={index} className="bg-gray-50 rounded-xl p-6 border border-gray-200">
                   <div className="flex items-center gap-1 mb-3">
@@ -440,18 +431,6 @@ export default function TaxiSavignySurOrge() {
                     Desserte de la gare RER C de Savigny-sur-Orge, des gares de Juvisy, Athis-Mons et de
                     la <Link href="/taxi-gare-massy-tgv" className="text-yellow-600 underline">gare Massy TGV</Link>{' '}
                     pour vos voyages grandes lignes.
-                  </p>
-                </div>
-
-                <div>
-                  <div className="flex items-center gap-3 mb-3">
-                    <Shield className="w-6 h-6 text-yellow-500" />
-                    <h3 className="text-xl font-bold text-gray-900">Transport médical CPAM</h3>
-                  </div>
-                  <p className="text-gray-600">
-                    <Link href="/taxi-conventionne-cpam-91" className="text-yellow-600 underline">Taxi conventionné CPAM</Link> pour
-                    vos trajets vers les hôpitaux d&apos;Athis-Mons, Juvisy, Longjumeau et Paris.
-                    Prise en charge administrative simplifiée sur bon de transport.
                   </p>
                 </div>
 

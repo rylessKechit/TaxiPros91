@@ -58,7 +58,7 @@ export default function PolitiqueConfidentialitePage() {
                   <li>
                     <strong>Via le formulaire de réservation :</strong> nom, prénom, numéro de téléphone, adresse email,
                     adresse de prise en charge et de destination, date et heure souhaitées, nombre de passagers,
-                    informations complémentaires (bagages, animal, PMR).
+                    informations complémentaires (bagages, animal).
                   </li>
                   <li>
                     <strong>Lors d&apos;un appel téléphonique :</strong> numéro de téléphone appelant (pour le suivi
@@ -147,7 +147,7 @@ export default function PolitiqueConfidentialitePage() {
                   <li>L&apos;équipe de {SITE.legalName} (dispatcher, chauffeurs concernés, comptabilité) ;</li>
                   <li>Notre hébergeur Vercel Inc. (stockage technique uniquement) ;</li>
                   <li>Notre prestataire d&apos;emailing transactionnel (pour les confirmations et rappels) ;</li>
-                  <li>Les autorités publiques sur demande légale (justice, fisc, URSSAF, CPAM pour les courses conventionnées).</li>
+                  <li>Les autorités publiques sur demande légale (justice, fisc, URSSAF).</li>
                 </ul>
               </section>
 

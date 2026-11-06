@@ -43,7 +43,7 @@ const faqs = [
   },
   {
     q: 'Quels moyens de paiement acceptez-vous ?',
-    a: `Tous nos taxis acceptent la carte bancaire (Visa, Mastercard, American Express), les espèces et les bons de transport CPAM. La facturation entreprise mensuelle est disponible sur demande pour vos déplacements professionnels.`,
+    a: `Tous nos taxis acceptent la carte bancaire (Visa, Mastercard, American Express) et les espèces. La facturation entreprise mensuelle est disponible sur demande pour vos déplacements professionnels.`,
   },
   {
     q: 'Proposez-vous l\'aller-retour Antony ↔ Orly ?',
@@ -491,7 +491,7 @@ export default function TaxiAntonyOrly() {
                   <span className="text-sm font-medium">Ville</span>
                 </div>
                 <h3 className="font-bold text-gray-900 text-lg mb-2">Taxi {FROM}</h3>
-                <p className="text-gray-600 text-sm mb-3">Toutes nos prestations à {FROM} : gares, aéroports, transport médical.</p>
+                <p className="text-gray-600 text-sm mb-3">Toutes nos prestations à {FROM} : gares, aéroports.</p>
                 <span className="text-yellow-600 font-medium text-sm">Voir la page ville</span>
               </Link>
             </div>

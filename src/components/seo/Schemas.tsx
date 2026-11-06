@@ -9,7 +9,7 @@ export function LocalBusinessSchema() {
     '@type': ['LocalBusiness', 'TaxiService'],
     '@id': ORG_ID,
     name: SITE.name,
-    description: 'Service de taxi professionnel en Essonne (91), 24h/24 et 7j/7. Transferts aéroport Orly et Roissy CDG, gare Massy TGV, transport médical conventionné CPAM.',
+    description: 'Service de taxi professionnel en Essonne (91), 24h/24 et 7j/7. Transferts aéroport Orly et Roissy CDG, gare Massy TGV.',
     url: SITE.url,
     telephone: SITE.phone.e164,
     email: SITE.email,
@@ -63,7 +63,6 @@ export function LocalBusinessSchema() {
       name: 'Services de taxi',
       itemListElement: [
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Transfert Aéroport Orly & CDG' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Taxi conventionné CPAM' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Transport professionnel et entreprise' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Transfert gare Massy TGV' } },
       ],

@@ -26,9 +26,8 @@ const faqs = [
   { q: 'Y a-t-il une gare à Verrières-le-Buisson ?', a: 'Non, Verrières-le-Buisson ne dispose pas de gare. Les habitants utilisent principalement la gare RER B d\'Antony (5 min en taxi) ou la gare Massy TGV (8 min en taxi). Notre service de taxi assure la liaison vers ces deux gares 24h/24.' },
   { q: 'Comment réserver un taxi à Verrières-le-Buisson ?', a: 'Pour réserver un taxi à Verrières-le-Buisson, vous pouvez appeler le 01 80 85 91 91 disponible 24h/24, ou utiliser notre formulaire de réservation en ligne. La confirmation est immédiate et vous recevez un SMS de rappel.' },
   { q: 'Quel délai pour avoir un taxi à Verrières-le-Buisson ?', a: 'En moyenne, un taxi peut être disponible à Verrières-le-Buisson en 10 à 15 minutes. Pour les trajets vers les gares ou aéroports, nous recommandons de réserver à l\'avance pour garantir votre prise en charge.' },
-  { q: 'Proposez-vous le transport médical à Verrières-le-Buisson ?', a: 'Oui, nous sommes conventionnés CPAM pour le transport médical à Verrières-le-Buisson. Nous assurons vos trajets vers les hôpitaux, cliniques et centres médicaux avec prise en charge de votre bon de transport.' },
   { q: 'Quel est le prix d\'un taxi pour rejoindre Antony depuis Verrières ?', a: 'Le trajet en taxi de Verrières-le-Buisson vers Antony (centre-ville ou gare RER B) coûte entre 10€ et 15€ pour environ 5 minutes de trajet. Ce tarif inclut la prise en charge et l\'attente si nécessaire.' },
-  { q: 'Acceptez-vous les paiements par carte bancaire ?', a: 'Oui, tous nos taxis acceptent le paiement par carte bancaire (Visa, Mastercard), en espèces, et les bons de transport CPAM. Le paiement s\'effectue à la fin de la course.' },
+  { q: 'Acceptez-vous les paiements par carte bancaire ?', a: 'Oui, tous nos taxis acceptent le paiement par carte bancaire (Visa, Mastercard) et en espèces. Le paiement s\'effectue à la fin de la course.' },
   { q: 'Desservez-vous tous les quartiers de Verrières-le-Buisson ?', a: 'Oui, nous intervenons dans tous les quartiers de Verrières-le-Buisson : Centre-bourg, Amblainvilliers, Les Antes, limite Igny, et tous les secteurs résidentiels. Prise en charge à votre domicile 24h/24.' },
 ]
 
@@ -48,7 +47,7 @@ const quartiers = [
 
 const avantages = [
   { icon: Clock, title: 'Disponible 24h/24', description: 'Service de taxi à Verrières-le-Buisson jour et nuit, week-ends et jours fériés inclus.' },
-  { icon: CreditCard, title: 'Paiement flexible', description: 'CB, espèces, bons CPAM. Facturation entreprise sur demande.' },
+  { icon: CreditCard, title: 'Paiement flexible', description: 'CB, espèces. Facturation entreprise sur demande.' },
   { icon: Shield, title: 'Chauffeurs professionnels', description: 'Conducteurs expérimentés, véhicules récents et entretenus.' },
   { icon: Star, title: 'Avis clients vérifiés', description: 'Service de qualité reconnu en Essonne. Satisfaction garantie.' },
 ]
@@ -77,16 +76,12 @@ const faqItems = [
     answer: 'En réservation immédiate, un taxi peut être à votre adresse à Verrières-le-Buisson en 10 à 15 minutes en moyenne. Pour les trajets vers les gares ou aéroports, nous recommandons de réserver au moins 2 heures à l\'avance pour garantir la disponibilité.'
   },
   {
-    question: 'Proposez-vous le transport médical à Verrières-le-Buisson ?',
-    answer: 'Oui, nous sommes conventionnés par la CPAM (Caisse Primaire d\'Assurance Maladie) pour le transport médical. Nous assurons vos trajets vers les hôpitaux, cliniques, centres de dialyse et cabinets médicaux de la région. Présentez votre bon de transport et nous nous occupons des formalités.'
-  },
-  {
     question: 'Quel est le prix d\'un taxi pour rejoindre Antony depuis Verrières ?',
     answer: 'Le trajet en taxi de Verrières-le-Buisson vers Antony (centre-ville ou gare RER B) coûte entre 10€ et 15€ pour environ 5 minutes de trajet. Ce tarif inclut la prise en charge et l\'aide aux bagages. Idéal pour rejoindre le RER B ou l\'Orlyval.'
   },
   {
     question: 'Acceptez-vous les paiements par carte bancaire ?',
-    answer: 'Oui, tous nos véhicules sont équipés de terminaux de paiement. Nous acceptons les cartes Visa, Mastercard, American Express, ainsi que les espèces et les bons de transport CPAM. Facturation entreprise disponible sur demande.'
+    answer: 'Oui, tous nos véhicules sont équipés de terminaux de paiement. Nous acceptons les cartes Visa, Mastercard, American Express, ainsi que les espèces. Facturation entreprise disponible sur demande.'
   },
   {
     question: 'Desservez-vous tous les quartiers de Verrières-le-Buisson ?',
@@ -103,7 +98,7 @@ export default function TaxiVerrieres() {
       {/* Schema.org JSON-LD */}
       <ServiceSchema
         name="Taxi à Verrières-le-Buisson"
-        description="Service de taxi professionnel à Verrières-le-Buisson (91370). Réservation 24h/24, transferts aéroport, gare, transport médical CPAM."
+        description="Service de taxi professionnel à Verrières-le-Buisson (91370). Réservation 24h/24, transferts aéroport, gare."
         url="https://www.taxipro91.com/taxi-verrieres-le-buisson"
         areaServed={['Verrières-le-Buisson']}
       />
@@ -484,14 +479,6 @@ export default function TaxiVerrieres() {
                   et son atmosphère paisible. Nos chauffeurs connaissent parfaitement chaque rue, chaque impasse de cette commune.
                   Que vous habitiez au <strong>Centre-bourg</strong>, à <strong>Amblainvilliers</strong>, aux <strong>Antes</strong>
                   ou à la limite d'Igny, nous venons vous chercher à votre porte.
-                </p>
-
-                <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Transport médical conventionné CPAM</h3>
-                <p>
-                  Nous sommes <strong>agréés par la CPAM</strong> pour le transport médical assis. Si vous disposez d'une
-                  prescription médicale de transport, nous assurons vos trajets vers les hôpitaux, cliniques,
-                  centres de dialyse et cabinets médicaux de la région. L'hôpital d'Antony, la clinique de Massy
-                  et les établissements parisiens sont facilement accessibles.
                 </p>
 
                 <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Proximité avec Antony et Massy</h3>

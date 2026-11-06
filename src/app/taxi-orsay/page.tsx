@@ -28,7 +28,7 @@ const URL = `${SITE.url}/taxi-orsay`
 
 export const metadata: Metadata = {
   title: `Taxi Orsay (${CP}) : Saclay, RER B 24h/24`,
-  description: `Taxi à Orsay 24h/24 : Université Paris-Saclay, CEA, Orly, gare Massy TGV. CB et CPAM. Réservez au ${SITE.phone.display}.`,
+  description: `Taxi à Orsay 24h/24 : Université Paris-Saclay, CEA, Orly, gare Massy TGV. Paiement CB. Réservez au ${SITE.phone.display}.`,
   openGraph: {
     title: `Taxi Orsay (${CP}) : Saclay, RER B 24h/24`,
     description: `Votre taxi à Orsay : Université Paris-Saclay, plateau de Saclay, RER B.`,
@@ -63,7 +63,7 @@ const quartiers = [
 const avantages = [
   { icon: Clock, title: 'Disponible 24h/24', description: 'Service de taxi à Orsay jour et nuit, week-ends et jours fériés inclus.' },
   { icon: Shield, title: 'Chauffeurs professionnels', description: 'Conducteurs expérimentés, véhicules récents, propres et entretenus.' },
-  { icon: CreditCard, title: 'Paiement flexible', description: 'CB, espèces, bons CPAM. Facturation entreprise sur demande.' },
+  { icon: CreditCard, title: 'Paiement flexible', description: 'CB, espèces. Facturation entreprise sur demande.' },
   { icon: Star, title: 'Avis clients vérifiés', description: 'Service de qualité reconnu en Essonne. Satisfaction garantie.' },
 ]
 
@@ -84,10 +84,6 @@ const faqs = [
     a: `Pour réserver un taxi à Orsay, appelez le ${SITE.phone.display} disponible 24h/24, utilisez notre formulaire de réservation en ligne, ou envoyez vos coordonnées par SMS. Confirmation immédiate et SMS de rappel envoyé avant la course.`,
   },
   {
-    q: `Proposez-vous le transport médical conventionné à Orsay ?`,
-    a: `Oui, nous sommes conventionnés CPAM pour le transport médical assis. Nous assurons vos trajets vers l'hôpital d'Orsay, les centres médicaux du plateau de Saclay, ainsi que les cliniques de la région. Bon de transport accepté.`,
-  },
-  {
     q: `Desservez-vous l'Université Paris-Saclay et le CEA depuis Orsay ?`,
     a: `Oui, nous transportons quotidiennement des étudiants, chercheurs et collaborateurs vers l'Université Paris-Saclay (Faculté des Sciences d'Orsay), le CEA, le synchrotron SOLEIL et l'ensemble des laboratoires du plateau de Saclay. Comptes entreprise disponibles.`,
   },
@@ -101,11 +97,7 @@ const faqs = [
   },
   {
     q: `Acceptez-vous les paiements par carte bancaire ?`,
-    a: `Oui, tous nos véhicules sont équipés de terminaux de paiement. Cartes Visa, Mastercard, American Express, espèces et bons CPAM acceptés. Facturation entreprise possible.`,
-  },
-  {
-    q: `Vos taxis sont-ils équipés pour les personnes à mobilité réduite ?`,
-    a: `Nous disposons de véhicules adaptés aux personnes à mobilité réduite (PMR). Précisez votre besoin lors de la réservation pour bénéficier du véhicule approprié.`,
+    a: `Oui, tous nos véhicules sont équipés de terminaux de paiement. Cartes Visa, Mastercard, American Express et espèces acceptées. Facturation entreprise possible.`,
   },
 ]
 
@@ -117,7 +109,7 @@ export default function TaxiOrsay() {
 
       <ServiceSchema
         name={`Taxi ${CITY}`}
-        description={`Service de taxi professionnel à ${CITY} (${CP}), 24h/24. Transferts Orly, CDG, gare Massy TGV, Université Paris-Saclay, CEA, transport médical CPAM.`}
+        description={`Service de taxi professionnel à ${CITY} (${CP}), 24h/24. Transferts Orly, CDG, gare Massy TGV, Université Paris-Saclay, CEA.`}
         url={URL}
         areaServed={[CITY, 'Essonne']}
       />
@@ -126,7 +118,7 @@ export default function TaxiOrsay() {
       <main>
         <section className="bg-yellow-400 py-3">
           <div className="container mx-auto px-4 text-center text-black text-sm md:text-base font-medium">
-            24h/24 • CB acceptée • Conventionné CPAM • Appelez le{' '}
+            24h/24 • CB acceptée • Appelez le{' '}
             <a href={SITE.phone.tel} className="font-bold hover:underline">{SITE.phone.display}</a>
           </div>
         </section>
@@ -164,7 +156,7 @@ export default function TaxiOrsay() {
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   <div className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-500" /> <span className="text-gray-700">Disponible 24h/24</span></div>
                   <div className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-500" /> <span className="text-gray-700">Tarifs transparents</span></div>
-                  <div className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-500" /> <span className="text-gray-700">CB & CPAM acceptés</span></div>
+                  <div className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-500" /> <span className="text-gray-700">CB acceptée</span></div>
                   <div className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-500" /> <span className="text-gray-700">Chauffeurs pro</span></div>
                 </div>
 
@@ -438,18 +430,6 @@ export default function TaxiOrsay() {
                     Desserte des gares RER B Orsay-Ville et Le Guichet, et de
                     la <Link href="/taxi-gare-massy-tgv" className="text-yellow-600 underline">gare Massy TGV</Link>{' '}
                     (à seulement 15 min) pour vos voyages grandes lignes vers Lyon, Marseille, Bordeaux ou Nantes.
-                  </p>
-                </div>
-
-                <div>
-                  <div className="flex items-center gap-3 mb-3">
-                    <Shield className="w-6 h-6 text-yellow-500" />
-                    <h3 className="text-xl font-bold text-gray-900">Transport médical CPAM</h3>
-                  </div>
-                  <p className="text-gray-600">
-                    <Link href="/taxi-conventionne-cpam-91" className="text-yellow-600 underline">Taxi conventionné CPAM</Link> pour
-                    vos trajets vers l&apos;hôpital d&apos;Orsay, les cabinets médicaux du plateau et les cliniques de la région.
-                    Prise en charge administrative simplifiée.
                   </p>
                 </div>
 

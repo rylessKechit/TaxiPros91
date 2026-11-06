@@ -261,7 +261,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                       Besoin d&apos;un taxi en Essonne ?
                     </p>
                     <p className="text-gray-800 text-sm">
-                      Réservez 24h/24, paiement CB, espèces, CPAM.
+                      Réservez 24h/24, paiement CB ou espèces.
                     </p>
                   </div>
                   <a

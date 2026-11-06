@@ -27,8 +27,7 @@ const faqs = [
   { q: 'Quelles gares RER B desservez-vous à Antony ?', a: 'Nous desservons les trois gares RER B d\'Antony : Antony (avec correspondance Orlyval), La Croix de Berny et Les Baconnets. Prise en charge et dépose au plus près des accès.' },
   { q: 'Proposez-vous des transferts vers le Parc de Sceaux ?', a: 'Oui, nous assurons les transferts vers le Domaine de Sceaux pour vos promenades, événements, mariages ou séances photos. Dépose à l\'entrée de votre choix (grilles d\'honneur, Petit Château, etc.).' },
   { q: 'Quel délai pour avoir un taxi à Antony ?', a: 'En moyenne, un taxi peut être disponible à Antony en 10 à 15 minutes. Pour les trajets vers Orly, nous recommandons de réserver à l\'avance pour garantir votre prise en charge.' },
-  { q: 'Acceptez-vous les paiements par carte bancaire ?', a: 'Oui, tous nos taxis acceptent le paiement par carte bancaire (Visa, Mastercard), en espèces, et les bons de transport CPAM. Le paiement s\'effectue à la fin de la course.' },
-  { q: 'Proposez-vous le transport médical à Antony ?', a: 'Oui, nous sommes conventionnés CPAM pour le transport médical à Antony. Nous assurons vos trajets vers les hôpitaux, cliniques et centres médicaux, notamment l\'hôpital privé d\'Antony.' },
+  { q: 'Acceptez-vous les paiements par carte bancaire ?', a: 'Oui, tous nos taxis acceptent le paiement par carte bancaire (Visa, Mastercard) et en espèces. Le paiement s\'effectue à la fin de la course.' },
   { q: 'Y a-t-il un supplément pour les trajets de nuit vers Orly ?', a: 'Les tarifs de nuit (19h-7h) incluent un supplément d\'environ 15-20%. C\'est particulièrement avantageux car l\'Orlyval ne fonctionne pas la nuit, le taxi devient alors la seule solution directe.' },
 ]
 
@@ -48,7 +47,7 @@ const quartiers = [
 
 const avantages = [
   { icon: Clock, title: 'Disponible 24h/24', description: 'Service de taxi à Antony jour et nuit, week-ends et jours fériés inclus.' },
-  { icon: CreditCard, title: 'Paiement flexible', description: 'CB, espèces, bons CPAM. Facturation entreprise sur demande.' },
+  { icon: CreditCard, title: 'Paiement flexible', description: 'CB, espèces. Facturation entreprise sur demande.' },
   { icon: Shield, title: 'Chauffeurs professionnels', description: 'Conducteurs expérimentés, véhicules récents et entretenus.' },
   { icon: Star, title: 'Avis clients vérifiés', description: 'Service de qualité reconnu en Essonne. Satisfaction garantie.' },
 ]
@@ -82,11 +81,7 @@ const faqItems = [
   },
   {
     question: 'Acceptez-vous les paiements par carte bancaire ?',
-    answer: 'Oui, tous nos véhicules sont équipés de terminaux de paiement. Nous acceptons les cartes Visa, Mastercard, American Express, ainsi que les espèces et les bons de transport CPAM. Facturation entreprise disponible sur demande.'
-  },
-  {
-    question: 'Proposez-vous le transport médical à Antony ?',
-    answer: 'Oui, nous sommes conventionnés par la CPAM pour le transport médical. Nous assurons vos trajets vers les hôpitaux (notamment l\'hôpital privé d\'Antony), cliniques, centres de dialyse et cabinets médicaux. Présentez votre bon de transport.'
+    answer: 'Oui, tous nos véhicules sont équipés de terminaux de paiement. Nous acceptons les cartes Visa, Mastercard, American Express, ainsi que les espèces. Facturation entreprise disponible sur demande.'
   },
   {
     question: 'Y a-t-il un supplément pour les trajets de nuit vers Orly ?',
@@ -103,7 +98,7 @@ export default function TaxiAntony() {
       {/* Schema.org JSON-LD */}
       <ServiceSchema
         name="Taxi à Antony"
-        description="Service de taxi professionnel à Antony (92160). Réservation 24h/24, transferts aéroport, gare, transport médical CPAM."
+        description="Service de taxi professionnel à Antony (92160). Réservation 24h/24, transferts aéroport, gare."
         url="https://www.taxipro91.com/taxi-antony"
         areaServed={['Antony']}
       />
@@ -492,17 +487,6 @@ export default function TaxiAntony() {
                 <p>
                   Nos chauffeurs connaissent parfaitement les différentes entrées du parc et vous déposent
                   au plus près de votre destination : grilles d'honneur, Petit Château, Orangerie...
-                </p>
-
-                <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Transport médical conventionné CPAM</h3>
-                <p>
-                  Nous sommes <strong>agréés par la CPAM</strong> pour le transport médical assis. Si vous disposez
-                  d'une prescription médicale de transport, nous assurons vos trajets vers les établissements de santé :
-                  hôpital privé d'Antony, cliniques, centres de dialyse, cabinets médicaux de la région.
-                </p>
-                <p>
-                  Nos chauffeurs sont formés à l'accompagnement des personnes à mobilité réduite et font preuve
-                  de patience et de bienveillance. Présentez simplement votre bon de transport.
                 </p>
 
                 <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Transport professionnel et entreprises</h3>

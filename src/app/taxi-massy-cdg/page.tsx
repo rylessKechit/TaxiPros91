@@ -43,7 +43,7 @@ const faqs = [
   },
   {
     q: 'Quels moyens de paiement acceptez-vous ?',
-    a: `Tous nos véhicules acceptent la carte bancaire (Visa, Mastercard, American Express), les espèces et les bons de transport CPAM. Pour les déplacements professionnels vers CDG, une facturation entreprise mensuelle est possible sur demande.`,
+    a: `Tous nos véhicules acceptent la carte bancaire (Visa, Mastercard, American Express) et les espèces. Pour les déplacements professionnels vers CDG, une facturation entreprise mensuelle est possible sur demande.`,
   },
   {
     q: 'Proposez-vous l\'aller-retour Massy ↔ CDG ?',
@@ -498,7 +498,7 @@ export default function TaxiMassyCDG() {
                   <span className="text-sm font-medium">Ville</span>
                 </div>
                 <h3 className="font-bold text-gray-900 text-lg mb-2">Taxi {FROM}</h3>
-                <p className="text-gray-600 text-sm mb-3">Toutes nos prestations à {FROM} : gares, aéroports, transport médical.</p>
+                <p className="text-gray-600 text-sm mb-3">Toutes nos prestations à {FROM} : gares, aéroports.</p>
                 <span className="text-yellow-600 font-medium text-sm">Voir la page ville</span>
               </Link>
             </div>

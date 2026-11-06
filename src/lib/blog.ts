@@ -77,7 +77,7 @@ Le temps "porte-à-porte" inclut la marche jusqu'à la gare, l'attente, le traje
 
 Le taxi est imbattable sur ce critère : prise en charge à votre porte, dépose au terminal, aide aux bagages, climatisation, possibilité de réserver à l'avance. Pas d'escaliers, pas de portes à passer avec une valise, pas de stress.
 
-L'Orlyval est confortable mais nécessite de manipuler vos bagages dans les escaliers et dans les couloirs. À éviter si vous avez plus de deux valises ou un fauteuil roulant.
+L'Orlyval est confortable mais nécessite de manipuler vos bagages dans les escaliers et dans les couloirs. À éviter si vous avez plus de deux valises.
 
 Le bus 91-10 est l'option la moins confortable, surtout aux heures de pointe : pas d'espace bagages dédié, pas de climatisation puissante.
 
@@ -120,7 +120,7 @@ Le bus 91-10 est l'option la moins confortable, surtout aux heures de pointe : p
     },
     {
       q: 'Peut-on payer le taxi Massy-Orly par carte bancaire ?',
-      a: "Oui, tous nos taxis sont équipés d'un terminal de paiement. Vous pouvez régler en CB (Visa, Mastercard), en espèces, par bon CPAM ou par facture entreprise.",
+      a: "Oui, tous nos taxis sont équipés d'un terminal de paiement. Vous pouvez régler en CB (Visa, Mastercard), en espèces ou par facture entreprise.",
     },
     {
       q: 'Faut-il réserver le taxi à l\'avance pour Orly ?',
@@ -301,7 +301,7 @@ La gare Massy TGV dispose de plusieurs parkings gérés par **Effia** :
 
 La **dépose-minute taxis** se situe sur le **parvis principal de la gare**, côté Place Maurice Schumann. Le chauffeur peut s'arrêter quelques minutes pour vous laisser descendre avec vos bagages, un agent veille à la fluidité du flux.
 
-Si vous arrivez **en taxi commandé**, votre chauffeur peut vous accompagner jusqu'à l'entrée du hall, voire jusqu'au quai en cas d'aide aux personnes à mobilité réduite (sur demande à la réservation).
+Si vous arrivez **en taxi commandé**, votre chauffeur peut vous accompagner jusqu'à l'entrée du hall.
 
 ## Destinations desservies depuis Massy TGV
 
@@ -326,7 +326,6 @@ Massy TGV propose également des **liaisons internationales** : Bruxelles (via L
 - **Restauration rapide** (boulangerie, café, snacks)
 - **Boutique presse**
 - **Wifi gratuit** dans la gare et à bord (selon train)
-- **Accueil PMR** (Service Accès Plus, à réserver 48h avant)
 - **Consigne à bagages** (selon disponibilité)
 
 ## Conseils pratiques pour voyager sereinement
@@ -357,10 +356,6 @@ Si vous arrivez à Massy en TGV et avez besoin d'un taxi pour rentrer ou rejoind
       a: 'Lyon (1h55), Bordeaux (2h30), Marseille (3h), Lille (1h20), Rennes (2h), Nantes (2h20), Toulouse (4h25), Montpellier (3h15) et des liaisons internationales vers Bruxelles et la Suisse.',
     },
     {
-      q: 'La gare Massy TGV est-elle accessible aux personnes à mobilité réduite ?',
-      a: 'Oui, la gare est équipée d\'ascenseurs et de rampes. Le service SNCF Accès Plus est disponible sur réservation 48h à l\'avance pour l\'assistance aux voyageurs PMR.',
-    },
-    {
       q: 'Combien de temps faut-il pour aller de Massy TGV à Orly ?',
       a: 'En taxi, comptez 15 minutes via l\'A10. En transports en commun (RER B + Orlyval), environ 35 minutes avec une correspondance à Antony.',
     },
@@ -374,9 +369,9 @@ const post4: BlogPost = {
   slug: 'taxi-de-nuit-essonne',
   title: 'Taxi de nuit en Essonne : tarifs, disponibilité, conseils',
   description:
-    "Tout savoir sur le taxi de nuit en Essonne : horaires, tarifs majorés, cas d'usage (boîte, train tardif, urgence), comment réserver et sécurité. Disponible 24h/24.",
+    "Tout savoir sur le taxi de nuit en Essonne : horaires, tarifs majorés, cas d'usage (sortie, train tardif, vol matinal), comment réserver et sécurité.",
   excerpt:
-    "Besoin d'un taxi la nuit en Essonne ? Découvrez les tarifs majorés, les horaires \"nuit\", les cas d'usage typiques (TGV tardif, sortie, urgence) et comment réserver en toute sécurité.",
+    "Besoin d'un taxi la nuit en Essonne ? Découvrez les tarifs majorés, les horaires \"nuit\", les cas d'usage typiques (TGV tardif, sortie, vol matinal) et comment réserver en toute sécurité.",
   category: 'Nuit',
   date: '2026-05-18',
   readingMinutes: 8,
@@ -424,14 +419,11 @@ Vous sortez d'un dîner à Massy, d'une soirée sur le plateau de Saclay ou d'un
 ### 2. Retour de TGV tardif
 Vous arrivez à Massy TGV à 23h45 en provenance de Lyon ou Marseille. Le dernier RER B vers le sud de l'Essonne est déjà parti. Un taxi commandé pendant votre trajet vous attend à la sortie.
 
-### 3. Urgence médicale non vitale
-Pour une consultation aux urgences (Hôpital Privé d'Antony, Hôpital de Longjumeau, etc.) en pleine nuit, sans appeler le SAMU, le taxi conventionné CPAM peut prendre en charge le transport. Conservez votre prescription pour le remboursement.
-
-### 4. Vol matinal à Orly ou CDG
+### 3. Vol matinal à Orly ou CDG
 Pour un vol à 6h30, il faut être à l'aéroport vers 5h. Le RER ne reprend pas à temps. Le taxi est la seule solution fiable, à réserver la veille pour garantir un chauffeur.
 
-### 5. Garde d'enfants ou trajet professionnel nocturne
-Personnel hospitalier, agents de sécurité, équipes de maintenance : le taxi de nuit est un partenaire fiable pour les professionnels travaillant en horaires décalés.
+### 4. Garde d'enfants ou trajet professionnel nocturne
+Agents de sécurité, équipes de maintenance : le taxi de nuit est un partenaire fiable pour les professionnels travaillant en horaires décalés.
 
 ## Comment réserver en pleine nuit
 
@@ -479,7 +471,7 @@ En Essonne, la nuit n'est plus un obstacle à vos déplacements. Avec un service
     },
     {
       q: 'Peut-on payer en carte bancaire la nuit ?',
-      a: 'Oui, tous nos véhicules sont équipés de terminaux CB fonctionnels 24h/24. Nous acceptons aussi les espèces et les bons CPAM pour les courses conventionnées.',
+      a: 'Oui, tous nos véhicules sont équipés de terminaux CB fonctionnels 24h/24. Nous acceptons aussi les espèces.',
     },
     {
       q: 'Combien coûte un taxi de nuit Massy-Paris ?',

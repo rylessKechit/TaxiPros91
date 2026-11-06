@@ -47,7 +47,7 @@ const faqs = [
   },
   {
     q: 'Quels moyens de paiement acceptez-vous ?',
-    a: `Tous nos taxis acceptent la carte bancaire (Visa, Mastercard, American Express), les espèces et les bons de transport CPAM. La facturation entreprise est disponible sur demande pour vos déplacements professionnels depuis Les Ulis vers Orly, particulièrement utile pour les sociétés de Courtaboeuf.`,
+    a: `Tous nos taxis acceptent la carte bancaire (Visa, Mastercard, American Express) et les espèces. La facturation entreprise est disponible sur demande pour vos déplacements professionnels depuis Les Ulis vers Orly, particulièrement utile pour les sociétés de Courtaboeuf.`,
   },
   {
     q: `Proposez-vous l'aller-retour ${FROM} ↔ Orly ?`,

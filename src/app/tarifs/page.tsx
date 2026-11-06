@@ -1,5 +1,4 @@
 import { Metadata } from 'next'
-import Link from 'next/link'
 import Header from '@/components/Header'
 import Breadcrumb from '@/components/Breadcrumb'
 import Footer from '@/components/Footer'
@@ -15,7 +14,6 @@ import {
   Banknote,
   Building2,
   HelpCircle,
-  HeartPulse,
   Calculator,
   Mail,
 } from 'lucide-react'
@@ -86,14 +84,9 @@ const usp = [
     desc: 'Le tarif définitif est communiqué avant le départ. Pas de mauvaise surprise à l\'arrivée.',
   },
   {
-    icon: HeartPulse,
-    title: 'Conventionné CPAM',
-    desc: 'Tiers payant intégral sur prescription médicale. Zéro avance de frais pour vos trajets santé.',
-  },
-  {
     icon: CreditCard,
     title: 'Paiement flexible',
-    desc: 'CB, espèces, bons CPAM, facturation entreprise. Solution adaptée à chaque besoin.',
+    desc: 'CB, espèces, facturation entreprise. Solution adaptée à chaque besoin.',
   },
 ]
 
@@ -112,7 +105,7 @@ const faqs = [
   },
   {
     q: 'Puis-je payer en carte bancaire ?',
-    a: 'Oui, tous nos véhicules sont équipés d\'un terminal de paiement. Nous acceptons les cartes Visa, Mastercard, ainsi que les espèces, les bons de transport CPAM et la facturation entreprise. Aucun frais supplémentaire n\'est facturé en cas de paiement par CB.',
+    a: 'Oui, tous nos véhicules sont équipés d\'un terminal de paiement. Nous acceptons les cartes Visa, Mastercard, ainsi que les espèces et la facturation entreprise. Aucun frais supplémentaire n\'est facturé en cas de paiement par CB.',
   },
   {
     q: 'Comment obtenir un devis gratuit ?',
@@ -365,7 +358,7 @@ export default function Tarifs() {
               Choisissez le mode de paiement qui vous convient. Reçu fourni systématiquement.
             </p>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
+            <div className="grid sm:grid-cols-3 gap-5 max-w-5xl mx-auto">
               <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 text-center">
                 <Banknote className="w-10 h-10 text-yellow-500 mx-auto mb-3" />
                 <h3 className="font-bold text-gray-900 mb-1">Espèces</h3>
@@ -377,44 +370,9 @@ export default function Tarifs() {
                 <p className="text-sm text-gray-600">Visa, Mastercard : sans frais</p>
               </div>
               <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 text-center">
-                <HeartPulse className="w-10 h-10 text-yellow-500 mx-auto mb-3" />
-                <h3 className="font-bold text-gray-900 mb-1">Bon CPAM</h3>
-                <p className="text-sm text-gray-600">Tiers payant intégral</p>
-              </div>
-              <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 text-center">
                 <Building2 className="w-10 h-10 text-yellow-500 mx-auto mb-3" />
                 <h3 className="font-bold text-gray-900 mb-1">Facturation entreprise</h3>
                 <p className="text-sm text-gray-600">Compte pro, paiement à 30 jours</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CPAM */}
-        <section className="py-12 md:py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto bg-white rounded-xl border border-gray-200 p-6 md:p-8">
-              <div className="flex flex-col md:flex-row gap-6 items-start">
-                <div className="w-14 h-14 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0">
-                  <HeartPulse className="w-7 h-7 text-black" />
-                </div>
-                <div className="flex-1">
-                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-                    Taxi conventionné CPAM&nbsp;: tarifs réglementés
-                  </h2>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
-                    Pour les transports médicaux sur prescription, nos tarifs respectent strictement la
-                    <strong> convention nationale signée avec l&apos;Assurance Maladie</strong>. Avec le tiers payant,
-                    vous bénéficiez de <strong>0 avance de frais</strong> et nous facturons directement
-                    la CPAM et votre mutuelle.
-                  </p>
-                  <Link
-                    href="/taxi-conventionne-cpam-91"
-                    className="inline-flex items-center gap-2 bg-gray-900 text-white font-bold py-2.5 px-5 rounded-lg hover:bg-gray-800 transition-colors text-sm"
-                  >
-                    En savoir plus sur le taxi CPAM
-                  </Link>
-                </div>
               </div>
             </div>
           </div>
@@ -484,7 +442,7 @@ export default function Tarifs() {
               Une politique tarifaire conçue pour la clarté, la confiance et la fidélité.
             </p>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-5 max-w-6xl mx-auto">
               {usp.map((u) => {
                 const Icon = u.icon
                 return (

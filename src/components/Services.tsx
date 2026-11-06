@@ -1,4 +1,4 @@
-import { Plane, Train, Stethoscope, Briefcase, GraduationCap, PartyPopper, Phone } from 'lucide-react'
+import { Plane, Train, Briefcase, GraduationCap, PartyPopper, Phone } from 'lucide-react'
 
 const services = [
   {
@@ -12,12 +12,6 @@ const services = [
     title: 'Gares & Stations',
     description: 'Transport vers toutes les gares parisiennes et les stations RER de l\'Essonne. Nous vous déposons au plus près des quais pour votre confort.',
     destinations: ['Gare Massy TGV', 'Gare de Lyon', 'Gare Montparnasse'],
-  },
-  {
-    icon: Stethoscope,
-    title: 'Transport Médical',
-    description: 'Taxi conventionné par la CPAM pour vos rendez-vous médicaux. Prise en charge des personnes à mobilité réduite. Accompagnement personnalisé.',
-    destinations: ['Hôpitaux', 'Cliniques', 'Centres de soins'],
   },
   {
     icon: Briefcase,
@@ -49,7 +43,7 @@ export default function Services() {
             Nos services de taxi en Essonne
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Que vous ayez besoin d'un transfert aéroport, d'un transport médical ou d'une course en ville,
+            Que vous ayez besoin d'un transfert aéroport, d'un trajet vers la gare ou d'une course en ville,
             notre équipe de chauffeurs professionnels est à votre service 24h/24.
           </p>
         </div>
