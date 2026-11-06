@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: 'Taxi à Longjumeau 24h/24 : RER C, aéroport Orly, gare Massy TGV. Chauffeurs pro, tarifs transparents. Réservez au 01 80 85 91 91.',
   openGraph: {
     title: 'Taxi Longjumeau (91160) : RER C, Orly 24h/24',
-    description: 'Votre taxi a Longjumeau : gare RER C, aeroport Orly, gare Massy TGV. Reservation rapide, tarifs transparents.',
+    description: 'Votre taxi à Longjumeau : gare RER C, aéroport Orly, gare Massy TGV. Réservation rapide, tarifs transparents.',
     url: 'https://www.taxipro91.com/taxi-longjumeau',
   },
   alternates: {
@@ -22,18 +22,18 @@ export const metadata: Metadata = {
 }
 
 const faqs = [
-  { q: 'Quel est le prix d\'un taxi Longjumeau vers Orly ?', a: 'Le prix d\'un taxi de Longjumeau vers l\'aeroport d\'Orly est d\'environ 20 a 30 euros selon l\'heure et le trafic. Le trajet dure environ 12 minutes via l\'A6. Ce tarif est fixe et comprend la prise en charge.' },
-  { q: 'Comment rejoindre la gare RER C de Longjumeau en taxi ?', a: 'Nous assurons les transferts vers la gare RER C de Longjumeau en 3 a 5 minutes selon votre point de depart. Service disponible 24h/24 pour vos correspondances vers Paris ou la banlieue sud.' },
-  { q: 'Combien de temps pour rejoindre Paris depuis Longjumeau ?', a: 'Le trajet Longjumeau-Paris centre dure environ 30 minutes via l\'autoroute A6, selon les conditions de circulation. Le tarif est de 45 a 60 euros selon la destination exacte dans Paris.' },
-  { q: 'Comment rejoindre la gare Massy TGV depuis Longjumeau ?', a: 'Le trajet Longjumeau vers la gare Massy TGV dure environ 10 minutes pour un tarif de 15 a 20 euros. Ideal pour vos correspondances TGV vers Lyon, Marseille, Bordeaux ou Nantes.' },
+  { q: 'Quel est le prix d\'un taxi Longjumeau vers Orly ?', a: 'Le prix d\'un taxi de Longjumeau vers l\'aéroport d\'Orly est d\'environ 20 à 30 euros selon l\'heure et le trafic. Le trajet dure environ 12 minutes via l\'A6. Ce tarif est fixe et comprend la prise en charge.' },
+  { q: 'Comment rejoindre la gare RER C de Longjumeau en taxi ?', a: 'Nous assurons les transferts vers la gare RER C de Longjumeau en 3 à 5 minutes selon votre point de départ. Service disponible 24h/24 pour vos correspondances vers Paris ou la banlieue sud.' },
+  { q: 'Combien de temps pour rejoindre Paris depuis Longjumeau ?', a: 'Le trajet Longjumeau-Paris centre dure environ 30 minutes via l\'autoroute A6, selon les conditions de circulation. Le tarif est de 45 à 60 euros selon la destination exacte dans Paris.' },
+  { q: 'Comment rejoindre la gare Massy TGV depuis Longjumeau ?', a: 'Le trajet Longjumeau vers la gare Massy TGV dure environ 10 minutes pour un tarif de 15 à 20 euros. Idéal pour vos correspondances TGV vers Lyon, Marseille, Bordeaux ou Nantes.' },
 ]
 
 const destinations = [
-  { name: 'Aeroport d\'Orly', distance: '12 min', price: '20-30\u20AC', description: 'Transfert rapide vers les terminaux Orly 1, 2, 3 et 4 via l\'A6. Suivi de vol inclus.' },
-  { name: 'Aeroport CDG', distance: '50 min', price: '75-95\u20AC', description: 'Liaison directe vers Roissy Charles de Gaulle, tous terminaux.' },
+  { name: 'Aéroport d\'Orly', distance: '12 min', price: '20-30\u20AC', description: 'Transfert rapide vers les terminaux Orly 1, 2, 3 et 4 via l\'A6. Suivi de vol inclus.' },
+  { name: 'Aéroport CDG', distance: '50 min', price: '75-95\u20AC', description: 'Liaison directe vers Roissy Charles de Gaulle, tous terminaux.' },
   { name: 'Paris Centre', distance: '30 min', price: '45-60\u20AC', description: 'Liaison directe vers tous les arrondissements parisiens via A6.' },
   { name: 'Gare Massy TGV', distance: '10 min', price: '15-20\u20AC', description: 'Connexion TGV vers Lyon, Marseille, Bordeaux, Nantes et RER B.' },
-  { name: 'Gare RER C Longjumeau', distance: '3 min', price: '8-12\u20AC', description: 'Desserte RER C vers Paris et banlieue sud. Ideal pour vos correspondances.' },
+  { name: 'Gare RER C Longjumeau', distance: '3 min', price: '8-12\u20AC', description: 'Desserte RER C vers Paris et banlieue sud. Idéal pour vos correspondances.' },
 ]
 
 const quartiers = [
@@ -42,33 +42,33 @@ const quartiers = [
 ]
 
 const avantages = [
-  { icon: Clock, title: 'Disponible 24h/24', description: 'Service de taxi a Longjumeau jour et nuit, week-ends et jours feries inclus.' },
-  { icon: CreditCard, title: 'Paiement flexible', description: 'CB, especes. Facturation entreprise sur demande.' },
-  { icon: Shield, title: 'Chauffeurs professionnels', description: 'Conducteurs experimentes, vehicules recents et entretenus.' },
+  { icon: Clock, title: 'Disponible 24h/24', description: 'Service de taxi à Longjumeau jour et nuit, week-ends et jours fériés inclus.' },
+  { icon: CreditCard, title: 'Paiement flexible', description: 'CB, espèces. Facturation entreprise sur demande.' },
+  { icon: Shield, title: 'Chauffeurs professionnels', description: 'Conducteurs expérimentés, véhicules récents et entretenus.' },
   { icon: Star, title: 'Avis clients vérifiés', description: 'Service de qualité reconnu en Essonne. Satisfaction garantie.' },
 ]
 
 const avisClients = [
-  { nom: 'Jean-Marc B.', note: 5, texte: 'Navette Orly parfaite, chauffeur a l\'heure malgre l\'heure matinale (5h). Vehicule propre et confortable. Je recommande !', date: 'Decembre 2024' },
-  { nom: 'Nathalie R.', note: 5, texte: 'Taxi reserve pour rejoindre la gare Massy TGV. Arrive 10 minutes avant l\'heure prevue. Tarif conforme au devis. Parfait.', date: 'Janvier 2025' },
+  { nom: 'Jean-Marc B.', note: 5, texte: 'Navette Orly parfaite, chauffeur à l\'heure malgré l\'heure matinale (5h). Véhicule propre et confortable. Je recommande !', date: 'Décembre 2024' },
+  { nom: 'Nathalie R.', note: 5, texte: 'Taxi réservé pour rejoindre la gare Massy TGV. Arrivé 10 minutes avant l\'heure prévue. Tarif conforme au devis. Parfait.', date: 'Janvier 2025' },
 ]
 
 const faqItems = [
   {
     question: 'Quel est le prix d\'un taxi Longjumeau vers Orly ?',
-    answer: 'Le prix d\'un taxi de Longjumeau vers l\'aeroport d\'Orly est d\'environ 20 a 30 euros selon l\'heure (jour/nuit) et les conditions de circulation. Grace a l\'acces direct a l\'A6, le trajet ne dure que 12 minutes. Ce tarif est fixe et comprend la prise en charge, l\'attente a l\'aeroport et l\'aide aux bagages.'
+    answer: 'Le prix d\'un taxi de Longjumeau vers l\'aéroport d\'Orly est d\'environ 20 à 30 euros selon l\'heure (jour/nuit) et les conditions de circulation. Grâce à l\'accès direct à l\'A6, le trajet ne dure que 12 minutes. Ce tarif est fixe et comprend la prise en charge, l\'attente à l\'aéroport et l\'aide aux bagages.'
   },
   {
     question: 'Comment rejoindre la gare RER C de Longjumeau en taxi ?',
-    answer: 'Nous assurons les transferts vers la gare RER C de Longjumeau en 3 a 5 minutes selon votre adresse de depart, pour un tarif de 8 a 12 euros. Service disponible 24h/24 pour vos correspondances vers Paris (Austerlitz, Saint-Michel) ou la banlieue sud.'
+    answer: 'Nous assurons les transferts vers la gare RER C de Longjumeau en 3 à 5 minutes selon votre adresse de départ, pour un tarif de 8 à 12 euros. Service disponible 24h/24 pour vos correspondances vers Paris (Austerlitz, Saint-Michel) ou la banlieue sud.'
   },
   {
     question: 'Combien de temps pour rejoindre Paris depuis Longjumeau ?',
-    answer: 'Le trajet Longjumeau-Paris centre dure environ 30 minutes via l\'autoroute A6, selon les conditions de circulation. Le tarif est de 45 a 60 euros selon votre destination exacte dans Paris. En heures creuses, le trajet peut etre plus rapide.'
+    answer: 'Le trajet Longjumeau-Paris centre dure environ 30 minutes via l\'autoroute A6, selon les conditions de circulation. Le tarif est de 45 à 60 euros selon votre destination exacte dans Paris. En heures creuses, le trajet peut être plus rapide.'
   },
   {
     question: 'Comment rejoindre la gare Massy TGV depuis Longjumeau ?',
-    answer: 'Le trajet depuis Longjumeau vers la gare Massy TGV dure environ 10 minutes pour un tarif de 15 a 20 euros. Cette liaison est ideale pour vos correspondances TGV vers Lyon, Marseille, Bordeaux, Nantes, Rennes et de nombreuses autres destinations.'
+    answer: 'Le trajet depuis Longjumeau vers la gare Massy TGV dure environ 10 minutes pour un tarif de 15 à 20 euros. Cette liaison est idéale pour vos correspondances TGV vers Lyon, Marseille, Bordeaux, Nantes, Rennes et de nombreuses autres destinations.'
   }
 ]
 
@@ -92,7 +92,7 @@ export default function TaxiLongjumeau() {
         <section className="bg-yellow-400 py-4">
           <div className="container mx-auto px-4 text-center">
             <p className="text-black font-medium">
-              Besoin d'un taxi a Longjumeau ? Appelez le{' '}
+              Besoin d'un taxi à Longjumeau ? Appelez le{' '}
               <a href="tel:+33180859191" className="font-bold text-xl hover:underline">01 80 85 91 91</a>
             </p>
           </div>
@@ -109,16 +109,16 @@ export default function TaxiLongjumeau() {
                 </div>
 
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                  Taxi a Longjumeau
+                  Taxi à Longjumeau
                 </h1>
 
                 <p className="text-xl text-gray-600 mb-6 leading-relaxed">
-                  Votre service de <strong>taxi a Longjumeau</strong> disponible 24h/24 et 7j/7.
+                  Votre service de <strong>taxi à Longjumeau</strong> disponible 24h/24 et 7j/7.
                   Nous assurons tous vos trajets depuis et vers <strong>la gare RER C</strong>,
-                  l'<strong>aeroport d'Orly</strong> et tous les quartiers de Longjumeau.
+                  l'<strong>aéroport d'Orly</strong> et tous les quartiers de Longjumeau.
                 </p>
 
-                {/* Avis resume */}
+                {/* Avis résumé */}
                 <div className="flex items-center gap-2 mb-6 bg-white p-3 rounded-lg border border-gray-200 w-fit">
                   <div className="flex">
                     {[1,2,3,4,5].map(i => <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />)}
@@ -138,7 +138,7 @@ export default function TaxiLongjumeau() {
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-700">Acces A6 direct</span>
+                    <span className="text-gray-700">Accès A6 direct</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
@@ -162,7 +162,7 @@ export default function TaxiLongjumeau() {
           </div>
         </section>
 
-        {/* Presentation de Longjumeau */}
+        {/* Présentation de Longjumeau */}
         <section className="py-12 md:py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
@@ -172,21 +172,21 @@ export default function TaxiLongjumeau() {
 
               <div className="prose prose-lg text-gray-600 max-w-none">
                 <p>
-                  <strong>Longjumeau</strong>, ville de plus de 21 000 habitants situee dans le departement de l'<strong>Essonne (91)</strong>,
-                  est strategiquement positionnee avec un acces direct a l'<strong>autoroute A6</strong>, Longjumeau offre une connexion
-                  rapide vers Paris et l'aeroport d'Orly.
+                  <strong>Longjumeau</strong>, ville de plus de 21 000 habitants située dans le département de l'<strong>Essonne (91)</strong>,
+                  est stratégiquement positionnée. Son accès direct à l'<strong>autoroute A6</strong> offre une connexion
+                  rapide vers Paris et l'aéroport d'Orly.
                 </p>
 
                 <p>
-                  La ville est desservie par le <strong>RER C</strong> a la gare de Longjumeau, offrant une liaison directe
+                  La ville est desservie par le <strong>RER C</strong> à la gare de Longjumeau, offrant une liaison directe
                   vers Paris Austerlitz et Saint-Michel Notre-Dame. Cette infrastructure de transport fait de Longjumeau
-                  un lieu de residence privilegie pour les actifs travaillant a Paris ou sur le plateau de Saclay.
+                  un lieu de résidence privilégié pour les actifs travaillant à Paris ou sur le plateau de Saclay.
                 </p>
 
                 <p>
                   Que vous ayez besoin d'une navette vers
-                  l'<strong>aeroport d'Orly</strong> ou d'un taxi pour rejoindre la <strong>gare Massy TGV</strong>,
-                  notre service de taxi a Longjumeau vous accompagne avec professionnalisme et ponctualite.
+                  l'<strong>aéroport d'Orly</strong> ou d'un taxi pour rejoindre la <strong>gare Massy TGV</strong>,
+                  notre service de taxi à Longjumeau vous accompagne avec professionnalisme et ponctualité.
                 </p>
               </div>
             </div>
@@ -200,7 +200,7 @@ export default function TaxiLongjumeau() {
               Tarifs indicatifs depuis Longjumeau
             </h2>
             <p className="text-gray-400 text-center mb-8 max-w-2xl mx-auto">
-              Prix estimes pour un trajet standard. Tarifs definitifs communiques lors de la reservation.
+              Prix estimés pour un trajet standard. Tarifs définitifs communiqués lors de la réservation.
             </p>
 
             <div className="overflow-x-auto">
@@ -208,8 +208,8 @@ export default function TaxiLongjumeau() {
                 <thead>
                   <tr className="border-b border-gray-700">
                     <th className="text-left py-4 px-4 font-bold">Destination</th>
-                    <th className="text-center py-4 px-4 font-bold">Duree</th>
-                    <th className="text-right py-4 px-4 font-bold">Prix estime</th>
+                    <th className="text-center py-4 px-4 font-bold">Durée</th>
+                    <th className="text-right py-4 px-4 font-bold">Prix estimé</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -229,19 +229,19 @@ export default function TaxiLongjumeau() {
             </div>
 
             <p className="text-gray-500 text-sm text-center mt-6">
-              * Tarifs indicatifs pouvant varier selon l'heure (jour/nuit), le trafic et le type de vehicule choisi.
+              * Tarifs indicatifs pouvant varier selon l'heure (jour/nuit), le trafic et le type de véhicule choisi.
             </p>
           </div>
         </section>
 
-        {/* Destinations detaillees */}
+        {/* Destinations détaillées */}
         <section className="py-12 md:py-16 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
               Vos destinations depuis Longjumeau
             </h2>
             <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
-              Decouvrez nos principales liaisons au depart de Longjumeau avec des prix transparents et sans surprise.
+              Découvrez nos principales liaisons au départ de Longjumeau avec des prix transparents et sans surprise.
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -266,10 +266,10 @@ export default function TaxiLongjumeau() {
         <section className="py-12 md:py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
-              Pourquoi choisir TAXI Pro 91 a Longjumeau ?
+              Pourquoi choisir TAXI Pro 91 à Longjumeau ?
             </h2>
             <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
-              Un service de qualite reconnu par nos clients depuis plus de 10 ans dans l'Essonne.
+              Un service de qualité reconnu par nos clients depuis plus de 10 ans dans l'Essonne.
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -293,7 +293,7 @@ export default function TaxiLongjumeau() {
         <section className="py-12 md:py-16 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
-              Avis de nos clients a Longjumeau
+              Avis de nos clients à Longjumeau
             </h2>
             <div className="flex items-center justify-center gap-2 mb-10">
               <div className="flex">
@@ -329,7 +329,7 @@ export default function TaxiLongjumeau() {
               Taxi dans tous les quartiers de Longjumeau
             </h2>
             <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
-              Nous intervenons dans tous les quartiers de Longjumeau pour vous prendre en charge ou vous deposer a l'adresse de votre choix, 24h/24.
+              Nous intervenons dans tous les quartiers de Longjumeau pour vous prendre en charge ou vous déposer à l'adresse de votre choix, 24h/24.
             </p>
 
             <div className="flex flex-wrap justify-center gap-3 mb-10">
@@ -342,14 +342,14 @@ export default function TaxiLongjumeau() {
           </div>
         </section>
 
-        {/* Comment reserver */}
+        {/* Comment réserver */}
         <section className="py-12 md:py-16 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
-              Comment reserver votre taxi a Longjumeau ?
+              Comment réserver votre taxi à Longjumeau ?
             </h2>
             <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
-              Reserver un taxi a Longjumeau n'a jamais ete aussi simple. Trois options s'offrent a vous :
+              Réserver un taxi à Longjumeau n'a jamais été aussi simple. Trois options s'offrent à vous :
             </p>
 
             <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -357,7 +357,7 @@ export default function TaxiLongjumeau() {
                 <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Phone className="w-8 h-8 text-black" />
                 </div>
-                <h3 className="font-bold text-gray-900 text-lg mb-2">Par telephone</h3>
+                <h3 className="font-bold text-gray-900 text-lg mb-2">Par téléphone</h3>
                 <p className="text-gray-600 mb-4">Appelez-nous directement au</p>
                 <a href="tel:+33180859191" className="text-xl font-bold text-yellow-600 hover:text-yellow-700">
                   01 80 85 91 91
@@ -369,16 +369,16 @@ export default function TaxiLongjumeau() {
                   <Car className="w-8 h-8 text-black" />
                 </div>
                 <h3 className="font-bold text-gray-900 text-lg mb-2">En ligne</h3>
-                <p className="text-gray-600 mb-4">Utilisez notre formulaire de reservation disponible 24h/24</p>
-                <span className="text-yellow-600 font-medium">Confirmation immediate</span>
+                <p className="text-gray-600 mb-4">Utilisez notre formulaire de réservation disponible 24h/24</p>
+                <span className="text-yellow-600 font-medium">Confirmation immédiate</span>
               </div>
 
               <div className="text-center">
                 <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Clock className="w-8 h-8 text-black" />
                 </div>
-                <h3 className="font-bold text-gray-900 text-lg mb-2">A l'avance</h3>
-                <p className="text-gray-600 mb-4">Reservez jusqu'a 30 jours a l'avance pour vos trajets importants</p>
+                <h3 className="font-bold text-gray-900 text-lg mb-2">À l'avance</h3>
+                <p className="text-gray-600 mb-4">Réservez jusqu'à 30 jours à l'avance pour vos trajets importants</p>
                 <span className="text-yellow-600 font-medium">SMS de rappel inclus</span>
               </div>
             </div>
@@ -389,10 +389,10 @@ export default function TaxiLongjumeau() {
         <section className="py-12 md:py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
-              Questions frequentes - Taxi Longjumeau
+              Questions fréquentes - Taxi Longjumeau
             </h2>
             <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
-              Retrouvez les reponses aux questions les plus posees par nos clients a Longjumeau.
+              Retrouvez les réponses aux questions les plus posées par nos clients à Longjumeau.
             </p>
 
             <div className="max-w-3xl mx-auto space-y-4">
@@ -423,61 +423,61 @@ export default function TaxiLongjumeau() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-                Votre taxi de confiance a Longjumeau depuis plus de 10 ans
+                Votre taxi de confiance à Longjumeau depuis plus de 10 ans
               </h2>
 
               <div className="prose prose-lg text-gray-600 max-w-none">
                 <p>
-                  <strong>TAXI Pro 91</strong> est votre partenaire de confiance pour tous vos deplacements a Longjumeau et dans l'Essonne.
-                  Situee au carrefour de l'autoroute A6 et de la ligne RER C, Longjumeau est une ville dynamique qui necessite
+                  <strong>TAXI Pro 91</strong> est votre partenaire de confiance pour tous vos déplacements à Longjumeau et dans l'Essonne.
+                  Située au carrefour de l'autoroute A6 et de la ligne RER C, Longjumeau est une ville dynamique qui nécessite
                   un service de taxi fiable.
                 </p>
 
-                <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Gare RER C de Longjumeau : vos correspondances facilitees</h3>
+                <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Gare RER C de Longjumeau : vos correspondances facilitées</h3>
                 <p>
                   La <strong>gare de Longjumeau</strong> est desservie par le <strong>RER C</strong>, offrant une connexion directe
-                  vers Paris (Austerlitz, Saint-Michel Notre-Dame, Musee d'Orsay) et la banlieue sud. Nos taxis assurent
-                  vos transferts vers et depuis la gare pour faciliter vos deplacements quotidiens ou ponctuels.
+                  vers Paris (Austerlitz, Saint-Michel Notre-Dame, Musée d'Orsay) et la banlieue sud. Nos taxis assurent
+                  vos transferts vers et depuis la gare pour faciliter vos déplacements quotidiens ou ponctuels.
                 </p>
                 <p>
-                  Que vous partiez tot le matin ou que vous rentriez tard le soir, notre service 24h/24 vous garantit
-                  une prise en charge a l'heure, meme pour le premier ou le dernier train.
+                  Que vous partiez tôt le matin ou que vous rentriez tard le soir, notre service 24h/24 vous garantit
+                  une prise en charge à l'heure, même pour le premier ou le dernier train.
                 </p>
 
-                <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Acces rapide a l'A6 : Orly en 12 minutes</h3>
+                <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Accès rapide à l'A6 : Orly en 12 minutes</h3>
                 <p>
-                  L'un des atouts majeurs de Longjumeau est son <strong>acces direct a l'autoroute A6</strong>, permettant
-                  de rejoindre l'<strong>aeroport d'Orly en seulement 12 minutes</strong>. Cette proximite fait de notre
-                  service de taxi le choix ideal pour vos transferts aeroport.
+                  L'un des atouts majeurs de Longjumeau est son <strong>accès direct à l'autoroute A6</strong>, permettant
+                  de rejoindre l'<strong>aéroport d'Orly en seulement 12 minutes</strong>. Cette proximité fait de notre
+                  service de taxi le choix idéal pour vos transferts aéroport.
                 </p>
                 <p>
-                  Nous proposons un service de navette aeroport avec <strong>suivi de vol en temps reel</strong>.
+                  Nous proposons un service de navette aéroport avec <strong>suivi de vol en temps réel</strong>.
                   En cas de retard ou d'avancement de votre vol, nous adaptons automatiquement l'heure de prise en charge.
-                  Le tarif est fixe et connu a l'avance : 20 a 30 euros pour Orly, sans surprise a l'arrivee.
+                  Le tarif est fixe et connu à l'avance : 20 à 30 euros pour Orly, sans surprise à l'arrivée.
                 </p>
 
                 <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Connexion vers la gare Massy TGV</h3>
                 <p>
-                  A seulement <strong>10 minutes de Longjumeau</strong>, la gare <strong>Massy TGV</strong> vous ouvre
-                  les portes de la France entiere : Lyon (2h), Marseille (3h), Bordeaux (2h30), Nantes (2h20), Rennes (2h).
-                  Notre service de taxi vous depose au plus pres des quais pour un depart serein.
+                  À seulement <strong>10 minutes de Longjumeau</strong>, la gare <strong>Massy TGV</strong> vous ouvre
+                  les portes de la France entière : Lyon (2h), Marseille (3h), Bordeaux (2h30), Nantes (2h20), Rennes (2h).
+                  Notre service de taxi vous dépose au plus près des quais pour un départ serein.
                 </p>
                 <p>
-                  Pour vos retours, votre chauffeur vous attend a la sortie de la gare avec une pancarte a votre nom.
-                  Le tarif Longjumeau-Massy TGV est de 15 a 20 euros, vehicule confortable garanti.
+                  Pour vos retours, votre chauffeur vous attend à la sortie de la gare avec une pancarte à votre nom.
+                  Le tarif Longjumeau-Massy TGV est de 15 à 20 euros, véhicule confortable garanti.
                 </p>
 
                 <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Service professionnel et facturation entreprise</h3>
                 <p>
                   De nombreuses entreprises de la zone industrielle de Longjumeau et des environs nous font confiance
                   pour le transport de leurs collaborateurs et visiteurs. Nous proposons des comptes entreprise avec
-                  facturation mensuelle, suivi detaille des courses et tarifs negocies selon le volume.
+                  facturation mensuelle, suivi détaillé des courses et tarifs négociés selon le volume.
                 </p>
               </div>
 
               <div className="mt-10 p-6 bg-yellow-50 rounded-xl border border-yellow-200">
                 <p className="text-gray-900 font-medium mb-4">
-                  Reservez votre taxi a Longjumeau des maintenant
+                  Réservez votre taxi à Longjumeau dès maintenant
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <a
@@ -491,7 +491,7 @@ export default function TaxiLongjumeau() {
                     href="/#reservation"
                     className="inline-flex items-center gap-3 bg-gray-900 text-white font-bold text-lg py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors"
                   >
-                    Reserver en ligne
+                    Réserver en ligne
                   </Link>
                 </div>
               </div>
