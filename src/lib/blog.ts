@@ -1,6 +1,8 @@
 export interface BlogPost {
   slug: string
   title: string
+  // Titre court pour la balise <title> (≤ 45 car., le layout ajoute « | TAXI Pro 91 »)
+  seoTitle?: string
   description: string
   excerpt: string
   category: string
@@ -16,8 +18,9 @@ export interface BlogPost {
 const post1: BlogPost = {
   slug: 'comment-aller-orly-depuis-massy',
   title: "Comment aller à l'aéroport d'Orly depuis Massy : taxi, RER, Orlyval comparés",
+  seoTitle: "Massy → Orly : taxi, RER ou Orlyval ?",
   description:
-    "Comparatif complet pour aller de Massy à Orly : taxi (15 min, 25-35€), RER + Orlyval (35 min, 13€), bus 91-10 (50 min, 4€), VTC. Choisissez la meilleure option selon votre profil.",
+    "Massy → Orly : taxi (15 min, 25-35€), RER + Orlyval (35 min, 13€), bus 91-10 (50 min, 4€) ou VTC. Quelle option choisir selon votre profil.",
   excerpt:
     "Vous partez de Massy pour Orly ? Découvrez les 4 options de transport (taxi, RER+Orlyval, bus, VTC), leurs prix réels et nos recommandations selon votre profil de voyageur.",
   category: 'Aéroports',
@@ -135,8 +138,9 @@ Le bus 91-10 est l'option la moins confortable, surtout aux heures de pointe : p
 const post2: BlogPost = {
   slug: 'prix-taxi-massy-orly-2026',
   title: "Prix d'un taxi Massy → Orly : tarifs détaillés 2026",
+  seoTitle: "Prix taxi Massy → Orly en 2026",
   description:
-    "Tarifs taxi Massy → Orly en 2026 : entre 25 et 35 € selon l'heure. Décomposition du prix, tarif jour/nuit, forfaits, astuces pour économiser. Guide complet.",
+    "Tarifs taxi Massy → Orly en 2026 : entre 25 et 35 € selon l'heure. Décomposition du prix, tarif jour/nuit, forfaits et astuces pour économiser.",
   excerpt:
     "Combien coûte vraiment un taxi de Massy à Orly en 2026 ? Décomposition complète du prix, tarif jour vs nuit, aller-retour, et nos conseils pour payer le moins cher.",
   category: 'Tarifs',
@@ -253,8 +257,9 @@ Pour réserver, un simple appel suffit : disponibilité 24h/24, prix communiqué
 const post3: BlogPost = {
   slug: 'guide-gare-massy-tgv',
   title: 'Gare Massy TGV : guide complet (parking, accès, horaires)',
+  seoTitle: "Gare Massy TGV : accès, parking, horaires",
   description:
-    "Guide complet de la gare Massy TGV : accès en taxi, voiture, RER, bus. Parkings et tarifs, dépose-minute, destinations TGV, conseils pratiques pour voyager sereinement.",
+    "Gare Massy TGV : accès en taxi, voiture, RER et bus. Parkings, dépose-minute, destinations TGV et conseils pratiques.",
   excerpt:
     "Tout savoir sur la gare Massy TGV : comment y accéder, où se garer, où prendre/déposer un taxi, quelles destinations sont desservies et nos conseils pour ne pas rater votre train.",
   category: 'Gares',
@@ -368,6 +373,7 @@ Si vous arrivez à Massy en TGV et avez besoin d'un taxi pour rentrer ou rejoind
 const post4: BlogPost = {
   slug: 'taxi-de-nuit-essonne',
   title: 'Taxi de nuit en Essonne : tarifs, disponibilité, conseils',
+  seoTitle: "Taxi de nuit en Essonne : tarifs et conseils",
   description:
     "Tout savoir sur le taxi de nuit en Essonne : horaires, tarifs majorés, cas d'usage (sortie, train tardif, vol matinal), comment réserver et sécurité.",
   excerpt:

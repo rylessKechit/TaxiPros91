@@ -25,11 +25,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const url = `${SITE.url}/blog/${post.slug}`
   return {
-    title: post.title,
+    title: post.seoTitle ?? post.title,
     description: post.description,
     alternates: { canonical: url },
     openGraph: {
-      title: post.title,
+      title: post.seoTitle ?? post.title,
       description: post.description,
       url,
       type: 'article',
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     twitter: {
       card: 'summary_large_image',
-      title: post.title,
+      title: post.seoTitle ?? post.title,
       description: post.description,
     },
   }

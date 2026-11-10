@@ -21,7 +21,7 @@ import {
 const PAGE_URL = `${SITE.url}/tarifs`
 
 export const metadata: Metadata = {
-  title: 'Tarifs taxi Essonne : grille de prix transparente 2026',
+  title: 'Tarifs taxi Essonne : grille de prix 2026',
   description: `Tarifs taxi Essonne 2026 : tarifs réglementés A/B/C/D, forfaits Orly, CDG, Paris, Disneyland. Prix annoncé avant la course. ${SITE.phone.display}.`,
   alternates: { canonical: PAGE_URL },
   openGraph: {
