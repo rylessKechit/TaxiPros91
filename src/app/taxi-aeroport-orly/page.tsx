@@ -94,7 +94,7 @@ const avantages = [
   },
   {
     icon: Star,
-    title: 'Avis clients vérifiés',
+    title: 'Avis clients',
     description: `Service de qualité reconnu. Ponctualité aux transferts aéroport notée comme critère n° 1 dans nos retours.`,
   },
 ]
@@ -190,7 +190,7 @@ export default function TaxiAeroportOrly() {
                 <div className="flex flex-wrap items-center gap-3 mb-6">
                   <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg border border-gray-200">
                     <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                    <span className="font-bold text-gray-900 text-sm">Avis vérifiés</span>
+                    <span className="font-bold text-gray-900 text-sm">Avis clients</span>
                   </div>
                   <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg border border-gray-200 text-sm text-gray-700">
                     <Clock className="w-4 h-4 text-yellow-500" />

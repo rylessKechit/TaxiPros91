@@ -53,7 +53,7 @@ export default function Testimonials() {
                 <Star key={star} className="w-7 h-7 text-yellow-400 fill-current" />
               ))}
             </div>
-            <span className="text-gray-900 font-bold text-2xl">Avis vérifiés</span>
+            <span className="text-gray-900 font-bold text-2xl">Avis clients</span>
           </div>
           <p className="text-gray-600 text-lg">
             Service de qualité reconnu en Essonne

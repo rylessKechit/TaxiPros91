@@ -50,7 +50,7 @@ const avantages = [
   { icon: Clock, title: 'Disponible 24h/24', description: 'Service de taxi à Saclay jour et nuit, week-ends et jours fériés inclus.' },
   { icon: CreditCard, title: 'Paiement flexible', description: 'CB, espèces, facturation entreprise. Comptes professionnels disponibles.' },
   { icon: Shield, title: 'Chauffeurs professionnels', description: 'Conducteurs connaissant parfaitement le plateau de Saclay.' },
-  { icon: Star, title: 'Avis clients vérifiés', description: 'Service de qualité reconnu en Essonne. Satisfaction garantie.' },
+  { icon: Star, title: 'Avis clients', description: 'Service de qualité reconnu en Essonne. Satisfaction garantie.' },
 ]
 
 const avisClients = [
@@ -145,8 +145,7 @@ export default function TaxiSaclay() {
                   <div className="flex">
                     {[1,2,3,4,5].map(i => <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />)}
                   </div>
-                  <span className="font-bold text-gray-900">Avis vérifiés</span>
-                  <span className="text-gray-500">— Avis clients vérifiés</span>
+                  <span className="font-bold text-gray-900">Avis clients</span>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4 mb-8">
@@ -324,8 +323,7 @@ export default function TaxiSaclay() {
               <div className="flex">
                 {[1,2,3,4,5].map(i => <Star key={i} className="w-6 h-6 text-yellow-400 fill-yellow-400" />)}
               </div>
-              <span className="font-bold text-xl text-gray-900">Avis vérifiés</span>
-              <span className="text-gray-500">Avis clients vérifiés</span>
+              <span className="font-bold text-xl text-gray-900">Avis clients</span>
             </div>
 
             <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
