@@ -538,6 +538,24 @@ export default function TaxiPalaiseau() {
           </div>
         </section>
 
+        {/* Pages liées */}
+        <section className="py-10 bg-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">Voir aussi</h2>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Link href="/taxi-gare-palaiseau" className="bg-white text-gray-700 px-4 py-2 rounded-lg border border-gray-200 hover:border-yellow-400 hover:text-yellow-600 transition-colors">
+                Taxi gares de Palaiseau (RER B)
+              </Link>
+              <Link href="/taxi-palaiseau-orly" className="bg-white text-gray-700 px-4 py-2 rounded-lg border border-gray-200 hover:border-yellow-400 hover:text-yellow-600 transition-colors">
+                Taxi Palaiseau → Orly
+              </Link>
+              <Link href="/taxi-palaiseau-cdg" className="bg-white text-gray-700 px-4 py-2 rounded-lg border border-gray-200 hover:border-yellow-400 hover:text-yellow-600 transition-colors">
+                Taxi Palaiseau → Roissy-CDG
+              </Link>
+            </div>
+          </div>
+        </section>
+
         <RelatedCities currentSlug="taxi-palaiseau" />
       </main>
       <Footer />

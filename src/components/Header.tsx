@@ -19,6 +19,7 @@ const airportLinks: NavLink[] = [
   { label: 'Aéroport Orly', href: '/taxi-orly' },
   { label: 'Aéroport Roissy CDG', href: '/taxi-cdg' },
   { label: 'Gare Massy TGV', href: '/taxi-gare-massy-tgv' },
+  { label: 'Gares de Palaiseau', href: '/taxi-gare-palaiseau' },
 ]
 
 const serviceLinks: NavLink[] = [
@@ -28,7 +29,11 @@ const serviceLinks: NavLink[] = [
   { label: 'Tarifs', href: '/tarifs' },
 ]
 
-const routeLinks: NavLink[] = popularRoutes.map((r) => ({ label: `${r.from} → ${r.to}`, href: `/${r.slug}` }))
+const routeLinks: NavLink[] = [
+  ...popularRoutes.map((r) => ({ label: `${r.from} → ${r.to}`, href: `/${r.slug}` })),
+  { label: 'Palaiseau → Roissy-CDG', href: '/taxi-palaiseau-cdg' },
+  { label: 'Saclay → Orly', href: '/taxi-saclay-orly' },
+]
 
 const menus: { label: string; links: NavLink[]; wide?: boolean }[] = [
   { label: 'Villes', links: cityLinks, wide: true },

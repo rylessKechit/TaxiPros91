@@ -23,6 +23,7 @@ export const cities: City[] = [
   { slug: 'orsay', name: 'Orsay', postalCode: '91400', region: 'Essonne', coords: { lat: 48.6989, lng: 2.1872 }, population: 16000 },
   { slug: 'gif-sur-yvette', name: 'Gif-sur-Yvette', postalCode: '91190', region: 'Essonne', coords: { lat: 48.6975, lng: 2.1361 }, population: 21000 },
   { slug: 'chilly-mazarin', name: 'Chilly-Mazarin', postalCode: '91380', region: 'Essonne', coords: { lat: 48.7019, lng: 2.3194 }, population: 21000 },
+  { slug: 'igny', name: 'Igny', postalCode: '91430', region: 'Essonne', coords: { lat: 48.7375, lng: 2.2267 } },
 ]
 
 export const getCity = (slug: string) => cities.find(c => c.slug === slug)

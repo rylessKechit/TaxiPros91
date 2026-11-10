@@ -69,6 +69,7 @@ export default function Footer() {
               <li><Link href="/taxi-orly" className={linkClass}>Aéroport Orly</Link></li>
               <li><Link href="/taxi-cdg" className={linkClass}>Aéroport Roissy CDG</Link></li>
               <li><Link href="/taxi-gare-massy-tgv" className={linkClass}>Gare Massy TGV</Link></li>
+              <li><Link href="/taxi-gare-palaiseau" className={linkClass}>Gares de Palaiseau</Link></li>
             </ul>
             <h3 className="font-bold text-lg mb-4">Trajets</h3>
             <ul className="space-y-2 text-sm">
@@ -77,6 +78,8 @@ export default function Footer() {
                   <Link href={`/${r.slug}`} className={linkClass}>{r.from} → {r.to}</Link>
                 </li>
               ))}
+              <li><Link href="/taxi-palaiseau-cdg" className={linkClass}>Palaiseau → Roissy-CDG</Link></li>
+              <li><Link href="/taxi-saclay-orly" className={linkClass}>Saclay → Orly</Link></li>
             </ul>
           </div>
 

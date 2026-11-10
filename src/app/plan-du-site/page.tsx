@@ -17,12 +17,13 @@ export const metadata: Metadata = {
 // Villes existantes avec page dédiée
 const cityPagesExisting = [
   'massy', 'palaiseau', 'antony', 'longjumeau', 'les-ulis',
-  'saclay', 'ballainvilliers', 'verrieres-le-buisson', 'evry-courcouronnes',
+  'saclay', 'ballainvilliers', 'verrieres-le-buisson', 'evry-courcouronnes', 'igny',
 ]
 const citiesWithPages = cities.filter(c => cityPagesExisting.includes(c.slug))
 
 const services = [
   { href: '/taxi-gare-massy-tgv', label: 'Taxi gare Massy TGV' },
+  { href: '/taxi-gare-palaiseau', label: 'Taxi gares de Palaiseau' },
   { href: '/taxi-entreprise', label: 'Taxi entreprise' },
   { href: '/taxi-ecole-polytechnique', label: 'Taxi École Polytechnique' },
   { href: '/taxi-paris-saclay', label: 'Taxi Paris-Saclay' },
@@ -93,10 +94,14 @@ export default function PlanDuSitePage() {
               </Section>
 
               <Section title="Trajets populaires">
-                <LinkList items={popularRoutes.map(r => ({
-                  href: `/${r.slug}`,
-                  label: `Taxi ${r.from} → ${r.to}`,
-                }))} />
+                <LinkList items={[
+                  ...popularRoutes.map(r => ({
+                    href: `/${r.slug}`,
+                    label: `Taxi ${r.from} → ${r.to}`,
+                  })),
+                  { href: '/taxi-palaiseau-cdg', label: 'Taxi Palaiseau → Roissy-CDG' },
+                  { href: '/taxi-saclay-orly', label: 'Taxi Saclay → Orly' },
+                ]} />
               </Section>
 
               <Section title="Services spécialisés">

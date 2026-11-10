@@ -20,6 +20,7 @@ import {
   HelpCircle,
   Info,
   Navigation,
+  Plane,
 } from 'lucide-react'
 
 const PAGE_URL = `${SITE.url}/taxi-gare-massy-tgv`
@@ -342,6 +343,42 @@ export default function TaxiGareMassyTGV() {
                   cela nous permet de confirmer la bonne gare et de suivre votre train en temps réel.
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Train + avion */}
+        <section className="py-12 md:py-16 bg-yellow-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                <Plane className="w-7 h-7 text-yellow-500" />
+                De Massy TGV vers Orly et Roissy-CDG
+              </h2>
+              <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                Massy TGV reçoit des trains de toute la France sans passer par Paris. Beaucoup de voyageurs y
+                descendent pour prendre ensuite un avion. Avec des valises, enchaîner RER et navette prend du
+                temps. Le taxi vous attend à la sortie de la gare et vous dépose devant votre terminal.
+              </p>
+              <div className="grid md:grid-cols-2 gap-4 mb-6">
+                <Link href="/taxi-orly" className="bg-white border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors block">
+                  <h3 className="font-bold text-gray-900 text-lg mb-2">Massy TGV → Orly</h3>
+                  <p className="text-sm text-gray-600">
+                    L&apos;aéroport le plus proche : comptez en général 15 à 25 minutes selon le trafic. Tous terminaux.
+                  </p>
+                </Link>
+                <Link href="/taxi-cdg" className="bg-white border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors block">
+                  <h3 className="font-bold text-gray-900 text-lg mb-2">Massy TGV → Roissy-CDG</h3>
+                  <p className="text-sm text-gray-600">
+                    De l&apos;autre côté de Paris : comptez environ une heure, davantage aux heures de pointe.
+                  </p>
+                </Link>
+              </div>
+              <p className="text-gray-600 leading-relaxed">
+                À la réservation, indiquez votre numéro de train et votre numéro de vol. Si le train a du retard,
+                la prise en charge suit. Le prix estimé s&apos;affiche dans le formulaire dès que vous saisissez
+                le trajet. Le trajet inverse, de l&apos;aéroport vers Massy TGV, se réserve de la même façon.
+              </p>
             </div>
           </div>
         </section>
