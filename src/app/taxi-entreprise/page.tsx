@@ -1,10 +1,10 @@
 import { Metadata } from 'next'
-import Link from 'next/link'
 import Header from '@/components/Header'
 import Breadcrumb from '@/components/Breadcrumb'
 import Footer from '@/components/Footer'
 import RelatedCities from '@/components/RelatedCities'
 import BookingForm from '@/components/BookingForm'
+import QuoteForm from '@/components/QuoteForm'
 import { FAQSchema, ServiceSchema } from '@/components/seo/Schemas'
 import { SITE } from '@/lib/site'
 import {
@@ -31,10 +31,10 @@ import {
 
 export const metadata: Metadata = {
   title: 'Taxi entreprise Essonne : compte pro B2B',
-  description: `Taxi entreprise B2B Essonne : compte dédié, facturation mensuelle, justificatifs détaillés. Devis au ${SITE.phone.display}.`,
+  description: `Taxi entreprise B2B Essonne : compte dédié, facturation mensuelle, justificatifs détaillés. Devis en ligne ou au ${SITE.phone.display}.`,
   openGraph: {
     title: 'Taxi entreprise Essonne : compte pro B2B',
-    description: `Compte entreprise, facturation mensuelle, transferts collaborateurs et VIP. Mercedes Classe E, Tesla, Van 7 places. Devis personnalisé au ${SITE.phone.display}.`,
+    description: `Compte entreprise, facturation mensuelle, transferts collaborateurs et VIP. Mercedes Classe E, Tesla, Van 7 places. Devis en ligne ou au ${SITE.phone.display}.`,
     url: `${SITE.url}/taxi-entreprise`,
   },
   alternates: {
@@ -129,8 +129,8 @@ const clients = [
 const services = [
   {
     icon: Users,
-    title: 'Transferts collaborateurs',
-    description: 'Aéroport (Orly, CDG, Le Bourget, Beauvais), gare TGV Massy, gares parisiennes, sites clients et réunions. Suivi de vol et de train inclus.',
+    title: 'Transferts collaborateurs et visiteurs',
+    description: 'Aéroport (Orly, CDG, Le Bourget, Beauvais), gare TGV Massy, gares parisiennes, sites clients et réunions. Suivi de vol et de train inclus. Réservation à l\'avance possible pour vos déplacements planifiés.',
   },
   {
     icon: Calendar,
@@ -169,7 +169,7 @@ const flotte = [
     name: 'Mercedes Classe V',
     type: 'Van Premium',
     description: 'Jusqu\'à 7 passagers en configuration équipe, ou 5 passagers avec grand espace bagages. Idéal navette aéroport pour comité de direction.',
-    capacity: '7 passagers max',
+    capacity: '7 passagers max, selon disponibilité',
   },
 ]
 
@@ -186,7 +186,7 @@ const etapesOuverture = [
   {
     num: 1,
     title: 'Prise de contact',
-    description: 'Appelez-nous ou envoyez un email. Nous analysons vos besoins (volume, destinations types, contraintes) sous 24 h.',
+    description: 'Remplissez le formulaire de devis ou appelez-nous. Nous analysons vos besoins (volume, destinations types, contraintes) sous 24 h.',
   },
   {
     num: 2,
@@ -330,10 +330,11 @@ export default function TaxiEntreprise() {
                     {SITE.phone.display}
                   </a>
                   <a
-                    href="#reservation"
+                    href="#devis"
                     className="inline-flex items-center gap-3 bg-yellow-400 text-black font-bold text-lg py-3 px-6 rounded-lg hover:bg-yellow-500 transition-colors"
                   >
-                    Demander un devis
+                    <FileText className="w-5 h-5" />
+                    Demander un devis professionnel
                   </a>
                 </div>
               </div>
@@ -634,20 +635,47 @@ export default function TaxiEntreprise() {
               ))}
             </div>
 
-            <div className="text-center mt-10">
+            <div className="flex flex-wrap justify-center gap-4 mt-10">
+              <a
+                href="#devis"
+                className="inline-flex items-center gap-3 bg-yellow-400 text-black font-bold text-lg py-3 px-8 rounded-lg hover:bg-yellow-500 transition-colors"
+              >
+                <FileText className="w-5 h-5" />
+                Demander un devis professionnel
+              </a>
               <a
                 href={SITE.phone.tel}
                 className="inline-flex items-center gap-3 bg-gray-900 text-white font-bold text-lg py-3 px-8 rounded-lg hover:bg-gray-800 transition-colors"
               >
                 <Phone className="w-5 h-5" />
-                Démarrer maintenant : {SITE.phone.display}
+                {SITE.phone.display}
               </a>
             </div>
           </div>
         </section>
 
+        {/* Demande de devis professionnel */}
+        <section id="devis" className="py-12 md:py-16 bg-white scroll-mt-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
+                Demander un devis professionnel
+              </h2>
+              <p className="text-gray-600 text-center mb-8">
+                Décrivez vos trajets habituels. Nous revenons vers vous sous 24 h ouvrées avec une
+                proposition adaptée à votre volume. Vous préférez parler à quelqu&apos;un ? Appelez le{' '}
+                <a href={SITE.phone.tel} className="font-bold text-yellow-600 hover:underline">
+                  {SITE.phone.display}
+                </a>
+                .
+              </p>
+              <QuoteForm />
+            </div>
+          </div>
+        </section>
+
         {/* Tarifs B2B */}
-        <section className="py-12 md:py-16 bg-white">
+        <section className="py-12 md:py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">
@@ -676,14 +704,17 @@ export default function TaxiEntreprise() {
               </div>
 
               <div className="mt-8 grid md:grid-cols-2 gap-4">
-                <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">
+                <div className="bg-white border border-gray-200 rounded-xl p-5">
                   <h3 className="font-bold text-gray-900 mb-2 flex items-center gap-2">
                     <Info className="w-5 h-5 text-yellow-600" />
                     Devis sous 24 h
                   </h3>
                   <p className="text-gray-600 text-sm">
-                    Transmettez-nous vos besoins (volume, destinations, fréquence). Nous revenons
-                    sous 24 h ouvrées avec un tarif détaillé et adapté.
+                    Indiquez vos besoins (volume, destinations, fréquence) dans le{' '}
+                    <a href="#devis" className="text-yellow-700 underline">
+                      formulaire de devis
+                    </a>
+                    . Nous revenons sous 24 h ouvrées avec un tarif détaillé et adapté.
                   </p>
                 </div>
                 <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-5">
@@ -702,7 +733,7 @@ export default function TaxiEntreprise() {
         </section>
 
         {/* FAQ */}
-        <section className="py-12 md:py-16 bg-gray-50">
+        <section className="py-12 md:py-16 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
               Questions fréquentes : Taxi entreprise
@@ -757,12 +788,12 @@ export default function TaxiEntreprise() {
                   <Phone className="w-5 h-5" />
                   {SITE.phone.display}
                 </a>
-                <Link
-                  href="/contact"
+                <a
+                  href="#devis"
                   className="inline-flex items-center gap-3 bg-gray-900 text-white font-bold text-lg py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors"
                 >
-                  Nous contacter
-                </Link>
+                  Demander un devis professionnel
+                </a>
               </div>
             </div>
           </div>
