@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { LocalBusinessSchema } from '@/components/seo/Schemas'
 import { SITE } from '@/lib/site'
+import MobileCallBar from '@/components/MobileCallBar'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -78,6 +79,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} antialiased`}>
         {children}
+        <MobileCallBar />
       </body>
     </html>
   )

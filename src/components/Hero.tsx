@@ -79,7 +79,7 @@ export default function Hero() {
             </div>
 
             {/* Colonne droite - Formulaire */}
-            <div>
+            <div id="reservation" className="scroll-mt-20">
               <BookingForm compact />
             </div>
           </div>
